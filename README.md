@@ -20,7 +20,7 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
     git pull
     ```
   - [Videotutorial](https://drive.google.com/file/d/1MFbCDJAiMJctlN_jPIfwlhWqPi0TGWiI/view?usp=sharing) Preparando el entorno de trabajo 
-	- Paquetes de Linux que deben estar presentes durante las prácticas (sudo apt install) `gcc` `make`    `valgrind`     `wdiff`  `doxygen`    `ImageMagick` `git` `graphviz`
+	- Paquetes de Linux que deben estar presentes durante las prácticas (sudo apt install) `gcc` `make` `valgrind`  `wdiff`  `meld` `doxygen`    `ImageMagick` `git` `graphviz`
  - Para aquellos que decidáis la opción de VirtualBox, el profesorado de MP hemos preparado una copia de una máquina virtual ya preparada con Linux, NetBeans y C++. Aquí tenéis las instrucciones  para instalarla. Son tres pasos muy sencillos ![MP_VBOXc](https://user-images.githubusercontent.com/9058636/152649408-c228ab4f-d8c1-4ef8-8e56-81230dd63986.png)
  
    - <a name="virtualbox"></a>Descargar e Instalar [Virtualbox](https://www.oracle.com/emea/virtualization/solutions/try-oracle-vm-virtualbox/?source=:ad:pas:go:dg:a_emea:71700000086137880-58700007342953610-p65823631225:RC_WWMK201210P00009C0001:&SC=:ad:pas:go:dg:a_emea::RC_WWMK201210P00009C0001::&gclid=CjwKCAiAl-6PBhBCEiwAc2GOVOk47paaZegmnUyyKtx-WFrjIcTIDntJfqxW40Kk8E3DFxK2_RPZBBoCUzwQAvD_BwE&gclsrc=aw.ds)
@@ -144,18 +144,7 @@ Breve introducción a la gestión de señales de error durante la ejecución de 
 - Manejo de excepciones [Videotutorial](https://drive.google.com/file/d/1aPJP1ft4OiQZED2dVGs7pbzy3nf7kQ1J/view?usp=sharing)
 
 # Erratas
-<a name="errata1Language0"></a>1. En el videotutorial sobre La implementación de los métodos se menciona el código 
-```
-bool isValidCharacter(char character, const string& validCharacters) {
-    return validCharacters.find(character) >= 0;
-}
-``` 
-este código tiene un error porque supone que el dato que devuelve find() es un número entero **con signo**, pero es un número entero **sin signo**, por lo que se resuelve fácilmente con un cambio de tipo forzado (casting)
-```
-bool isValidCharacter(char character, const string& validCharacters) {
-    return (int) validCharacters.find(character) >= 0;
-}
-``` 
+
 
 
 
