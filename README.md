@@ -47,17 +47,17 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 |Semana3	4/mar/2024 | |<ol><li>[**NetBeans 3**](#netbeans) <ul><li>El [depurador](#depurador) de programas</ul>|  |
 |Semana4	11/mar/2024 |[**Kmer1**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer1.pdf)  Kmeros y frecuencias asociadas. Clase KmerFreq <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer1/tests/TestReport.md)  |  | Paso de vectores a funciones y métodos|
 |Semana5	18/mar/2024 |  || |
-|Semana6	25/mar/2024 | **Semana Santa**| | |
-|Semana7	1/abr/2024 | [**Kmer2**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer2.pdf) Modelo de una especie. Clase Profile con vector estático <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer2/tests/TestReport.md)| | <ol><li> Clases con vectores estáticos. <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes <li> Uso de [parámetros](#parametrosmain) desde la línea de comandos.  CStrings  </ol>|
-|Semana8	8/abr/2024 | |
-|Semana9	15/abr/2024 |[**Kmer3**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer3.pdf) Cálculo de distancias entre profiles. Clase Profile con vector estático <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer3/tests/TestReport.md) | [**valgrind**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/valgrind.pdf) Detección de pérdidas de memoria| Uso de memoria dinámica en C++. Arrays dinámicos. Detección de pérdidas de memoria|
-|Semana10	22/abr/2024 ||||
-|Semana11	29/abril/2024 | [**Kmer4**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer4.pdf) Cálculo de distancias entre profiles. Clase Profile con vector en memoria dinámica <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer4/tests/TestReport.md) | | Constructor de copia+Operador de asignación+Destructor|
-|Semana12	6/may/2024 |**Kmer4** <br>**Examen de laboratorio**<br>1 PUNTO | | |
-|Semana13	13/may/2024 |[**Kmer5**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer5.pdf) Aprendizaje y clasificación. Clase KmerCounter <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer5/tests/TestReport.md) <br>2 PUNTOS | | Matrices bidimensionales dinámicas.|
-|Semana14	20/may/2024 | | | |
-|Semana15	27/may/2024 | | | |
-|Semana16	3/jun/2024 | | | |
+|Semana Santa	25/mar/2024 | **Semana Santa**| | |
+|Semana6	1/abr/2024 | [**Kmer2**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer2.pdf) Modelo de una especie. Clase Profile con vector estático <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer2/tests/TestReport.md)| | <ol><li> Clases con vectores estáticos. <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes <li> Uso de [parámetros](#parametrosmain) desde la línea de comandos.  CStrings  </ol>|
+|Semana7	8/abr/2024 | |
+|Semana8	15/abr/2024 |[**Kmer3**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer3.pdf) Cálculo de distancias entre profiles. Clase Profile con vector estático <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer3/tests/TestReport.md) | [**valgrind**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/valgrind.pdf) Detección de pérdidas de memoria| Uso de memoria dinámica en C++. Arrays dinámicos. Detección de pérdidas de memoria|
+|Semana9	22/abr/2024 ||||
+|Semana10	29/abril/2024 | [**Kmer4**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer4.pdf) Cálculo de distancias entre profiles. Clase Profile con vector en memoria dinámica <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer4/tests/TestReport.md) | | Constructor de copia+Operador de asignación+Destructor|
+|Semana11	6/may/2024 |**Kmer4** <br>**Examen de laboratorio**<br>1 PUNTO | | |
+|Semana12	13/may/2024 |[**Kmer5**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer5.pdf) Aprendizaje y clasificación. Clase KmerCounter <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer5/tests/TestReport.md) <br>2 PUNTOS | | Matrices bidimensionales dinámicas.|
+|Semana13	20/may/2024 | | | |
+|Semana14	27/may/2024 | | | |
+|Semana15	3/jun/2024 | | | |
 |||||
 
 # Técnicas, herramientas y metodologías de prácticas
