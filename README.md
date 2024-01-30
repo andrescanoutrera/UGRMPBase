@@ -52,9 +52,9 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 |Semana7	8/abr/2024 | |
 |Semana8	15/abr/2024 |[**Kmer3**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer3.pdf) Cálculo de distancias entre profiles. Clase Profile con vector estático <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer3/tests/TestReport.md) | [**valgrind**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/valgrind.pdf) Detección de pérdidas de memoria| Uso de memoria dinámica en C++. Arrays dinámicos. Detección de pérdidas de memoria|
 |Semana9	22/abr/2024 ||||
-|Semana10	29/abril/2024 | [**Kmer4**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer4.pdf) Cálculo de distancias entre profiles. Clase Profile con vector en memoria dinámica <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer4/tests/TestReport.md) | | Constructor de copia+Operador de asignación+Destructor|
+|Semana10	29/abril/2024 | [**Kmer4**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer4.pdf) Cálculo de distancias entre profiles. Clase Profile con vector en memoria dinámica <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer4/tests/TestReport.md) | | <ol><li>Constructor de copia <li>Operador de asignación <li>Destructor</ol>|
 |Semana11	6/may/2024 |**Kmer4** <br>**Examen de laboratorio**<br>1 PUNTO | | |
-|Semana12	13/may/2024 |[**Kmer5**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer5.pdf) Aprendizaje y clasificación. Clase KmerCounter <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer5/tests/TestReport.md) <br>2 PUNTOS | | Matrices bidimensionales dinámicas.|
+|Semana12	13/may/2024 |[**Kmer5**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer5.pdf) Aprendizaje y clasificación. Clase KmerCounter <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer5/tests/TestReport.md) <br>2 PUNTOS | | <ol> <li>Sobrecarga de operadores. <li>Matrices bidimensionales dinámicas.</ol>|
 |Semana13	20/may/2024 | | | |
 |Semana14	27/may/2024 | | | |
 |Semana15	3/jun/2024 | | | |
