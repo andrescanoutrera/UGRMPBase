@@ -6,15 +6,16 @@ Este es el repositorio público de la Asignatura Metodología de la Programació
 
 Antes de empezar las clases sería bueno que fueses preparando todo el material porque vamos a aprender muchas cosas interesantes y el tiempo vuela, así que empezaremos directamente desde el minuto 0.
 
-Tienes toda la información está en el [README](https://github.com/Anatoli-Grishenko/UGRMPBase/blob/main/README.md) pero aquí te apuntamos lo más importante ahora mismo
+Tienes toda la información está en el [README](README.md) pero aquí te apuntamos lo más importante ahora mismo
 
-1. Mira los vídeos de [introducción a la asignatura](https://drive.google.com/file/d/1VO7ib1QnUlEk1pHtn4F7D6QJwZZykgbo/view?usp=sharing)  y de [introducción a las prácticas](https://drive.google.com/file/d/1peiNfwzRKYvCFHCJlSH2licuhCIuEeqL/view?usp=share_link)
+1. Mira los vídeos de [introducción a la asignatura](https://drive.google.com/file/d/1VO7ib1QnUlEk1pHtn4F7D6QJwZZykgbo/view?usp=sharing)  y de [introducción a las prácticas](ToDo)
+<!-- (https://drive.google.com/file/d/1peiNfwzRKYvCFHCJlSH2licuhCIuEeqL/view?usp=share_link) -->
 1. Prepara tu ordenador para trabajar con la asignatura
-   - Si quieres seguir en Windows, instala [VirtualBox](https://github.com/Anatoli-Grishenko/UGRMPBase/blob/main/README.md#virtualbox) y la imagen de arranque especial que hemos preparado para la asignatura, es un Linux muy ligero que consume poca memoria y recursos y ya viene con todo instalado.
-   - Si te atreves con el arranque dual, aquí tienes un poco de [ayuda](https://github.com/Anatoli-Grishenko/UGRMPBase/blob/MP2122/DualBoot.md)
-1. Bajate el [repositorio de MP](https://github.com/Anatoli-Grishenko/UGRMPBase/blob/main/README.md#repo) a tu ordenador y mantenlo siempre actualizado 
+   - Si quieres seguir en Windows, instala [VirtualBox](README.md#virtualbox) y la imagen de arranque especial que hemos preparado para la asignatura, es un Linux muy ligero que consume poca memoria y recursos y ya viene con todo instalado.
+   - Si te atreves con el arranque dual, aquí tienes un poco de [ayuda](DualBoot.md)
+1. Bajate el [repositorio de MP](README.md#repo) a tu ordenador y mantenlo siempre actualizado
 1. Apúntate en el grupo de Telegram de tu grupo, es la forma más eficiente de estar al día
-1. Si aún te apetece un poco más, puedes probar a ejecutar el proyecto Hello World! siguiendo este [tutorial](https://github.com/Anatoli-Grishenko/UGRMPBase/blob/main/README.md#helloworld)
+1. Si aún te apetece un poco más, puedes probar a ejecutar el proyecto Hello World! siguiendo este [tutorial](README.md#helloworld)
 
 Eso es todo por ahora. Nos vemos en clase la semana que viene.
 
