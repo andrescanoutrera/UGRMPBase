@@ -4,7 +4,8 @@
 
 ![image](https://user-images.githubusercontent.com/9058636/154716516-2ef804b3-e2f4-4cdc-971e-771049323063.png)
 Para estar al día de las incidencias de la asignatura y tener contacto directo con los profesores puedes unirte al grupo de Telegram de algunas titulaciones
-- Grupo de Telegram del [Doble Grado Informática y Matemáticas](https://t.me/+vdHQM93iAMthNGRk) 
+- Grupo de Telegram del [Doble Grado Informática y Matemáticas](ToDo)
+[comment]: <> (https://t.me/+vdHQM93iAMthNGRk)
 
 # <a name="preping"></a>Preparándolo todo
 -  [Videotutorial](https://drive.google.com/file/d/1VO7ib1QnUlEk1pHtn4F7D6QJwZZykgbo/view?usp=sharing) introducción a la asignatura.
@@ -38,11 +39,13 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
 
 # Secuencia de prácticas
 
-Mira los vídeos de [introducción a la asignatura](https://drive.google.com/file/d/1VO7ib1QnUlEk1pHtn4F7D6QJwZZykgbo/view?usp=sharing)  y de [introducción a las prácticas](https://drive.google.com/file/d/1peiNfwzRKYvCFHCJlSH2licuhCIuEeqL/view?usp=share_link)
+Mira los vídeos de [introducción a la asignatura](https://drive.google.com/file/d/1VO7ib1QnUlEk1pHtn4F7D6QJwZZykgbo/view?usp=sharing)  y de [introducción a las prácticas](ToDo)
+
+[comment]: <> (https://drive.google.com/file/d/1peiNfwzRKYvCFHCJlSH2licuhCIuEeqL/view?usp=share_link)
 
 |Comienzo | Práctica <br> Entregable en Prado | Herramientas | Metodología
 | -----| -----|-----| ----- |
-|Semana1 19/feb/2024 || <ol><li>[**NetBeans 1**](#netbeans) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del el proyecto [MP Geometry](#mpgeometry)<ul><li>Métodos `const`.<li>Parámetros por valor y por referencia. <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la enrtada</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MP Geometry](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MP Geometry](#mpgeometry)</ol>|
+|Semana1 19/feb/2024 || <ol><li>[**NetBeans 1**](#netbeans) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del proyecto [MP Geometry](#mpgeometry)<ul><li>Métodos `const`.<li>Parámetros por valor y por referencia. <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la enrtada</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MP Geometry](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MP Geometry](#mpgeometry)</ol>|
 |<a name="Semana2"></a>Semana2	26/feb/2024 | [**Kmer0**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer0.pdf) Identificación de Kmeros. Clase Kmer <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer0/TestReport.md)<br><br>Guía para hacer Langage0 <ul><li>[Videotutorial](https://drive.google.com/file/d/1WqboW2TvMYhU5-oFdhuC8uxH2oTFJVUk/view?usp=share_link). <li> [Guía paso a paso](https://drive.google.com/file/d/1W9dcJvh_KaqlsC4bUI3LI3JBSd-hJ61Z/view?usp=share_link)</ul> <b>Implementación comentada</b><ul><li>[Implementación de los métodos](https://drive.google.com/file/d/1-5VoP14gbSPbcekRAWKOHzZxJQlVjv53/view?usp=share_link) (ver [errata 1](#errata1Language0)) <li>[Main v1](https://drive.google.com/file/d/1Y3IJPecJBoVNVOW32LktF4WHhk5TkWUG/view?usp=share_link) <li>[Main V2](https://drive.google.com/file/d/19FREHM2VgSpuiwlvwCDMvpTurXtF5zfD/view?usp=share_link) <li>[Main V3](https://drive.google.com/file/d/1Z8HCFxWvzYTZZpAZnrj4AG56oShxP0HX/view?usp=share_link) <li>[Tests](https://drive.google.com/file/d/1ZFNrtuMSaYhqT2Y_4rKM38GD9kVyXUJO/view?usp=share_link)</ul> | <ol><li>[**NetBeans 2**](#netbeans) <ul><li>Compilación separada: Bibliotecas</ul>|<ol>  <li> Uso de bibliotecas con el proyecto [MP Geometry](#mpgeometry) </ol>|
 |Semana3	4/mar/2024 | |<ol><li>[**NetBeans 3**](#netbeans) <ul><li>El [depurador](#depurador) de programas</ul>|  |
 |Semana4	11/mar/2024 |[**Kmer1**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer1.pdf)  Kmeros y frecuencias asociadas. Clase KmerFreq <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer1/tests/TestReport.md)  |  | Paso de vectores a funciones y métodos|
