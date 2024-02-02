@@ -120,7 +120,7 @@ Valgrind es una herramienta para la detección, sobre todo, de pérdidas de memo
 
 - Manual sobre el uso de [Valgrind](PDFs/valgrind.pdf)
 <!-- - Manual sobre el uso de [Dr Memory](Adicional/drmemory.pdf) -->
-- Proyecto Interactivo `ValgrindShowcase`
+- Proyecto Interactivo [ValgrindShowcase](NetBeansProjects/ValgrindShowcase)
   - Descomprimir
   - Cargar en Netbeans
   - Ejecutar y seguir las instrucciones. Se puede volver a empezar de nuevo sin más que descomprimir de nuevo.
