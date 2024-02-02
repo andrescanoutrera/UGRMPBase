@@ -54,7 +54,7 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 |Semana7	8/abr/2024 | |
 |Semana8	15/abr/2024 |[**Kmer3**](PDFs/kmer3.pdf) Cálculo de distancias entre profiles. Clase Profile con vector estático <br>[Tests detallados](NetBeansProjects/Kmer3/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer3/TestReport.HowToTestUnitTests.md) | [**valgrind**](PDFs/valgrind.pdf) Detección de pérdidas de memoria| <ol> <li> Uso de memoria dinámica en C++. <li> Arrays dinámicos. <li> Detección de pérdidas de memoria </ol>|
 |Semana9	22/abr/2024 ||||
-|Semana10	29/abril/2024 | [**Kmer4**](PDFs/kmer4.pdf) Cálculo de distancias entre profiles. Clase Profile con vector en memoria dinámica <br>[Tests detallados](NetBeansProjects/Kmer4/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer4/TestReport.HowToTestUnitTests.md) | | <ol><li>Clases con datos en memoria dinámica <li>Constructor de copia <li>Operador de asignación <li>Destructor</ol>|
+|Semana10	29/abril/2024 | [**Kmer4**](PDFs/kmer4.pdf) Cálculo de distancias entre profiles. Clase Profile con vector en memoria dinámica <br>[Tests detallados](NetBeansProjects/Kmer4/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer4/TestReport.HowToTestUnitTests.md) | | <ol><li>Clases que contienen datos en memoria dinámica <li>Constructor de copia <li>Operador de asignación <li>Destructor</ol>|
 |Semana11	6/may/2024 |**Kmer4** <br>**Examen de laboratorio**<br>1 PUNTO | | |
 |Semana12	13/may/2024 |[**Kmer5**](PDFs/kmer5.pdf) Aprendizaje y clasificación. Clase KmerCounter <br>[Tests detallados](NetBeansProjects/Kmer5/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer5/TestReport.HowToTestUnitTests.md) <br>2 PUNTOS | | <ol> <li>Sobrecarga de operadores. <li>Matrices bidimensionales dinámicas <li> Ficheros binarios .</ol>|
 |Semana13	20/may/2024 | | | |
@@ -107,7 +107,7 @@ Es una metodología de desarrollo de proyectos software en la que primero se def
 - [Manual completo TDD](PDFs/Adicional/TDDGTEST_V2.pdf)
 -->
 
-# <a name="depurador"></a>Depuración de programas
+## <a name="depurador"></a>Depuración de programas
 El depurador es una herramienta que suele estar incorporada en los IDE (Integrated Development Environment) como NetBeans. Se utiliza para ejecutar el programa paso a paso e intentar encontrar errores en el código.
 
 - Manual sobre el [depurador de NetBeans](PDFs/Debugger.pdf)
@@ -115,7 +115,7 @@ El depurador es una herramienta que suele estar incorporada en los IDE (Integrat
 - [Videotutorial 2](https://drive.google.com/file/d/1cStDUlagLLo_UQk5HOvZNWuqg3dxxCNl/view?usp=sharing)
 - Proyectos de NetBeans para depurar incluídos en el videotutorial: `Debugger1` `Debugger2` `Debugger3`
 
-# Detección de pérdidas de memoria y errores en la gestión de la memoria
+## Detección de pérdidas de memoria y errores en la gestión de la memoria
 Valgrind es una herramienta para la detección, sobre todo, de pérdidas de memoria, pero también de otros problemas de gestión de la memoria dinámica.
 
 - Manual sobre el uso de [Valgrind](PDFs/valgrind.pdf)
@@ -125,7 +125,7 @@ Valgrind es una herramienta para la detección, sobre todo, de pérdidas de memo
   - Cargar en Netbeans
   - Ejecutar y seguir las instrucciones. Se puede volver a empezar de nuevo sin más que descomprimir de nuevo.
 
-# <a name="ficheros"></a>Manejo de ficheros de texto (muy básico)
+## <a name="ficheros"></a>Manejo de ficheros de texto (muy básico)
 Los ficheros de texto permiten almacenar datos que  pueden leer los programas de forma masiva para procesarlos. Este apartado es una (muy breve) introducción al manejo de ficheros que se verá en teoría.
 
 - Manual sobre el manejo (muy básico) de [ficheros de texto](PDFs/Ficheros.pdf)
@@ -133,7 +133,7 @@ Los ficheros de texto permiten almacenar datos que  pueden leer los programas de
 - Videotutorial 2. [Ficheros de salida](https://drive.google.com/file/d/1xllMQyf0sQP-cfrGSabFi5shA4bUzMZc/view?usp=sharing)
 - Videotutorial 3. Gestión de [errores en el manejo de ficheros](https://drive.google.com/file/d/19us64WCMXZyEd5um_MuZpLp5IqQU3nMV/view?usp=sharing)
 
-# <a name="parametrosmain"></a>Paso de parámetros a la función main() desde la línea de órdenes
+## <a name="parametrosmain"></a>Paso de parámetros a la función main() desde la línea de órdenes
 
 Esta es una técnica muy habitual para introducir datos en un programa desde la línea de comandos. Absolutamente imprescindible en programas de consola de Linux/Unix.
 
@@ -141,10 +141,10 @@ Esta es una técnica muy habitual para introducir datos en un programa desde la 
 - [Videotutorial 1](https://drive.google.com/file/d/1xlVzVTwbFSWfhdaHGgNSq67bQo0c46nJ/view?usp=sharing)
 - [Videotutorial 2](https://drive.google.com/file/d/1HaYIyECXYuZ1FAMSlSB1P7PSj9qCXlXG/view?usp=sharing)
 
-# Construcción manual de makefiles (Material de ampliación)
+## Construcción manual de makefiles (Material de ampliación)
 - Manual para la elaboración de [makefiles](PDFs/Adicional/makefile.pdf)
 
-# Manejo de errores y excepciones  (Material de ampliación)
+## Manejo de errores y excepciones  (Material de ampliación)
 Breve introducción a la gestión de señales de error durante la ejecución de un programa y la gestión controlada de estos mediante el uso de excepciones. Videotutorial 
 
 - Manejo de señales de error. [Videotutorial](https://drive.google.com/file/d/1U0pBUxBrklBKLkZcgsIkClCeQxyf1Bv0/view?usp=sharing)
@@ -153,6 +153,8 @@ Breve introducción a la gestión de señales de error durante la ejecución de 
 
 
 # Erratas
+
+En esta sección incluimos erratas que se detecten en los distintos guiones y proyectos Netbeans. Esperemos que no sean muchas.
 
 
 
