@@ -1,0 +1,15 @@
+2 GCgCcCxGxG
+
+%%%CALL < data/easyDNA2_missing.k0in
+%%%DESCRIPTION Easy test with a few nucleotides. There are some missing nucleotides. K=2
+%%%OUTPUT
+9
+GC<-->cg
+CG<-->gc
+GC<-->cg
+CC<-->gg
+CC<-->gg
+C_<-->g_
+_G<-->_c
+G_<-->c_
+_G<-->_c

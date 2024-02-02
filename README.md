@@ -45,18 +45,18 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 |Comienzo | Práctica <br> Entregable en Prado | Herramientas | Metodología
 | -----| -----|-----| ----- |
 |Semana1 19/feb/2024 || <ol><li>[**NetBeans 1**](#netbeans) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del proyecto [MP Geometry](#mpgeometry)<ul><li>Métodos `const`.<li>Parámetros por valor y por referencia. <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la enrtada</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MP Geometry](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MP Geometry](#mpgeometry)  <li> Opcional: Uso de bibliotecas con el proyecto [MP Geometry](#mpgeometry) </ol>|
-|<a name="Semana2"></a>Semana2	26/feb/2024 | [**Kmer0**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer0.pdf) Identificación de Kmeros. Clase Kmer <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer0/TestReport.md) | <ol><li>[**NetBeans 2**](#netbeans) <ul><li>Compilación separada</ul>| |
+|<a name="Semana2"></a>Semana2	26/feb/2024 | [**Kmer0**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer0.pdf) Identificación de Kmeros. Clase Kmer <br>[Tests detallados](NetBeansProjects/Kmer0/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer0/TestReport.HowToTestUnitTests.md) | <ol><li>[**NetBeans 2**](#netbeans) <ul><li>Compilación separada</ul>| |
 |Semana3	4/mar/2024 | |<ol><li>[**NetBeans 3**](#netbeans) <ul><li>El [depurador](#depurador) de programas</ul>|  |
-|Semana4	11/mar/2024 |[**Kmer1**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer1.pdf)  Kmeros y frecuencias asociadas. Clase KmerFreq <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer1/tests/TestReport.md)  |  | Paso de vectores a funciones y métodos|
+|Semana4	11/mar/2024 |[**Kmer1**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer1.pdf)  Kmeros y frecuencias asociadas. Clase KmerFreq <br>[Tests detallados](NetBeansProjects/Kmer1/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer1/TestReport.HowToTestUnitTests.md)  |  |  <ol> <li>Calificador const para métodos y parámetros <li>Paso de parámetros por valor y referencia  <li> Devolución por valor y referencia <li>Paso de vectores a funciones y métodos </ol>|
 |Semana5	18/mar/2024 |  || |
 |Semana Santa	25/mar/2024 | **Semana Santa**| | |
-|Semana6	1/abr/2024 | [**Kmer2**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer2.pdf) Modelo de una especie. Clase Profile con vector estático <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer2/tests/TestReport.md)| | <ol><li> Clases con vectores estáticos. <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes <li> Uso de [parámetros](#parametrosmain) desde la línea de comandos.  CStrings  </ol>|
+|Semana6	1/abr/2024 | [**Kmer2**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer2.pdf) Modelo de una especie. Clase Profile con vector estático <br>[Tests detallados](NetBeansProjects/Kmer2/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer2/TestReport.HowToTestUnitTests.md)| | <ol><li> Clases con vectores estáticos. <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes <li> Uso de [parámetros](#parametrosmain) desde la línea de comandos.  CStrings  </ol>|
 |Semana7	8/abr/2024 | |
-|Semana8	15/abr/2024 |[**Kmer3**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer3.pdf) Cálculo de distancias entre profiles. Clase Profile con vector estático <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer3/tests/TestReport.md) | [**valgrind**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/valgrind.pdf) Detección de pérdidas de memoria| Uso de memoria dinámica en C++. Arrays dinámicos. Detección de pérdidas de memoria|
+|Semana8	15/abr/2024 |[**Kmer3**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer3.pdf) Cálculo de distancias entre profiles. Clase Profile con vector estático <br>[Tests detallados](NetBeansProjects/Kmer3/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer3/TestReport.HowToTestUnitTests.md) | [**valgrind**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/valgrind.pdf) Detección de pérdidas de memoria| <ol> <li> Uso de memoria dinámica en C++. <li> Arrays dinámicos. <li> Detección de pérdidas de memoria </ol>|
 |Semana9	22/abr/2024 ||||
-|Semana10	29/abril/2024 | [**Kmer4**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer4.pdf) Cálculo de distancias entre profiles. Clase Profile con vector en memoria dinámica <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer4/tests/TestReport.md) | | <ol><li>Constructor de copia <li>Operador de asignación <li>Destructor</ol>|
+|Semana10	29/abril/2024 | [**Kmer4**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer4.pdf) Cálculo de distancias entre profiles. Clase Profile con vector en memoria dinámica <br>[Tests detallados](NetBeansProjects/Kmer4/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer4/TestReport.HowToTestUnitTests.md) | | <ol><li>Clases con datos en memoria dinámica <li>Constructor de copia <li>Operador de asignación <li>Destructor</ol>|
 |Semana11	6/may/2024 |**Kmer4** <br>**Examen de laboratorio**<br>1 PUNTO | | |
-|Semana12	13/may/2024 |[**Kmer5**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer5.pdf) Aprendizaje y clasificación. Clase KmerCounter <br>[Tests detallados](https://github.com/andrescanoutrera/UGRMPBase/blob/main/NetBeansProjects/Kmer5/tests/TestReport.md) <br>2 PUNTOS | | <ol> <li>Sobrecarga de operadores. <li>Matrices bidimensionales dinámicas.</ol>|
+|Semana12	13/may/2024 |[**Kmer5**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer5.pdf) Aprendizaje y clasificación. Clase KmerCounter <br>[Tests detallados](NetBeansProjects/Kmer5/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer5/TestReport.HowToTestUnitTests.md) <br>2 PUNTOS | | <ol> <li>Sobrecarga de operadores. <li>Matrices bidimensionales dinámicas <li> Ficheros binarios .</ol>|
 |Semana13	20/may/2024 | | | |
 |Semana14	27/may/2024 | | | |
 |Semana15	3/jun/2024 | | | |
@@ -104,7 +104,7 @@ Es una metodología de desarrollo de proyectos software en la que primero se def
 - Pasar todos los tests unitarios. [Videotutorial](https://drive.google.com/file/d/1R0zEd_yxQ51Yo0N3VTNH-s7pYzgefXMg/view?usp=sharing)
 - Los tests de integración. [Videotutorial](https://drive.google.com/file/d/13weHJA5zQhC9YADoqyVhUHxc7WHoPE1O/view?usp=sharing)
 - Proyecto `MyVector`  
-- [Manual completo TDD](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/TDDGTEST_V2.pdf)
+- [Manual completo TDD](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/Adicional/TDDGTEST_V2.pdf)
 -->
 
 # <a name="depurador"></a>Depuración de programas
@@ -119,7 +119,7 @@ El depurador es una herramienta que suele estar incorporada en los IDE (Integrat
 Valgrind es una herramienta para la detección, sobre todo, de pérdidas de memoria, pero también de otros problemas de gestión de la memoria dinámica.
 
 - Manual sobre el uso de [Valgrind](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/valgrind.pdf)
-<!-- - Manual sobre el uso de [Dr Memory](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/drmemory.pdf) -->
+<!-- - Manual sobre el uso de [Dr Memory](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/Adicional/drmemory.pdf) -->
 - Proyecto Interactivo `ValgrindShowcase`
   - Descomprimir
   - Cargar en Netbeans
@@ -141,14 +141,16 @@ Esta es una técnica muy habitual para introducir datos en un programa desde la 
 - [Videotutorial 1](https://drive.google.com/file/d/1xlVzVTwbFSWfhdaHGgNSq67bQo0c46nJ/view?usp=sharing)
 - [Videotutorial 2](https://drive.google.com/file/d/1HaYIyECXYuZ1FAMSlSB1P7PSj9qCXlXG/view?usp=sharing)
 
+# Construcción manual de makefiles (Material de ampliación)
+- Manual para la elaboración de [makefiles](PDFs/Adicional/makefile.pdf)
+
 # Manejo de errores y excepciones  (Material de ampliación)
 Breve introducción a la gestión de señales de error durante la ejecución de un programa y la gestión controlada de estos mediante el uso de excepciones. Videotutorial 
 
 - Manejo de señales de error. [Videotutorial](https://drive.google.com/file/d/1U0pBUxBrklBKLkZcgsIkClCeQxyf1Bv0/view?usp=sharing)
 - Manejo de excepciones [Videotutorial](https://drive.google.com/file/d/1aPJP1ft4OiQZED2dVGs7pbzy3nf7kQ1J/view?usp=sharing)
 
-# Construcción manual de makefiles (Material de ampliación)
-- Manual para la elaboración de makefiles [makefiles](PDFs/makefile.pdf)
+
 
 # Erratas
 

@@ -1,0 +1,37 @@
+%%%CALL < data/shortDNA5_missing.k0in
+%%%DESCRIPTION Short test with 37 nucleotides. There are some missing nucleotides. K=5
+%%%OUTPUT
+33
+GCGCC<-->cgcgg
+CGCCC<-->gcggg
+GCCCC<-->cgggg
+CCCCG<-->ggggc
+CCCG_<-->gggc_
+CCG__<-->ggc__
+CG__T<-->gc__a
+G__TG<-->c__ac
+__TGG<-->__acc
+_TGGA<-->_acct
+TGGAC<-->acctg
+GGACA<-->cctgt
+GACAG<-->ctgtc
+ACAGC<-->tgtcg
+CAGCC<-->gtcgg
+AGCCA<-->tcggt
+GCCAT<-->cggta
+CCATG<-->ggtac
+CATGC<-->gtacg
+ATGCG<-->tacgc
+TGCGC<-->acgcg
+GCGCT<-->cgcga
+CGCTA<-->gcgat
+GCTAA<-->cgatt
+CTAAC<-->gattg
+TAACC<-->attgg
+AACCC<-->ttggg
+ACCCT<-->tggga
+CCCTG<-->gggac
+CCTGG<-->ggacc
+CTGGC<-->gaccg
+TGGCT<-->accga
+GGCT_<-->ccga_

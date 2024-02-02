@@ -1,0 +1,12 @@
+%%%CALL < data/easyDNA3.k0in
+%%%DESCRIPTION Easy test with a few nucleotides. K=3
+%%%OUTPUT
+8
+GCG<-->cgc
+CGC<-->gcg
+GCC<-->cgg
+CCC<-->ggg
+CCC<-->ggg
+CCG<-->ggc
+CGT<-->gca
+GTG<-->cac

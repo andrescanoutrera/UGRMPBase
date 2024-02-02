@@ -1,0 +1,10 @@
+%%%CALL < data/easyDNA5.k0in
+%%%DESCRIPTION Easy test with a few nucleotides. K=5
+%%%OUTPUT
+6
+GCGCC<-->cgcgg
+CGCCC<-->gcggg
+GCCCC<-->cgggg
+CCCCG<-->ggggc
+CCCGT<-->gggca
+CCGTG<-->ggcac

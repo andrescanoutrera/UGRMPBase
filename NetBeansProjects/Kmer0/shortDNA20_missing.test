@@ -1,0 +1,5 @@
+%%%CALL < data/shortDNA20_missing.k0in
+%%%DESCRIPTION Short test with 20 nucleotides. There are some missing nucleotides. K=20
+%%%OUTPUT
+1
+GCGCCCCG__TGGACAGCCA<-->cgcggggc__acctgtcggt
