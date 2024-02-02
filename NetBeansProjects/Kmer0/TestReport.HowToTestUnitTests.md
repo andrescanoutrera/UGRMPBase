@@ -1,4 +1,4 @@
-Los tests de integración que vamos a pasar a vuestros programas son más o menos los que se ejecutan si usáis el script runTests.sh. Sin embargo, los tests de unidad son un poco más engorroso de probar, pero es posible hacerlo. Para probar si te funciona un test de unidad, tienes que comentar temporalmente el código incluido en tu función main() e insertar el código del test de unidad que quieras probar. También es necesario incluir previamente las siguientes declaraciones:
+Los tests de integración que vamos a pasar a vuestros programas son más o menos los que se ejecutan si usáis el script runTests.sh. Sin embargo, los tests de unidad son un poco más engorrosos de probar, pero es posible hacerlo. Para probar si te funciona un test de unidad, tienes que comentar temporalmente el código incluido en tu función main() e insertar el código del test de unidad que quieras probar. También es necesario incluir previamente las siguientes declaraciones:
 
 
 ``` cpp
@@ -38,4 +38,4 @@ int main(int argc, char* argv[]) {
     */
 }
 ```
-Al ejecutar el programa, debería mostrarse en la salida estándar el contenido que se indicaba para ese test en  [TestReport.md](TestReport.md). En este caso, el programa debería mostrar el carácter "_".
+Al ejecutar el programa, debería mostrarse en la salida estándar el contenido que se indicaba para ese test en  [TestReport.md](TestReport.md). En este caso, el programa debería mostrar el carácter "_". Si no se muestra ese contenido, entonces es que falla el test, y por tanto hay algo mal en alguno de los métodos o funciones de vuestra práctica.
