@@ -26,7 +26,7 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
  
    - <a name="virtualbox"></a>Descargar e Instalar [Virtualbox](https://www.oracle.com/emea/virtualization/solutions/try-oracle-vm-virtualbox/?source=:ad:pas:go:dg:a_emea:71700000086137880-58700007342953610-p65823631225:RC_WWMK201210P00009C0001:&SC=:ad:pas:go:dg:a_emea::RC_WWMK201210P00009C0001::&gclid=CjwKCAiAl-6PBhBCEiwAc2GOVOk47paaZegmnUyyKtx-WFrjIcTIDntJfqxW40Kk8E3DFxK2_RPZBBoCUzwQAvD_BwE&gclsrc=aw.ds)
    - Descargar la [Máquina virtual oficial de la asignatura](https://drive.google.com/drive/u/1/folders/1HMwctEsaFuICZpuHUF5rZuM6IpXPJqy8) desde Google Drive (tardará un poco porque son más de 4 GB). Es una versión de `Ubuntu 20` conocida como `LUbuntu 16.04 LTS` la cual ya vien empaquetada para consumir la mínima cantidad de recursos dado que se va a usar dentro de una VirtualBox sobre Windows. Esta imagen ya está configurada para la asignatura MP y lleva todo el software necesario instalado.
-   - Importar la máquina virtual  y acceder a ella. [guía de importación](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/importova.pdf)
+   - Importar la máquina virtual  y acceder a ella. [guía de importación](PDFs/importVBOX.pdf)
    - Usuario `mp`
    - Password `.CambiaEsto`
 - Laboratorios de prácticas de la ETSIIT. Arranque con Ubuntu 20.04. El resto de herramientas ya están instaladas.
@@ -45,18 +45,18 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 |Comienzo | Práctica <br> Entregable en Prado | Herramientas | Metodología
 | -----| -----|-----| ----- |
 |Semana1 19/feb/2024 || <ol><li>[**NetBeans 1**](#netbeans) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del proyecto [MP Geometry](#mpgeometry)<ul><li>Métodos `const`.<li>Parámetros por valor y por referencia. <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la enrtada</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MP Geometry](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MP Geometry](#mpgeometry)  <li> Opcional: Uso de bibliotecas con el proyecto [MP Geometry](#mpgeometry) </ol>|
-|<a name="Semana2"></a>Semana2	26/feb/2024 | [**Kmer0**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer0.pdf) Identificación de Kmeros. Clase Kmer <br>[Tests detallados](NetBeansProjects/Kmer0/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer0/TestReport.HowToTestUnitTests.md) | <ol><li>[**NetBeans 2**](#netbeans) <ul><li>Compilación separada</ul>| |
+|<a name="Semana2"></a>Semana2	26/feb/2024 | [**Kmer0**](PDFs/kmer0.pdf) Identificación de Kmeros. Clase Kmer <br>[Tests detallados](NetBeansProjects/Kmer0/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer0/TestReport.HowToTestUnitTests.md) | <ol><li>[**NetBeans 2**](#netbeans) <ul><li>Compilación separada</ul>| |
 |Semana3	4/mar/2024 | |<ol><li>[**NetBeans 3**](#netbeans) <ul><li>El [depurador](#depurador) de programas</ul>|  |
-|Semana4	11/mar/2024 |[**Kmer1**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer1.pdf)  Kmeros y frecuencias asociadas. Clase KmerFreq <br>[Tests detallados](NetBeansProjects/Kmer1/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer1/TestReport.HowToTestUnitTests.md)  |  |  <ol> <li>Calificador const para métodos y parámetros <li>Paso de parámetros por valor y referencia  <li> Devolución por valor y referencia <li>Paso de vectores a funciones y métodos </ol>|
+|Semana4	11/mar/2024 |[**Kmer1**](PDFs/kmer1.pdf)  Kmeros y frecuencias asociadas. Clase KmerFreq <br>[Tests detallados](NetBeansProjects/Kmer1/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer1/TestReport.HowToTestUnitTests.md)  |  |  <ol> <li>Calificador const para métodos y parámetros <li>Paso de parámetros por valor y referencia  <li> Devolución por valor y referencia <li>Paso de vectores a funciones y métodos </ol>|
 |Semana5	18/mar/2024 |  || |
 |Semana Santa	25/mar/2024 | **Semana Santa**| | |
-|Semana6	1/abr/2024 | [**Kmer2**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer2.pdf) Modelo de una especie. Clase Profile con vector estático <br>[Tests detallados](NetBeansProjects/Kmer2/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer2/TestReport.HowToTestUnitTests.md)| | <ol><li> Clases con vectores estáticos. <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes <li> Uso de [parámetros](#parametrosmain) desde la línea de comandos.  CStrings  </ol>|
+|Semana6	1/abr/2024 | [**Kmer2**](PDFs/kmer2.pdf) Modelo de una especie. Clase Profile con vector estático <br>[Tests detallados](NetBeansProjects/Kmer2/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer2/TestReport.HowToTestUnitTests.md)| | <ol><li> Clases con vectores estáticos. <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes <li> Uso de [parámetros](#parametrosmain) desde la línea de comandos.  CStrings  </ol>|
 |Semana7	8/abr/2024 | |
-|Semana8	15/abr/2024 |[**Kmer3**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer3.pdf) Cálculo de distancias entre profiles. Clase Profile con vector estático <br>[Tests detallados](NetBeansProjects/Kmer3/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer3/TestReport.HowToTestUnitTests.md) | [**valgrind**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/valgrind.pdf) Detección de pérdidas de memoria| <ol> <li> Uso de memoria dinámica en C++. <li> Arrays dinámicos. <li> Detección de pérdidas de memoria </ol>|
+|Semana8	15/abr/2024 |[**Kmer3**](PDFs/kmer3.pdf) Cálculo de distancias entre profiles. Clase Profile con vector estático <br>[Tests detallados](NetBeansProjects/Kmer3/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer3/TestReport.HowToTestUnitTests.md) | [**valgrind**](PDFs/valgrind.pdf) Detección de pérdidas de memoria| <ol> <li> Uso de memoria dinámica en C++. <li> Arrays dinámicos. <li> Detección de pérdidas de memoria </ol>|
 |Semana9	22/abr/2024 ||||
-|Semana10	29/abril/2024 | [**Kmer4**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer4.pdf) Cálculo de distancias entre profiles. Clase Profile con vector en memoria dinámica <br>[Tests detallados](NetBeansProjects/Kmer4/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer4/TestReport.HowToTestUnitTests.md) | | <ol><li>Clases con datos en memoria dinámica <li>Constructor de copia <li>Operador de asignación <li>Destructor</ol>|
+|Semana10	29/abril/2024 | [**Kmer4**](PDFs/kmer4.pdf) Cálculo de distancias entre profiles. Clase Profile con vector en memoria dinámica <br>[Tests detallados](NetBeansProjects/Kmer4/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer4/TestReport.HowToTestUnitTests.md) | | <ol><li>Clases con datos en memoria dinámica <li>Constructor de copia <li>Operador de asignación <li>Destructor</ol>|
 |Semana11	6/may/2024 |**Kmer4** <br>**Examen de laboratorio**<br>1 PUNTO | | |
-|Semana12	13/may/2024 |[**Kmer5**](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/kmer5.pdf) Aprendizaje y clasificación. Clase KmerCounter <br>[Tests detallados](NetBeansProjects/Kmer5/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer5/TestReport.HowToTestUnitTests.md) <br>2 PUNTOS | | <ol> <li>Sobrecarga de operadores. <li>Matrices bidimensionales dinámicas <li> Ficheros binarios .</ol>|
+|Semana12	13/may/2024 |[**Kmer5**](PDFs/kmer5.pdf) Aprendizaje y clasificación. Clase KmerCounter <br>[Tests detallados](NetBeansProjects/Kmer5/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer5/TestReport.HowToTestUnitTests.md) <br>2 PUNTOS | | <ol> <li>Sobrecarga de operadores. <li>Matrices bidimensionales dinámicas <li> Ficheros binarios .</ol>|
 |Semana13	20/may/2024 | | | |
 |Semana14	27/may/2024 | | | |
 |Semana15	3/jun/2024 | | | |
@@ -68,28 +68,28 @@ En esta sección encontrarás manuales y videotutoriales sobre temas específico
 
 ## <a name="netbeans"></a> El entorno de desarrollo NetBeans
 NetBeans es un entorno de desarrollo integrado libre y multiplataforma, creado principalmente para el lenguaje de programación Java, pero que ofrece soporte para otros muchos lenguajes de programación. Existe además un número importante de módulos para extenderlo. NetBeans es un producto libre y gratuito sin restricciones de uso. 
-- [Manual de referencia](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/netbeans.pdf)
+- [Manual de referencia](PDFs/netbeans.pdf)
 - <a name="prmerospasos"></a>Primeros pasos <ul><li>[Videotutorial](https://drive.google.com/file/d/1MFbCDJAiMJctlN_jPIfwlhWqPi0TGWiI/view?usp=sharing)</li>
    </ul>
-- <a name="helloworld"></a>Hello world!<ul><li>[Videotutorial](https://drive.google.com/drive/u/1/folders/1QOu1xYpdQd_FwKzcOo-HlXZ8dlmMcCSs)<li>Abrir [Proyecto Netbeans](https://github.com/andrescanoutrera/UGRMPBase/tree/main/NetBeansProjects/HelloWorld)<li>Vistas Lógica (Projects) y Física (Files) <li> Editor<li>Estándar C++14<li>Compilar y enlazar<li> Carpetas build y dist<li> Ejecutar<ul><li>Pestaña de salida del programa<li>Desde Netbeans<li>Desde la terminal de ordenes<li>Ficheros de datos de validación</ul></ul>
+- <a name="helloworld"></a>Hello world!<ul><li>[Videotutorial](https://drive.google.com/drive/u/1/folders/1QOu1xYpdQd_FwKzcOo-HlXZ8dlmMcCSs)<li>Abrir [Proyecto Netbeans](NetBeansProjects/HelloWorld)<li>Vistas Lógica (Projects) y Física (Files) <li> Editor<li>Estándar C++14<li>Compilar y enlazar<li> Carpetas build y dist<li> Ejecutar<ul><li>Pestaña de salida del programa<li>Desde Netbeans<li>Desde la terminal de ordenes<li>Ficheros de datos de validación</ul></ul>
 - Directivas del precompilador<ul><li>[Videotutorial](https://drive.google.com/file/d/1-nneQyafIa58DgtlcD3x2bCDXL93N1au/view?usp=sharing)</ul>
 
 ## <a name="doxygen"></a> Documentación con Doxygen
 
 Doxygen es un programa de apoyo a la documentación (comentarios) de proyectos de software que usa una sintaxis de anotación de los comentarios en el código que podríamos llamar, estándar, y común a otros lenguajes.
 
-- [Manual de doxygen](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/doxygen.pdf)
+- [Manual de doxygen](PDFs/doxygen.pdf)
 - [Videotutorial](https://drive.google.com/drive/u/1/folders/1Ki1RYMaBIORurj7MiQUqWsCBt_lsbPfv) 
 
 ## Compilación separada
 Es una metodología de desarrollo de proyectos de software que divide el proyecto en unidades funcionales, llamados módulos o paquetes o bibliotecas (librerías), que se compilan por separado y se enlazan en un único fichero
 
 - Primera parte.De un proyecto monolítico a un proyecto modularizado.
-  - <a name="mpgeometry"></a>Proyecto NetBeans [MPGeometry monolítico](https://github.com/andrescanoutrera/UGRMPBase/tree/main/NetBeansProjects/MPGeometry)
+  - <a name="mpgeometry"></a>Proyecto NetBeans [MPGeometry monolítico](NetBeansProjects/MPGeometry)
   - [Videotutorial]( https://drive.google.com/file/d/1-KiBquuuHJ5_zNeSLqWH88PqazuoTVmy/view?usp=sharin) modularización y compilación  separada
-  - Proyecto NetBeans [MPGeometry sep](https://github.com/andrescanoutrera/UGRMPBase/tree/main/NetBeansProjects/MPGeometrySep)
+  - Proyecto NetBeans [MPGeometry sep](NetBeansProjects/MPGeometrySep)
 
-  - Proyecto NetBeans [MPGeometry modularizado](https://github.com/andrescanoutrera/UGRMPBase/tree/main/NetBeansProjects/MPGeometry_MOD)
+  - Proyecto NetBeans [MPGeometry modularizado](NetBeansProjects/MPGeometry_MOD)
 - Segunda parte. Uso de bibliotecas (librerías)
   - [Videotutorial](https://drive.google.com/file/d/1m9pC3XWjz6BS9Srfu_4B_Bimw_jfw5xP/view?usp=sharing)
 
@@ -104,13 +104,13 @@ Es una metodología de desarrollo de proyectos software en la que primero se def
 - Pasar todos los tests unitarios. [Videotutorial](https://drive.google.com/file/d/1R0zEd_yxQ51Yo0N3VTNH-s7pYzgefXMg/view?usp=sharing)
 - Los tests de integración. [Videotutorial](https://drive.google.com/file/d/13weHJA5zQhC9YADoqyVhUHxc7WHoPE1O/view?usp=sharing)
 - Proyecto `MyVector`  
-- [Manual completo TDD](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/Adicional/TDDGTEST_V2.pdf)
+- [Manual completo TDD](PDFs/Adicional/TDDGTEST_V2.pdf)
 -->
 
 # <a name="depurador"></a>Depuración de programas
 El depurador es una herramienta que suele estar incorporada en los IDE (Integrated Development Environment) como NetBeans. Se utiliza para ejecutar el programa paso a paso e intentar encontrar errores en el código.
 
-- Manual sobre el [depurador de NetBeans](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/Debugger.pdf)
+- Manual sobre el [depurador de NetBeans](PDFs/Debugger.pdf)
 - [Videotutorial 1](https://drive.google.com/file/d/1vtFSsMQKnaHpsGD25TCPHCAdmDVJ_a1k/view?usp=sharing)
 - [Videotutorial 2](https://drive.google.com/file/d/1cStDUlagLLo_UQk5HOvZNWuqg3dxxCNl/view?usp=sharing)
 - Proyectos de NetBeans para depurar incluídos en el videotutorial: `Debugger1` `Debugger2` `Debugger3`
@@ -118,8 +118,8 @@ El depurador es una herramienta que suele estar incorporada en los IDE (Integrat
 # Detección de pérdidas de memoria y errores en la gestión de la memoria
 Valgrind es una herramienta para la detección, sobre todo, de pérdidas de memoria, pero también de otros problemas de gestión de la memoria dinámica.
 
-- Manual sobre el uso de [Valgrind](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/valgrind.pdf)
-<!-- - Manual sobre el uso de [Dr Memory](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/Adicional/drmemory.pdf) -->
+- Manual sobre el uso de [Valgrind](PDFs/valgrind.pdf)
+<!-- - Manual sobre el uso de [Dr Memory](Adicional/drmemory.pdf) -->
 - Proyecto Interactivo `ValgrindShowcase`
   - Descomprimir
   - Cargar en Netbeans
@@ -128,7 +128,7 @@ Valgrind es una herramienta para la detección, sobre todo, de pérdidas de memo
 # <a name="ficheros"></a>Manejo de ficheros de texto (muy básico)
 Los ficheros de texto permiten almacenar datos que  pueden leer los programas de forma masiva para procesarlos. Este apartado es una (muy breve) introducción al manejo de ficheros que se verá en teoría.
 
-- Manual sobre el manejo (muy básico) de [ficheros de texto](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/Ficheros.pdf)
+- Manual sobre el manejo (muy básico) de [ficheros de texto](PDFs/Ficheros.pdf)
 - Videotutorial 1. [Ficheros de entrada](https://drive.google.com/file/d/1A3ToJaVXrF1k2bl0dz2xz1e3Hu4arvR8/view?usp=sharing)
 - Videotutorial 2. [Ficheros de salida](https://drive.google.com/file/d/1xllMQyf0sQP-cfrGSabFi5shA4bUzMZc/view?usp=sharing)
 - Videotutorial 3. Gestión de [errores en el manejo de ficheros](https://drive.google.com/file/d/19us64WCMXZyEd5um_MuZpLp5IqQU3nMV/view?usp=sharing)
@@ -137,7 +137,7 @@ Los ficheros de texto permiten almacenar datos que  pueden leer los programas de
 
 Esta es una técnica muy habitual para introducir datos en un programa desde la línea de comandos. Absolutamente imprescindible en programas de consola de Linux/Unix.
 
-- Manual sobre el [paso de argumentos a main()](https://github.com/andrescanoutrera/UGRMPBase/blob/main/PDFs/ArgumentosMain.pdf)
+- Manual sobre el [paso de argumentos a main()](PDFs/ArgumentosMain.pdf)
 - [Videotutorial 1](https://drive.google.com/file/d/1xlVzVTwbFSWfhdaHGgNSq67bQo0c46nJ/view?usp=sharing)
 - [Videotutorial 2](https://drive.google.com/file/d/1HaYIyECXYuZ1FAMSlSB1P7PSj9qCXlXG/view?usp=sharing)
 
