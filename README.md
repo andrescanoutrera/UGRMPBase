@@ -4,8 +4,7 @@
 
 ![image](https://user-images.githubusercontent.com/9058636/154716516-2ef804b3-e2f4-4cdc-971e-771049323063.png)
 Para estar al día de las incidencias de la asignatura y tener contacto directo con los profesores puedes unirte al grupo de Telegram de algunas titulaciones
-- Grupo de Telegram del [Doble Grado Informática y Matemáticas](https://t.me/+QJjPGdaLXrRkOTVk)
-<!-- (https://t.me/+vdHQM93iAMthNGRk) -->
+<!-- - Grupo de Telegram del [Doble Grado Informática y Matemáticas](https://t.me/+QJjPGdaLXrRkOTVk) -->
 
 # <a name="preping"></a>Preparándolo todo
 -  [Videotutorial](https://drive.google.com/file/d/1VO7ib1QnUlEk1pHtn4F7D6QJwZZykgbo/view?usp=sharing) introducción a la asignatura.
@@ -45,7 +44,7 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 |Comienzo | Práctica <br> Entregable en Prado | Herramientas | Metodología
 | -----| -----|-----| ----- |
 |Semana1 19/feb/2024 || <ol><li>[**NetBeans 1**](#netbeans) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del proyecto [MP Geometry](#mpgeometry)<ul><li>Métodos `const`.<li>Parámetros por valor y por referencia. <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la enrtada</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MP Geometry](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MP Geometry](#mpgeometry)  <li> Opcional: Uso de bibliotecas con el proyecto [MP Geometry](#mpgeometry) </ol>|
-|<a name="Semana2"></a>Semana2	26/feb/2024 | [**Kmer0**](PDFs/kmer0.pdf) Identificación de Kmeros. Clase Kmer <br>[Tests detallados](NetBeansProjects/Kmer0/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer0/TestReport.HowToTestUnitTests.md) | <ol><li>[**NetBeans 2**](#netbeans) <ul><li>Compilación separada</ul>| |
+|<a name="Semana2"></a>Semana2	26/feb/2024 | [**Kmer0**](PDFs/kmer0.pdf) Identificación de Kmeros. Clase Kmer <br>[Tests detallados](NetBeansProjects/Kmer0/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer0/TestReport.HowToTestUnitTests.md) | <ol><li>[**NetBeans 2**](#netbeans) <ul><li>Compilación separada</ul>| <ol> <li>Calificador const para métodos y parámetros <li>Paso de parámetros por valor y referencia  <li> Devolución por valor y referencia </ol> |
 |Semana3	4/mar/2024 | |<ol><li>[**NetBeans 3**](#netbeans) <ul><li>El [depurador](#depurador) de programas</ul>|  |
 |Semana4	11/mar/2024 |[**Kmer1**](PDFs/kmer1.pdf)  Kmeros y frecuencias asociadas. Clase KmerFreq <br>[Tests detallados](NetBeansProjects/Kmer1/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer1/TestReport.HowToTestUnitTests.md)  |  |  <ol> <li>Calificador const para métodos y parámetros <li>Paso de parámetros por valor y referencia  <li> Devolución por valor y referencia <li>Paso de vectores a funciones y métodos </ol>|
 |Semana5	18/mar/2024 |  || |
