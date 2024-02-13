@@ -1,0 +1,8 @@
+%%%CALL -t max ../Genomes/7pairsDNA.prf ../Genomes/7pairsDNA.prf
+%%%VALGRIND
+%%%DESCRIPTION Max distance from 7pairsDNA.prf to 7pairsDNA.prf
+%%%OUTPUT
+Distance to ../Genomes/7pairsDNA.prf: 0
+Farthest profile file: ../Genomes/7pairsDNA.prf
+Identifier of the farthest profile: red bug
+
