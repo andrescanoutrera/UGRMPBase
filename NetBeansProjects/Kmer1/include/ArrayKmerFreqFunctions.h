@@ -66,8 +66,10 @@ int FindKmerInArrayKmerFreq(KmerFreq array[], Kmer kmer,
         int initialPos, int finalPos);
 
 /**
- * @brief Sorts the given array of KmerFreq in decreasing order of 
- * frequency using the selection sort algorithm
+ * @brief Sorts the given array of KmerFreq in decreasing order of
+ * frequency using a sort algorithm.
+ * Note: It is not allowed to use any sorting algorithm available in any
+ * C++ library.
  * @param array An array of KmerFreq. Input/output parameter
  * @param nElements The number of elements used by the array. Input parameter
 */
