@@ -1,0 +1,9 @@
+%%%CALL -k 2 ../Genomes/human1.dna ../Genomes/human_chr6_s60000_l500000_k2.prf ../Genomes/drosophila_chr2L_k2.prf
+%%%VALGRIND
+%%%DESCRIPTION Classify a short DNA file (human1.dna) using k=2 [CLASSIFY ../Genomes/human1.dna ../Genomes/human_chr6_s60000_l500000_k2.prf ../Genomes/drosophila_chr2L_k2.prf]
+%%%RELEASE CLASSIFY
+%%%OUTPUT
+Distance to ../Genomes/human_chr6_s60000_l500000_k2.prf (homo sapiens): 0.257812
+Distance to ../Genomes/drosophila_chr2L_k2.prf (drosophila melanogaster): 0.34375
+
+Final decision: homo sapiens with a distance of 0.257812

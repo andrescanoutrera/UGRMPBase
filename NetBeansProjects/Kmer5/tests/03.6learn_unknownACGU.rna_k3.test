@@ -1,0 +1,13 @@
+%%%CALL -k 3 -p bug -o tests/output/unknownACGU_k3.prf ../Genomes/unknownACGU.rna
+%%%VALGRIND
+%%%DESCRIPTION Learn from a very short RNA file (unknownACGU.rna) using k=3 [LEARN -k 3 -n ACGU -p bug -o tests/output/unknownACGU_k3.prf ../Genomes/unknownACGU.rna]
+%%%RELEASE LEARN
+%%%FROMFILE tests/output/unknownACGU_k3.prf
+%%%OUTPUT
+MP-KMER-T-1.0
+bug
+4
+GGG 4
+AAA 2
+AAG 1
+AGG 1

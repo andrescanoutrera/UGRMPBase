@@ -1,0 +1,17 @@
+%%%CALL -n ACGU -p bug -o tests/output/unknownACGU.prf ../Genomes/unknownACGU.rna
+%%%VALGRIND
+%%%DESCRIPTION Learn from a very short RNA file (unknownACGU.rna) using the default value for k [LEARN -n ACGU -p bug -o tests/output/unknownACGU.prf ../Genomes/unknownACGU.rna]
+%%%RELEASE LEARN
+%%%FROMFILE tests/output/unknownACGU.prf
+%%%OUTPUT
+MP-KMER-T-1.0
+bug
+8
+GGGGG 2
+AAAAG 1
+AAAGG 1
+AAGGG 1
+AGGGG 1
+GGGGU 1
+GGGUC 1
+GGUCC 1

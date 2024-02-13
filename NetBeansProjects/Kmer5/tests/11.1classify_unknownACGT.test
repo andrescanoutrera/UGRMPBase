@@ -1,0 +1,9 @@
+%%%CALL ../Genomes/unknownACGT.dna ../Genomes/human_chr6_s60000_l500000.prf ../Genomes/drosophila_chr2L_s1_l500000.prf 
+%%%VALGRIND
+%%%DESCRIPTION Classify a very short DNA file (unknownACGT.dna) using the default value for k [CLASSIFY ../Genomes/unknownACGT.dna ../Genomes/human_chr6_s60000_l500000_k2.prf ../Genomes/drosophila_chr2L_k2.prf]
+%%%RELEASE CLASSIFY
+%%%OUTPUT
+Distance to ../Genomes/human_chr6_s60000_l500000.prf (homo sapiens): 0.583984
+Distance to ../Genomes/drosophila_chr2L_s1_l500000.prf (drosophila melanogaster): 0.88457
+
+Final decision: homo sapiens with a distance of 0.583984

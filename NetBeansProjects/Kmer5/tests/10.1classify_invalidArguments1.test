@@ -1,0 +1,15 @@
+%%%CALL -K 5 ../Genomes/human1.dna ../Genomes/human2.prf ../Genomes/mouse1.prf
+%%%VALGRIND
+%%%DESCRIPTION Classify: Running with invalid arguments (-K is not valid) [CLASSIFY -K 5 ../Genomes/human1.dna ../Genomes/human2.prf ../Genomes/mouse1.prf]
+%%%RELEASE CLASSIFY
+%%%OUTPUT
+ERROR in CLASSIFY parameters
+Run with the following parameters:
+CLASSIFY [-k kValue] [-n nucleotidesSet] <file.dna> <profile1.prf> [<profile2.prf> <profile3.prf> ....]
+
+Parameters:
+-k kValue: number of nucleotides in a kmer (5 by default)
+-n nucletiodesSet: set of possible nucleotides in a kmer (ACGT by default). It is used when learning a model for <file.dna>. Note that the characters should be provided in uppercase
+<profile1.prf> [<profile2.prf> <profile3.prf> ....] ....: names of the Profile models (at least one is mandatory)
+
+This program obtains the identifier of the closest profile to the input DNA file

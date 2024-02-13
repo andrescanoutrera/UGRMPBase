@@ -1,0 +1,78 @@
+\hypertarget{Profile_8h}{}\doxysection{include/\+Profile.h File Reference}
+\label{Profile_8h}\index{include/Profile.h@{include/Profile.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}Kmer\+Freq.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classProfile}{Profile}}
+\begin{DoxyCompactList}\small\item\em It defines a model (profile) for a given biological species. It contains a vector of pairs Kmer-\/frequency (objects of the class \mbox{\hyperlink{classKmerFreq}{Kmer\+Freq}}) and an identifier (string) of the profile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{Profile_8h_a10394d473203a176a1a8fa88371161d2}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classProfile}{Profile}} \&profile)
+\begin{DoxyCompactList}\small\item\em Overloading of the stream insertion operator for \mbox{\hyperlink{classProfile}{Profile}} class. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{Profile_8h_a35e66464cb94e0ee554f9bfe75450ef0}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{classProfile}{Profile}} \&profile)
+\begin{DoxyCompactList}\small\item\em Overloading of the stream extraction operator for \mbox{\hyperlink{classProfile}{Profile}} class. Note that this operator should remove any Kmer-\/frequency pairs that the argument \mbox{\hyperlink{classProfile}{Profile}} object previously contained. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Silvia Acid Carrillo \href{mailto:acid@decsai.ugr.es}{\texttt{ acid@decsai.\+ugr.\+es}} 
+
+Andrés Cano Utrera \href{mailto:acu@decsai.ugr.es}{\texttt{ acu@decsai.\+ugr.\+es}} 
+
+Luis Castillo Vidal \href{mailto:L.Castillo@decsai.ugr.es}{\texttt{ L.\+Castillo@decsai.\+ugr.\+es}}
+\end{DoxyAuthor}
+Created on 31 October 2023, 9\+:40 
+
+Definition in file \mbox{\hyperlink{Profile_8h_source}{Profile.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Profile_8h_a10394d473203a176a1a8fa88371161d2}\label{Profile_8h_a10394d473203a176a1a8fa88371161d2}} 
+\index{Profile.h@{Profile.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Profile.h@{Profile.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classProfile}{Profile}} \&}]{profile }\end{DoxyParamCaption})}
+
+
+
+Overloading of the stream insertion operator for \mbox{\hyperlink{classProfile}{Profile}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to be used \\
+\hline
+{\em profile} & the \mbox{\hyperlink{classProfile}{Profile}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily os} A reference to the output stream 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Profile_8h_a35e66464cb94e0ee554f9bfe75450ef0}\label{Profile_8h_a35e66464cb94e0ee554f9bfe75450ef0}} 
+\index{Profile.h@{Profile.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Profile.h@{Profile.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{classProfile}{Profile}} \&}]{profile }\end{DoxyParamCaption})}
+
+
+
+Overloading of the stream extraction operator for \mbox{\hyperlink{classProfile}{Profile}} class. Note that this operator should remove any Kmer-\/frequency pairs that the argument \mbox{\hyperlink{classProfile}{Profile}} object previously contained. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & Throws a std\+::out\+\_\+of\+\_\+range if the number of kmers read from the file is negative. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em is} & The input stream to be used \\
+\hline
+{\em profile} & the \mbox{\hyperlink{classProfile}{Profile}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily is} A reference to the input stream 
+\end{DoxyReturn}

@@ -1,0 +1,136 @@
+\hypertarget{JOIN_8cpp}{}\doxysection{src/\+JOIN.cpp File Reference}
+\label{JOIN_8cpp}\index{src/JOIN.cpp@{src/JOIN.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cstring$>$}\newline
+{\ttfamily \#include \char`\"{}Bigram\+Counter.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Language.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{JOIN_8cpp_a82208e7f47d4a50db15e00036cfdf73a}{show\+English\+Help}} (ostream \&output\+Stream)
+\item 
+int \mbox{\hyperlink{JOIN_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Silvia Acid Carrillo \href{mailto:acid@decsai.ugr.es}{\texttt{ acid@decsai.\+ugr.\+es}} 
+
+Andrés Cano Utrera \href{mailto:acu@decsai.ugr.es}{\texttt{ acu@decsai.\+ugr.\+es}} 
+
+Luis Castillo Vidal \href{mailto:L.Castillo@decsai.ugr.es}{\texttt{ L.\+Castillo@decsai.\+ugr.\+es}}
+\end{DoxyAuthor}
+Created on 29 January 2023, 11\+:00 
+
+Definition in file \mbox{\hyperlink{JOIN_8cpp_source}{JOIN.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{JOIN_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\label{JOIN_8cpp_a0ddf1224851353fc92bfbff6f499fa97}} 
+\index{JOIN.cpp@{JOIN.cpp}!main@{main}}
+\index{main@{main}!JOIN.cpp@{JOIN.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+This program reads an undefined number of Language objects from the files passed as parameters to \mbox{\hyperlink{JOIN_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main()}}. It obtains as result the union of all the input Language objects. The result is then sorted by decreasing order of frequency and alphabetical order of bigrams when there is any tie in frequencies. Finally, the resulting Language is saved in an output file. The program must have at least an input file. Running example\+: \begin{quote}
+ JOIN \mbox{[}-\/t$\vert$-\/b\mbox{]} \mbox{[}-\/o \texorpdfstring{$<$}{<}output\+File.\+bgr\texorpdfstring{$>$}{>}\mbox{]} \texorpdfstring{$<$}{<}file1.\+bgr\texorpdfstring{$>$}{>} \mbox{[}\texorpdfstring{$<$}{<}file2.\+bgr\texorpdfstring{$>$}{>} ... \texorpdfstring{$<$}{<}filen.\+bgr\texorpdfstring{$>$}{>}\mbox{]} \end{quote}
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & The number of command line parameters \\
+\hline
+{\em argv} & The vector of command line parameters (cstrings) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 If there is no error; a value \texorpdfstring{$>$}{>} 0 if error 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{JOIN_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{JOIN_8cpp_source}{JOIN.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ Language\ inputLanguage,\ inputLanguageAux;}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{string}\ outputFileName\ =\ \textcolor{stringliteral}{"{}output.bgr"{}};}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{int}\ nInputFiles;}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{int}\ firstInputFileArg\ =\ -\/1,\ \textcolor{comment}{//\ position\ in\ argv\ of\ the\ first\ input\ file\ name}}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ lastInputFileArg\ =\ -\/1;\ \textcolor{comment}{//\ position\ in\ argv\ of\ the\ last\ input\ file\ name}}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{char}\ mode\ =\ \textcolor{charliteral}{'t'};\ \textcolor{comment}{//\ text\ mode\ ('t')\ or\ binary\ ('b')}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{bool}\ hasBeenReadInitialParameters\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ true\ if\ all\ the\ parameters\ with\ -\/\ has\ been\ read}}
+\DoxyCodeLine{00061\ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ argc\ \&\&\ !hasBeenReadInitialParameters;\ ++i)\ \{\ \textcolor{comment}{//\ Loop\ to\ process\ the\ main()\ parameters}}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (argv[i][0]\ ==\ \textcolor{charliteral}{'-\/'}\ \&\&\ !hasBeenReadInitialParameters)\ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(strcmp(argv[i],\ \textcolor{stringliteral}{"{}-\/t"{}})\ ==\ 0)\{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mode\ =\ \textcolor{charliteral}{'t'};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(strcmp(argv[i],\ \textcolor{stringliteral}{"{}-\/b"{}})\ ==\ 0)\{}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mode\ =\ \textcolor{charliteral}{'b'};}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (strcmp(argv[i],\ \textcolor{stringliteral}{"{}-\/o"{}})\ ==\ 0)\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((i\ +\ 1)\ <\ argc)\ \{\ \textcolor{comment}{//\ If\ at\ least\ another\ parameter\ is\ provided\ (output\ file\ name)\ }}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outputFileName\ =\ argv[i\ +\ 1];}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ++i;\ }
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ }
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{JOIN_8cpp_a82208e7f47d4a50db15e00036cfdf73a}{showEnglishHelp}}(cerr);}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ hasBeenReadInitialParameters\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ firstInputFileArg\ =\ i;}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \}}
+\DoxyCodeLine{00086\ \ \ \ \ lastInputFileArg\ =\ argc-\/1;}
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keywordflow}{if}\ (firstInputFileArg\ <\ 0)\ \{}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{JOIN_8cpp_a82208e7f47d4a50db15e00036cfdf73a}{showEnglishHelp}}(cerr);}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00090\ \ \ \ \ \}\ }
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00092\ \ \ \ \ inputLanguage.load(argv[firstInputFileArg]);}
+\DoxyCodeLine{00093\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ firstInputFileArg+1;\ i\ <=\ lastInputFileArg;\ i++)\ \{}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ inputLanguageAux.load(argv[i]);}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(inputLanguageAux.getLanguageId()\ ==\ inputLanguage.getLanguageId())\{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ inputLanguage+=inputLanguageAux;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00098\ \ \ \ \ \}}
+\DoxyCodeLine{00099\ \ \ \ \ inputLanguage.sort();}
+\DoxyCodeLine{00100\ \ \ \ \ inputLanguage.save(outputFileName.c\_str(),mode);}
+\DoxyCodeLine{00101\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00102\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{JOIN_8cpp_a82208e7f47d4a50db15e00036cfdf73a}\label{JOIN_8cpp_a82208e7f47d4a50db15e00036cfdf73a}} 
+\index{JOIN.cpp@{JOIN.cpp}!showEnglishHelp@{showEnglishHelp}}
+\index{showEnglishHelp@{showEnglishHelp}!JOIN.cpp@{JOIN.cpp}}
+\doxysubsubsection{\texorpdfstring{showEnglishHelp()}{showEnglishHelp()}}
+{\footnotesize\ttfamily void show\+English\+Help (\begin{DoxyParamCaption}\item[{ostream \&}]{output\+Stream }\end{DoxyParamCaption})}
+
+Shows help about the use of this program in the given output stream 
+\begin{DoxyParams}{Parameters}
+{\em output\+Stream} & The output stream where the help will be shown (for example, cout, cerr, etc) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{JOIN_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{JOIN_8cpp_source}{JOIN.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00029\ \ \ \ \ outputStream\ <<\ \textcolor{stringliteral}{"{}Error,\ run\ with\ the\ following\ parameters:"{}}\ <<\ endl;}
+\DoxyCodeLine{00030\ \ \ \ \ outputStream\ <<\ \textcolor{stringliteral}{"{}JOIN\ [-\/t|-\/b]\ [-\/o\ <outputFile.bgr>]\ <file1.bgr>\ [<file2.bgr>\ ...\ <filen.bgr>]\ "{}}\ <<\ endl;}
+\DoxyCodeLine{00031\ \ \ \ \ outputStream\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ \ \ \ join\ the\ Language\ files\ <file1.bgr>\ <file2.bgr>\ ...\ into\ <outputFile.bgr>"{}}\ <<\ endl;}
+\DoxyCodeLine{00032\ \ \ \ \ outputStream\ <<\ endl;}
+\DoxyCodeLine{00033\ \ \ \ \ outputStream\ <<\ \textcolor{stringliteral}{"{}Parameters:"{}}\ <<\ endl;}
+\DoxyCodeLine{00034\ \ \ \ \ outputStream\ <<\ \textcolor{stringliteral}{"{}-\/t|-\/b:\ text\ mode\ or\ binary\ mode\ for\ the\ output\ file\ (-\/t\ by\ default)"{}}\ <<\ endl;}
+\DoxyCodeLine{00035\ \ \ \ \ outputStream\ <<\ \textcolor{stringliteral}{"{}-\/o\ <outputFile.bgr>:\ name\ of\ the\ output\ file\ (output.bgr\ by\ default)"{}}\ <<\ endl;}
+\DoxyCodeLine{00036\ \ \ \ \ outputStream\ <<\ \textcolor{stringliteral}{"{}<file*.bgr>:\ each\ one\ of\ the\ files\ to\ be\ joined"{}}\ <<\ endl;}
+\DoxyCodeLine{00037\ \}}
+
+\end{DoxyCode}

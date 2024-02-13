@@ -1,0 +1,14 @@
+%%%CALL -k 1 -p 'homo sapiens' -o tests/output/human1_k1.prf ../Genomes/human1.dna
+%%%VALGRIND
+%%%DESCRIPTION Learn from a short DNA file (human1.dna) using k=1 [LEARN -k 1 -p "homo sapiens" -o tests/output/human1_k1.prf ../Genomes/human1.dna]
+%%%RELEASE LEARN
+%%%FROMFILE tests/output/human1_k1.prf
+%%%OUTPUT
+MP-KMER-T-1.0
+homo sapiens
+4
+G 2816
+C 2615
+A 2291
+T 2278
+

@@ -1,0 +1,178 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Deprecated List}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Class Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Class List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}File Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}File List}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Class Documentation}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Kmer Class Reference}{7}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Detailed Description}{8}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Constructor \& Destructor Documentation}{8}{subsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Kmer()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{8}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}Kmer()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{9}{subsubsection.4.1.2.2}%
+\contentsline {subsection}{\numberline {4.1.3}Member Function Documentation}{9}{subsection.4.1.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.1}at()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{9}{subsubsection.4.1.3.1}%
+\contentsline {subsubsection}{\numberline {4.1.3.2}at()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{10}{subsubsection.4.1.3.2}%
+\contentsline {subsubsection}{\numberline {4.1.3.3}complementary()}{11}{subsubsection.4.1.3.3}%
+\contentsline {subsubsection}{\numberline {4.1.3.4}getK()}{11}{subsubsection.4.1.3.4}%
+\contentsline {subsubsection}{\numberline {4.1.3.5}normalize()}{12}{subsubsection.4.1.3.5}%
+\contentsline {subsubsection}{\numberline {4.1.3.6}operator[]()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{12}{subsubsection.4.1.3.6}%
+\contentsline {subsubsection}{\numberline {4.1.3.7}operator[]()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{13}{subsubsection.4.1.3.7}%
+\contentsline {subsubsection}{\numberline {4.1.3.8}read()}{13}{subsubsection.4.1.3.8}%
+\contentsline {subsubsection}{\numberline {4.1.3.9}size()}{13}{subsubsection.4.1.3.9}%
+\contentsline {subsubsection}{\numberline {4.1.3.10}toLower()}{14}{subsubsection.4.1.3.10}%
+\contentsline {subsubsection}{\numberline {4.1.3.11}toString()}{14}{subsubsection.4.1.3.11}%
+\contentsline {subsubsection}{\numberline {4.1.3.12}toUpper()}{14}{subsubsection.4.1.3.12}%
+\contentsline {subsubsection}{\numberline {4.1.3.13}write()}{14}{subsubsection.4.1.3.13}%
+\contentsline {subsection}{\numberline {4.1.4}Friends And Related Function Documentation}{15}{subsection.4.1.4}%
+\contentsline {subsubsection}{\numberline {4.1.4.1}operator$<$$<$}{15}{subsubsection.4.1.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.4.2}operator$>$$>$}{16}{subsubsection.4.1.4.2}%
+\contentsline {subsection}{\numberline {4.1.5}Member Data Documentation}{16}{subsection.4.1.5}%
+\contentsline {subsubsection}{\numberline {4.1.5.1}MISSING\_NUCLEOTIDE}{16}{subsubsection.4.1.5.1}%
+\contentsline {section}{\numberline {4.2}Kmer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Counter Class Reference}{16}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Detailed Description}{17}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Constructor \& Destructor Documentation}{18}{subsection.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.1}KmerCounter()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{18}{subsubsection.4.2.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2.2}KmerCounter()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{18}{subsubsection.4.2.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.2.3}$\sim $KmerCounter()}{19}{subsubsection.4.2.2.3}%
+\contentsline {subsection}{\numberline {4.2.3}Member Function Documentation}{19}{subsection.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.1}calculateFrequencies()}{19}{subsubsection.4.2.3.1}%
+\contentsline {subsubsection}{\numberline {4.2.3.2}getK()}{20}{subsubsection.4.2.3.2}%
+\contentsline {subsubsection}{\numberline {4.2.3.3}getNumberActiveKmers()}{20}{subsubsection.4.2.3.3}%
+\contentsline {subsubsection}{\numberline {4.2.3.4}getNumKmers()}{20}{subsubsection.4.2.3.4}%
+\contentsline {subsubsection}{\numberline {4.2.3.5}getNumNucleotides()}{21}{subsubsection.4.2.3.5}%
+\contentsline {subsubsection}{\numberline {4.2.3.6}increaseFrequency()}{21}{subsubsection.4.2.3.6}%
+\contentsline {subsubsection}{\numberline {4.2.3.7}operator+=()}{22}{subsubsection.4.2.3.7}%
+\contentsline {subsubsection}{\numberline {4.2.3.8}operator=()}{22}{subsubsection.4.2.3.8}%
+\contentsline {subsubsection}{\numberline {4.2.3.9}toProfile()}{23}{subsubsection.4.2.3.9}%
+\contentsline {subsection}{\numberline {4.2.4}Member Data Documentation}{23}{subsection.4.2.4}%
+\contentsline {subsubsection}{\numberline {4.2.4.1}DEFAULT\_VALID\_NUCLEOTIDES}{24}{subsubsection.4.2.4.1}%
+\contentsline {section}{\numberline {4.3}Kmer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Freq Class Reference}{24}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Detailed Description}{25}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Constructor \& Destructor Documentation}{25}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}KmerFreq()}{25}{subsubsection.4.3.2.1}%
+\contentsline {subsection}{\numberline {4.3.3}Member Function Documentation}{25}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}getFrequency()}{25}{subsubsection.4.3.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.3.2}getKmer()}{26}{subsubsection.4.3.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.3.3}read()}{26}{subsubsection.4.3.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.4}setFrequency()}{26}{subsubsection.4.3.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.3.5}setKmer()}{27}{subsubsection.4.3.3.5}%
+\contentsline {subsubsection}{\numberline {4.3.3.6}toString()}{27}{subsubsection.4.3.3.6}%
+\contentsline {subsubsection}{\numberline {4.3.3.7}write()}{27}{subsubsection.4.3.3.7}%
+\contentsline {subsection}{\numberline {4.3.4}Friends And Related Function Documentation}{28}{subsection.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.3.4.1}operator$<$$<$}{28}{subsubsection.4.3.4.1}%
+\contentsline {subsubsection}{\numberline {4.3.4.2}operator$>$$>$}{28}{subsubsection.4.3.4.2}%
+\contentsline {section}{\numberline {4.4}Profile Class Reference}{29}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Detailed Description}{31}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Constructor \& Destructor Documentation}{31}{subsection.4.4.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.1}Profile()\hspace {0.1cm}{\footnotesize \ttfamily [1/3]}}{31}{subsubsection.4.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.4.2.2}Profile()\hspace {0.1cm}{\footnotesize \ttfamily [2/3]}}{31}{subsubsection.4.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.4.2.3}Profile()\hspace {0.1cm}{\footnotesize \ttfamily [3/3]}}{32}{subsubsection.4.4.2.3}%
+\contentsline {subsubsection}{\numberline {4.4.2.4}$\sim $Profile()}{32}{subsubsection.4.4.2.4}%
+\contentsline {subsection}{\numberline {4.4.3}Member Function Documentation}{32}{subsection.4.4.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.1}append()}{32}{subsubsection.4.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.4.3.2}at()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{33}{subsubsection.4.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.4.3.3}at()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{33}{subsubsection.4.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.4.3.4}deletePos()}{34}{subsubsection.4.4.3.4}%
+\contentsline {subsubsection}{\numberline {4.4.3.5}findKmer()}{34}{subsubsection.4.4.3.5}%
+\contentsline {subsubsection}{\numberline {4.4.3.6}getCapacity()}{35}{subsubsection.4.4.3.6}%
+\contentsline {subsubsection}{\numberline {4.4.3.7}getDistance()}{35}{subsubsection.4.4.3.7}%
+\contentsline {subsubsection}{\numberline {4.4.3.8}getProfileId()}{36}{subsubsection.4.4.3.8}%
+\contentsline {subsubsection}{\numberline {4.4.3.9}getSize()}{37}{subsubsection.4.4.3.9}%
+\contentsline {subsubsection}{\numberline {4.4.3.10}load()}{37}{subsubsection.4.4.3.10}%
+\contentsline {subsubsection}{\numberline {4.4.3.11}normalize()}{38}{subsubsection.4.4.3.11}%
+\contentsline {subsubsection}{\numberline {4.4.3.12}operator+=()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{38}{subsubsection.4.4.3.12}%
+\contentsline {subsubsection}{\numberline {4.4.3.13}operator+=()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{39}{subsubsection.4.4.3.13}%
+\contentsline {subsubsection}{\numberline {4.4.3.14}operator=()}{39}{subsubsection.4.4.3.14}%
+\contentsline {subsubsection}{\numberline {4.4.3.15}operator[]()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{40}{subsubsection.4.4.3.15}%
+\contentsline {subsubsection}{\numberline {4.4.3.16}operator[]()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{40}{subsubsection.4.4.3.16}%
+\contentsline {subsubsection}{\numberline {4.4.3.17}save()}{41}{subsubsection.4.4.3.17}%
+\contentsline {subsubsection}{\numberline {4.4.3.18}setProfileId()}{42}{subsubsection.4.4.3.18}%
+\contentsline {subsubsection}{\numberline {4.4.3.19}sort()}{42}{subsubsection.4.4.3.19}%
+\contentsline {subsubsection}{\numberline {4.4.3.20}toString()}{42}{subsubsection.4.4.3.20}%
+\contentsline {subsubsection}{\numberline {4.4.3.21}zip()}{43}{subsubsection.4.4.3.21}%
+\contentsline {subsection}{\numberline {4.4.4}Friends And Related Function Documentation}{43}{subsection.4.4.4}%
+\contentsline {subsubsection}{\numberline {4.4.4.1}operator$<$$<$}{44}{subsubsection.4.4.4.1}%
+\contentsline {subsubsection}{\numberline {4.4.4.2}operator$>$$>$}{44}{subsubsection.4.4.4.2}%
+\contentsline {chapter}{\numberline {5}File Documentation}{45}{chapter.5}%
+\contentsline {section}{\numberline {5.1}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kmer.h File Reference}{45}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Detailed Description}{46}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Function Documentation}{46}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}IsValidNucleotide()}{46}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}operator"!=()}{46}{subsubsection.5.1.2.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}operator$<$()}{47}{subsubsection.5.1.2.3}%
+\contentsline {subsubsection}{\numberline {5.1.2.4}operator$<$$<$()}{47}{subsubsection.5.1.2.4}%
+\contentsline {subsubsection}{\numberline {5.1.2.5}operator$<$=()}{48}{subsubsection.5.1.2.5}%
+\contentsline {subsubsection}{\numberline {5.1.2.6}operator==()}{48}{subsubsection.5.1.2.6}%
+\contentsline {subsubsection}{\numberline {5.1.2.7}operator$>$()}{49}{subsubsection.5.1.2.7}%
+\contentsline {subsubsection}{\numberline {5.1.2.8}operator$>$=()}{49}{subsubsection.5.1.2.8}%
+\contentsline {subsubsection}{\numberline {5.1.2.9}operator$>$$>$()}{49}{subsubsection.5.1.2.9}%
+\contentsline {subsubsection}{\numberline {5.1.2.10}ToLower()}{51}{subsubsection.5.1.2.10}%
+\contentsline {subsubsection}{\numberline {5.1.2.11}ToUpper()}{51}{subsubsection.5.1.2.11}%
+\contentsline {section}{\numberline {5.2}Kmer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{52}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Kmer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Counter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{53}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Kmer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Freq.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{54}{section.5.4}%
+\contentsline {section}{\numberline {5.5}include/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Profile.h File Reference}{55}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{55}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Function Documentation}{55}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}operator$<$$<$()}{55}{subsubsection.5.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.5.2.2}operator$>$$>$()}{56}{subsubsection.5.5.2.2}%
+\contentsline {section}{\numberline {5.6}Profile.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{56}{section.5.6}%
+\contentsline {section}{\numberline {5.7}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}CLASSIFY.cpp File Reference}{58}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{58}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Function Documentation}{58}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}main()}{58}{subsubsection.5.7.2.1}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}showEnglishHelp()}{59}{subsubsection.5.7.2.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.3}showSpanishHelp()}{59}{subsubsection.5.7.2.3}%
+\contentsline {section}{\numberline {5.8}CLASSIFY.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{60}{section.5.8}%
+\contentsline {section}{\numberline {5.9}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}JOIN.cpp File Reference}{60}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Detailed Description}{61}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Function Documentation}{61}{subsection.5.9.2}%
+\contentsline {subsubsection}{\numberline {5.9.2.1}main()}{61}{subsubsection.5.9.2.1}%
+\contentsline {subsubsection}{\numberline {5.9.2.2}showEnglishHelp()}{62}{subsubsection.5.9.2.2}%
+\contentsline {section}{\numberline {5.10}JOIN.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{62}{section.5.10}%
+\contentsline {section}{\numberline {5.11}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kmer.cpp File Reference}{64}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Detailed Description}{64}{subsection.5.11.1}%
+\contentsline {subsection}{\numberline {5.11.2}Function Documentation}{64}{subsection.5.11.2}%
+\contentsline {subsubsection}{\numberline {5.11.2.1}IsValidNucleotide()}{65}{subsubsection.5.11.2.1}%
+\contentsline {subsubsection}{\numberline {5.11.2.2}operator"!=()}{65}{subsubsection.5.11.2.2}%
+\contentsline {subsubsection}{\numberline {5.11.2.3}operator$<$()}{65}{subsubsection.5.11.2.3}%
+\contentsline {subsubsection}{\numberline {5.11.2.4}operator$<$$<$()}{66}{subsubsection.5.11.2.4}%
+\contentsline {subsubsection}{\numberline {5.11.2.5}operator$<$=()}{66}{subsubsection.5.11.2.5}%
+\contentsline {subsubsection}{\numberline {5.11.2.6}operator==()}{67}{subsubsection.5.11.2.6}%
+\contentsline {subsubsection}{\numberline {5.11.2.7}operator$>$()}{67}{subsubsection.5.11.2.7}%
+\contentsline {subsubsection}{\numberline {5.11.2.8}operator$>$=()}{68}{subsubsection.5.11.2.8}%
+\contentsline {subsubsection}{\numberline {5.11.2.9}operator$>$$>$()}{68}{subsubsection.5.11.2.9}%
+\contentsline {subsubsection}{\numberline {5.11.2.10}ToLower()}{69}{subsubsection.5.11.2.10}%
+\contentsline {subsubsection}{\numberline {5.11.2.11}ToUpper()}{69}{subsubsection.5.11.2.11}%
+\contentsline {section}{\numberline {5.12}Kmer.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{70}{section.5.12}%
+\contentsline {section}{\numberline {5.13}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kmer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Counter.cpp File Reference}{72}{section.5.13}%
+\contentsline {subsection}{\numberline {5.13.1}Detailed Description}{72}{subsection.5.13.1}%
+\contentsline {section}{\numberline {5.14}Kmer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Counter.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{72}{section.5.14}%
+\contentsline {section}{\numberline {5.15}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Kmer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Freq.cpp File Reference}{76}{section.5.15}%
+\contentsline {subsection}{\numberline {5.15.1}Detailed Description}{76}{subsection.5.15.1}%
+\contentsline {subsection}{\numberline {5.15.2}Function Documentation}{77}{subsection.5.15.2}%
+\contentsline {subsubsection}{\numberline {5.15.2.1}operator"!=()}{77}{subsubsection.5.15.2.1}%
+\contentsline {subsubsection}{\numberline {5.15.2.2}operator$<$()}{77}{subsubsection.5.15.2.2}%
+\contentsline {subsubsection}{\numberline {5.15.2.3}operator$<$$<$()}{78}{subsubsection.5.15.2.3}%
+\contentsline {subsubsection}{\numberline {5.15.2.4}operator$<$=()}{78}{subsubsection.5.15.2.4}%
+\contentsline {subsubsection}{\numberline {5.15.2.5}operator==()}{78}{subsubsection.5.15.2.5}%
+\contentsline {subsubsection}{\numberline {5.15.2.6}operator$>$()}{80}{subsubsection.5.15.2.6}%
+\contentsline {subsubsection}{\numberline {5.15.2.7}operator$>$=()}{80}{subsubsection.5.15.2.7}%
+\contentsline {subsubsection}{\numberline {5.15.2.8}operator$>$$>$()}{81}{subsubsection.5.15.2.8}%
+\contentsline {section}{\numberline {5.16}Kmer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Freq.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{81}{section.5.16}%
+\contentsline {section}{\numberline {5.17}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}LEARN.cpp File Reference}{82}{section.5.17}%
+\contentsline {subsection}{\numberline {5.17.1}Detailed Description}{83}{subsection.5.17.1}%
+\contentsline {subsection}{\numberline {5.17.2}Function Documentation}{83}{subsection.5.17.2}%
+\contentsline {subsubsection}{\numberline {5.17.2.1}main()}{83}{subsubsection.5.17.2.1}%
+\contentsline {subsubsection}{\numberline {5.17.2.2}showEnglishHelp()}{85}{subsubsection.5.17.2.2}%
+\contentsline {subsubsection}{\numberline {5.17.2.3}showSpanishHelp()}{85}{subsubsection.5.17.2.3}%
+\contentsline {section}{\numberline {5.18}LEARN.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{85}{section.5.18}%
+\contentsline {section}{\numberline {5.19}metamain.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{87}{section.5.19}%
+\contentsline {section}{\numberline {5.20}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Profile.cpp File Reference}{87}{section.5.20}%
+\contentsline {subsection}{\numberline {5.20.1}Detailed Description}{88}{subsection.5.20.1}%
+\contentsline {subsection}{\numberline {5.20.2}Function Documentation}{88}{subsection.5.20.2}%
+\contentsline {subsubsection}{\numberline {5.20.2.1}operator$<$$<$()}{88}{subsubsection.5.20.2.1}%
+\contentsline {subsubsection}{\numberline {5.20.2.2}operator$>$$>$()}{88}{subsubsection.5.20.2.2}%
+\contentsline {section}{\numberline {5.21}Profile.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cpp}{89}{section.5.21}%
+\contentsline {chapter}{Index}{95}{section*.20}%

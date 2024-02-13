@@ -1,0 +1,14 @@
+%%%CALL -p bug -o tests/output/unknownACGT.prf ../Genomes/unknownACGT.dna
+%%%VALGRIND
+%%%DESCRIPTION Learn from unknownACGT.dna (a very short DNA file) using the default value for k [LEARN -p bug -o tests/output/unknownACGT.prf ../Genomes/unknownACGT.dna]
+%%%RELEASE LEARN
+%%%FROMFILE tests/output/unknownACGT.prf
+%%%OUTPUT
+MP-KMER-T-1.0
+bug
+5
+AGGGA 1
+ATAGG 1
+GGACC 1
+GGGAC 1
+TAGGG 1

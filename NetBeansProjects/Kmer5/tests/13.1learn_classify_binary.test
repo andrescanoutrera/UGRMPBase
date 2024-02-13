@@ -1,0 +1,17 @@
+%%%CALL -b -p 'homo sapiens' -o tests/output/human_chr9_s10000_l500000.prf ../Genomes/human_chr9_s10000_l500000.dna; dist/CLASSIFY/GNU-Linux/CLASSIFY ../Genomes/human_chr6_s60000_l500000.dna ../Genomes/brewers_yeast_chrVII.s1_l500000.prf ../Genomes/chimpanzee_chr9_s1_l500000.prf ../Genomes/covidFullGenomeDNA.prf ../Genomes/drosophila_chr2L_s1_l500000.prf ../Genomes/ebolaFullGenomeDNA.prf tests/output/human_chr9_s10000_l500000.prf ../Genomes/monkeypoxFullGenomeDNA.prf ../Genomes/mouse_chr6_s3050050_l500000.prf ../Genomes/nematode_chrI_s1l500000.prf ../Genomes/rat_chr6_s1l500000.prf ../Genomes/zebrafish_chr6_s1l500000.prf 
+%%%DESCRIPTION Learn the homo sapiens as a binary profile from human_chr9_s10000_l500000.dna and then it is used to classify human_chr6_s60000_l500000.dna [LEARN -b -p 'homo sapiens' -o tests/output/human_chr9_s10000_l500000.prf ../Genomes/human_chr9_s10000_l500000.dna; CLASSIFY ../Genomes/human_chr6_s60000_l500000.dna ../Genomes/brewers_yeast_chrVII.s1_l500000.prf ../Genomes/chimpanzee_chr9_s1_l500000.prf ../Genomes/covidFullGenomeDNA.prf ../Genomes/drosophila_chr2L_s1_l500000.prf ../Genomes/ebolaFullGenomeDNA.prf tests/output/human_chr9_s10000_l500000.prf ../Genomes/monkeypoxFullGenomeDNA.prf ../Genomes/mouse_chr6_s3050050_l500000.prf ../Genomes/nematode_chrI_s1l500000.prf ../Genomes/rat_chr6_s1l500000.prf ../Genomes/zebrafish_chr6_s1l500000.prf]
+%%%RELEASE LEARN
+%%%OUTPUT
+Distance to ../Genomes/brewers_yeast_chrVII.s1_l500000.prf (saccharomyces cerevisiae): 0.20294
+Distance to ../Genomes/chimpanzee_chr9_s1_l500000.prf (pan troglodytes): 0.0643864
+Distance to ../Genomes/covidFullGenomeDNA.prf (severe acute respiratory syndrome coronavirus 2): 0.194633
+Distance to ../Genomes/drosophila_chr2L_s1_l500000.prf (drosophila melanogaster): 0.189238
+Distance to ../Genomes/ebolaFullGenomeDNA.prf (ebolavirus zaire): 0.179686
+Distance to tests/output/human_chr9_s10000_l500000.prf (homo sapiens): 0.0557804
+Distance to ../Genomes/monkeypoxFullGenomeDNA.prf (monkey pox virus): 0.262987
+Distance to ../Genomes/mouse_chr6_s3050050_l500000.prf (mus musculus): 0.088129
+Distance to ../Genomes/nematode_chrI_s1l500000.prf (caenorhabditis elegans): 0.221075
+Distance to ../Genomes/rat_chr6_s1l500000.prf (rattus norvegicus): 0.111126
+Distance to ../Genomes/zebrafish_chr6_s1l500000.prf (danio rerio): 0.145231
+
+Final decision: homo sapiens with a distance of 0.0557804

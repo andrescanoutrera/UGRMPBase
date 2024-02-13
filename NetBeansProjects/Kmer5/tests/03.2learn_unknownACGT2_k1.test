@@ -1,0 +1,13 @@
+%%%CALL -k 1 -o tests/output/unknownACGT_k1.prf ../Genomes/unknownACGT.dna
+%%%VALGRIND
+%%%DESCRIPTION Learn from unknownACGT.dna (a very short DNA file) using k=1 [LEARN -k 1 -p bug -o tests/output/unknownACGT.prf ../Genomes/unknownACGT.dna]
+%%%RELEASE LEARN
+%%%FROMFILE tests/output/unknownACGT_k1.prf
+%%%OUTPUT
+MP-KMER-T-1.0
+unknown
+4
+A 3
+G 3
+C 2
+T 1

@@ -1,0 +1,26 @@
+%%%CALL -k 2 -p 'homo sapiens' -o tests/output/human1_k2.prf ../Genomes/human1.dna
+%%%VALGRIND
+%%%DESCRIPTION Learn from a short DNA file (human1.dna) using k=2 [LEARN -k 2 -p "homo sapiens" -o tests/output/human1_k2.prf ../Genomes/human1.dna]
+%%%RELEASE LEARN
+%%%FROMFILE tests/output/human1_k2.prf
+%%%OUTPUT
+MP-KMER-T-1.0
+homo sapiens
+16
+GG 893
+TG 858
+CC 843
+CA 811
+AG 801
+CT 696
+GC 669
+GA 636
+GT 618
+TC 567
+TT 540
+AC 536
+AA 531
+AT 423
+TA 313
+CG 264
+

@@ -1,0 +1,15 @@
+%%%CALL -k 2 -n ACGU -p bug -o tests/output/unknownACGU_k2.prf ../Genomes/unknownACGU.rna
+%%%VALGRIND
+%%%DESCRIPTION Learn from a very short RNA file (unknownACGU.rna) using k=2 [LEARN -k 2 -n ACGU -p bug -o tests/output/unknownACGU_k2.prf ../Genomes/unknownACGU.rna]
+%%%RELEASE LEARN
+%%%FROMFILE tests/output/unknownACGU_k2.prf
+%%%OUTPUT
+MP-KMER-T-1.0
+bug
+6
+GG 5
+AA 3
+AG 1
+CC 1
+GU 1
+UC 1

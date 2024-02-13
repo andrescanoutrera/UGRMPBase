@@ -1,0 +1,18 @@
+%%%CALL -T -p human -o tests/output/human1.prf ../Genomes/human1.dna
+%%%VALGRIND
+%%%DESCRIPTION Learn: Running with invalid arguments (-T is not valid) [LEARN -T -p human -o tests/output/human1.prf ../Genomes/human1.dna]
+%%%RELEASE LEARN
+%%%OUTPUT
+ERROR in LEARN parameters
+Run with the following parameters:
+LEARN [-t|-b] [-k kValue] [-n nucleotidesSet] [-p profileId] [-o outputFilename] <file1.dna> [<file2.dna> <file3.dna> .... ]
+
+Parameters:
+-t|-b: text mode or binary mode for the output file (-t by default)
+-k kValue: number of nucleotides in a kmer (5 by default)
+-n nucleotidesSet: set of possible nucleotides in a kmer (ACGT by default). Note that the characters should be provided in uppercase
+-p profileId: profile identifier (unknown by default)
+-o outputFilename: name of the output file (output.prf by default)
+<file1.dna> <file2.dna> <file3.dna> ....: names of the input files (at least one is mandatory)
+
+This program learns a profile model from a set of input DNA files <file1.dna> <file2.dna> <file3.dna> ....

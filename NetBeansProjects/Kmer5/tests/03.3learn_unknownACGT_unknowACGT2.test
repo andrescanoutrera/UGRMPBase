@@ -1,0 +1,17 @@
+%%%CALL -k 2 -p bug -o tests/output/unknownACGT+unknownACGT2_k2.prf ../Genomes/unknownACGT.dna ../Genomes/unknownACGT2.dna 
+%%%VALGRIND
+%%%DESCRIPTION Learn from two very short DNA files (unknownACGT.dna and unknownACGT2.dna) using k=2 [LEARN -k 2 -p bug -o tests/output/unknownACGT+unknownACGT2_k2.prf ../Genomes/unknownACGT.dna ../Genomes/unknownACGT2.dna]
+%%%RELEASE LEARN
+%%%FROMFILE tests/output/unknownACGT+unknownACGT2_k2.prf
+%%%OUTPUT
+MP-KMER-T-1.0
+bug
+8
+AG 3
+GA 3
+AC 2
+GG 2
+TA 2
+AT 1
+CC 1
+CT 1

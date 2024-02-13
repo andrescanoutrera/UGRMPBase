@@ -1,0 +1,406 @@
+\hypertarget{Profile_8cpp_source}{}\doxysection{Profile.\+cpp}
+\label{Profile_8cpp_source}\index{src/Profile.cpp@{src/Profile.cpp}}
+\mbox{\hyperlink{Profile_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Metodología\ de\ la\ Programación:\ Kmer5}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00003}00003\ \textcolor{comment}{\ *\ Curso\ 2023/2024}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00004}00004\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Profile_8h}{Profile.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00022}00022\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00024}00024\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ Profile::MAGIC\_STRING\_T=\textcolor{stringliteral}{"{}MP-\/KMER-\/T-\/1.0"{}};}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00025}00025\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ Profile::MAGIC\_STRING\_B=\textcolor{stringliteral}{"{}MP-\/KMER-\/B-\/1.0"{}};}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00027}\mbox{\hyperlink{classProfile_a4eea708cdbed0262d9e7ddbe3f1e3f89}{00027}}\ \mbox{\hyperlink{classProfile_a4eea708cdbed0262d9e7ddbe3f1e3f89}{Profile::Profile}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00028}00028\ \ \ \ \ \_profileId=\textcolor{stringliteral}{"{}unknown"{}};}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00029}00029\ \ \ \ \ allocate(INITIAL\_CAPACITY);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00032}\mbox{\hyperlink{classProfile_a7c775ded698a62c74cf8a60f965a3175}{00032}}\ \mbox{\hyperlink{classProfile_a4eea708cdbed0262d9e7ddbe3f1e3f89}{Profile::Profile}}(\textcolor{keywordtype}{int}\ size)\ \ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{if}(size\ <\ 0)\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}Profile::Profile(int\ numberKmers):\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}invalid\ numberKmers="{}}\ +\ to\_string(size));}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00037}00037\ \ \ \ \ \_profileId=\textcolor{stringliteral}{"{}unknown"{}};}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00038}00038\ \ \ \ \ allocate(size);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00039}00039\ \ \ \ \ \_size\ =\ size;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00040}00040\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00042}\mbox{\hyperlink{classProfile_ab24ce27cac3af0470d3d9dff259d40af}{00042}}\ \mbox{\hyperlink{classProfile_a4eea708cdbed0262d9e7ddbe3f1e3f89}{Profile::Profile}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProfile}{Profile}}\&\ orig)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00043}00043\ \ \ \ \ allocate(orig.\_capacity);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00044}00044\ \ \ \ \ copy(orig);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00047}\mbox{\hyperlink{classProfile_a58fa758a59bc4ee3c1a9980e360e4e98}{00047}}\ \mbox{\hyperlink{classProfile_a58fa758a59bc4ee3c1a9980e360e4e98}{Profile::\string~Profile}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00048}00048\ \ \ \ \ deallocate();}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00051}\mbox{\hyperlink{classProfile_abcd9eb81e41916bfa3e6a2e70d77ec36}{00051}}\ \mbox{\hyperlink{classProfile}{Profile}}\&\ \mbox{\hyperlink{classProfile_abcd9eb81e41916bfa3e6a2e70d77ec36}{Profile::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProfile}{Profile}}\&\ orig)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&orig)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ deallocate();}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ allocate(orig.\_capacity\ );}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ copy(orig);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00058}00058\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00060}\mbox{\hyperlink{classProfile_a98f636e772ca85e17171ae7e9607794c}{00060}}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \mbox{\hyperlink{classProfile_a98f636e772ca85e17171ae7e9607794c}{Profile::getProfileId}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{return}\ \_profileId;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00062}00062\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00064}\mbox{\hyperlink{classProfile_a61f455b03b0842bfeaebe404de23e0f6}{00064}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProfile_a61f455b03b0842bfeaebe404de23e0f6}{Profile::setProfileId}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ \textcolor{keywordtype}{id})\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00065}00065\ \ \ \ \ \_profileId\ =\ id;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00068}\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{00068}}\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classKmerFreq}{KmerFreq}}\&\ \mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{Profile::at}}(\textcolor{keywordtype}{int}\ index)\textcolor{keyword}{\ const\ }\{\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordflow}{if}\ (0\ <=\ index\ \&\&\ index\ <\ \mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}())\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_vectorKmerFreq[index];}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{else}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}const\ KmerFreq\&\ Profile::at(int\ index)\ const:\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}invalid\ position\ "{}}\ +\ to\_string(index));}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00074}00074\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00076}\mbox{\hyperlink{classProfile_a05a62606369c53b9a6f148510b983fdc}{00076}}\ \mbox{\hyperlink{classKmerFreq}{KmerFreq}}\&\ \mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{Profile::at}}(\textcolor{keywordtype}{int}\ index)\ \{\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{if}\ (0\ <=\ index\ \&\&\ index\ <\ \mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}())\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \_vectorKmerFreq[index];}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}KmerFreq\&\ Profile::at(int\ index):\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}invalid\ position\ "{}}\ +\ to\_string(index));}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00083}00083\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00084}\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{00084}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{Profile::getSize}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00085}00085\ \ \ \ \ \textcolor{keywordflow}{return}\ \_size;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00086}00086\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00088}\mbox{\hyperlink{classProfile_a35d3903904bea29113171ee3c61a0b80}{00088}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classProfile_a35d3903904bea29113171ee3c61a0b80}{Profile::getCapacity}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{return}\ \_capacity;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00090}00090\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00092}\mbox{\hyperlink{classProfile_ac7fdfdcdbdb4b1042c3378e7fd2b87a3}{00092}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classProfile_ac7fdfdcdbdb4b1042c3378e7fd2b87a3}{Profile::getDistance}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProfile}{Profile}}\&\ otherProfile)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}()\ ==\ 0\ ||\ otherProfile.\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}()\ ==\ 0)\{\ \textcolor{comment}{//\ CAMBIADO\ ESTE\ AÑO\ RESPECTO\ A\ 2022/2023}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}double\ Profile::getDistance(const\ Profile\&\ otherProfile)\ const:\ "{}})}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ +\ \textcolor{stringliteral}{"{}*this\ or\ otherProfile\ do\ not\ have\ any\ kmer"{}});}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00098}00098\ \ \ \ \ \textcolor{keywordtype}{int}\ posB;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00099}00099\ \ \ \ \ \textcolor{keywordtype}{int}\ posA\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00100}00100\ \ \ \ \ \textcolor{keywordtype}{double}\ dist\ =\ 0.0;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00102}00102\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ posB\ =\ otherProfile.\mbox{\hyperlink{classProfile_a5d70a275b94cc9a75d2a95208609a9d5}{findKmer}}\ (this-\/>\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(i).\mbox{\hyperlink{classKmerFreq_a88c835ab19d85b09415bf5a10c607154}{getKmer}}());\ \textcolor{comment}{//\ or\ posB\ =\ B.findKmer((*this)[i].getKmer());}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (posB\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ posB\ =\ \mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}();}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00106}00106\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ posB\ =\ otherProfile.getSize();\ //\ CAMBIADO\ ESTE\ AÑO\ RESPECTO\ A\ 2022/2023}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ dist\ +=\ abs(posA\ -\/\ posB);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ posA++;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00111}00111\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00112}00112\ \ \ \ \ \textcolor{keywordflow}{return}\ dist\ /\ (\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}()\ *\ \mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}());\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00113}00113\ \textcolor{comment}{//\ \ \ \ return\ dist\ /\ (getSize()\ *\ \ otherProfile.getSize()\ );\ \ //\ CAMBIADO\ ESTE\ AÑO\ RESPECTO\ A\ 2022/2023}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00114}00114\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00116}\mbox{\hyperlink{classProfile_a5d70a275b94cc9a75d2a95208609a9d5}{00116}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classProfile_a5d70a275b94cc9a75d2a95208609a9d5}{Profile::findKmer}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classKmer}{Kmer}}\&\ kmer)\textcolor{keyword}{\ const\ }\{\ \textcolor{comment}{//\ const\ string\&\ kmer)\ const\ \ \{}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00117}00117\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (kmer\ ==\ this-\/>\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(i).\mbox{\hyperlink{classKmerFreq_a88c835ab19d85b09415bf5a10c607154}{getKmer}}())\ \{\ \textcolor{comment}{//\ or\ if\ (kmer\ ==\ (*this)[i].getKmer())\ \{}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ i;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00122}00122\ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00123}00123\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00125}\mbox{\hyperlink{classProfile_aebf59be07939461a353f8875c53439da}{00125}}\ std::string\ \mbox{\hyperlink{classProfile_aebf59be07939461a353f8875c53439da}{Profile::toString}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00126}00126\ \ \ \ \ \textcolor{keywordtype}{string}\ outputString\ =\ this-\/>\mbox{\hyperlink{classProfile_a98f636e772ca85e17171ae7e9607794c}{getProfileId}}()\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}}\ +\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ to\_string(this-\/>\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}())\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00128}00128\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00129}00129\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<this-\/>\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ outputString\ +=\ this-\/>\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(i).\mbox{\hyperlink{classKmerFreq_a957b96ca622c651ce80d2809c582f1a2}{toString}}()\ +\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00131}00131\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00132}00132\ \ \ \ \ \textcolor{keywordflow}{return}\ outputString;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00133}00133\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00135}\mbox{\hyperlink{classProfile_a570418ae069bf73b6c41802ec4925a67}{00135}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProfile_a570418ae069bf73b6c41802ec4925a67}{Profile::sort}}()\ \ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00136}00136\ \ \ \ \ \mbox{\hyperlink{classKmerFreq}{KmerFreq}}\ aux;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00137}00137\ \ \ \ \ \textcolor{keywordtype}{int}\ pos;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00138}00138\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i=0;\ i<\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}();\ i++)\ \ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ pos\ =\ i;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j=i+1;\ j<\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}();\ j++)}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (this-\/>\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(j)>this-\/>\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(pos))\ \textcolor{comment}{//\ or\ if\ ((*this)[j]>(*this)[pos])}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pos\ =\ j;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pos\ !=\ i)\ \ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ aux\ =\ this-\/>\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(i);\ \textcolor{comment}{//\ or\ aux\ =\ (*this)[i];}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(i)\ =\ this-\/>\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(pos);\textcolor{comment}{//\ or\ (*this)[i]\ =\ (*this)[pos];\ }}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(pos)\ =\ aux;\ \textcolor{comment}{//\ or\ (*this)[pos]\ =\ aux;\ }}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00148}00148\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00149}00149\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00151}\mbox{\hyperlink{classProfile_ac9de02f7e457355aed0c1db130990424}{00151}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProfile_ac9de02f7e457355aed0c1db130990424}{Profile::save}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fileName,\ \textcolor{keywordtype}{char}\ mode)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00152}00152\ \ \ \ \ ofstream\ stream(fileName,\ ios::out\ |\ ios::binary);\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00154}00154\ \ \ \ \ \textcolor{keywordflow}{if}\ (stream)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (mode\ ==\ \textcolor{charliteral}{'t'})\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ Profile::MAGIC\_STRING\_T\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ *\textcolor{keyword}{this}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{\ \textcolor{comment}{//\ mode\ ==\ 'b'}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ Profile::MAGIC\_STRING\_B\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ this-\/>\mbox{\hyperlink{classProfile_a98f636e772ca85e17171ae7e9607794c}{getProfileId}}()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ stream\ <<\ this-\/>\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00164}00164\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ stream.write(reinterpret\_cast<char\ *>(\_vectorKmerFreq),}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00165}00165\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sizeof(KmerFreq)*this-\/>getSize());\ }}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<this-\/>\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}();\ i++)\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_vectorKmerFreq[i].\mbox{\hyperlink{classKmerFreq_a6cc3e41e138ec34216dc6f71ca4be182}{write}}(stream);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (stream)\ \ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ stream.close();}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::ios\_base::failure(}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}void\ Profile::save(const\ char\ *fileName,\ char\ mode)\ const:\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}error\ writing\ to\ file\ "{}}\ +\ fileName);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00178}00178\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00179}00179\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::ios\_base::failure(}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}void\ Profile::save(const\ char\ *fileName,\ char\ mode)\ const:\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}error\ opening\ file\ "{}}\ +\ fileName);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00183}00183\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00184}00184\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00186}\mbox{\hyperlink{classProfile_a13cd5a8edb2b02ac2d86ac87d8be4eab}{00186}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProfile_a13cd5a8edb2b02ac2d86ac87d8be4eab}{Profile::load}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ *fileName)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00187}00187\ \ \ \ \ ifstream\ inputStream;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00188}00188\ \ \ \ \ inputStream.open(fileName,\ ifstream::in\ |\ ios::binary);\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00189}00189\ \ \ \ \ \textcolor{keywordtype}{string}\ magicString;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00191}00191\ \ \ \ \ \textcolor{keywordflow}{if}\ (inputStream)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00192}00192\ \ \ \ \ \ \ \ \ inputStream\ >>\ magicString;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00193}00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (magicString\ ==\ Profile::MAGIC\_STRING\_T)\ \{\ \textcolor{comment}{//\ For\ text\ files}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ inputStream\ >>\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (magicString\ ==\ Profile::MAGIC\_STRING\_B)\{\ \textcolor{comment}{//\ Fo\ binary\ files}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ nKmers;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ speciesId;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ inputStream\ >>\ speciesId;\ \textcolor{comment}{//\ Read\ Species\ identifier}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classProfile_a61f455b03b0842bfeaebe404de23e0f6}{setProfileId}}(speciesId);\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ inputStream\ >>\ nKmers;\ \textcolor{comment}{//\ Read\ number\ of\ kmers}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (nKmers\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}void\ Profile::load(const\ char\ *fileName):\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}invalid\ number\ of\ kmers="{}}\ +\ to\_string(nKmers));}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ inputStream.get();\ \textcolor{comment}{//\ Read\ '\(\backslash\)n'\ character\ that\ appears\ after\ nKmers}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ deallocate();}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00211}00211\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ allocate(nKmers);}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKmerFreq}{KmerFreq}}\ kmerFreq;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<nKmers;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00215}00215\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_vectorKmerFreq[i].read(inputStream);}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ kmerFreq.\mbox{\hyperlink{classKmerFreq_a6d67e30291839918ede129cc7bba0244}{read}}(inputStream);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classProfile_af14dbca99de21a387371ee3f51bef60b}{append}}(kmerFreq);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}void\ Profile::load(const\ char\ *fileName):\ "{}})\ +\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}the\ found\ magic\ string\ "{}}\ +\ magicString\ +\ \textcolor{stringliteral}{"{}\ in\ file\ "{}}\ +\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fileName\ +\ \textcolor{stringliteral}{"{}\ is\ not\ valid\ "{}});\ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00225}00225\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00226}00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (inputStream)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00227}00227\ \ \ \ \ \ \ \ \ \ \ \ \ inputStream.close();}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00228}00228\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00229}00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::ios\_base::failure(}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}void\ Profile::load(const\ char\ *fileName):\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}error\ reading\ from\ file\ "{}}\ +\ fileName);\ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00233}00233\ \ \ \ \ \ \ \ \ \}\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00234}00234\ \ \ \ \ \}\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00235}00235\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00236}00236\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::ios\_base::failure(}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}void\ Profile::load(const\ char\ *fileName):\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}error\ opening\ file\ "{}}\ +\ fileName);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00239}00239\ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00240}00240\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00242}\mbox{\hyperlink{classProfile_af14dbca99de21a387371ee3f51bef60b}{00242}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProfile_af14dbca99de21a387371ee3f51bef60b}{Profile::append}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classKmerFreq}{KmerFreq}}\&\ kmerFreq)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00243}00243\ \ \ \ \ \textcolor{keywordtype}{int}\ pos\ =\ this-\/>\mbox{\hyperlink{classProfile_a5d70a275b94cc9a75d2a95208609a9d5}{findKmer}}(kmerFreq.\mbox{\hyperlink{classKmerFreq_a88c835ab19d85b09415bf5a10c607154}{getKmer}}().\mbox{\hyperlink{classKmer_ae394adf5587405c5204a07df6b95cebb}{toString}}());}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00244}00244\ \ \ \ \ \textcolor{keywordflow}{if}\ (pos\ >=\ 0)\ \{\ \textcolor{comment}{//\ If\ found}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00245}00245\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(pos).\mbox{\hyperlink{classKmerFreq_a02f30c44425e7b245e46253c5e532930}{setFrequency}}(this-\/>\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(pos).getFrequency()\ +}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ kmerFreq.\mbox{\hyperlink{classKmerFreq_a7050b1a322f4a846c2c010320826ecd9}{getFrequency}}());}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00247}00247\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{\ \textcolor{comment}{//\ If\ not\ found}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00248}00248\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(this-\/>\_size\ ==\ this-\/>\_capacity)\{\ \textcolor{comment}{//\ If\ the\ vector\ is\ full}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>reallocate(this-\/>\_capacity\ +\ BLOCK\_SIZE);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00250}00250\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00251}00251\ \ \ \ \ \ \ \ \ this-\/>\_size++;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00252}00252\ \ \ \ \ \ \ \ \ this-\/>\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(this-\/>\_size-\/1)\ =\ kmerFreq;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00253}00253\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00254}00254\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00255}00255\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00256}\mbox{\hyperlink{classProfile_a773c29240773a3eec195cf42ac90d265}{00256}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProfile_a773c29240773a3eec195cf42ac90d265}{Profile::normalize}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ validNucleotides\ )\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00257}00257\ \ \ \ \ \mbox{\hyperlink{classKmer}{Kmer}}\ kmer;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00258}00258\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<\_size;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00259}00259\ \ \ \ \ \ \ \ \ kmer\ =\ \_vectorKmerFreq[i].\mbox{\hyperlink{classKmerFreq_a88c835ab19d85b09415bf5a10c607154}{getKmer}}();}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00260}00260\ \ \ \ \ \ \ \ \ kmer.\mbox{\hyperlink{classKmer_ac4f03c56da85aed417d2139199e7a6bd}{normalize}}(validNucleotides);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00261}00261\ \ \ \ \ \ \ \ \ \_vectorKmerFreq[i].\mbox{\hyperlink{classKmerFreq_a4eb114f842390e0091cda7a2aab9d8ec}{setKmer}}(kmer);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00262}00262\ \ \ \ \ \}\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00263}00263\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00264}00264\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00265}\mbox{\hyperlink{classProfile_a5fd206ead3a0755075038ac3ce3f81f7}{00265}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProfile_a5fd206ead3a0755075038ac3ce3f81f7}{Profile::deletePos}}(\textcolor{keywordtype}{int}\ pos)\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00266}00266\ \ \ \ \ \textcolor{keywordflow}{if}(pos<0\ ||\ pos>=\_size)\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00267}00267\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00268}00268\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}Profile::deletePos(int\ pos):\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00269}00269\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}invalid\ position\ "{}}\ +\ to\_string(pos));}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00270}00270\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00271}00271\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=pos+1;\ i<\_size;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00272}00272\ \ \ \ \ \ \ \ \ \_vectorKmerFreq[i-\/1]\ =\ \_vectorKmerFreq[i];}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00273}00273\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00274}00274\ \ \ \ \ \_size-\/-\/;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00275}00275\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00276}00276\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00277}\mbox{\hyperlink{classProfile_ad4b354430500852139736ec518ccbd40}{00277}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classProfile_ad4b354430500852139736ec518ccbd40}{Profile::zip}}(\textcolor{keywordtype}{bool}\ deleteMissing,\ \textcolor{keywordtype}{int}\ lowerBound)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00278}00278\ \ \ \ \ \textcolor{keywordtype}{int}\ pos;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00279}00279\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00280}00280\ \ \ \ \ pos\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00281}00281\ \ \ \ \ \textcolor{keywordflow}{while}\ (pos\ <\ \_size)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00282}00282\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((deleteMissing\ \&\&}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00283}00283\ \ \ \ \ \ \ \ \ \ \ \ \ \_vectorKmerFreq[pos].getKmer().\mbox{\hyperlink{classProfile_aebf59be07939461a353f8875c53439da}{toString}}().find(}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKmer_a4cdc2682181a0435d9fe703316fad091}{Kmer::MISSING\_NUCLEOTIDE}})\ !=\ string::npos)\ ||}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \_vectorKmerFreq[pos].getFrequency()\ <=\ lowerBound)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classProfile_a5fd206ead3a0755075038ac3ce3f81f7}{deletePos}}(pos);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00288}00288\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ pos++;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00290}00290\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00291}00291\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00292}00292\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00293}00293\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00294}\mbox{\hyperlink{classProfile_a6fbb00cae45bc58ddbad099b4b828935}{00294}}\ \mbox{\hyperlink{classKmerFreq}{KmerFreq}}\&\ \mbox{\hyperlink{classProfile_a6fbb00cae45bc58ddbad099b4b828935}{Profile::operator[]}}(\textcolor{keywordtype}{int}\ index)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00295}00295\ \ \ \ \ \textcolor{keywordflow}{return}\ \_vectorKmerFreq[index];}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00296}00296\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00297}00297\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00298}\mbox{\hyperlink{classProfile_a994ef4d9d0c21dfb299697b097e81374}{00298}}\ \mbox{\hyperlink{classKmerFreq}{KmerFreq}}\&\ \mbox{\hyperlink{classProfile_a6fbb00cae45bc58ddbad099b4b828935}{Profile::operator[]}}(\textcolor{keywordtype}{int}\ index)\ \{\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00299}00299\ \ \ \ \ \textcolor{keywordflow}{return}\ \_vectorKmerFreq[index];}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00300}00300\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00301}00301\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00302}\mbox{\hyperlink{classProfile_a76c17739fb9d67cd2e9c0a7d3a1de564}{00302}}\ \mbox{\hyperlink{classProfile}{Profile}}\&\ \mbox{\hyperlink{classProfile_a76c17739fb9d67cd2e9c0a7d3a1de564}{Profile::operator+=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classKmerFreq}{KmerFreq}}\&\ kmerFreq)\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00303}00303\ \ \ \ \ this-\/>\mbox{\hyperlink{classProfile_af14dbca99de21a387371ee3f51bef60b}{append}}(kmerFreq);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00304}00304\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00305}00305\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00306}00306\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00307}00307\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00308}\mbox{\hyperlink{classProfile_ad853bc62e6c80c42de56a255d844ea74}{00308}}\ \mbox{\hyperlink{classProfile}{Profile}}\&\ \mbox{\hyperlink{classProfile_a76c17739fb9d67cd2e9c0a7d3a1de564}{Profile::operator+=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProfile}{Profile}}\&\ profile)\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00309}00309\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ profile.\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00310}00310\ \ \ \ \ \ \ \ \ (*this)+=profile.\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(i);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00311}00311\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00312}00312\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00313}00313\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00314}00314\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00315}00315\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00316}00316\ ostream\&\ \mbox{\hyperlink{Kmer_8cpp_ab53972bb4640a710e6ad7b6349764b38}{operator<<}}(ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classProfile}{Profile}}\ \&\ language)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00317}00317\ \ \ \ \ os\ <<\ language.\mbox{\hyperlink{classProfile_a98f636e772ca85e17171ae7e9607794c}{getProfileId}}()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00318}00318\ \ \ \ \ os\ <<\ language.\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}()\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00319}00319\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ language.\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00320}00320\ \ \ \ \ \ \ \ \ os\ <<\ \ language.\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(i)\ <<\ endl;\ \textcolor{comment}{//or\ os\ <<\ \ idioma[i]\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00321}00321\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00322}00322\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00323}00323\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00324}00324\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00325}00325\ istream\&\ \mbox{\hyperlink{Kmer_8cpp_addbc29fbe9cfd371ed5765f10bebccd9}{operator>>}}(istream\&\ is,\ \mbox{\hyperlink{classProfile}{Profile}}\&\ profile)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00326}00326\ \ \ \ \ \textcolor{keywordtype}{string}\ speciesId;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00327}00327\ \ \ \ \ \textcolor{keywordtype}{int}\ numberKmers;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00328}00328\ \ \ \ \ \mbox{\hyperlink{classKmerFreq}{KmerFreq}}\ kmerFreq;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00329}00329\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00330}00330\ \textcolor{comment}{//\ \ \ \ profile.deallocate();}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00331}00331\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00332}00332\ \ \ \ \ is\ >>\ speciesId;\ \textcolor{comment}{//\ Read\ species\ identifier}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00333}00333\ \ \ \ \ is\ >>\ numberKmers;\ \textcolor{comment}{//\ Read\ the\ number\ of\ kmers}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00334}00334\ \ \ \ \ \textcolor{keywordflow}{if}\ (numberKmers\ <\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00335}00335\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00336}00336\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}istream\&\ operator>>(istream\&\ is,\ Profile\&\ profile):\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00337}00337\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}the\ number\ of\ kmers\ read\ "{}}\ +\ to\_string(numberKmers)\ +\ \textcolor{stringliteral}{"{}\ is\ not\ valid\ "{}});}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00338}00338\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00339}00339\ \textcolor{comment}{//\ \ \ \ profile.allocate(numberKmers);}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00340}00340\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00341}00341\ \ \ \ \ \mbox{\hyperlink{classProfile}{Profile}}\ iaux(numberKmers);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00342}00342\ \ \ \ \ iaux.setProfileId(speciesId);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00343}00343\ \textcolor{comment}{//\ \ \ \ for\ (int\ i\ =\ 0;\ i\ <\ iaux.getSize();\ ++i)\ \{}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00344}00344\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ numberKmers;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00345}00345\ \ \ \ \ \ \ \ \ is\ >>\ kmerFreq;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00346}00346\ \textcolor{comment}{//\ \ \ \ \ \ \ \ iaux.at(i)\ =\ kmerFreq;\ //\ or\ iaux[i]\ =\ bgr;}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00347}00347\ \ \ \ \ \ \ \ \ iaux.append(kmerFreq);}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00348}00348\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00349}00349\ \ \ \ \ profile\ =\ iaux;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00350}00350\ \ \ \ \ \textcolor{keywordflow}{return}\ is;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00351}00351\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00352}00352\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00353}00353\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00354}00354\ \textcolor{comment}{//\ Private\ methods}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00355}00355\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00356}00356\ \textcolor{keywordtype}{void}\ Profile::allocate(\textcolor{keywordtype}{int}\ capacity)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00357}00357\ \ \ \ \ \textcolor{keywordflow}{if}\ (capacity\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00358}00358\ \ \ \ \ \ \ \ \ \_capacity\ =\ capacity;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00359}00359\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00360}00360\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00361}00361\ \ \ \ \ \ \ \ \ \_capacity\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00362}00362\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00363}00363\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00364}00364\ \ \ \ \ \textcolor{keywordflow}{if}(\_capacity>0)\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00365}00365\ \ \ \ \ \ \ \ \ \_vectorKmerFreq\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classKmerFreq}{KmerFreq}}[\_capacity];\ \textcolor{comment}{//\ each\ pair\ contains\ "{}\_"{},\ 0}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00366}00366\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00367}00367\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00368}00368\ \ \ \ \ \ \ \ \ \_vectorKmerFreq\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00369}00369\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00370}00370\ \ \ \ \ \_size\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00371}00371\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00372}00372\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00373}00373\ \textcolor{keywordtype}{void}\ Profile::reallocate(\textcolor{keywordtype}{int}\ newCapacity)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00374}00374\ \ \ \ \ \textcolor{keywordflow}{if}\ (newCapacity\ !=\ this-\/>\_capacity)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00375}00375\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKmerFreq}{KmerFreq}}\ *newVector;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00376}00376\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newCapacity\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00377}00377\ \ \ \ \ \ \ \ \ \ \ \ \ \_capacity\ =\ newCapacity;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00378}00378\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00379}00379\ \ \ \ \ \ \ \ \ \ \ \ \ \_capacity\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00380}00380\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00381}00381\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\_capacity>0)\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00382}00382\ \ \ \ \ \ \ \ \ \ \ \ \ newVector\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{classKmerFreq}{KmerFreq}}[\_capacity];}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00383}00383\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00384}00384\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00385}00385\ \ \ \ \ \ \ \ \ \ \ \ \ newVector\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00386}00386\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00387}00387\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00388}00388\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \_capacity\ \&\&\ i\ <\ \_size;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00389}00389\ \ \ \ \ \ \ \ \ \ \ \ \ newVector[i]\ =\ \_vectorKmerFreq[i];}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00390}00390\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00391}00391\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \_vectorKmerFreq;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00392}00392\ \ \ \ \ \ \ \ \ \_vectorKmerFreq\ =\ newVector;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00393}00393\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00394}00394\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00395}00395\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00396}00396\ \textcolor{keywordtype}{void}\ Profile::deallocate()\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00397}00397\ \ \ \ \ \textcolor{keyword}{delete}[]\ \_vectorKmerFreq;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00398}00398\ \ \ \ \ \_vectorKmerFreq\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00399}00399\ \ \ \ \ \_size\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00400}00400\ \ \ \ \ \_capacity\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00401}00401\ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00402}00402\ }
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00403}00403\ \textcolor{keywordtype}{void}\ Profile::copy(\textcolor{keyword}{const}\ \mbox{\hyperlink{classProfile}{Profile}}\&\ otherProfile)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00404}00404\ \ \ \ \ this-\/>\_profileId\ =\ otherProfile.\mbox{\hyperlink{classProfile_a98f636e772ca85e17171ae7e9607794c}{getProfileId}}();}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00405}00405\ \ \ \ \ this-\/>\_size\ =\ otherProfile.\_size;\ \textcolor{comment}{//\ En\ principio,\ no\ sería\ necesario\ si\ se\ cumple\ la\ precondición}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00406}00406\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ otherProfile.\mbox{\hyperlink{classProfile_a6978b4455292f9ea904ac21ec0703b76}{getSize}}();\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00407}00407\ \ \ \ \ \ \ \ \ \_vectorKmerFreq[i]\ =\ otherProfile.\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(i);\ \textcolor{comment}{//\ or\ \_vectorKmerFreq[i]\ =\ other[i];}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00408}00408\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Profile_8cpp_source_l00409}00409\ \}}
+
+\end{DoxyCode}

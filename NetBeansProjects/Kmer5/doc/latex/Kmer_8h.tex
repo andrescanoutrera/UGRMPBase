@@ -1,0 +1,384 @@
+\hypertarget{Kmer_8h}{}\doxysection{include/\+Kmer.h File Reference}
+\label{Kmer_8h}\index{include/Kmer.h@{include/Kmer.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classKmer}{Kmer}}
+\begin{DoxyCompactList}\small\item\em It represents a list of k consecutive nucleotides of a DNA or RNA sequence. Each nucleotide is represented with a character like \textquotesingle{}A\textquotesingle{}, \textquotesingle{}C\textquotesingle{}, \textquotesingle{}G\textquotesingle{}, \textquotesingle{}T\textquotesingle{}, \textquotesingle{}U\textquotesingle{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{Kmer_8h_ab37d45ac1439c9a30303f1c023d825fc}{Is\+Valid\+Nucleotide}} (char nucleotide, const std\+::string \&valid\+Nucleotides)
+\begin{DoxyCompactList}\small\item\em Checks if the given nucleotide is contained in {\ttfamily valid\+Nucleotides}. That is, if the given character can be considered as part of a genetic sequence. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Kmer_8h_a77194578942a94dd58a0d5721ffa89d4}{To\+Lower}} (\mbox{\hyperlink{classKmer}{Kmer}} \&kmer)
+\begin{DoxyCompactList}\small\item\em Converts to lowercase the characters (nucleotides) of the given \mbox{\hyperlink{classKmer}{Kmer}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Kmer_8h_a529f93b76b54a04d3d72be14476cd38e}{To\+Upper}} (\mbox{\hyperlink{classKmer}{Kmer}} \&kmer)
+\begin{DoxyCompactList}\small\item\em Converts to uppercase the characters (nucleotides) of the given \mbox{\hyperlink{classKmer}{Kmer}}. \end{DoxyCompactList}\item 
+std\+::ostream \& \mbox{\hyperlink{Kmer_8h_ab53972bb4640a710e6ad7b6349764b38}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classKmer}{Kmer}} \&kmer)
+\begin{DoxyCompactList}\small\item\em Overloading of the stream insertion operator for \mbox{\hyperlink{classKmer}{Kmer}} class. It inserts the characters (nucleotides) of the given \mbox{\hyperlink{classKmer}{Kmer}} in the output string. \end{DoxyCompactList}\item 
+std\+::istream \& \mbox{\hyperlink{Kmer_8h_addbc29fbe9cfd371ed5765f10bebccd9}{operator$>$$>$}} (std\+::istream \&is, \mbox{\hyperlink{classKmer}{Kmer}} \&kmer)
+\begin{DoxyCompactList}\small\item\em Overloading of the stream extraction operator for \mbox{\hyperlink{classKmer}{Kmer}} class. It reads a list of characters from the input string that will set the list of nucleotides of the given \mbox{\hyperlink{classKmer}{Kmer}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{Kmer_8h_a9a172cc76f688828ba9d080c89628df9}{operator$>$}} (const \mbox{\hyperlink{classKmer}{Kmer}} \&kmer1, const \mbox{\hyperlink{classKmer}{Kmer}} \&kmer2)
+\begin{DoxyCompactList}\small\item\em Overloading of the operator \texorpdfstring{$>$}{>} for \mbox{\hyperlink{classKmer}{Kmer}} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{Kmer_8h_a0f91834910f9e7f2f8584bf61581a198}{operator$<$}} (const \mbox{\hyperlink{classKmer}{Kmer}} \&kmer1, const \mbox{\hyperlink{classKmer}{Kmer}} \&kmer2)
+\begin{DoxyCompactList}\small\item\em Overloading of the operator \texorpdfstring{$<$}{<} for \mbox{\hyperlink{classKmer}{Kmer}} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{Kmer_8h_accf655674e9cadfa0063144cde453309}{operator==}} (const \mbox{\hyperlink{classKmer}{Kmer}} \&kmer1, const \mbox{\hyperlink{classKmer}{Kmer}} \&kmer2)
+\begin{DoxyCompactList}\small\item\em Overloading of the operator == for \mbox{\hyperlink{classKmer}{Kmer}} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{Kmer_8h_a69835f227e974cf64dc93873c49f4530}{operator!=}} (const \mbox{\hyperlink{classKmer}{Kmer}} \&kmer1, const \mbox{\hyperlink{classKmer}{Kmer}} \&kmer2)
+\begin{DoxyCompactList}\small\item\em Overloading of the operator != for \mbox{\hyperlink{classKmer}{Kmer}} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{Kmer_8h_a570dc99ce58529111a08303d8f6ea345}{operator$<$=}} (const \mbox{\hyperlink{classKmer}{Kmer}} \&kmer1, const \mbox{\hyperlink{classKmer}{Kmer}} \&kmer2)
+\begin{DoxyCompactList}\small\item\em Overloading of the operator \texorpdfstring{$<$}{<}= for \mbox{\hyperlink{classKmer}{Kmer}} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{Kmer_8h_ac9a64844d2f9bfb282e348998d1b1ec7}{operator$>$=}} (const \mbox{\hyperlink{classKmer}{Kmer}} \&kmer1, const \mbox{\hyperlink{classKmer}{Kmer}} \&kmer2)
+\begin{DoxyCompactList}\small\item\em Overloading of the operator \texorpdfstring{$>$}{>}= for \mbox{\hyperlink{classKmer}{Kmer}} class. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Silvia Acid Carrillo \href{mailto:acid@decsai.ugr.es}{\texttt{ acid@decsai.\+ugr.\+es}} 
+
+Andrés Cano Utrera \href{mailto:acu@decsai.ugr.es}{\texttt{ acu@decsai.\+ugr.\+es}} 
+
+Luis Castillo Vidal \href{mailto:L.Castillo@decsai.ugr.es}{\texttt{ L.\+Castillo@decsai.\+ugr.\+es}}
+\end{DoxyAuthor}
+Created on 23 October 2023, 12\+:25 
+
+Definition in file \mbox{\hyperlink{Kmer_8h_source}{Kmer.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Kmer_8h_ab37d45ac1439c9a30303f1c023d825fc}\label{Kmer_8h_ab37d45ac1439c9a30303f1c023d825fc}} 
+\index{Kmer.h@{Kmer.h}!IsValidNucleotide@{IsValidNucleotide}}
+\index{IsValidNucleotide@{IsValidNucleotide}!Kmer.h@{Kmer.h}}
+\doxysubsubsection{\texorpdfstring{IsValidNucleotide()}{IsValidNucleotide()}}
+{\footnotesize\ttfamily bool Is\+Valid\+Nucleotide (\begin{DoxyParamCaption}\item[{char}]{nucleotide,  }\item[{const std\+::string \&}]{valid\+Nucleotides }\end{DoxyParamCaption})}
+
+
+
+Checks if the given nucleotide is contained in {\ttfamily valid\+Nucleotides}. That is, if the given character can be considered as part of a genetic sequence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nucleotide} & The nucleotide (a character) to check \\
+\hline
+{\em valid\+Nucleotides} & The set of characters that we consider as possible characters in a genetic sequence. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the given character is contained in {\ttfamily valid\+Nucleotides}; false otherwise 
+\end{DoxyReturn}
+\mbox{\Hypertarget{Kmer_8h_a69835f227e974cf64dc93873c49f4530}\label{Kmer_8h_a69835f227e974cf64dc93873c49f4530}} 
+\index{Kmer.h@{Kmer.h}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!Kmer.h@{Kmer.h}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer1,  }\item[{const \mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer2 }\end{DoxyParamCaption})}
+
+
+
+Overloading of the operator != for \mbox{\hyperlink{classKmer}{Kmer}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kmer1} & a \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+{\em kmer2} & a \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two kmers contains different text; false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Kmer_8cpp_source_l00189}{189}} of file \mbox{\hyperlink{Kmer_8cpp_source}{Kmer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{return}\ !(kmer1\ ==\ kmer2);}
+\DoxyCodeLine{00191\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Kmer_8h_a0f91834910f9e7f2f8584bf61581a198}\label{Kmer_8h_a0f91834910f9e7f2f8584bf61581a198}} 
+\index{Kmer.h@{Kmer.h}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Kmer.h@{Kmer.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer1,  }\item[{const \mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer2 }\end{DoxyParamCaption})}
+
+
+
+Overloading of the operator \texorpdfstring{$<$}{<} for \mbox{\hyperlink{classKmer}{Kmer}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kmer1} & a \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+{\em kmer2} & a \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if kmer1 \texorpdfstring{$<$}{<} kmer2; false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Kmer_8cpp_source_l00181}{181}} of file \mbox{\hyperlink{Kmer_8cpp_source}{Kmer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \textcolor{keywordflow}{return}\ kmer2\ >\ kmer1;}
+\DoxyCodeLine{00183\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Kmer_8h_ab53972bb4640a710e6ad7b6349764b38}\label{Kmer_8h_ab53972bb4640a710e6ad7b6349764b38}} 
+\index{Kmer.h@{Kmer.h}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Kmer.h@{Kmer.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer }\end{DoxyParamCaption})}
+
+
+
+Overloading of the stream insertion operator for \mbox{\hyperlink{classKmer}{Kmer}} class. It inserts the characters (nucleotides) of the given \mbox{\hyperlink{classKmer}{Kmer}} in the output string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & The output stream to be used \\
+\hline
+{\em kmer} & the \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily os} A reference to the output stream 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Kmer_8cpp_source_l00174}{174}} of file \mbox{\hyperlink{Kmer_8cpp_source}{Kmer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ os\ <<\ kmer.\_text;\ \ \ }
+\DoxyCodeLine{00166\ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
+\DoxyCodeLine{00167\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Kmer_8h_a570dc99ce58529111a08303d8f6ea345}\label{Kmer_8h_a570dc99ce58529111a08303d8f6ea345}} 
+\index{Kmer.h@{Kmer.h}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!Kmer.h@{Kmer.h}}
+\doxysubsubsection{\texorpdfstring{operator$<$=()}{operator<=()}}
+{\footnotesize\ttfamily bool operator$<$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer1,  }\item[{const \mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer2 }\end{DoxyParamCaption})}
+
+
+
+Overloading of the operator \texorpdfstring{$<$}{<}= for \mbox{\hyperlink{classKmer}{Kmer}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kmer1} & a \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+{\em kmer2} & a \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if kmer1 \texorpdfstring{$<$}{<}= kmer2; false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Kmer_8cpp_source_l00193}{193}} of file \mbox{\hyperlink{Kmer_8cpp_source}{Kmer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{keywordflow}{return}\ !(kmer1\ >\ kmer2);}
+\DoxyCodeLine{00195\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Kmer_8h_accf655674e9cadfa0063144cde453309}\label{Kmer_8h_accf655674e9cadfa0063144cde453309}} 
+\index{Kmer.h@{Kmer.h}!operator==@{operator==}}
+\index{operator==@{operator==}!Kmer.h@{Kmer.h}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer1,  }\item[{const \mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer2 }\end{DoxyParamCaption})}
+
+
+
+Overloading of the operator == for \mbox{\hyperlink{classKmer}{Kmer}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kmer1} & a \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+{\em kmer2} & a \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the two kmers contains the same text; false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Kmer_8cpp_source_l00185}{185}} of file \mbox{\hyperlink{Kmer_8cpp_source}{Kmer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \textcolor{keywordflow}{return}\ !(kmer1<kmer2\ ||\ kmer1>kmer2);}
+\DoxyCodeLine{00187\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Kmer_8h_a9a172cc76f688828ba9d080c89628df9}\label{Kmer_8h_a9a172cc76f688828ba9d080c89628df9}} 
+\index{Kmer.h@{Kmer.h}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!Kmer.h@{Kmer.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily bool operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer1,  }\item[{const \mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer2 }\end{DoxyParamCaption})}
+
+
+
+Overloading of the operator \texorpdfstring{$>$}{>} for \mbox{\hyperlink{classKmer}{Kmer}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kmer1} & a \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+{\em kmer2} & a \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if kmer1 \texorpdfstring{$>$}{>} kmer2; false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Kmer_8cpp_source_l00177}{177}} of file \mbox{\hyperlink{Kmer_8cpp_source}{Kmer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00178\ \ \ \ \ \textcolor{keywordflow}{return}\ kmer1.\mbox{\hyperlink{classKmer_ae394adf5587405c5204a07df6b95cebb}{toString}}()\ >\ kmer2.\mbox{\hyperlink{classKmer_ae394adf5587405c5204a07df6b95cebb}{toString}}();}
+\DoxyCodeLine{00179\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Kmer_8h_ac9a64844d2f9bfb282e348998d1b1ec7}\label{Kmer_8h_ac9a64844d2f9bfb282e348998d1b1ec7}} 
+\index{Kmer.h@{Kmer.h}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!Kmer.h@{Kmer.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$=()}{operator>=()}}
+{\footnotesize\ttfamily bool operator$>$= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer1,  }\item[{const \mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer2 }\end{DoxyParamCaption})}
+
+
+
+Overloading of the operator \texorpdfstring{$>$}{>}= for \mbox{\hyperlink{classKmer}{Kmer}} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em kmer1} & a \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+{\em kmer2} & a \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if kmer1 \texorpdfstring{$>$}{>}= kmer2; false otherwise 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Kmer_8cpp_source_l00197}{197}} of file \mbox{\hyperlink{Kmer_8cpp_source}{Kmer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \textcolor{keywordflow}{return}\ !(kmer1\ <\ kmer2);}
+\DoxyCodeLine{00199\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Kmer_8h_addbc29fbe9cfd371ed5765f10bebccd9}\label{Kmer_8h_addbc29fbe9cfd371ed5765f10bebccd9}} 
+\index{Kmer.h@{Kmer.h}!operator$>$$>$@{operator$>$$>$}}
+\index{operator$>$$>$@{operator$>$$>$}!Kmer.h@{Kmer.h}}
+\doxysubsubsection{\texorpdfstring{operator$>$$>$()}{operator>>()}}
+{\footnotesize\ttfamily std\+::istream \& operator$>$$>$ (\begin{DoxyParamCaption}\item[{std\+::istream \&}]{is,  }\item[{\mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer }\end{DoxyParamCaption})}
+
+
+
+Overloading of the stream extraction operator for \mbox{\hyperlink{classKmer}{Kmer}} class. It reads a list of characters from the input string that will set the list of nucleotides of the given \mbox{\hyperlink{classKmer}{Kmer}}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em is} & The input stream to be used \\
+\hline
+{\em kmer} & the \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily is} the input stream 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Kmer_8cpp_source_l00175}{175}} of file \mbox{\hyperlink{Kmer_8cpp_source}{Kmer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{keywordtype}{string}\ chain;}
+\DoxyCodeLine{00171\ \ \ \ \ is\ >>\ chain;}
+\DoxyCodeLine{00172\ \ \ \ \ kmer\ =\ \mbox{\hyperlink{classKmer}{Kmer}}(chain);}
+\DoxyCodeLine{00173\ \ \ \ \ }
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{return}\ is;}
+\DoxyCodeLine{00175\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Kmer_8h_a77194578942a94dd58a0d5721ffa89d4}\label{Kmer_8h_a77194578942a94dd58a0d5721ffa89d4}} 
+\index{Kmer.h@{Kmer.h}!ToLower@{ToLower}}
+\index{ToLower@{ToLower}!Kmer.h@{Kmer.h}}
+\doxysubsubsection{\texorpdfstring{ToLower()}{ToLower()}}
+{\footnotesize\ttfamily void To\+Lower (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer }\end{DoxyParamCaption})}
+
+
+
+Converts to lowercase the characters (nucleotides) of the given \mbox{\hyperlink{classKmer}{Kmer}}. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000001}{Deprecated}}]This function could go away in future versions \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em kmer} & A \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Kmer_8cpp_source_l00152}{152}} of file \mbox{\hyperlink{Kmer_8cpp_source}{Kmer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<kmer.\mbox{\hyperlink{classKmer_a20154d7f1b00e893ecaf05cdf4221859}{size}}();\ i++)\{}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ kmer.\mbox{\hyperlink{classKmer_af01ed408a277d7a40cbaf9e52d28054d}{at}}(i)\ =\ tolower(kmer.\mbox{\hyperlink{classKmer_af01ed408a277d7a40cbaf9e52d28054d}{at}}(i));}
+\DoxyCodeLine{00155\ \ \ \ \ \}}
+\DoxyCodeLine{00156\ \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Kmer_8h_a529f93b76b54a04d3d72be14476cd38e}\label{Kmer_8h_a529f93b76b54a04d3d72be14476cd38e}} 
+\index{Kmer.h@{Kmer.h}!ToUpper@{ToUpper}}
+\index{ToUpper@{ToUpper}!Kmer.h@{Kmer.h}}
+\doxysubsubsection{\texorpdfstring{ToUpper()}{ToUpper()}}
+{\footnotesize\ttfamily void To\+Upper (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classKmer}{Kmer}} \&}]{kmer }\end{DoxyParamCaption})}
+
+
+
+Converts to uppercase the characters (nucleotides) of the given \mbox{\hyperlink{classKmer}{Kmer}}. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\mbox{\hyperlink{deprecated__deprecated000002}{Deprecated}}]This function could go away in future versions \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em kmer} & A \mbox{\hyperlink{classKmer}{Kmer}} object \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Kmer_8cpp_source_l00158}{158}} of file \mbox{\hyperlink{Kmer_8cpp_source}{Kmer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i=0;\ i<kmer.\mbox{\hyperlink{classKmer_a20154d7f1b00e893ecaf05cdf4221859}{size}}();\ i++)\{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ kmer.\mbox{\hyperlink{classKmer_af01ed408a277d7a40cbaf9e52d28054d}{at}}(i)\ =\ toupper(kmer.\mbox{\hyperlink{classKmer_af01ed408a277d7a40cbaf9e52d28054d}{at}}(i));}
+\DoxyCodeLine{00161\ \ \ \ \ \}}
+\DoxyCodeLine{00162\ \}}
+
+\end{DoxyCode}

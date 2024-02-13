@@ -1,0 +1,303 @@
+\hypertarget{KmerCounter_8cpp_source}{}\doxysection{Kmer\+Counter.\+cpp}
+\label{KmerCounter_8cpp_source}\index{src/KmerCounter.cpp@{src/KmerCounter.cpp}}
+\mbox{\hyperlink{KmerCounter_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00001}00001\ \textcolor{comment}{/*}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Metodología\ de\ la\ Programación:\ Kmer5}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00003}00003\ \textcolor{comment}{\ *\ Curso\ 2023/2024}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00004}00004\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00016}00016\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00017}00017\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <cstring>}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00019}00019\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}KmerCounter.h"{}}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Kmer_8h}{Kmer.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00024}00024\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00034}00034\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classKmerCounter_a0c290717cbabe266966e2533f97fd299}{KmerCounter::DEFAULT\_VALID\_NUCLEOTIDES}}=\textcolor{stringliteral}{"{}ACGT"{}};}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00037}00037\ \textcolor{comment}{//char\ readNextValidChar(istream\&\ fe,\ const\ string\&\ validChars);}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00039}00039\ \mbox{\hyperlink{classKmerCounter_aac203f405a4b474df253b4811b866d8f}{KmerCounter::KmerCounter}}(\textcolor{keywordtype}{int}\ k,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ validNucleotides)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00040}00040\ \ \ \ \ \_validNucleotides\ =\ validNucleotides;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00041}00041\ \ \ \ \ \_allNucleotides\ =\ string(1,\ \mbox{\hyperlink{classKmer_a4cdc2682181a0435d9fe703316fad091}{Kmer::MISSING\_NUCLEOTIDE}})\ +\ \_validNucleotides;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00042}00042\ \ \ \ \ \_k\ =\ k;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00043}00043\ \ \ \ \ allocate(getNumRows(),\ getNumCols());}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00044}00044\ \ \ \ \ initFrequencies();}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00047}\mbox{\hyperlink{classKmerCounter_aa34fd017468e985f3a8ce9808b52e279}{00047}}\ \mbox{\hyperlink{classKmerCounter_aac203f405a4b474df253b4811b866d8f}{KmerCounter::KmerCounter}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classKmerCounter}{KmerCounter}}\&\ orig)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00048}00048\ \ \ \ \ allocate(orig.getNumRows(),\ orig.getNumCols());}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00049}00049\ \ \ \ \ copy(orig);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00050}00050\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00052}\mbox{\hyperlink{classKmerCounter_ac42f87be9dd6aecf9911ab45481efa17}{00052}}\ \mbox{\hyperlink{classKmerCounter_ac42f87be9dd6aecf9911ab45481efa17}{KmerCounter::\string~KmerCounter}}()\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00053}00053\ \ \ \ \ deallocate();}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00054}00054\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00056}\mbox{\hyperlink{classKmerCounter_a354e6c78208511b54a5d7297c7643ff7}{00056}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classKmerCounter_a354e6c78208511b54a5d7297c7643ff7}{KmerCounter::getNumNucleotides}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{return}\ \_allNucleotides.size();}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00058}00058\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00060}\mbox{\hyperlink{classKmerCounter_a3692ae889a64e4270ffb27de81455098}{00060}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classKmerCounter_a3692ae889a64e4270ffb27de81455098}{KmerCounter::getK}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{return}\ \_k;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00062}00062\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00064}\mbox{\hyperlink{classKmerCounter_a302916d81acdfd44d21b0a006743c875}{00064}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classKmerCounter_a302916d81acdfd44d21b0a006743c875}{KmerCounter::getNumKmers}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00065}00065\ \ \ \ \textcolor{keywordflow}{return}\ pow(\mbox{\hyperlink{classKmerCounter_a354e6c78208511b54a5d7297c7643ff7}{getNumNucleotides}}(),\_k);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00068}\mbox{\hyperlink{classKmerCounter_a48be658ff5257a0c74c0ed42bd98797b}{00068}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classKmerCounter_a48be658ff5257a0c74c0ed42bd98797b}{KmerCounter::getNumberActiveKmers}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{int}\ counter\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{int}\ nRows=\ getNumRows();}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordtype}{int}\ nCols\ =\ getNumCols();}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00072}00072\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ row\ =\ 0;\ row\ <\ nRows;\ ++row)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ column\ =\ 0;\ column\ <\ nCols;\ ++column)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_frequency[row][column]\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ counter++;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00079}00079\ \ \ \ \ \textcolor{keywordflow}{return}\ counter;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00080}00080\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00082}00082\ \textcolor{comment}{//bool\ KmerCounter::setFrequency(const\ Kmer\&\ kmer,\ int\ frequency)\ \{\ }}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00083}00083\ \textcolor{comment}{//\ \ \ \ int\ row,\ column;}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00084}00084\ \textcolor{comment}{//}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00085}00085\ \textcolor{comment}{//\ \ \ \ this-\/>getRowColumn(row,\ column);}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00086}00086\ \textcolor{comment}{//\ \ \ \ if\ (0\ <=\ row\ \&\&\ row\ <\ getNumNucleotides()\ \&\&\ 0\ <=\ column\ \&\&\ column\ <\ getNumNucleotides())\ \{}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00087}00087\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \_frequency[row][column]\ =\ frequency;\ }}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00088}00088\ \textcolor{comment}{//\ \ \ \ \ \ \ \ return\ true;}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00089}00089\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00090}00090\ \textcolor{comment}{//\ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00091}00091\ \textcolor{comment}{//\ \ \ \ return\ false;}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00092}00092\ \textcolor{comment}{//\}}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00094}\mbox{\hyperlink{classKmerCounter_af3e67fb9d9e2190a15e2458cd720c8d0}{00094}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKmerCounter_af3e67fb9d9e2190a15e2458cd720c8d0}{KmerCounter::increaseFrequency}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classKmer}{Kmer}}\&\ kmer,\ \textcolor{keywordtype}{int}\ frequency)\ \{\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{keywordtype}{int}\ row,\ column;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00097}00097\ \ \ \ \ this-\/>getRowColumn(kmer,\ row,\ column);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00098}00098\ \ \ \ \ \textcolor{keywordflow}{if}(row<0\ ||\ column\ <0)\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00099}00099\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}void\ KmerCounter::increaseFrequency(const\ Kmer\&\ kmer,\ int\ frequency):\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ kmer.\mbox{\hyperlink{classKmer_ae394adf5587405c5204a07df6b95cebb}{toString}}()\ +\ \textcolor{stringliteral}{"{}\ contains\ invalid\ nucleotides"{}});}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00102}00102\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00103}00103\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \_frequency[row][column]\ +=\ frequency;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00106}00106\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00108}\mbox{\hyperlink{classKmerCounter_ab455c7361c295537d8c1c6b568421b2d}{00108}}\ \mbox{\hyperlink{classKmerCounter}{KmerCounter}}\&\ \mbox{\hyperlink{classKmerCounter_ab455c7361c295537d8c1c6b568421b2d}{KmerCounter::operator=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classKmerCounter}{KmerCounter}}\&\ orig)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00109}00109\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ !=\ \&orig)\ \{\ \ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ deallocate();}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ allocate(orig.getNumRows(),\ orig.getNumCols());}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ copy(orig);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00113}00113\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00114}00114\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00115}00115\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00117}\mbox{\hyperlink{classKmerCounter_ae63a1c4c8ba9aa7384df49a3857f5946}{00117}}\ \mbox{\hyperlink{classKmerCounter}{KmerCounter}}\&\ \mbox{\hyperlink{classKmerCounter_ae63a1c4c8ba9aa7384df49a3857f5946}{KmerCounter::operator+=}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classKmerCounter}{KmerCounter}}\&\ rkc)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00118}00118\ \ \ \ \ \textcolor{keywordflow}{if}\ (\_allNucleotides\ ==\ rkc.\_allNucleotides\ \&\&\ \_k==rkc.\_k)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ f\ =\ 0;\ f\ <\ getNumRows();\ f++)}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ c\ =\ 0;\ c\ <\ getNumCols();\ c++)}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_frequency[f][c]\ +=\ rkc.\_frequency[f][c];}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00122}00122\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00123}00123\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}KmerCounter\&\ KmerCounter::operator+=(const\ KmerCounter\&\ rkc):\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ the\ given\ argument\ contains\ a\ different\ set\ nucleotides\ or\ a\ different\ K"{}});}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00127}00127\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00128}00128\ \ \ \ \ \textcolor{keywordflow}{return}\ *\textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00129}00129\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00130}00130\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00131}00131\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\&\ KmerCounter::operator()(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ column)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00132}00132\ \ \ \ \ \textcolor{keywordflow}{return}\ \_frequency[row][column];}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00133}00133\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00135}00135\ \textcolor{keywordtype}{int}\&\ KmerCounter::operator()(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ column)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00136}00136\ \ \ \ \ \textcolor{keywordflow}{return}\ \_frequency[row][column];}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00137}00137\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00139}\mbox{\hyperlink{classKmerCounter_aefc19e641ff99ee8749ddeed8dd17a30}{00139}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classKmerCounter_aefc19e641ff99ee8749ddeed8dd17a30}{KmerCounter::calculateFrequencies}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*\ fileName)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00140}00140\ \ \ \ \ ifstream\ fe;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00142}00142\ \ \ \ \ fe.open(fileName,\ ifstream::in);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00143}00143\ \ \ \ \ \textcolor{keywordflow}{if}\ (!fe)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::ios\_base::failure(}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}void\ KmerCounter::calculateFrequencies(const\ char*\ fileName):\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Error,\ opening\ file\ "{}}\ +\ \textcolor{keywordtype}{string}(fileName));}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00147}00147\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ size;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ inputString;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ fe\ >>\ inputString;\ \textcolor{comment}{//\ Read\ the\ DNA\ sequence}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ size\ =\ inputString.size();}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Obtain\ the\ kmers}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (size\ -\/\ index\ >=\ \_k)\ \{\ \textcolor{comment}{//\ exit\ if\ there\ are\ not\ enough\ characters\ to\ build\ a\ Kmer}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKmer}{Kmer}}\ kmer\ =\ \mbox{\hyperlink{classKmer}{Kmer}}(inputString.substr(index,\ \_k));}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ kmer.\mbox{\hyperlink{classKmer_ac4f03c56da85aed417d2139199e7a6bd}{normalize}}(this-\/>\_validNucleotides);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00159}00159\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}KMER\ encontrado:\ "{}\ <<\ kmer\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKmerCounter_af3e67fb9d9e2190a15e2458cd720c8d0}{increaseFrequency}}(kmer);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ index++;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00162}00162\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00163}00163\ \ \ \ \ \ \ \ \ fe.close();}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00164}00164\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00165}00165\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00167}\mbox{\hyperlink{classKmerCounter_a73dc1b5fcc09e837c2330b4c822cc60b}{00167}}\ \mbox{\hyperlink{classProfile}{Profile}}\ \mbox{\hyperlink{classKmerCounter_a73dc1b5fcc09e837c2330b4c822cc60b}{KmerCounter::toProfile}}()\textcolor{keyword}{\ const\ }\{\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00168}00168\ \ \ \ \ \textcolor{keywordtype}{int}\ frequency;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00169}00169\ \ \ \ \ \mbox{\hyperlink{classKmerFreq}{KmerFreq}}\ kmerFreq;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00170}00170\ \ \ \ \ \mbox{\hyperlink{classProfile}{Profile}}\ profile(this-\/>\mbox{\hyperlink{classKmerCounter_a48be658ff5257a0c74c0ed42bd98797b}{getNumberActiveKmers}}());}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00171}00171\ \textcolor{comment}{//\ \ \ \ cout\ <<\ "{}getNumberActiveKmers():\ "{}\ <<\ getNumberActiveKmers()\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00172}00172\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00173}00173\ \ \ \ \ \textcolor{keywordtype}{int}\ nRows\ =\ this-\/>getNumRows();}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00174}00174\ \ \ \ \ \textcolor{keywordtype}{int}\ nCols\ =\ this-\/>getNumCols();}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00175}00175\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ pos\ =\ 0,\ row\ =\ 0;\ row\ <\ nRows;\ row++)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ col\ =\ 0;\ col\ <\ nCols;\ col++)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ frequency\ =\ (*this)(row,\ col);\ \textcolor{comment}{//\ or\ this-\/>\_frequency[row][col];}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (frequency\ >\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classKmer}{Kmer}}\ kmer\ =\ this-\/>getKmer(row,\ col);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00180}00180\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ kmerFreq.\mbox{\hyperlink{classKmerFreq_a4eb114f842390e0091cda7a2aab9d8ec}{setKmer}}(kmer);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ kmerFreq.\mbox{\hyperlink{classKmerFreq_a02f30c44425e7b245e46253c5e532930}{setFrequency}}(frequency);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00183}00183\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}Kmer\ a\ insertar\ en\ Profile\ "{}\ <<\ kmer\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00184}00184\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ "{}profile\ size:\ "{}\ <<\ profile.getSize()\ <<\ endl;}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ profile.\mbox{\hyperlink{classProfile_a1e3a111507230aeb795e2c0ec4a9cc9d}{at}}(pos)\ =\ kmerFreq;\ \textcolor{comment}{//\ or\ profile[pos]\ =\ kmerFreq;\ }}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ pos++;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00188}00188\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00189}00189\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00190}00190\ \textcolor{comment}{//\ \ \ \ profile.sort();}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00191}00191\ \ \ \ \ \textcolor{keywordflow}{return}\ profile;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00192}00192\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00193}00193\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00194}00194\ \textcolor{comment}{//void\ KmerCounter::fromProfile(const\ Profile\ \&\ profile)\ \{}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00195}00195\ \textcolor{comment}{//\ \ \ \ for\ (int\ i\ =\ 0;\ i\ <\ profile.getSize();\ i++)\{}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00196}00196\ \textcolor{comment}{//\ \ \ \ \ \ \ \ this-\/>setFrequency(profile.at(i).getKmer(),\ //\ or\ this-\/>increaseFrequency(profile[i].getKmer(),}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00197}00197\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ profile.at(i).getFrequency());\ //\ or\ profile[i].getFrequency());}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00198}00198\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00199}00199\ \textcolor{comment}{//\}}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00203}00203\ \textcolor{keywordtype}{void}\ KmerCounter::allocate(\textcolor{keywordtype}{int}\ nRows,\ \textcolor{keywordtype}{int}\ nCols)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00204}00204\ \ \ \ \ \textcolor{keywordflow}{if}\ (nRows\ >\ 0\ \&\&\ nCols\ >0)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \_frequency\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}*[nRows];}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \_frequency[0]\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[nRows\ *\ nCols];}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 1;\ i\ <\ nRows;\ ++i)}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \_frequency[i]\ =\ \_frequency[i\ -\/\ 1]\ +\ nCols;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00209}00209\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00210}00210\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \_frequency\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00212}00212\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00213}00213\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00214}00214\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00215}00215\ \textcolor{keywordtype}{int}\ KmerCounter::getNumRows()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00216}00216\ \ \ \ \ \textcolor{keywordflow}{return}\ pow(\_allNucleotides.size(),\ (\_k\ +\ 1)/2);\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00217}00217\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00219}00219\ \textcolor{keywordtype}{int}\ KmerCounter::getNumCols()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00220}00220\ \ \ \ \ \textcolor{keywordflow}{return}\ pow(\_allNucleotides.size(),\ \_k\ -\/\ (\_k\ +\ 1)/2\ );\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00221}00221\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00223}00223\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00224}00224\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00225}00225\ \textcolor{keywordtype}{int}\ KmerCounter::getIndex(\textcolor{keyword}{const}\ std::string\&\ kmer)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00226}00226\ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00227}00227\ \ \ \ \ \textcolor{keywordtype}{int}\ base\ =\ 1;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00228}00228\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00229}00229\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ kmer.size();\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00230}00230\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ pos\ =\ \_allNucleotides.find(kmer[kmer.size()-\/i-\/1]);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00231}00231\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (pos\ <\ 0)\ \textcolor{comment}{//\ ToDo\ lanzar\ excepción\ ?}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/1;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//pos\ =\ 0;}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00234}00234\ \ \ \ \ \ \ \ \ index\ +=\ pos\ *\ base;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00235}00235\ \ \ \ \ \ \ \ \ base\ *=\ \_allNucleotides.size();}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00236}00236\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00237}00237\ \ \ \ \ \textcolor{keywordflow}{return}\ index;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00238}00238\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00239}00239\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00240}00240\ \textcolor{keywordtype}{string}\ KmerCounter::getInvertedIndex(\textcolor{keywordtype}{int}\ index,\ \textcolor{keywordtype}{int}\ nCharacters)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00241}00241\ \ \ \ \ \textcolor{keywordtype}{string}\ result(nCharacters,\ \mbox{\hyperlink{classKmer_a4cdc2682181a0435d9fe703316fad091}{Kmer::MISSING\_NUCLEOTIDE}});}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00242}00242\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00243}00243\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ result.size();\ i\ >\ 0;\ i-\/-\/)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00244}00244\ \ \ \ \ \ \ \ \ result[i\ -\/\ 1]\ =\ \_allNucleotides[index\ \%\ \_allNucleotides.size()];}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00245}00245\ \ \ \ \ \ \ \ \ index\ =\ index\ /\ \_allNucleotides.size();}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00246}00246\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00247}00247\ \ \ \ \ \textcolor{keywordflow}{return}\ result;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00248}00248\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00249}00249\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00250}00250\ \textcolor{keywordtype}{void}\ KmerCounter::getRowColumn(\textcolor{keyword}{const}\ \mbox{\hyperlink{classKmer}{Kmer}}\ \&kmer,\ \textcolor{keywordtype}{int}\&\ row,\ \textcolor{keywordtype}{int}\&\ column)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00251}00251\ \ \ \ \ \textcolor{keywordtype}{int}\ lenRowString=(\_k\ +\ 1)/2;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00252}00252\ \ \ \ \ \textcolor{keywordtype}{string}\ rowString=kmer.\mbox{\hyperlink{classKmer_ae394adf5587405c5204a07df6b95cebb}{toString}}().substr(0,\ lenRowString);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00253}00253\ \ \ \ \ \textcolor{keywordtype}{string}\ colString=kmer.\mbox{\hyperlink{classKmer_ae394adf5587405c5204a07df6b95cebb}{toString}}().substr(lenRowString,\ \_k-\/lenRowString);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00254}00254\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00255}00255\ \ \ \ \ row\ =\ getIndex(rowString);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00256}00256\ \ \ \ \ column\ =\ getIndex(colString);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00257}00257\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00258}00258\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00259}00259\ \mbox{\hyperlink{classKmer}{Kmer}}\ KmerCounter::getKmer(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ column)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00260}00260\ \ \ \ \ \textcolor{keywordflow}{if}(row<0\ ||\ column\ <0\ ||\ row\ >=\ this-\/>getNumRows()\ ||\ column\ >=\ this-\/>getNumCols())\{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00261}00261\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}(\textcolor{stringliteral}{"{}Kmer\ KmerCounter::getKmer(int\ row,\ int\ column)\ const:\ "{}})\ +}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ invalid\ row\ or\ column,\ row\ =\ "{}}\ +\ std::to\_string(row)\ +\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ column\ =\ "{}}\ +\ std::to\_string(column));}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00265}00265\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00266}00266\ \ \ \ \ \textcolor{keywordtype}{string}\ dna\ =\ this-\/>getInvertedIndex(row,\ (\_k\ +\ 1)/2\ )\ +\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00267}00267\ \ \ \ \ \ \ \ \ \ \ \ \ this-\/>getInvertedIndex(column,\ \_k\ -\/\ (\_k\ +\ 1)/2);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00268}00268\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{classKmer}{Kmer}}(dna);}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00269}00269\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00270}00270\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00271}00271\ \textcolor{keywordtype}{void}\ KmerCounter::initFrequencies()\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00272}00272\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ row\ =\ 0;\ row\ <\ getNumRows();\ ++row)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00273}00273\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ column\ =\ 0;\ column\ <\ getNumCols();\ ++column)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \_frequency[row][column]\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00275}00275\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00276}00276\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00277}00277\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00278}00278\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00279}00279\ \textcolor{keywordtype}{void}\ KmerCounter::deallocate()\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00280}00280\ \ \ \ \ \textcolor{keywordflow}{if}\ (\_frequency\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00281}00281\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \_frequency[0];}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00282}00282\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}[]\ \_frequency;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00283}00283\ \ \ \ \ \ \ \ \ \_frequency\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00284}00284\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00285}00285\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00287}00287\ \textcolor{keywordtype}{void}\ KmerCounter::copy(\textcolor{keyword}{const}\ \mbox{\hyperlink{classKmerCounter}{KmerCounter}}\&\ orig)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00288}00288\ \ \ \ \ \_validNucleotides\ =\ orig.\_validNucleotides;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00289}00289\ \ \ \ \ \_allNucleotides\ =\ orig.\_allNucleotides;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00290}00290\ \ \ \ \ \_k\ =\ orig.\_k;}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00291}00291\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00292}00292\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ row\ =\ 0;\ row\ <\ getNumRows();\ ++row)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00293}00293\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ col\ =\ 0;\ col\ <\ getNumCols();\ ++col)\ \{}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00294}00294\ \ \ \ \ \ \ \ \ \ \ \ \ (*this)(row,col)\ =\ orig(row,col);\ \textcolor{comment}{//\ or\ \_frequency[row][col]\ =\ orig.\_frequency[row][col];}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00295}00295\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00296}00296\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00297}00297\ \}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00298}00298\ }
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00299}00299\ \textcolor{comment}{//char\ readNextValidChar(istream\&\ inputStream,\ const\ string\&\ validChars)\ \{}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00300}00300\ \textcolor{comment}{//\ \ \ \ //\ TODO\ Ineficiente.\ Podría\ mejorarse\ usando\ un\ map\ como\ hace\ Huete\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00301}00301\ \textcolor{comment}{//\ \ \ \ //\ suponiendo\ que\ los\ caracteres\ en\ cadena\ están\ ordenados\ por\ orden\ alfabético}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00302}00302\ \textcolor{comment}{//\ \ \ \ char\ character,\ result\ =\ '\(\backslash\)0';}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00303}00303\ \textcolor{comment}{//\ \ \ \ bool\ stop\ =\ false;}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00304}00304\ \textcolor{comment}{//\ \ \ \ while\ (inputStream\ \&\&\ !stop)\ \{}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00305}00305\ \textcolor{comment}{//\ \ \ \ \ \ \ \ character\ =\ tolower(inputStream.get());}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00306}00306\ \textcolor{comment}{//\ \ \ \ \ \ \ \ if\ (inputStream)\ \{}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00307}00307\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ if\ (validChars.find(character)\ <\ validChars.size())\ \{}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00308}00308\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ result\ =\ character;}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00309}00309\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ stop\ =\ true;}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00310}00310\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00311}00311\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00312}00312\ \textcolor{comment}{//\ \ \ \ \}}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00313}00313\ \textcolor{comment}{//\ \ \ \ return\ result;}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00314}00314\ \textcolor{comment}{//\}}}
+\DoxyCodeLine{\Hypertarget{KmerCounter_8cpp_source_l00315}00315\ }
+
+\end{DoxyCode}

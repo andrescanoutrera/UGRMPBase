@@ -1,0 +1,333 @@
+\begin{theindex}
+
+  \item {$\sim$KmerCounter}
+    \subitem {KmerCounter}, \hyperpage{18}
+  \item {$\sim$Profile}
+    \subitem {Profile}, \hyperpage{32}
+
+  \indexspace
+
+  \item {append}
+    \subitem {Profile}, \hyperpage{32}
+  \item {at}
+    \subitem {Kmer}, \hyperpage{9, 10}
+    \subitem {Profile}, \hyperpage{33}
+
+  \indexspace
+
+  \item {calculateFrequencies}
+    \subitem {KmerCounter}, \hyperpage{19}
+  \item {CLASSIFY.cpp}
+    \subitem {main}, \hyperpage{58}
+    \subitem {showEnglishHelp}, \hyperpage{59}
+    \subitem {showSpanishHelp}, \hyperpage{59}
+  \item {complementary}
+    \subitem {Kmer}, \hyperpage{10}
+
+  \indexspace
+
+  \item {DEFAULT\_VALID\_NUCLEOTIDES}
+    \subitem {KmerCounter}, \hyperpage{23}
+  \item {deletePos}
+    \subitem {Profile}, \hyperpage{34}
+
+  \indexspace
+
+  \item {findKmer}
+    \subitem {Profile}, \hyperpage{34}
+
+  \indexspace
+
+  \item {getCapacity}
+    \subitem {Profile}, \hyperpage{35}
+  \item {getDistance}
+    \subitem {Profile}, \hyperpage{35}
+  \item {getFrequency}
+    \subitem {KmerFreq}, \hyperpage{25}
+  \item {getK}
+    \subitem {Kmer}, \hyperpage{11}
+    \subitem {KmerCounter}, \hyperpage{19}
+  \item {getKmer}
+    \subitem {KmerFreq}, \hyperpage{25}
+  \item {getNumberActiveKmers}
+    \subitem {KmerCounter}, \hyperpage{20}
+  \item {getNumKmers}
+    \subitem {KmerCounter}, \hyperpage{20}
+  \item {getNumNucleotides}
+    \subitem {KmerCounter}, \hyperpage{20}
+  \item {getProfileId}
+    \subitem {Profile}, \hyperpage{36}
+  \item {getSize}
+    \subitem {Profile}, \hyperpage{36}
+
+  \indexspace
+
+  \item {include/Kmer.h}, \hyperpage{45}, \hyperpage{52}
+  \item {include/KmerCounter.h}, \hyperpage{53}
+  \item {include/KmerFreq.h}, \hyperpage{54}
+  \item {include/Profile.h}, \hyperpage{55, 56}
+  \item {increaseFrequency}
+    \subitem {KmerCounter}, \hyperpage{21}
+  \item {IsValidNucleotide}
+    \subitem {Kmer.cpp}, \hyperpage{64}
+    \subitem {Kmer.h}, \hyperpage{46}
+
+  \indexspace
+
+  \item {JOIN.cpp}
+    \subitem {main}, \hyperpage{61}
+    \subitem {showEnglishHelp}, \hyperpage{62}
+
+  \indexspace
+
+  \item {Kmer}, \hyperpage{7}
+    \subitem {at}, \hyperpage{9, 10}
+    \subitem {complementary}, \hyperpage{10}
+    \subitem {getK}, \hyperpage{11}
+    \subitem {Kmer}, \hyperpage{8, 9}
+    \subitem {MISSING\_NUCLEOTIDE}, \hyperpage{16}
+    \subitem {normalize}, \hyperpage{11}
+    \subitem {operator$<$$<$}, \hyperpage{15}
+    \subitem {operator$>$$>$}, \hyperpage{15}
+    \subitem {operator[]}, \hyperpage{12}
+    \subitem {read}, \hyperpage{13}
+    \subitem {size}, \hyperpage{13}
+    \subitem {toLower}, \hyperpage{14}
+    \subitem {toString}, \hyperpage{14}
+    \subitem {toUpper}, \hyperpage{14}
+    \subitem {write}, \hyperpage{14}
+  \item {Kmer.cpp}
+    \subitem {IsValidNucleotide}, \hyperpage{64}
+    \subitem {operator!=}, \hyperpage{65}
+    \subitem {operator$<$}, \hyperpage{65}
+    \subitem {operator$<$$<$}, \hyperpage{66}
+    \subitem {operator$<$=}, \hyperpage{66}
+    \subitem {operator$>$}, \hyperpage{67}
+    \subitem {operator$>$$>$}, \hyperpage{68}
+    \subitem {operator$>$=}, \hyperpage{68}
+    \subitem {operator==}, \hyperpage{67}
+    \subitem {ToLower}, \hyperpage{69}
+    \subitem {ToUpper}, \hyperpage{69}
+  \item {Kmer.h}
+    \subitem {IsValidNucleotide}, \hyperpage{46}
+    \subitem {operator!=}, \hyperpage{46}
+    \subitem {operator$<$}, \hyperpage{47}
+    \subitem {operator$<$$<$}, \hyperpage{47}
+    \subitem {operator$<$=}, \hyperpage{48}
+    \subitem {operator$>$}, \hyperpage{48}
+    \subitem {operator$>$$>$}, \hyperpage{49}
+    \subitem {operator$>$=}, \hyperpage{49}
+    \subitem {operator==}, \hyperpage{48}
+    \subitem {ToLower}, \hyperpage{51}
+    \subitem {ToUpper}, \hyperpage{51}
+  \item {KmerCounter}, \hyperpage{16}
+    \subitem {$\sim$KmerCounter}, \hyperpage{18}
+    \subitem {calculateFrequencies}, \hyperpage{19}
+    \subitem {DEFAULT\_VALID\_NUCLEOTIDES}, \hyperpage{23}
+    \subitem {getK}, \hyperpage{19}
+    \subitem {getNumberActiveKmers}, \hyperpage{20}
+    \subitem {getNumKmers}, \hyperpage{20}
+    \subitem {getNumNucleotides}, \hyperpage{20}
+    \subitem {increaseFrequency}, \hyperpage{21}
+    \subitem {KmerCounter}, \hyperpage{18}
+    \subitem {operator+=}, \hyperpage{22}
+    \subitem {operator=}, \hyperpage{22}
+    \subitem {toProfile}, \hyperpage{23}
+  \item {KmerFreq}, \hyperpage{24}
+    \subitem {getFrequency}, \hyperpage{25}
+    \subitem {getKmer}, \hyperpage{25}
+    \subitem {KmerFreq}, \hyperpage{25}
+    \subitem {operator$<$$<$}, \hyperpage{28}
+    \subitem {operator$>$$>$}, \hyperpage{28}
+    \subitem {read}, \hyperpage{26}
+    \subitem {setFrequency}, \hyperpage{26}
+    \subitem {setKmer}, \hyperpage{27}
+    \subitem {toString}, \hyperpage{27}
+    \subitem {write}, \hyperpage{27}
+  \item {KmerFreq.cpp}
+    \subitem {operator!=}, \hyperpage{77}
+    \subitem {operator$<$}, \hyperpage{77}
+    \subitem {operator$<$$<$}, \hyperpage{77}
+    \subitem {operator$<$=}, \hyperpage{78}
+    \subitem {operator$>$}, \hyperpage{80}
+    \subitem {operator$>$$>$}, \hyperpage{81}
+    \subitem {operator$>$=}, \hyperpage{80}
+    \subitem {operator==}, \hyperpage{78}
+
+  \indexspace
+
+  \item {LEARN.cpp}
+    \subitem {main}, \hyperpage{83}
+    \subitem {showEnglishHelp}, \hyperpage{85}
+    \subitem {showSpanishHelp}, \hyperpage{85}
+  \item {load}
+    \subitem {Profile}, \hyperpage{37}
+
+  \indexspace
+
+  \item {main}
+    \subitem {CLASSIFY.cpp}, \hyperpage{58}
+    \subitem {JOIN.cpp}, \hyperpage{61}
+    \subitem {LEARN.cpp}, \hyperpage{83}
+  \item {MISSING\_NUCLEOTIDE}
+    \subitem {Kmer}, \hyperpage{16}
+
+  \indexspace
+
+  \item {normalize}
+    \subitem {Kmer}, \hyperpage{11}
+    \subitem {Profile}, \hyperpage{38}
+
+  \indexspace
+
+  \item {operator!=}
+    \subitem {Kmer.cpp}, \hyperpage{65}
+    \subitem {Kmer.h}, \hyperpage{46}
+    \subitem {KmerFreq.cpp}, \hyperpage{77}
+  \item {operator$<$}
+    \subitem {Kmer.cpp}, \hyperpage{65}
+    \subitem {Kmer.h}, \hyperpage{47}
+    \subitem {KmerFreq.cpp}, \hyperpage{77}
+  \item {operator$<$$<$}
+    \subitem {Kmer}, \hyperpage{15}
+    \subitem {Kmer.cpp}, \hyperpage{66}
+    \subitem {Kmer.h}, \hyperpage{47}
+    \subitem {KmerFreq}, \hyperpage{28}
+    \subitem {KmerFreq.cpp}, \hyperpage{77}
+    \subitem {Profile}, \hyperpage{43}
+    \subitem {Profile.cpp}, \hyperpage{88}
+    \subitem {Profile.h}, \hyperpage{55}
+  \item {operator$<$=}
+    \subitem {Kmer.cpp}, \hyperpage{66}
+    \subitem {Kmer.h}, \hyperpage{48}
+    \subitem {KmerFreq.cpp}, \hyperpage{78}
+  \item {operator$>$}
+    \subitem {Kmer.cpp}, \hyperpage{67}
+    \subitem {Kmer.h}, \hyperpage{48}
+    \subitem {KmerFreq.cpp}, \hyperpage{80}
+  \item {operator$>$$>$}
+    \subitem {Kmer}, \hyperpage{15}
+    \subitem {Kmer.cpp}, \hyperpage{68}
+    \subitem {Kmer.h}, \hyperpage{49}
+    \subitem {KmerFreq}, \hyperpage{28}
+    \subitem {KmerFreq.cpp}, \hyperpage{81}
+    \subitem {Profile}, \hyperpage{44}
+    \subitem {Profile.cpp}, \hyperpage{88}
+    \subitem {Profile.h}, \hyperpage{56}
+  \item {operator$>$=}
+    \subitem {Kmer.cpp}, \hyperpage{68}
+    \subitem {Kmer.h}, \hyperpage{49}
+    \subitem {KmerFreq.cpp}, \hyperpage{80}
+  \item {operator+=}
+    \subitem {KmerCounter}, \hyperpage{22}
+    \subitem {Profile}, \hyperpage{38, 39}
+  \item {operator=}
+    \subitem {KmerCounter}, \hyperpage{22}
+    \subitem {Profile}, \hyperpage{39}
+  \item {operator==}
+    \subitem {Kmer.cpp}, \hyperpage{67}
+    \subitem {Kmer.h}, \hyperpage{48}
+    \subitem {KmerFreq.cpp}, \hyperpage{78}
+  \item {operator[]}
+    \subitem {Kmer}, \hyperpage{12}
+    \subitem {Profile}, \hyperpage{40}
+
+  \indexspace
+
+  \item {Profile}, \hyperpage{29}
+    \subitem {$\sim$Profile}, \hyperpage{32}
+    \subitem {append}, \hyperpage{32}
+    \subitem {at}, \hyperpage{33}
+    \subitem {deletePos}, \hyperpage{34}
+    \subitem {findKmer}, \hyperpage{34}
+    \subitem {getCapacity}, \hyperpage{35}
+    \subitem {getDistance}, \hyperpage{35}
+    \subitem {getProfileId}, \hyperpage{36}
+    \subitem {getSize}, \hyperpage{36}
+    \subitem {load}, \hyperpage{37}
+    \subitem {normalize}, \hyperpage{38}
+    \subitem {operator$<$$<$}, \hyperpage{43}
+    \subitem {operator$>$$>$}, \hyperpage{44}
+    \subitem {operator+=}, \hyperpage{38, 39}
+    \subitem {operator=}, \hyperpage{39}
+    \subitem {operator[]}, \hyperpage{40}
+    \subitem {Profile}, \hyperpage{31, 32}
+    \subitem {save}, \hyperpage{41}
+    \subitem {setProfileId}, \hyperpage{41}
+    \subitem {sort}, \hyperpage{42}
+    \subitem {toString}, \hyperpage{42}
+    \subitem {zip}, \hyperpage{43}
+  \item {Profile.cpp}
+    \subitem {operator$<$$<$}, \hyperpage{88}
+    \subitem {operator$>$$>$}, \hyperpage{88}
+  \item {Profile.h}
+    \subitem {operator$<$$<$}, \hyperpage{55}
+    \subitem {operator$>$$>$}, \hyperpage{56}
+
+  \indexspace
+
+  \item {read}
+    \subitem {Kmer}, \hyperpage{13}
+    \subitem {KmerFreq}, \hyperpage{26}
+
+  \indexspace
+
+  \item {save}
+    \subitem {Profile}, \hyperpage{41}
+  \item {setFrequency}
+    \subitem {KmerFreq}, \hyperpage{26}
+  \item {setKmer}
+    \subitem {KmerFreq}, \hyperpage{27}
+  \item {setProfileId}
+    \subitem {Profile}, \hyperpage{41}
+  \item {showEnglishHelp}
+    \subitem {CLASSIFY.cpp}, \hyperpage{59}
+    \subitem {JOIN.cpp}, \hyperpage{62}
+    \subitem {LEARN.cpp}, \hyperpage{85}
+  \item {showSpanishHelp}
+    \subitem {CLASSIFY.cpp}, \hyperpage{59}
+    \subitem {LEARN.cpp}, \hyperpage{85}
+  \item {size}
+    \subitem {Kmer}, \hyperpage{13}
+  \item {sort}
+    \subitem {Profile}, \hyperpage{42}
+  \item {src/CLASSIFY.cpp}, \hyperpage{58}, \hyperpage{60}
+  \item {src/JOIN.cpp}, \hyperpage{60}, \hyperpage{62}
+  \item {src/Kmer.cpp}, \hyperpage{64}, \hyperpage{70}
+  \item {src/KmerCounter.cpp}, \hyperpage{72}
+  \item {src/KmerFreq.cpp}, \hyperpage{76}, \hyperpage{81}
+  \item {src/LEARN.cpp}, \hyperpage{82}, \hyperpage{85}
+  \item {src/metamain.cpp}, \hyperpage{87}
+  \item {src/Profile.cpp}, \hyperpage{87}, \hyperpage{89}
+
+  \indexspace
+
+  \item {ToLower}
+    \subitem {Kmer.cpp}, \hyperpage{69}
+    \subitem {Kmer.h}, \hyperpage{51}
+  \item {toLower}
+    \subitem {Kmer}, \hyperpage{14}
+  \item {toProfile}
+    \subitem {KmerCounter}, \hyperpage{23}
+  \item {toString}
+    \subitem {Kmer}, \hyperpage{14}
+    \subitem {KmerFreq}, \hyperpage{27}
+    \subitem {Profile}, \hyperpage{42}
+  \item {ToUpper}
+    \subitem {Kmer.cpp}, \hyperpage{69}
+    \subitem {Kmer.h}, \hyperpage{51}
+  \item {toUpper}
+    \subitem {Kmer}, \hyperpage{14}
+
+  \indexspace
+
+  \item {write}
+    \subitem {Kmer}, \hyperpage{14}
+    \subitem {KmerFreq}, \hyperpage{27}
+
+  \indexspace
+
+  \item {zip}
+    \subitem {Profile}, \hyperpage{43}
+
+\end{theindex}
