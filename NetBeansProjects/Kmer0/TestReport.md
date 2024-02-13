@@ -1,6 +1,6 @@
 # OUTCOME OF TESTS FOR PROJECT kmer0_template
 
-As of Feb  1 2024 13:23:59
+As of Feb 13 2024 10:01:01
 
 | ID | NAME | RESULT | DESCRIPTION | 
 | :--- | :--- | :--- | :--- |
@@ -57,22 +57,22 @@ As of Feb  1 2024 13:23:59
 | 26 | T02_Intermediate.Kmer_complementary_3_excep |  PASSED |```Kmer kmer1("u_"); Kmer kmer2;kmer2 = kmer1.complementary(VALID_NUCLEOTIDES_ADN, "A");```|
 | | | | should THROW an exception std::invalid_argument|
 | 27| T03_Advanced.Integration_easyDNA2_missing-valgrind | PASSED | NO LEAKS |
-| 27 | T03_Advanced.Integration_easyDNA2_missing | PASSED | Easy test with a few nucleotides. There are some missing nucleotides. K=2|
+| 27 | T03_Advanced.Integration_easyDNA2_missing | PASSED | [kmer0 < data/easyDNA2_missing.k0in]: Easy test with a few nucleotides. There are some missing nucleotides. K=2|
 | 28| T03_Advanced.Integration_easyDNA3-valgrind | PASSED | NO LEAKS |
-| 28 | T03_Advanced.Integration_easyDNA3 | PASSED | Easy test with a few nucleotides. K=3|
+| 28 | T03_Advanced.Integration_easyDNA3 | PASSED | [kmer0 < data/easyDNA3.k0in]: Easy test with a few nucleotides. K=3|
 | 29| T03_Advanced.Integration_easyDNA5_missing-valgrind | PASSED | NO LEAKS |
-| 29 | T03_Advanced.Integration_easyDNA5_missing | PASSED | Easy test with a few nucleotides. There are some missing nucleotides. K=5|
+| 29 | T03_Advanced.Integration_easyDNA5_missing | PASSED | [kmer0 < data/easyDNA5_missing.k0in]: Easy test with a few nucleotides. There are some missing nucleotides. K=5|
 | 30| T03_Advanced.Integration_easyDNA5-valgrind | PASSED | NO LEAKS |
-| 30 | T03_Advanced.Integration_easyDNA5 | PASSED | Easy test with a few nucleotides. K=5|
+| 30 | T03_Advanced.Integration_easyDNA5 | PASSED | [kmer0 < data/easyDNA5.k0in]: Easy test with a few nucleotides. K=5|
 | 31| T03_Advanced.Integration_shortDNA1_missing-valgrind | PASSED | NO LEAKS |
-| 31 | T03_Advanced.Integration_shortDNA1_missing | PASSED | Short test with 37 nucleotides. There are some missing nucleotides. K=1|
+| 31 | T03_Advanced.Integration_shortDNA1_missing | PASSED | [kmer0 < data/shortDNA1_missing.k0in]: Short test with 37 nucleotides. There are some missing nucleotides. K=1|
 | 32| T03_Advanced.Integration_shortDNA20_missing-valgrind | PASSED | NO LEAKS |
-| 32 | T03_Advanced.Integration_shortDNA20_missing | PASSED | Short test with 20 nucleotides. There are some missing nucleotides. K=20|
+| 32 | T03_Advanced.Integration_shortDNA20_missing | PASSED | [kmer0 < data/shortDNA20_missing.k0in]: Short test with 20 nucleotides. There are some missing nucleotides. K=20|
 | 33| T03_Advanced.Integration_shortDNA25_no-valgrind | PASSED | NO LEAKS |
-| 33 | T03_Advanced.Integration_shortDNA25_no | PASSED | Short test with 19 nucleotides. There are some missing nucleotides. K=25|
+| 33 | T03_Advanced.Integration_shortDNA25_no | PASSED | [kmer0 < data/shortDNA25_no.k0in]: Short test with 19 nucleotides. There are some missing nucleotides. K=25|
 | 34| T03_Advanced.Integration_shortDNA5_missing-valgrind | PASSED | NO LEAKS |
-| 34 | T03_Advanced.Integration_shortDNA5_missing | PASSED | Short test with 37 nucleotides. There are some missing nucleotides. K=5|
+| 34 | T03_Advanced.Integration_shortDNA5_missing | PASSED | [kmer0 < data/shortDNA5_missing.k0in]: Short test with 37 nucleotides. There are some missing nucleotides. K=5|
 | 35| T03_Advanced.Integration_simpleDNA250-valgrind | PASSED | NO LEAKS |
-| 35 | T03_Advanced.Integration_simpleDNA250 | PASSED | Short test with 250 nucleotides. There are some missing nucleotides. K=250|
+| 35 | T03_Advanced.Integration_simpleDNA250 | PASSED | [kmer0 < data/simpleDNA250.k0in]: Short test with 250 nucleotides. There are some missing nucleotides. K=250|
 | 36| T03_Advanced.Integration_simpleDNA5-valgrind | PASSED | NO LEAKS |
-| 36 | T03_Advanced.Integration_simpleDNA5 | PASSED | Simple test with 250 nucleotides. There are some missing nucleotides. The array of kmers will be completely filled and some kmers will be left unsaved (from 100 onwards). K=5|
+| 36 | T03_Advanced.Integration_simpleDNA5 | PASSED | [kmer0 < data/simpleDNA5.k0in]: Simple test with 250 nucleotides. There are some missing nucleotides. The array of kmers will be completely filled and some kmers will be left unsaved (from 100 onwards). K=5|
