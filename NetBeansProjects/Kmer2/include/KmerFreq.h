@@ -29,7 +29,7 @@ public:
     /**
      * @brief Base constructor. 
      * It builds a KmerFreq object containing a Kmer with one nucleotide, the
-     * unknown nucleotide (Kmer::UNKNOWN_NUCLEOTIDE) and 0 as its frequency
+     * unknown nucleotide (Kmer::MISSING_NUCLEOTIDE) and 0 as its frequency
      */
     KmerFreq();
 
