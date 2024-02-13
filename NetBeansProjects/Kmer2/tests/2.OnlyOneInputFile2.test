@@ -1,0 +1,13 @@
+%%%CALL tests/output/7pairsDNA.prf ../Genomes/7pairsDNA.prf
+%%%VALGRIND
+%%%DESCRIPTION Only one input file. The input file is not normalized, it contains some kmers with frequency equal to 0 and it is not sorted by frequency nor kmer. 
+%%%FROMFILE tests/output/7pairsDNA.prf
+%%%OUTPUT
+MP-KMER-T-1.0
+red bug
+5
+CT 9
+AT 4
+CG 4
+AG 2
+GT 1

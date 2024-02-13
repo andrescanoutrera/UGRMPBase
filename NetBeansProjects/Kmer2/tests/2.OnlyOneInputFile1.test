@@ -1,0 +1,13 @@
+%%%CALL tests/output/7pairsDNA_normalized_zipped.prf ../Genomes/7pairsDNA_normalized_zipped.prf
+%%%VALGRIND
+%%%DESCRIPTION Only one input file. The input file is already normalized, zipped and sorted by frecuency. 
+%%%FROMFILE tests/output/7pairsDNA_normalized_zipped.prf
+%%%OUTPUT
+MP-KMER-T-1.0
+red bug
+5
+CT 9
+AT 4
+CG 4
+AG 2
+GT 1

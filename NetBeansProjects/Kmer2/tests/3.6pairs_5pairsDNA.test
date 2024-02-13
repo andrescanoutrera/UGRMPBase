@@ -1,0 +1,14 @@
+%%%CALL tests/output/6pairs_5pairsDNA.prf ../Genomes/6pairsDNA.prf ../Genomes/5pairsDNA.prf
+%%%VALGRIND
+%%%DESCRIPTION Join of ../Genomes/6pairsDNA.prf + ../Genomes/5pairsDNA.prf 
+%%%FROMFILE tests/output/6pairs_5pairsDNA.prf
+%%%OUTPUT
+MP-KMER-T-1.0
+red bug
+6
+C_ 7
+CG 5
+CC 4
+_G 4
+GC 3
+G_ 2

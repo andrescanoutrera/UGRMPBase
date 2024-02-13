@@ -1,0 +1,13 @@
+%%%CALL tests/output/7pairsDNA_human1.prf ../Genomes/7pairsDNA.prf ../Genomes/human1.prf
+%%%VALGRIND
+%%%DESCRIPTION Join of profiles with different profile identifiers: ../Genomes/7pairsDNA.prf + ../Genomes/human1.prf
+%%%FROMFILE tests/output/7pairsDNA_human1.prf
+%%%OUTPUT
+MP-KMER-T-1.0
+red bug
+5
+CT 9
+AT 4
+CG 4
+AG 2
+GT 1

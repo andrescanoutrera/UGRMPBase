@@ -1,0 +1,10 @@
+%%%CALL tests/output/4pairsDNA.prf ../Genomes/4pairsDNA.prf
+%%%VALGRIND
+%%%DESCRIPTION Only one input file. The input file is not normalized, it does not contain any kmer with frequency equal to 0 and it is not sorted by frequency nor kmer. In the process of normalization, some identical kmers are obtained, that are removed by merging them.
+%%%FROMFILE tests/output/4pairsDNA.prf
+%%%OUTPUT
+MP-KMER-T-1.0
+red bug
+2
+CT 9
+_G 5

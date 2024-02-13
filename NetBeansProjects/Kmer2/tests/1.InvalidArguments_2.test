@@ -1,0 +1,13 @@
+%%%CALL tests/output/output.prf
+%%%VALGRIND
+%%%DESCRIPTION Running with only one argument
+%%%OUTPUT
+ERROR in Kmer2 parameters
+Run with the following parameters:
+kmer2 <outputFile.prf> <file1.prf> [<file2.prf> ... <filen.prf>] 
+
+Parameters:
+<outputFile.prf>: output file where the join profile will be saved
+<file1.prf> [<file2.prf> ... <filen.prf>]: input profile files
+
+This program obtains a join profile (<outputFile.prf>) using the provided input profiles <file1.prf> [<file2.prf> ... <filen.prf>]
