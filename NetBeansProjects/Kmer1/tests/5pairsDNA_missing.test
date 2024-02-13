@@ -1,0 +1,7 @@
+%%%CALL < data/5pairsDNA_missing.k1in
+%%%DESCRIPTION 5 pairs. There are some missing nucleotides.
+%%%OUTPUT
+3
+AG 4
+CG 4
+CC 1

@@ -1,0 +1,5 @@
+%%%CALL < data/4pairsDNA.k1in
+%%%DESCRIPTION 4 pairs. After normalization there are duplicated kmers that should be removed.
+%%%OUTPUT
+1
+CT 9
