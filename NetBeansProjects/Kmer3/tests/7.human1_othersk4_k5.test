@@ -1,0 +1,8 @@
+%%%CALL ../Genomes/human1_k1.prf ../Genomes/human1.prf ../Genomes/human2.prf
+%%%VALGRIND
+%%%DESCRIPTION Min distance from human1_k1.prf to other profiles of kmers with k=5
+%%%OUTPUT
+Distance to ../Genomes/human1.prf: 0.9985
+Distance to ../Genomes/human2.prf: 0.998436
+Nearest profile file: ../Genomes/human2.prf
+Identifier of the nearest profile: homo sapiens

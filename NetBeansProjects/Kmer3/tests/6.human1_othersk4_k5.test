@@ -1,0 +1,9 @@
+%%%CALL ../Genomes/human1_k4_k5.prf ../Genomes/chimpanzee_chr6_s1_l500000_k4_k5.prf ../Genomes/human_chr6_s60000_l500000_k4_k5.prf
+%%%VALGRIND
+%%%DESCRIPTION Min distance from human1_k4_k5.prf to other profiles with kmers with k=4 and k=5
+%%%OUTPUT
+Distance to ../Genomes/chimpanzee_chr6_s1_l500000_k4_k5.prf: 0.143368
+Distance to ../Genomes/human_chr6_s60000_l500000_k4_k5.prf: 0.1448
+Nearest profile file: ../Genomes/chimpanzee_chr6_s1_l500000_k4_k5.prf
+Identifier of the nearest profile: pan troglodytes
+

@@ -1,0 +1,14 @@
+%%%CALL
+%%%VALGRIND
+%%%DESCRIPTION Running whithout arguments
+%%%OUTPUT
+ERROR in Kmer3 parameters
+Run with the following parameters:
+kmer3 [-t min|max] <file1.prf> <file2.prf> [ ... <filen.prf>]
+
+Parameters:
+-t min | -t max: search for minimun distances or maximum distances (-t min by default)
+<file1.prf>: source profile file for computing distances
+<file2.prf> [ ... <filen.prf>]: target profile files for computing distances
+
+This program computes the distance from profile <file1.prf> to the rest

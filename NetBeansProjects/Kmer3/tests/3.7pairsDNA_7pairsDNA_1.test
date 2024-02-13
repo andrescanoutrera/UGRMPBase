@@ -1,0 +1,8 @@
+%%%CALL ../Genomes/7pairsDNA.prf ../Genomes/7pairsDNA.prf
+%%%VALGRIND
+%%%DESCRIPTION Min distance from 7pairsDNA.prf to 7pairsDNA.prf
+%%%OUTPUT
+Distance to ../Genomes/7pairsDNA.prf: 0
+Nearest profile file: ../Genomes/7pairsDNA.prf
+Identifier of the nearest profile: red bug
+

@@ -1,0 +1,10 @@
+%%%CALL ../Genomes/human1.prf ../Genomes/human2.prf ../Genomes/fly1.prf ../Genomes/worm1.prf
+%%%VALGRIND
+%%%DESCRIPTION Min distance from human1.prf to other profiles
+%%%OUTPUT
+Distance to ../Genomes/human2.prf: 0.264996
+Distance to ../Genomes/fly1.prf: 0.29156
+Distance to ../Genomes/worm1.prf: 0.330618
+Nearest profile file: ../Genomes/human2.prf
+Identifier of the nearest profile: homo sapiens
+
