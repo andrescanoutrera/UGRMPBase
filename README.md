@@ -7,7 +7,8 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
  - Grupo de Telegram del [Doble Grado Informática y Matemáticas](https://t.me/+QJjPGdaLXrRkOTVk) -->
 
 # <a name="preping"></a>Preparándolo todo
--  [Videotutorial](https://drive.google.com/file/d/1VO7ib1QnUlEk1pHtn4F7D6QJwZZykgbo/view?usp=sharing) introducción a la asignatura.
+-  [Videotutorial](https://drive.google.com/file/d/1VO7ib1QnUlEk1pHtn4F7D6QJwZZykgbo/view?usp=sharing) Preparando el entorno de trabajo.
+<!--- introducción a la asignatura.-->
 <!--- Documentos de apoyo al videotutorial para la preparación del entorno de trabajo en el ordenador. En él se describe, a rasgos generales, cómo preparar el ordenador para la asignatura e incluye enlaces a otros videotutoriales, PDF, o Webs con descripciones más precisas de cada aspecto concreto. Este documento en PDF que aparece aquí son las transparencias del videotutorial y contiene los enlaces desde los que acceder a las herramientas y documentos que se citan en el vídeo.  -->
 <!--  - Las transparencias del vídeo con enlaces  -->
 - Repositorio en github de las prácticas de la asignatura:  https://github.com/andrescanoutrera/UGRMPBase
@@ -21,7 +22,7 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
     cd UGRMPbase
     git pull
     ```
-- [Videotutorial](ToDo) Preparando el entorno de trabajo
+- [Videotutorial](ToDo) Primeros pasos
 <!-- https://drive.google.com/file/d/1MFbCDJAiMJctlN_jPIfwlhWqPi0TGWiI/view?usp=sharing)  -->
 - Paquetes de Linux que deben estar presentes durante las prácticas (sudo apt install) `gcc` `make` `valgrind`  `wdiff`  `meld` `doxygen`    `ImageMagick` `git` `graphviz`
  - Para aquellos que decidáis la opción de VirtualBox, el profesorado de MP hemos preparado una copia de una máquina virtual ya preparada con Linux, NetBeans y C++. Aquí tenéis las instrucciones  para instalarla. Son tres pasos muy sencillos ![MP_VBOXc](https://user-images.githubusercontent.com/9058636/152649408-c228ab4f-d8c1-4ef8-8e56-81230dd63986.png)
