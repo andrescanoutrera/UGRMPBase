@@ -19,7 +19,7 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
     ``` 
   - Mantener el repo actualizado con los últimos cambios
     ```
-    cd UGRMPbase
+    cd UGRMPBase
     git pull
     ```
 - [Videotutorial](ToDo) Primeros pasos
