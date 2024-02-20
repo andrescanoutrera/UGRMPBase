@@ -24,13 +24,16 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
     ```
 - [Videotutorial](https://drive.google.com/file/d/1HkdEueUfbA9n8aLdPhaF0WxcK4q6xl70/view?usp=drive_link) Primeros pasos (descarga del repositorio UGMPBase).
 - Paquetes de Linux que deben estar presentes durante las prácticas (sudo apt install) `gcc` `make` `valgrind`  `wdiff`  `meld` `doxygen`    `ImageMagick` `git` `graphviz`
- - Para aquellos que decidáis la opción de VirtualBox, el profesorado de MP hemos preparado una copia de una máquina virtual ya preparada con Linux, NetBeans y C++. Aquí tenéis las instrucciones  para instalarla. Son tres pasos muy sencillos ![MP_VBOXc](https://user-images.githubusercontent.com/9058636/152649408-c228ab4f-d8c1-4ef8-8e56-81230dd63986.png)
+- Para aquellos que decidáis la opción de VirtualBox, el profesorado de MP hemos preparado una copia de una máquina virtual ya preparada con Linux, NetBeans y C++. Aquí tenéis las instrucciones  para instalarla. Son tres pasos muy sencillos ![MP_VBOXc](https://user-images.githubusercontent.com/9058636/152649408-c228ab4f-d8c1-4ef8-8e56-81230dd63986.png)
  
    - <a name="virtualbox"></a>Descargar e Instalar [Virtualbox](https://www.oracle.com/emea/virtualization/solutions/try-oracle-vm-virtualbox/?source=:ad:pas:go:dg:a_emea:71700000086137880-58700007342953610-p65823631225:RC_WWMK201210P00009C0001:&SC=:ad:pas:go:dg:a_emea::RC_WWMK201210P00009C0001::&gclid=CjwKCAiAl-6PBhBCEiwAc2GOVOk47paaZegmnUyyKtx-WFrjIcTIDntJfqxW40Kk8E3DFxK2_RPZBBoCUzwQAvD_BwE&gclsrc=aw.ds)
-   - Descargar la [Máquina virtual oficial de la asignatura](https://drive.google.com/drive/u/1/folders/1HMwctEsaFuICZpuHUF5rZuM6IpXPJqy8) desde Google Drive (tardará un poco porque son más de 4 GB). Es una versión de `Ubuntu 20` conocida como `LUbuntu 16.04 LTS` la cual ya vien empaquetada para consumir la mínima cantidad de recursos dado que se va a usar dentro de una VirtualBox sobre Windows. Esta imagen ya está configurada para la asignatura MP y lleva todo el software necesario instalado.
+   - Descargar la [Máquina virtual oficial de la asignatura](https://drive.google.com/drive/u/1/folders/1HMwctEsaFuICZpuHUF5rZuM6IpXPJqy8) desde Google Drive (tardará un poco porque son más de 4 GB). Es una versión de `Ubuntu 20` conocida como `LUbuntu 16.04 LTS` la cual ya viene empaquetada para consumir la mínima cantidad de recursos dado que se va a usar dentro de una VirtualBox sobre Windows. Esta imagen ya está configurada para la asignatura MP y lleva todo el software necesario instalado.
    - Importar la máquina virtual  y acceder a ella. [guía de importación](PDFs/importVBOX.pdf)
    - Usuario `mp`
    - Password `.CambiaEsto`
+   - En febrero de 2024, la oficina de Software Libre de la UGR nos ha proporcionado una nueva [Máquina virtual oficial de la asignatura](https://drive.google.com/file/d/199qZAdcO_iIb1QTubGkuF7APseNESvNk/view?usp=sharing) disponible también a través de Google Drive (que ocupa en este caso algo más de 10GB). Es una versión de `Ubuntu 22` que también está configurada para la asignatura MP y lleva todo el software necesario instalado.
+   - Usuario `usuario`
+   - Password `usuario`
 - Laboratorios de prácticas de la ETSIIT. Arranque con Ubuntu 20.04. El resto de herramientas ya están instaladas.
 - Y, finalmente una última opción: el servidor de imágenes virtuales de la [ETSIIT](https://turing.ugr.es/). Arrancar con Ubuntu 18. Ya tiene instalado NetBeans 11.2 y C++. 
 - Enlaces interesantes
