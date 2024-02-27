@@ -9,7 +9,7 @@
 
 
 /**
- * @mainpage MP1920Geometry
+ * @mainpage
  * 
  * Given two rectangles and a sequence of points
  * this program calculates which points are inscribed within the intersection of the two
@@ -22,7 +22,7 @@
  *       - Check if the point belongs the intersection
  *       - Counts the number of points inscribed in the intersection
  *       - The sequence ends when a point with any negative coordinate is read
-  * ~~~~
+ * ~~~~
  *        B{(1,6) (6,1)}
  *  6+     +-----------------------------o
  *   |     |                             |
@@ -50,7 +50,7 @@
  *   P={(0,0), (1,1), (2,2), (3,3), (4,4), (5,5), (6,6)}
  *   P(I)={(2,2), (3,3), (4,4), (5,5)}
  * 
- *~~~~~
+ * ~~~~
  *
  */
 #include <iostream>
