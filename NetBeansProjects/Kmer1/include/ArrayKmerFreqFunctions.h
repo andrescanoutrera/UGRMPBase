@@ -79,7 +79,7 @@ void SortArrayKmerFreq(KmerFreq array[], int nElements);
 /**
  * @brief Normalizes the given array of KmerFreq. That is, for each Kmer in
  * the array, all its characters are converted to uppercase. Then, invalid 
- * characters are replaced by the UNKNOWN_NUCLEOTIDE value.
+ * characters are replaced by the MISSING_NUCLEOTIDE value.
  * 
  * If after the previous normalization process of every kmer, identical kmers 
  * are obtained, these will be merged into the first identical kmer by 
