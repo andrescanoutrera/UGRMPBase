@@ -4,7 +4,7 @@
  */
 
 /* 
- * File:   main.cpp
+ * @file main.cpp
  * @author Silvia Acid Carrillo <acid@decsai.ugr.es>
  * @author Andrés Cano Utrera <acu@decsai.ugr.es>
  * @author Luis Castillo Vidal <L.Castillo@decsai.ugr.es>
