@@ -10,3 +10,4 @@
 
 # 15/MAR/2024
 * Modificado el fichero NetBeansProjects/Kmer1/tests/TestReport.HowToTestUnitTests.md para añadir la declaración de la constante MAX usada en algunos tests de unidad
+* Se cambia /* por /** en los comentarios iniciales de main.cpp de los proyectos Kmer0, Kmer1, Kmer2, Kmer3 y Kmer4
