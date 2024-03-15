@@ -5,6 +5,7 @@ const string VALID_NUCLEOTIDES_ADN = "ACGT";
 const string COMPLEMENTARY_NUCLEOTIDES_ADN = "TGCA";
 const string VALID_NUCLEOTIDES_ARN = "ACGU";
 const string COMPLEMENTARY_NUCLEOTIDES_ARN = "UGCA";
+const int MAX = 10;
 
 std::string printAKF(const KmerFreq array[], int nElements) {
     string res = "";
