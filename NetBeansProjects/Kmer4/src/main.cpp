@@ -3,7 +3,7 @@
  * Curso 2023/2024
  */
 
-/* 
+/**
  * @file main.cpp
  * @author Silvia Acid Carrillo <acid@decsai.ugr.es>
  * @author Andrés Cano Utrera <acu@decsai.ugr.es>
