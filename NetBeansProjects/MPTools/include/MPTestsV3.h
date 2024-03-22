@@ -72,8 +72,12 @@ extern double dreal_result, ddue_result;
 #define BOOL_STR(b) ((b)?string("true"):string("false"))
 
 #define SETUP_TEST(...) sexpression=#__VA_ARGS__; \
+sdue_exception="";\
 TEST_EXPRESSION(__VA_ARGS__)\
-__VA_ARGS__
+if(bexception){\
+    REPORT_UNIT_TEST_EXCEPTION(false);\
+}\
+__VA_ARGS__;\
 
 #define OBTAINED_STRING sreal_result
 #define OBTAINED_BOOL breal_result
@@ -89,7 +93,7 @@ __VA_ARGS__
 #define EXPECTED_EXCEPTION sdue_exception
 
 #define TEST_EXCEPTION(EXPR)\
-    EXPECTED_EXCEPTION==#EXPR;\
+    EXPECTED_EXCEPTION=#EXPR;\
     sgoodmessage=EXPECTED_EXCEPTION;
 
 #define TEST_OUTCOME_STRING(EXPR)\
@@ -121,10 +125,13 @@ if (stype=="double") {\
 #define BAD_OUTCOME_MD " but gives "+sbadvalue
 
 #define GOOD_EXCEPTION_ASCII sexpression+" should THROW an exception "+sdue_exception
-#define BAD_EXCEPTION_ASCII " but throws "+sbadvalue
+#define GOOD_NOEXCEPTION_ASCII sexpression+" should NOT THROW any exception "
+//#define BAD_EXCEPTION_ASCII " but throws "+sbadvalue
+#define BAD_EXCEPTION_ASCII " but throws "+sreal_exception
 #define NO_EXCEPTION_ASCII " but THROWS none"
 
-#define GOOD_EXCEPTION_MD string("```")+sexpression+"```|\n| | | | should THROW an exception "+sdue_exception+"|\n"+
+#define GOOD_EXCEPTION_MD string("```")+sexpression+"```|\n| | | | should THROW an exception "+sdue_exception+"|\n"
+#define GOOD_NOEXCEPTION_MD string("```")+sexpression+"```|\n| | | | should NOT THROW any exception |\n"
 #define BAD_EXCEPTION_MD "| | | | but throws "+sreal_exception
 #define NO_EXCEPTION_MD " | | | | but THROWS none"
 
@@ -147,7 +154,9 @@ try {\
     bexception=true;\
     etype = e;\
     sreal_exception=typeid(e).name();\
-    REPLACE(sreal_exception,"St12","std::")\
+    REPLACE(sreal_exception,"St12","std::");\
+    REPLACE(sreal_exception,"St16","std::");\
+    REPLACE(sreal_exception,"NSt8ios_base7failureB5cxx11E","std::ios_base::failure");\
     sexception=e.what();\
 }
 
@@ -323,6 +332,7 @@ sbadvalue=string(" an unexpected exception ")+sreal_exception;\
     } else {\
        EXPECTED_EXCEPTION=#TYPE;\
        REPLACE(OBTAINED_EXCEPTION,"St12","");\
+       REPLACE(OBTAINED_EXCEPTION,"St16","");\
        if(EXPECTED_EXCEPTION==OBTAINED_EXCEPTION) {\
             REPORT_UNIT_TEST_EXCEPTION(true)\
             ASSERT_TRUE(bexception) << GOOD_EXCEPTION_ASCII+BAD_EXCEPTION_ASCII<<endl;\
@@ -413,7 +423,7 @@ protected:
     do { \
     std::string aux="", orig=STRINGVAR; \
     bool trim=true; \
-    for (int i=0; i<orig.length(); i++)  \
+    for (size_t i=0; i<orig.length(); i++)  \
         if (!trim || orig[i] != SPACE[0]) { \
         aux= aux + orig[i]; \
         trim=false; } \
@@ -439,7 +449,7 @@ protected:
 #define MTRIM(STRINGVAR) \
     do { \
     std::string aux="", orig=STRINGVAR; \
-    int i=0; \
+    size_t i=0; \
     while(i<orig.length())  \
         if (i<orig.length()-1 && orig[i] == SPACE[0] && orig[i+1] == SPACE[0]) { \
             i++;}\
@@ -679,7 +689,7 @@ return ret;\
     long timeout=30;\
     bool breakpoint=false;\
     CLEAN_TO_FILE();\
-    std::string _output, _wdiff, _expected, __PROJECT__, __BIN__; \
+    std::string _auxString, _output, _wdiff, _expected, __PROJECT__, __BIN__; \
     char REAL_OUTPUT[MAX_STRING_OUTPUT], EXPECTED_OUTPUT[MAX_STRING_OUTPUT];\
     std::string cmdline="", binary="", leakdetector="", leakreport; \
     if (BRANCH == "Debug") {\
@@ -724,6 +734,17 @@ return ret;\
 sfilename[nfilenames]=FILENAME;\
 sfilecontent[nfilenames++]=toISO(#__VA_ARGS__);
 
+/**
+ * @brief Some programs produce the output on certain datafiles. This is 
+ * a modification of TO_FILE. This macro has two parameters, the name of the 
+ * output file and the name of the validation file (expected file) after the 
+ * execution ends
+ */
+#define TO_FILE_OUTPUT_EXPECTED(OUTPUTFILENAME,EXPECTEDFILENAME)\
+sfilename[nfilenames]=OUTPUTFILENAME;\
+LOAD(_auxString,EXPECTEDFILENAME);\
+sfilecontent[nfilenames++]=toISO(_auxString);
+
 #define CLEAN_TO_FILE()\
 nfilenames=0;
 
@@ -734,6 +755,10 @@ nfilenames=0;
  */
 #define EXPECTED_COUT(...) \
     SAVE(#__VA_ARGS__, FILEEXPECTED );
+
+#define EXPECTED_COUT_FROM_FILE(FILENAME) \
+    LOAD(_auxString, FILENAME);\
+    SAVE(_auxString,FILEEXPECTED);
 
 /**
  * @brief Defines the expected outcome of the integration tests, and temporally
@@ -795,6 +820,18 @@ nfilenames=0;
 //    cmdline = cmdline + binary +" < " +FILEINPUT+ " 1> "+FILECOUT + " 2> " + FILEOUTPUT; \
 
 
+#define CALL_FROM_FILE_NOREPORT(ARGS)\
+    binary = __BIN__+ " " + ARGS ;\
+    DETECT_MEMORY_LEAKS();\
+    cmdline="";\
+    cmdline = cmdline+ __TIME_OUT_CALL__+" "+ std::to_string(timeout).c_str()+" "+std::to_string(timeout).c_str()+" ";\
+    cmdline = cmdline + binary +" < " +FILEINPUT+ " 1> " + FILEOUTPUT+" 2> " + FILEOUTPUT; \
+    std::system(cmdline.c_str());
+//    LOAD(_output, FILEOUTPUT); \
+//    SAVE(_output, FILEOUTPUT); \
+//    cmdline=(string)"../Scripts/getDifferenceOutputs.sh "+stestname+" > "+FILEDIFF;\
+//    std::system(cmdline.c_str());
+
 /**
  * @brief Calls the main binary with only main arguments
  */
@@ -820,6 +857,20 @@ nfilenames=0;
     cmdline = cmdline + binary +  " 1> " + FILEOUTPUT+" 2> " + FILEOUTPUT; \
     std::system(cmdline.c_str());\
     COMPARE_OUTPUT_FILES()
+
+/**
+ * @brief Calls the main binary with only main arguments.
+ * It is the version 2 of CALL_TO_FILES. It uses COMPARE_OUTPUT_FILES_V2
+ * instead of COMPARE_OUTPUT_FILES() in order to obtain reports of the tests
+ */
+#define CALL_TO_FILES_V2(ARGS) \
+    binary = __BIN__+ " " + ARGS ; \
+    DETECT_MEMORY_LEAKS(); \
+    cmdline="";\
+    cmdline = cmdline + __TIME_OUT_CALL__+" "+ std::to_string(timeout).c_str()+" "+std::to_string(timeout).c_str()+" ";\
+    cmdline = cmdline + binary + " < " +FILEINPUT+ " 1> " + FILECOUT+" 2> " + FILECOUT; \
+    std::system(cmdline.c_str());\
+    COMPARE_OUTPUT_FILES_V2()
 
 
 /////////////////////////////////////////////
@@ -914,6 +965,26 @@ nfilenames=0;
         ASSERTSTREQ(filedata.c_str(), sfilecontent[i].c_str()) << "The outpout obtained in file "+sfilename[i] << " is wrong " <<endl;\
         }
 
+/**
+ * @brief It checks that all the content of the output datafiles declared in the test 
+ * is right. It is the version 2 of  COMPARE_OUTPUT_FILES. It adds code to 
+ * obtain report of the integration test.
+ */
+#define COMPARE_OUTPUT_FILES_V2() \
+    for (int i=0; i<nfilenames; i++){ \
+        string filedata;\
+        LOAD(filedata, sfilename[i]); \
+        SAVE(filedata, FILEOUTPUT); \
+        filedata=sfilecontent[i]; \
+        CLEANUP(filedata); \
+        SAVE(filedata, FILEEXPECTED); \
+        cmdline=(string)"../Scripts/getDifferenceOutputs.sh "+stestname+" > "+FILEDIFF;\
+        std::system(cmdline.c_str());\
+        LOAD(_wdiff, FILEDIFF); \
+        REPORT_INTEGRATION_TEST(_wdiff);\
+        ASSERTSTREQ("", _wdiff.c_str());\
+        }
+
 //#define ASSERT_OUTPUT() \
 //    LOAD(_output, FILEOUTPUT); \
 //    LOAD(_expected, FILEEXPECTED);\
@@ -945,7 +1016,7 @@ nfilenames=0;
     } else {\
         FAIL_TEST();\
     } 
-
+ 
 /**
  * @brief Checks if the previous test has failed, 
  * otherwise, report the test and record its outcome.
@@ -1101,7 +1172,7 @@ nfilenames=0;
 
 //    label=std::to_string(ntest)+"::"+std::to_string(ncheck);\
 
-
+ 
 /**
  * @brief Report the success or failure of a test
  */
@@ -1187,13 +1258,23 @@ nfilenames=0;
             APPEND(RTHead, FILEREPORT);\
                 APPEND(" PASSED |"+GOOD_EXCEPTION_MD+"", FILEREPORT);\
             APPEND("T"+idtest+SEPCSV, FILEREPORT_HEAD_CSV);\
-            APPEND((string)"PASSED"+SEPCSV, FILEREPORT_CSV);\
+            APPEND((string)"T"+idtest+" PASSED"+SEPCSV, FILEREPORT_CSV);\
         } else {\
             RTHead = RTHead + "| "+ idtest +" | **"+::testing::UnitTest::GetInstance()->current_test_info()->test_suite_name()+"."+::testing::UnitTest::GetInstance()->current_test_info()->name()+ "** | ";\
             APPEND(RTHead, FILEREPORT);\
-            APPEND("**FAILED** |"+GOOD_EXCEPTION_MD+BAD_EXCEPTION_MD+" ", FILEREPORT);\
+            if(sdue_exception==""){\
+                APPEND("**FAILED** |"+GOOD_NOEXCEPTION_MD+BAD_EXCEPTION_MD+" \n", FILEREPORT);\
+            }\
+            else{\
+                APPEND("**FAILED** |"+GOOD_EXCEPTION_MD+BAD_EXCEPTION_MD+" \n", FILEREPORT);\
+            }\
             APPEND("T"+idtest+SEPCSV, FILEREPORT_HEAD_CSV);\
-            APPEND("FAILED "+GOOD_EXCEPTION_ASCII+BAD_EXCEPTION_ASCII+SEPCSV, FILEREPORT_CSV);\
+            if(sdue_exception==""){\
+                APPEND("T"+idtest+" FAILED "+GOOD_NOEXCEPTION_ASCII+BAD_EXCEPTION_ASCII+SEPCSV, FILEREPORT_CSV);\
+            }\
+            else{\
+                APPEND("T"+idtest+" FAILED "+GOOD_EXCEPTION_ASCII+BAD_EXCEPTION_ASCII+SEPCSV, FILEREPORT_CSV);\
+            }\
         } \
     } else {\
         RTHead = RTHead + "| "+ idtest +" | "+::testing::UnitTest::GetInstance()->current_test_info()->test_suite_name()+"."+::testing::UnitTest::GetInstance()->current_test_info()->name()+ " | ";\
@@ -1214,7 +1295,7 @@ nfilenames=0;
             APPEND((string)"PASSED | "+sexpression+"|\n", FILEREPORT);\
             APPEND("T"+idtest+SEPCSV, FILEREPORT_HEAD_CSV);\
             APPEND("T"+idtest+" PASSED"+SEPCSV, FILEREPORT_CSV);\
-} else {\
+    } else {\
             std::string msg;\
             RTHead = RTHead + "| "+ idtest +" | **"+::testing::UnitTest::GetInstance()->current_test_info()->test_suite_name()+"."+::testing::UnitTest::GetInstance()->current_test_info()->name()+ "** | ";\
             APPEND(RTHead, FILEREPORT);\
@@ -1238,8 +1319,11 @@ nfilenames=0;
     STHead = STHead + "| "+ idtest + "| **"+::testing::UnitTest::GetInstance()->current_test_info()->test_suite_name()+"."+::testing::UnitTest::GetInstance()->current_test_info()->name()+ "** | ";\
     APPEND(STHead, FILEREPORT);\
     APPEND("**SKIPPED** | **The previous test failed** |\n", FILEREPORT);\
+    APPEND("T"+idtest+SEPCSV, FILEREPORT_HEAD_CSV);\
+    APPEND("T"+idtest+" SKIPPED "+SEPCSV, FILEREPORT_CSV);\
     }while(0);
 
+//    APPEND("T"+idtest+" FAILED "+GOOD_OUTCOME_ASCII+BAD_OUTCOME_ASCII+SEPCSV, FILEREPORT_CSV);\
 
 
 #else
