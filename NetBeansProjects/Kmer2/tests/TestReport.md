@@ -1,6 +1,6 @@
 # OUTCOME OF TESTS FOR PROJECT kmer2_template
 
-As of Feb 13 2024 10:51:55
+As of Apr  9 2024 13:38:28
 
 | ID | NAME | RESULT | DESCRIPTION | 
 | :--- | :--- | :--- | :--- |
@@ -76,7 +76,7 @@ As of Feb 13 2024 10:51:55
 | | | | should give ```-1```|
 | 36 | T01_Basics.Profile_findKmer_4 |  PASSED |```Profile prf(DIM_VECTOR_KMER_FREQ); Kmer km; KmerFreq kmf; kmf.setKmer(km); kmf.setFrequency(10);prf.findKmer(km);```|
 | | | | should give ```0```|
-| 37 | T01_Basics.Profile_toString |  PASSED |```Kmer km1("AA"); Kmer km2("CC"); KmerFreq kmf; Profile prf(2); kmf.setKmer(km1); kmf.setFrequency(10); prf._vectorKmerFreq[0]= kmf; kmf.setKmer(km2); prf._vectorKmerFreq[1]= kmf;std::regex_replace(prf.toString(),std::regex("\n")," ")```|
+| 37 | T01_Basics.Profile_toString |  PASSED |```Kmer km1("AA"); Kmer km2("CC"); KmerFreq kmf; Profile prf(2); kmf.setKmer(km1); kmf.setFrequency(10); prf._vectorKmerFreq[0]= kmf; kmf.setKmer(km2); prf._vectorKmerFreq[1]= kmf;std::regex_replace(prf.toString(),std::regex(ENDL)," ")```|
 | | | | should give ```"unknown 2 AA 10 CC 10 "```|
 | 38 | T01_Basics.Profile_append_0 |  PASSED |```Kmer km("AA"); KmerFreq kmf; kmf.setKmer(km); kmf.setFrequency(10); Profile prf; prf.append(kmf);prf.inspectT()```|
 | | | | should give ```"unknown 1 AA 10 "```|
@@ -144,7 +144,7 @@ As of Feb 13 2024 10:51:55
 | | | | should give ```20```|
 | 70 | T02_Intermediate.Profile_Save_1_exception |  PASSED |```Profile l1; const char* fileName = "tests/outp/imposibleToCreateFile.prf";l1.save(fileName);```|
 | | | | should THROW an exception std::ios_base::failure|
-| 71 | T02_Intermediate.Profile_Load_2_exception |  PASSED |```Profile l1; const char* fileName = "tests/validation/test_noHeader.prf";l1.load(fileName);```|
+| 71 | T02_Intermediate.Profile_Load_2_exception |  PASSED |```Profile l1; const char* fileName = "../Genomes/test_noHeader.prf";l1.load(fileName);```|
 | | | | should THROW an exception std::invalid_argument|
 | 72 | T02_Intermediate.Profile_Load_3_exception |  PASSED |```Profile l1; const char* fileName = "tests/output/test_xxx.prf";l1.load(fileName);```|
 | | | | should THROW an exception std::ios_base::failure|

@@ -9,4 +9,5 @@ const string VALID_NUCLEOTIDES_ARN = "ACGU";
 const string COMPLEMENTARY_NUCLEOTIDES_ARN = "UGCA";
 
 const int DIM_VECTOR_KMER_FREQ = 2000;
+#define ENDL "\n"
 ```

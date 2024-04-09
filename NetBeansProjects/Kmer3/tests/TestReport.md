@@ -1,6 +1,6 @@
 # OUTCOME OF TESTS FOR PROJECT kmer3_template
 
-As of Feb 13 2024 17:31:50
+As of Apr  9 2024 13:47:02
 
 | ID | NAME | RESULT | DESCRIPTION | 
 | :--- | :--- | :--- | :--- |
@@ -76,7 +76,7 @@ As of Feb 13 2024 17:31:50
 | | | | should give ```-1```|
 | 36 | T01_Basics.Profile_findKmer_4 |  PASSED |```Profile prf(DIM_VECTOR_KMER_FREQ); Kmer km; KmerFreq kmf; kmf.setKmer(km); kmf.setFrequency(10);prf.findKmer(km);```|
 | | | | should give ```0```|
-| 37 | T01_Basics.Profile_toString |  PASSED |```Kmer km1("AA"); Kmer km2("CC"); KmerFreq kmf; Profile prf(2); kmf.setKmer(km1); kmf.setFrequency(10); prf._vectorKmerFreq[0]= kmf; kmf.setKmer(km2); prf._vectorKmerFreq[1]= kmf;std::regex_replace(prf.toString(),std::regex("\n")," ")```|
+| 37 | T01_Basics.Profile_toString |  PASSED |```Kmer km1("AA"); Kmer km2("CC"); KmerFreq kmf; Profile prf(2); kmf.setKmer(km1); kmf.setFrequency(10); prf._vectorKmerFreq[0]= kmf; kmf.setKmer(km2); prf._vectorKmerFreq[1]= kmf;std::regex_replace(prf.toString(),std::regex(ENDL)," ")```|
 | | | | should give ```"unknown 2 AA 10 CC 10 "```|
 | 38 | T01_Basics.Profile_append_0 |  PASSED |```Kmer km("AA"); KmerFreq kmf; kmf.setKmer(km); kmf.setFrequency(10); Profile prf; prf.append(kmf);prf.inspectT()```|
 | | | | should give ```"unknown 1 AA 10 "```|
@@ -148,7 +148,7 @@ As of Feb 13 2024 17:31:50
 | | | | should THROW an exception std::ios_base::failure|
 | 72 | T02_Intermediate.Profile_loadLoad |  PASSED |```Profile l1; int n; const char* fileName = "tests/output/test_save1.prf"; l1.load(fileName); n = l1.getSize(); l1.load(fileName);l1.getSize()```|
 | | | | should give ```20```|
-| 73 | T02_Intermediate.Profile_Load_2_exception |  PASSED |```Profile l1; const char* fileName = "tests/validation/test_noHeader.prf";l1.load(fileName);```|
+| 73 | T02_Intermediate.Profile_Load_2_exception |  PASSED |```Profile l1; const char* fileName = "../Genomes/test_noHeader.prf";l1.load(fileName);```|
 | | | | should THROW an exception std::invalid_argument|
 | 74 | T02_Intermediate.Profile_Load_3_exception |  PASSED |```Profile l1; const char* fileName = "tests/output/test_xxx.prf";l1.load(fileName);```|
 | | | | should THROW an exception std::ios_base::failure|

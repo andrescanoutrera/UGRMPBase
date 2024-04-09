@@ -1,6 +1,6 @@
 # OUTCOME OF TESTS FOR PROJECT kmer5_template
 
-As of Feb 13 2024 17:39:57
+As of Apr  9 2024 13:57:08
 
 | ID | NAME | RESULT | DESCRIPTION | 
 | :--- | :--- | :--- | :--- |
@@ -78,7 +78,7 @@ As of Feb 13 2024 17:39:57
 | | | | should give ```-1```|
 | 37 | T01_Basics.Profile_findKmer_4 |  PASSED |```Profile prf(DIM_VECTOR_KMER_FREQ); Kmer km; KmerFreq kmf; kmf.setKmer(km); kmf.setFrequency(10);prf.findKmer(km);```|
 | | | | should give ```0```|
-| 38 | T01_Basics.Profile_toString |  PASSED |```Kmer km1("AA"); Kmer km2("CC"); KmerFreq kmf; Profile prf(2); kmf.setKmer(km1); kmf.setFrequency(10); prf._vectorKmerFreq[0]= kmf; kmf.setKmer(km2); prf._vectorKmerFreq[1]= kmf;std::regex_replace(prf.toString(),std::regex("\n")," ")```|
+| 38 | T01_Basics.Profile_toString |  PASSED |```Kmer km1("AA"); Kmer km2("CC"); KmerFreq kmf; Profile prf(2); kmf.setKmer(km1); kmf.setFrequency(10); prf._vectorKmerFreq[0]= kmf; kmf.setKmer(km2); prf._vectorKmerFreq[1]= kmf;std::regex_replace(prf.toString(),std::regex(ENDL)," ")```|
 | | | | should give ```"unknown 2 AA 10 CC 10 "```|
 | 39 | T01_Basics.Profile_append_0 |  PASSED |```Kmer km("AA"); string s; KmerFreq kmf; kmf.setKmer(km); kmf.setFrequency(10); Profile prf; prf.append(kmf); s = prf.inspectT()+ to_string(prf.getCapacity());s.c_str()```|
 | | | | should give ```"unknown 1 AA 10 10"```|
@@ -184,7 +184,7 @@ As of Feb 13 2024 17:39:57
 | | | | should THROW an exception std::ios_base::failure|
 | 90 | T02_Intermediate.Profile_Save_2_exception |  PASSED |```Profile l1; const char* fileName = "tests/output/invalidFileMode.prf";l1.save(fileName, 'z');```|
 | | | | should THROW an exception std::invalid_argument|
-| 91 | T02_Intermediate.Profile_Load_2_exception |  PASSED |```Profile l1; const char* fileName = "tests/validation/test_noHeader.prf";l1.load(fileName);```|
+| 91 | T02_Intermediate.Profile_Load_2_exception |  PASSED |```Profile l1; const char* fileName = "../Genomes/test_noHeader.prf";l1.load(fileName);```|
 | | | | should THROW an exception std::invalid_argument|
 | 92 | T02_Intermediate.Profile_Load_3_exception |  PASSED |```Profile l1; const char* fileName = "tests/output/test_xxx.prf";l1.load(fileName);```|
 | | | | should THROW an exception std::ios_base::failure|
@@ -240,9 +240,9 @@ As of Feb 13 2024 17:39:57
 | | | | should give ```"GG 10"```|
 | 118 | T02_Intermediate.Profile_operatorat_3 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf1; bf1.setKmer(b1); bf1.setFrequency(10); KmerFreq bf2; bf2.setKmer(b2); bf2.setFrequency(20); Profile prf; prf.append(bf1); prf.append(bf2); prf[1]=bf1;prf[1].inspectT()```|
 | | | | should give ```"AA 10"```|
-| 119 | T02_Intermediate.profile_print_ |  PASSED |```std::string sout; ostringstream ssout; Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf; bf.setKmer(b1); bf.setFrequency(10); Profile prf; prf.append(bf); prf.append(bf); bf.setKmer(b2); prf.append(bf); std::streambuf *old = std::cout.rdbuf(ssout.rdbuf()); ssout << prf; sout = ssout.str(); sout = std::regex_replace(sout, std::regex("\n"), " "); std::cout.rdbuf(old);sout```|
+| 119 | T02_Intermediate.profile_print_ |  PASSED |```std::string sout; ostringstream ssout; Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf; bf.setKmer(b1); bf.setFrequency(10); Profile prf; prf.append(bf); prf.append(bf); bf.setKmer(b2); prf.append(bf); std::streambuf *old = std::cout.rdbuf(ssout.rdbuf()); ssout << prf; sout = ssout.str(); sout = std::regex_replace(sout, std::regex(ENDL), " "); std::cout.rdbuf(old);sout```|
 | | | | should give ```"unknown 2 AA 20 GG 10 "```|
-| 120 | T02_Intermediate.Profile_read_ |  PASSED |```Profile prf; std::string sin="unknown\n 3 aa 10 ab 10 ac 10"; istringstream ssin(sin); ssin >> prf;prf.inspectT()```|
+| 120 | T02_Intermediate.Profile_read_ |  PASSED |```Profile prf; std::string sin="unknown"; sin=sin+ENDL+" 3 aa 10 ab 10 ac 10"; istringstream ssin(sin); ssin >> prf;prf.inspectT()```|
 | | | | should give ```"unknown 3 aa 10 ab 10 ac 10 "```|
 | 121 | T02_Intermediate.Profile_saveLoad_parameter_t |  PASSED |```Profile l1; Profile l2; l1.setProfileId("Test1"); KmerFreq kmf; for(int i=0; i < 10; i++) { Kmer kmer(i+1); kmf.setKmer(kmer); kmf.setFrequency(10-i); l1.append(kmf); kmer.at(0)='A'; kmf.setKmer(kmer); kmf.setFrequency(10-i); l1.append(kmf); } l1.sort(); const char* fileName = "tests/output/test_save1.prf"; l1.save(fileName,'t'); l2.load(fileName); bool iguales=true; iguales = l1.inspectT() == l2.inspectT();iguales```|
 | | | | should give ```true```|
