@@ -31,6 +31,10 @@ Short DNA files
 
 - worm2.dna: A DNA file with part of the caenorhabditis elegans genome (nematode), part of chromosome I (10000 nucleotides).
 
+Wrong profiles
+==============
+- test_noHeader.prf: A profile file with a wrong magic string
+
 Very short profiles for DNA or RNA
 ==================================
 - 12pairsDNA.prf: A profile file for a DNA sequence with some kmers with the missing nucleotide.
