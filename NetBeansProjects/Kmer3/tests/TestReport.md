@@ -146,8 +146,8 @@ As of Apr  9 2024 13:47:02
 | | | | should give ```true```|
 | 71 | T02_Intermediate.Profile_Save_1_exception |  PASSED |```Profile l1; const char* fileName = "tests/outp/imposibleToCreateFile.prf";l1.save(fileName);```|
 | | | | should THROW an exception std::ios_base::failure|
-| 72 | T02_Intermediate.Profile_loadLoad |  PASSED |```Profile l1; int n; const char* fileName = "tests/output/test_save1.prf"; l1.load(fileName); n = l1.getSize(); l1.load(fileName);l1.getSize()```|
-| | | | should give ```20```|
+| 72 | T02_Intermediate.Profile_loadLoad |  PASSED |```Profile l1; int n; const char* fileName = "../Genomes/12pairsDNA.prf"; l1.load(fileName); n = l1.getSize(); l1.load(fileName);l1.getSize()```|
+| | | | should give ```12```|
 | 73 | T02_Intermediate.Profile_Load_2_exception |  PASSED |```Profile l1; const char* fileName = "../Genomes/test_noHeader.prf";l1.load(fileName);```|
 | | | | should THROW an exception std::invalid_argument|
 | 74 | T02_Intermediate.Profile_Load_3_exception |  PASSED |```Profile l1; const char* fileName = "tests/output/test_xxx.prf";l1.load(fileName);```|

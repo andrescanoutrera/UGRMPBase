@@ -140,8 +140,8 @@ As of Apr  9 2024 13:38:28
 | | | | should give ```80```|
 | 68 | T02_Intermediate.Profile_saveLoad |  PASSED |```Profile l1; Profile l2; l1.setProfileId("Test1"); KmerFreq kmf; for(int i=0; i < 10; i++) { Kmer kmer(i+1); kmf.setKmer(kmer); kmf.setFrequency(10-i); l1.append(kmf); kmer.at(0)='A'; kmf.setKmer(kmer); kmf.setFrequency(10-i); l1.append(kmf); } l1.sort(); const char* fileName = "tests/output/test_save1.prf"; l1.save(fileName); l2.load(fileName); bool iguales=true; iguales = l1.inspectT() == l2.inspectT();iguales```|
 | | | | should give ```true```|
-| 69 | T02_Intermediate.Profile_loadLoad |  PASSED |```Profile l1; int n; const char* fileName = "tests/output/test_save1.prf"; l1.load(fileName); n = l1.getSize(); l1.load(fileName);l1.getSize()```|
-| | | | should give ```20```|
+| 69 | T02_Intermediate.Profile_loadLoad |  PASSED |```Profile l1; int n; const char* fileName = "../Genomes/12pairsDNA.prf"; l1.load(fileName); n = l1.getSize(); l1.load(fileName);l1.getSize()```|
+| | | | should give ```12```|
 | 70 | T02_Intermediate.Profile_Save_1_exception |  PASSED |```Profile l1; const char* fileName = "tests/outp/imposibleToCreateFile.prf";l1.save(fileName);```|
 | | | | should THROW an exception std::ios_base::failure|
 | 71 | T02_Intermediate.Profile_Load_2_exception |  PASSED |```Profile l1; const char* fileName = "../Genomes/test_noHeader.prf";l1.load(fileName);```|
