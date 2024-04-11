@@ -144,41 +144,43 @@ As of Apr  9 2024 13:56:17
 | | | | should give ```true```|
 | 70 | T02_Intermediate.Profile_Save_1_exception |  PASSED |```Profile l1; const char* fileName = "tests/outp/imposibleToCreateFile.prf";l1.save(fileName);```|
 | | | | should THROW an exception std::ios_base::failure|
-| 71 | T02_Intermediate.Profile_Load_2_exception |  PASSED |```Profile l1; const char* fileName = "../Genomes/test_noHeader.prf";l1.load(fileName);```|
+| 71 | T02_Intermediate.Profile_loadLoad |  PASSED |```Profile l1; int n; const char* fileName = "../Genomes/12pairsDNA.prf"; l1.load(fileName); n = l1.getSize(); l1.load(fileName);l1.getSize()```|
+| | | | should give ```12```|
+| 72 | T02_Intermediate.Profile_Load_2_exception |  PASSED |```Profile l1; const char* fileName = "../Genomes/test_noHeader.prf";l1.load(fileName);```|
 | | | | should THROW an exception std::invalid_argument|
-| 72 | T02_Intermediate.Profile_Load_3_exception |  PASSED |```Profile l1; const char* fileName = "tests/output/test_xxx.prf";l1.load(fileName);```|
+| 73 | T02_Intermediate.Profile_Load_3_exception |  PASSED |```Profile l1; const char* fileName = "tests/output/test_xxx.prf";l1.load(fileName);```|
 | | | | should THROW an exception std::ios_base::failure|
-| 73 | T02_Intermediate.Profile_getDistance_emptyToOther_1 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); Kmer b3("CC"); Kmer b4("TT"); KmerFreq kmf; kmf.setFrequency(10); Profile l1; Profile empty; kmf.setKmer(b1); l1.append(kmf); kmf.setKmer(b2); l1.append(kmf); kmf.setKmer(b3); l1.append(kmf); kmf.setKmer(b4); l1.append(kmf);empty.getDistance(l1)```|
+| 74 | T02_Intermediate.Profile_getDistance_emptyToOther_1 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); Kmer b3("CC"); Kmer b4("TT"); KmerFreq kmf; kmf.setFrequency(10); Profile l1; Profile empty; kmf.setKmer(b1); l1.append(kmf); kmf.setKmer(b2); l1.append(kmf); kmf.setKmer(b3); l1.append(kmf); kmf.setKmer(b4); l1.append(kmf);empty.getDistance(l1)```|
 | | | | should THROW an exception std::invalid_argument|
-| 74 | T02_Intermediate.Profile_getDistance_otherToEmpy_2 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); Kmer b3("CC"); Kmer b4("TT"); KmerFreq kmf; kmf.setFrequency(10); Profile l1; Profile empty; kmf.setKmer(b1); l1.append(kmf); kmf.setKmer(b2); l1.append(kmf); kmf.setKmer(b3); l1.append(kmf); kmf.setKmer(b4); l1.append(kmf);l1.getDistance(empty)```|
+| 75 | T02_Intermediate.Profile_getDistance_otherToEmpy_2 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); Kmer b3("CC"); Kmer b4("TT"); KmerFreq kmf; kmf.setFrequency(10); Profile l1; Profile empty; kmf.setKmer(b1); l1.append(kmf); kmf.setKmer(b2); l1.append(kmf); kmf.setKmer(b3); l1.append(kmf); kmf.setKmer(b4); l1.append(kmf);l1.getDistance(empty)```|
 | | | | should THROW an exception std::invalid_argument|
-| 75 | T02_Intermediate.Profile_getDistance_4 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); Kmer b3("CC"); Kmer b4("TT"); Kmer b5("__"); Kmer b6("A_"); KmerFreq kmf; kmf.setFrequency(10); Profile l1; Profile l2; kmf.setKmer(b1); l1.append(kmf); kmf.setKmer(b2); l1.append(kmf); kmf.setKmer(b4); l2.append(kmf); kmf.setKmer(b3); l2.append(kmf); kmf.setKmer(b5); l2.append(kmf); kmf.setKmer(b6); l2.append(kmf);l1.getDistance(l2)```|
+| 76 | T02_Intermediate.Profile_getDistance_4 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); Kmer b3("CC"); Kmer b4("TT"); Kmer b5("__"); Kmer b6("A_"); KmerFreq kmf; kmf.setFrequency(10); Profile l1; Profile l2; kmf.setKmer(b1); l1.append(kmf); kmf.setKmer(b2); l1.append(kmf); kmf.setKmer(b4); l2.append(kmf); kmf.setKmer(b3); l2.append(kmf); kmf.setKmer(b5); l2.append(kmf); kmf.setKmer(b6); l2.append(kmf);l1.getDistance(l2)```|
 | | | | should give ```0.875000```|
-| 76 | T02_Intermediate.Profile_getDistance_5 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); Kmer b3("CC"); Kmer b4("TT"); Kmer b5("__"); KmerFreq kmf; kmf.setFrequency(10); Profile l1; Profile l2; kmf.setKmer(b1); l1.append(kmf); kmf.setKmer(b2); l1.append(kmf); kmf.setKmer(b4); l2.append(kmf); kmf.setKmer(b3); l2.append(kmf); kmf.setKmer(b5); l2.append(kmf); kmf.setKmer(b1); l2.append(kmf);l2.getDistance(l1)```|
+| 77 | T02_Intermediate.Profile_getDistance_5 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); Kmer b3("CC"); Kmer b4("TT"); Kmer b5("__"); KmerFreq kmf; kmf.setFrequency(10); Profile l1; Profile l2; kmf.setKmer(b1); l1.append(kmf); kmf.setKmer(b2); l1.append(kmf); kmf.setKmer(b4); l2.append(kmf); kmf.setKmer(b3); l2.append(kmf); kmf.setKmer(b5); l2.append(kmf); kmf.setKmer(b1); l2.append(kmf);l2.getDistance(l1)```|
 | | | | should give ```0.750000```|
-| 77 | T03_Advanced.zip_2 |  PASSED |```Profile l1(1); KmerFreq kmf; Kmer km("AA"); kmf.setKmer(km); kmf.setFrequency(10); l1.append(kmf); Kmer km2("C_"); kmf.setKmer(km2); l1.append(kmf); Kmer km3("_G"); kmf.setKmer(km3); l1.append(kmf); l1.zip();l1.inspectT();```|
+| 78 | T03_Advanced.zip_2 |  PASSED |```Profile l1(1); KmerFreq kmf; Kmer km("AA"); kmf.setKmer(km); kmf.setFrequency(10); l1.append(kmf); Kmer km2("C_"); kmf.setKmer(km2); l1.append(kmf); Kmer km3("_G"); kmf.setKmer(km3); l1.append(kmf); l1.zip();l1.inspectT();```|
 | | | | should give ```"unknown 3 AA 10 C_ 10 _G 10 "```|
-| 78 | T03_Advanced.zip_3 |  PASSED |```Profile l1(1); KmerFreq kmf; Kmer km("A_"); kmf.setKmer(km); kmf.setFrequency(10); l1.append(kmf); Kmer km2("__"); kmf.setKmer(km2); l1.append(kmf); Kmer km3("TT"); kmf.setKmer(km3); l1.append(kmf); l1.zip(true);l1.inspectT();```|
+| 79 | T03_Advanced.zip_3 |  PASSED |```Profile l1(1); KmerFreq kmf; Kmer km("A_"); kmf.setKmer(km); kmf.setFrequency(10); l1.append(kmf); Kmer km2("__"); kmf.setKmer(km2); l1.append(kmf); Kmer km3("TT"); kmf.setKmer(km3); l1.append(kmf); l1.zip(true);l1.inspectT();```|
 | | | | should give ```"unknown 1 TT 10 "```|
-| 79| T03_Advanced.Integration_RunWithMissingArguments1-valgrind | PASSED | NO LEAKS |
-| 79 | T03_Advanced.Integration_RunWithMissingArguments1 | PASSED | [kmer4]: Running without arguments.|
-| 80| T03_Advanced.Integration_RunWithMissingArguments_2-valgrind | PASSED | NO LEAKS |
-| 80 | T03_Advanced.Integration_RunWithMissingArguments_2 | PASSED | [kmer4 ../Genomes/7pairsDNA.prf]: Running with missing arguments|
-| 81| T03_Advanced.Integration_RunWithInvalidArguments1-valgrind | PASSED | NO LEAKS |
-| 81 | T03_Advanced.Integration_RunWithInvalidArguments1 | PASSED | [kmer4 -f ../Genomes/7pairsDNA.prf ../Genomes/7pairsDNA.prf]: Running with invalid arguments (-f)|
-| 82| T03_Advanced.Integration_RunWithInvalidArguments2-valgrind | PASSED | NO LEAKS |
-| 82 | T03_Advanced.Integration_RunWithInvalidArguments2 | PASSED | [kmer4 -t MIN ../Genomes/7pairsDNA.prf ../Genomes/7pairsDNA.prf]: Running with invalid arguments (MIN)|
-| 83| T03_Advanced.Integration_7pairsDNA_7pairsDNA_1-valgrind | PASSED | NO LEAKS |
-| 83 | T03_Advanced.Integration_7pairsDNA_7pairsDNA_1 | PASSED | [kmer4 ../Genomes/7pairsDNA.prf ../Genomes/7pairsDNA.prf]: Min distance from 7pairsDNA.prf to 7pairsDNA.prf|
-| 84| T03_Advanced.Integration_7pairsDNA_7pairsDNA_2-valgrind | PASSED | NO LEAKS |
-| 84 | T03_Advanced.Integration_7pairsDNA_7pairsDNA_2 | PASSED | [kmer4 -t max ../Genomes/7pairsDNA.prf ../Genomes/7pairsDNA.prf]: Max distance from 7pairsDNA.prf to 7pairsDNA.prf|
-| 85| T03_Advanced.Integration_7pairsDNA_others_1-valgrind | PASSED | NO LEAKS |
-| 85 | T03_Advanced.Integration_7pairsDNA_others_1 | PASSED | [kmer4 ../Genomes/7pairsDNA.prf ../Genomes/5pairsDNA.prf ../Genomes/6pairsDNA.prf ../Genomes/5pairsRNA.prf]: Min distance from 7pairsDNA.prf to other profiles|
-| 86| T03_Advanced.Integration_7pairsDNA_others_2-valgrind | PASSED | NO LEAKS |
-| 86 | T03_Advanced.Integration_7pairsDNA_others_2 | PASSED | [kmer4 -t max ../Genomes/7pairsDNA.prf ../Genomes/5pairsDNA.prf ../Genomes/6pairsDNA.prf ../Genomes/5pairsRNA.prf]: Max distance from 7pairsDNA.prf to other profiles|
-| 87| T03_Advanced.Integration_human1others-valgrind | PASSED | NO LEAKS |
-| 87 | T03_Advanced.Integration_human1others | PASSED | [kmer4 ../Genomes/human1.prf ../Genomes/human2.prf ../Genomes/fly1.prf ../Genomes/worm1.prf]: Min distance from human1.prf to other profiles|
-| 88| T03_Advanced.Integration_human1_othersk4_k5-valgrind | PASSED | NO LEAKS |
-| 88 | T03_Advanced.Integration_human1_othersk4_k5 | PASSED | [kmer4 ../Genomes/human1_k4_k5.prf ../Genomes/chimpanzee_chr6_s1_l500000_k4_k5.prf ../Genomes/human_chr6_s60000_l500000_k4_k5.prf]: Min distance from human1_k4_k5.prf to other profiles with kmers with k=4 and k=5|
-| 89| T03_Advanced.Integration_human1others_k4k5-valgrind | PASSED | NO LEAKS |
-| 89 | T03_Advanced.Integration_human1others_k4k5 | PASSED | [kmer4 ../Genomes/human1_k1.prf ../Genomes/human1.prf ../Genomes/human2.prf]: Min distance from human1_k1.prf to other profiles of kmers with k=5|
+| 80| T03_Advanced.Integration_RunWithMissingArguments1-valgrind | PASSED | NO LEAKS |
+| 80 | T03_Advanced.Integration_RunWithMissingArguments1 | PASSED | [kmer4]: Running without arguments.|
+| 81| T03_Advanced.Integration_RunWithMissingArguments_2-valgrind | PASSED | NO LEAKS |
+| 81 | T03_Advanced.Integration_RunWithMissingArguments_2 | PASSED | [kmer4 ../Genomes/7pairsDNA.prf]: Running with missing arguments|
+| 82| T03_Advanced.Integration_RunWithInvalidArguments1-valgrind | PASSED | NO LEAKS |
+| 82 | T03_Advanced.Integration_RunWithInvalidArguments1 | PASSED | [kmer4 -f ../Genomes/7pairsDNA.prf ../Genomes/7pairsDNA.prf]: Running with invalid arguments (-f)|
+| 83| T03_Advanced.Integration_RunWithInvalidArguments2-valgrind | PASSED | NO LEAKS |
+| 83 | T03_Advanced.Integration_RunWithInvalidArguments2 | PASSED | [kmer4 -t MIN ../Genomes/7pairsDNA.prf ../Genomes/7pairsDNA.prf]: Running with invalid arguments (MIN)|
+| 84| T03_Advanced.Integration_7pairsDNA_7pairsDNA_1-valgrind | PASSED | NO LEAKS |
+| 84 | T03_Advanced.Integration_7pairsDNA_7pairsDNA_1 | PASSED | [kmer4 ../Genomes/7pairsDNA.prf ../Genomes/7pairsDNA.prf]: Min distance from 7pairsDNA.prf to 7pairsDNA.prf|
+| 85| T03_Advanced.Integration_7pairsDNA_7pairsDNA_2-valgrind | PASSED | NO LEAKS |
+| 85 | T03_Advanced.Integration_7pairsDNA_7pairsDNA_2 | PASSED | [kmer4 -t max ../Genomes/7pairsDNA.prf ../Genomes/7pairsDNA.prf]: Max distance from 7pairsDNA.prf to 7pairsDNA.prf|
+| 86| T03_Advanced.Integration_7pairsDNA_others_1-valgrind | PASSED | NO LEAKS |
+| 86 | T03_Advanced.Integration_7pairsDNA_others_1 | PASSED | [kmer4 ../Genomes/7pairsDNA.prf ../Genomes/5pairsDNA.prf ../Genomes/6pairsDNA.prf ../Genomes/5pairsRNA.prf]: Min distance from 7pairsDNA.prf to other profiles|
+| 87| T03_Advanced.Integration_7pairsDNA_others_2-valgrind | PASSED | NO LEAKS |
+| 87 | T03_Advanced.Integration_7pairsDNA_others_2 | PASSED | [kmer4 -t max ../Genomes/7pairsDNA.prf ../Genomes/5pairsDNA.prf ../Genomes/6pairsDNA.prf ../Genomes/5pairsRNA.prf]: Max distance from 7pairsDNA.prf to other profiles|
+| 88| T03_Advanced.Integration_human1others-valgrind | PASSED | NO LEAKS |
+| 88 | T03_Advanced.Integration_human1others | PASSED | [kmer4 ../Genomes/human1.prf ../Genomes/human2.prf ../Genomes/fly1.prf ../Genomes/worm1.prf]: Min distance from human1.prf to other profiles|
+| 89| T03_Advanced.Integration_human1_othersk4_k5-valgrind | PASSED | NO LEAKS |
+| 89 | T03_Advanced.Integration_human1_othersk4_k5 | PASSED | [kmer4 ../Genomes/human1_k4_k5.prf ../Genomes/chimpanzee_chr6_s1_l500000_k4_k5.prf ../Genomes/human_chr6_s60000_l500000_k4_k5.prf]: Min distance from human1_k4_k5.prf to other profiles with kmers with k=4 and k=5|
+| 90| T03_Advanced.Integration_human1others_k4k5-valgrind | PASSED | NO LEAKS |
+| 90 | T03_Advanced.Integration_human1others_k4k5 | PASSED | [kmer4 ../Genomes/human1_k1.prf ../Genomes/human1.prf ../Genomes/human2.prf]: Min distance from human1_k1.prf to other profiles of kmers with k=5|

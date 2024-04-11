@@ -18,4 +18,8 @@ Modificados los ficheros TestReport.HowToTestUnitTests.md de Kmer1 hasta Kmer5 p
 # 9/ABR/2024
 * El fichero test_noHeader.prf ha sido añadido a carpeta Genomes. Es usado en algún test de unidad de la clase Profile
 * Se sustituye en algunos tests el uso de \n por la macro ENDL, pues daba problema en el report generado en caso de fallo del test que lo usaba
+* Se modifica el test de unidad Profile_loadLoad para que use ../Genomes/12pairsDNA.prf como fichero de entrada en lugar de tests/output/test_save1.prf
+* Se actualizan ficheros tests/TestReport.md de Kmer2 y Kmer3 debido a los cambios anteriores
 
+# 11/ABR/2024
+* Se actualizan ficheros tests/TestReport.md de Kmer4 y Kmer5 debido a la inclusión del test de unidad Profile_loadLoad en Kmer4 y Kmer5
