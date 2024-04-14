@@ -25,3 +25,6 @@ Modificados los ficheros TestReport.HowToTestUnitTests.md de Kmer1 hasta Kmer5 p
 
 # 11/ABR/2024
 * Se actualizan ficheros tests/TestReport.md de Kmer4 y Kmer5 debido a la inclusión del test de unidad Profile_loadLoad en Kmer4 y Kmer5
+
+# 14/ABR/2024
+* Se arregla una pequeña errata en el Ejemplo 1 de kmer3.pdf: los kmeros de las líneas 5 y 6 del primer cuadro del ejemplo se han intercambiado
