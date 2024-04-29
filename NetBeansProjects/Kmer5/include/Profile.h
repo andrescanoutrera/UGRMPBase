@@ -225,9 +225,7 @@ public:
      * @param fileName A c-string with the name of the file where the Profile 
      * will be stored. Input parameter
      * @throw std::out_of_range Throws a std::out_of_range exception if the 
-     * number of kmers in the given file, cannot be allocated in this Profile
-     * because it exceeds the maximum capacity or if the number of kmers read 
-     * from the given file is negative.
+     * number of kmers in the given file is negative.
      * @throw std::ios_base::failure Throws a std::ios_base::failure exception 
      * if the given file cannot be opened or if an error occurs while reading
      * from the file
@@ -243,11 +241,6 @@ public:
      * given KmerFreq object is appended to the end of the list of
      * KmerFreq objects in this Profile.
      * Modifier method
-     * @thow std::out_of_range Throws a std::out_of_range exception in case
-     * that a new element must be appended to the end of the array and the
-     * number of elements in the array of KmerFreq is equals to the capacity
-     * of that array. In that case, the array is full, and no more elements
-     * can be appended to the array.
      * @param kmerFreq The KmerFreq to append to this object. Input paramether
      */
     void append(KmerFreq kmerFreq);

@@ -185,7 +185,7 @@ public:
      * given KmerFreq object is appended to the end of the list of
      * KmerFreq objects in this Profile.
      * Modifier method
-     * @thow std::out_of_range Throws a std::out_of_range exception in case
+     * @throw std::out_of_range Throws a std::out_of_range exception in case
      * that a new element must be appended to the end of the array and the
      * number of elements in the array of KmerFreq is equals to the capacity
      * of that array. In that case, the array is full, and no more elements
