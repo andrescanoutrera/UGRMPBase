@@ -108,7 +108,7 @@ std::ostream operator<<(std::ostream os, KmerFreq kmerFreq);
 /**
  * @brief Overloading of the stream extraction operator for KmerFreq class
  * @param is The input stream to be used. Output parameter
- * @param kmerFreq the KmerFreq object. Input parameter
+ * @param kmerFreq the KmerFreq object. Output parameter
  * @return @p is A reference to the input stream
  */
 std::istream operator>>(std::istream is, KmerFreq kmerFreq);

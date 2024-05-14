@@ -202,8 +202,8 @@ std::ostream operator<<(std::ostream os, Kmer kmer);
  * @brief Overloading of the stream extraction operator for Kmer class. It
  * reads a list of characters from the input string that will set the
  * list of nucleotides of the given Kmer.
- * @param is The input stream to be used
- * @param kmer the Kmer object
+ * @param is The input stream to be used. Output parameter
+ * @param kmer the Kmer object. Output parameter
  * @return @p is the input stream
  */
 std::istream operator>>(std::istream is, Kmer kmer);
