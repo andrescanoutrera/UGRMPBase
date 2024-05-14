@@ -31,3 +31,6 @@ Modificados los ficheros TestReport.HowToTestUnitTests.md de Kmer1 hasta Kmer5 p
 
 # 29/ABR/2024
 * En métodos Profile::load() y  Profile::append() de Kmer4 y Kmer5 se cambian comentarios respecto a las excepciones a lanzar. En load() no hay que lanzar ahora excepción std::out_of_range si se agota la capacidad, pues con memoria dinámica no ocurrirá. Solo hay que lanzar esta excepción si el número de kmeros fuese negativo. En append() ya no hay que lanzar excepción std::out_of_range al agotar la capacidad, pues de nuevo, con memoria dinámica no ocurrirá.
+
+# 14/MAY/2024
+* Se corrigen erratas en los comentarios de los parámetros de las funciones para la sobrecarga de los operadores de entrada/salida (operator>> y operator<<)
