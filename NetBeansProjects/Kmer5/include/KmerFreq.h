@@ -132,7 +132,7 @@ bool operator>(KmerFreq kmerFreq1, KmerFreq kmerFreq2);
 bool operator<(KmerFreq kmerFreq1, KmerFreq kmerFreq2);
 
 /**
- * @brief Overloading of the operator == for Kmer class
+ * @brief Overloading of the operator == for KmerFreq class
  * @param kmerFreq1 a KmerFreq object. Input parameter
  * @param kmerFreq2 a KmerFreq object. Input parameter
  * @return true if the two kmers contains the same pair Kmer-frequency;
