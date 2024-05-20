@@ -34,3 +34,6 @@ Modificados los ficheros TestReport.HowToTestUnitTests.md de Kmer1 hasta Kmer5 p
 
 # 14/MAY/2024
 * Se corrigen erratas en los comentarios de los parámetros de las funciones para la sobrecarga de los operadores de entrada/salida (operator>> y operator<<)
+
+# 20/MAY/2024
+* Se incluyen 6 nuevos tests de unidad en clase Profile, para probar constructor de copia y operador de asignación. Los nuevos tests son: T01_Basics.Profile_OperatorAssign_0, T01_Basics.Profile_ProfileCopy_0, T02_Intermediate.Profile_OperatorAssign_1, T02_Intermediate.Profile_OperatorAssign_2, T02_Intermediate.Profile_ProfileCopy_1, T02_Intermediate.Profile_ProfileCopy_2
