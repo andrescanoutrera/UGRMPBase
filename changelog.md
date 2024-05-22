@@ -37,3 +37,7 @@ Modificados los ficheros TestReport.HowToTestUnitTests.md de Kmer1 hasta Kmer5 p
 
 # 20/MAY/2024
 * Se incluyen 6 nuevos tests de unidad en clase Profile, para probar constructor de copia y operador de asignación. Los nuevos tests son: T01_Basics.Profile_OperatorAssign_0, T01_Basics.Profile_ProfileCopy_0, T02_Intermediate.Profile_OperatorAssign_1, T02_Intermediate.Profile_OperatorAssign_2, T02_Intermediate.Profile_ProfileCopy_1, T02_Intermediate.Profile_ProfileCopy_2
+
+# 22/MAY/2024
+* Modificaciones en Kmer5/tests/03.6learn_unknownACGU.rna_k3.test pues había una errata. Faltaba el párametro -n ACGU en el comando de ejecución del programa
+* Actualización de Kmer5/tests/TestReport.md tras arreglar algunas erratas de algunos tests
