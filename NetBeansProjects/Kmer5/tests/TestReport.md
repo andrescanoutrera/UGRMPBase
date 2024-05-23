@@ -283,7 +283,7 @@ As of May 20 2024 09:28:12
 | 139| T03_Advanced.Integration_LEARN_1unknownACGT-valgrind | PASSED | NO LEAKS |
 | 139 | T03_Advanced.Integration_LEARN_1unknownACGT | PASSED | [LEARN -p bug -o tests/output/unknownACGT.prf ../Genomes/unknownACGT.dna]: Learn from unknownACGT.dna (a very short DNA file) using the default value for k [LEARN -p bug -o tests/output/unknownACGT.prf ../Genomes/unknownACGT.dna]|
 | 140| T03_Advanced.Integration_LEARN_unknownACGT2_k1-valgrind | PASSED | NO LEAKS |
-| 140 | T03_Advanced.Integration_LEARN_unknownACGT2_k1 | PASSED | Learn from unknownACGT.dna (a very short DNA file) using k=1 [LEARN -k 1 -o tests/output/unknownACGT.prf ../Genomes/unknownACGT.dna]|
+| 140 | T03_Advanced.Integration_LEARN_unknownACGT2_k1 | PASSED | Learn from unknownACGT.dna (a very short DNA file) using k=1 [LEARN -k 1 -o tests/output/unknownACGT_k1.prf ../Genomes/unknownACGT.dna]|
 | 141| T03_Advanced.Integration_LEARN_unknowACGT2-valgrind | PASSED | NO LEAKS |
 | 141 | T03_Advanced.Integration_LEARN_unknowACGT2 | PASSED | [LEARN -k 2 -p bug -o tests/output/unknownACGT+unknownACGT2_k2.prf ../Genomes/unknownACGT.dna ../Genomes/unknownACGT2.dna]: Learn from two very short DNA files (unknownACGT.dna and unknownACGT2.dna) using k=2|
 | 142| T03_Advanced.Integration_LEARN_unknownACGU-valgrind | PASSED | NO LEAKS |
@@ -316,7 +316,7 @@ As of May 20 2024 09:28:12
 | 155| T03_Advanced.Integration_CLASSIFY_RunWithInvalidArguments2-valgrind | PASSED | NO LEAKS |
 | 155 | T03_Advanced.Integration_CLASSIFY_RunWithInvalidArguments2 | PASSED | [CLASSIFY -N ACGT ../Genomes/human1.dna ../Genomes/human2.prf ../Genomes/mouse1.prf]: Running with invalid arguments (-N is not valid)|
 | 156| T03_Advanced.Integration_CLASSIFY_unknownACGT-valgrind | PASSED | NO LEAKS |
-| 156 | T03_Advanced.Integration_CLASSIFY_unknownACGT | PASSED | [CLASSIFY ../Genomes/unknownACGT.dna ../Genomes/human_chr6_s60000_l500000_k2.prf ../Genomes/drosophila_chr2L_k2.prf]: Classify a very short DNA file (unknownACGT.dna) using the default value for k|
+| 156 | T03_Advanced.Integration_CLASSIFY_unknownACGT | PASSED | [CLASSIFY ../Genomes/unknownACGT.dna ../Genomes/human_chr6_s60000_l500000.prf ../Genomes/drosophila_chr2L_s1_l500000.prf]: Classify a very short DNA file (unknownACGT.dna) using the default value for k|
 | 157| T03_Advanced.Integration_CLASSIFY_human2_k2-valgrind | PASSED | NO LEAKS |
 | 157 | T03_Advanced.Integration_CLASSIFY_human2_k2 | PASSED | [CLASSIFY -k 2 ../Genomes/human1.dna ../Genomes/human_chr6_s60000_l500000_k2.prf ../Genomes/drosophila_chr2L_k2.prf]: Classify a short DNA file (human1.dna) using k=2|
 | 158| T03_Advanced.Integration_CLASSIFY_human_chr6-valgrind | PASSED | NO LEAKS |
