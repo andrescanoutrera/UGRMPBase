@@ -41,3 +41,7 @@ Modificados los ficheros TestReport.HowToTestUnitTests.md de Kmer1 hasta Kmer5 p
 # 22/MAY/2024
 * Modificaciones en Kmer5/tests/03.6learn_unknownACGU.rna_k3.test pues había una errata. Faltaba el párametro -n ACGU en el comando de ejecución del programa
 * Actualización de Kmer5/tests/TestReport.md tras arreglar algunas erratas de algunos tests
+
+# 23/MAY/2024
+* Corregidas erratas en la descripción de algunos tests de Kmer5 (ficheros Kmer5/tests/*.test)
+* Nueva actualización de Kmer5/tests/TestReport.md tras arreglar algunas erratas de algunos tests
