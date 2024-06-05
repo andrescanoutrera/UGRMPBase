@@ -214,114 +214,106 @@ As of May 20 2024 09:28:12
 | | | | should THROW an exception std::invalid_argument|
 | 105 | T02_Intermediate.Counter_getRowColumn_exception_2 |  PASSED |```KmerCounter kc(2); Kmer km; int fila=kc.getNumRows(); int col=kc.getNumCols();km=kc.getKmer(fila, col);```|
 | | | | should THROW an exception std::invalid_argument|
-| 106 | T02_Intermediate.Counter_calculateFrequencies_EN_0 |  PASSED |```const char nfE[50] = "tests/validation/test_homoSP.dna"; const char nfS[50] = "tests/validation/test_homoSP.prf"; bool iguales = true; string s; int posi; int posj; int freq; int freql; KmerCounter ki; ki.calculateFrequencies(nfE); Profile l; l.load(nfS); if (ki.getNumberActiveKmers() != l.getSize()) iguales= false; for(int i=0; i < l.getSize() && iguales; i++){ s = l.at(i).getKmer().toString(); ki.getRowColumn(s,posi, posj); freql = l.at(i).getFrequency(); freq = ki._frequency[posi][posj]; if (freq != freql) iguales = false; }iguales```|
+| 106 | T02_Intermediate.Counter_calculateFrequencies_EN_0 |  PASSED |```const char nfE[50] = "../Genomes/test_homoSP.dna"; const char nfS[50] = "../Genomes/test_homoSP.prf"; bool iguales = true; string s; int posi; int posj; int freq; int freql; KmerCounter ki; ki.calculateFrequencies(nfE); Profile l; l.load(nfS); if (ki.getNumberActiveKmers() != l.getSize()) iguales= false; for(int i=0; i < l.getSize() && iguales; i++){ s = l.at(i).getKmer().toString(); ki.getRowColumn(s,posi, posj); freql = l.at(i).getFrequency(); freq = ki._frequency[posi][posj]; if (freq != freql) iguales = false; }iguales```|
 | | | | should give ```true```|
-| 107 | T02_Intermediate.Counter_toProfile_1 |  PASSED |```const char nfE[50] = "tests/validation/test_homoSP.dna"; const char nfS[50] = "tests/validation/test_homoSP.prf"; KmerCounter ki; ki.calculateFrequencies(nfE); Profile lr; Profile lo; lr.load(nfS); lo = ki.toProfile(); lo.sort(); bool iguales = true; if (lr.getSize() != lo.getSize()) iguales= false; for(int i=0; i < lo.getSize() && iguales; i++){ if ((lr.at(i).getKmer().toString() != lo.at(i).getKmer().toString()) || (lr.at(i).getFrequency() != lo.at(i).getFrequency())) iguales =false; }iguales```|
+| 107 | T02_Intermediate.Counter_toProfile_1 |  PASSED |```const char nfE[50] = "../Genomes/test_homoSP.dna"; const char nfS[50] = "../Genomes/test_homoSP.prf"; KmerCounter ki; ki.calculateFrequencies(nfE); Profile lr; Profile lo; lr.load(nfS); lo = ki.toProfile(); lo.sort(); bool iguales = true; if (lr.getSize() != lo.getSize()) iguales= false; for(int i=0; i < lo.getSize() && iguales; i++){ if ((lr.at(i).getKmer().toString() != lo.at(i).getKmer().toString()) || (lr.at(i).getFrequency() != lo.at(i).getFrequency())) iguales =false; }iguales```|
 | | | | should give ```true```|
 | 108 | T02_Intermediate.Kmer_read_ |  PASSED |```Kmer b; std::string sin="AA"; istringstream ssin(sin); ssin >> b;b.toString()```|
 | | | | should give ```"AA"```|
 | 109 | T02_Intermediate.kmer_print_ |  PASSED |```std::string sout; ostringstream ssout; Kmer b("AA"); ssout << b; sout = ssout.str();sout```|
 | | | | should give ```"AA"```|
-| 110 | T02_Intermediate.Kmer_oper_at_int_1 |  PASSED |```const Kmer kmer("ab");kmer[0];```|
-| | | | should give ```"a"```|
-| 111 | T02_Intermediate.Kmer_oper_at_int_2 |  PASSED |```const Kmer kmer("ab");kmer[1];```|
-| | | | should give ```"b"```|
-| 112 | T02_Intermediate.Kmer_oper_at_int_3 |  PASSED |```Kmer kmer("cb"); kmer[0]='A';kmer[0];```|
-| | | | should give ```"A"```|
-| 113 | T02_Intermediate.Kmer_oper_at_int_4 |  PASSED |```Kmer kmer("ag");kmer[1]; kmer[1]='T';```|
-| | | | should give ```"T"```|
-| 114 | T02_Intermediate.KmerFreq_read_ |  PASSED |```KmerFreq bfr; std::string sin="aa 10"; istringstream ssin(sin); ssin >> bfr;bfr.toString()```|
+| 110 | T02_Intermediate.KmerFreq_read_ |  PASSED |```KmerFreq bfr; std::string sin="aa 10"; istringstream ssin(sin); ssin >> bfr;bfr.toString()```|
 | | | | should give ```"aa 10"```|
-| 115 | T02_Intermediate.kmerFreq_print_ |  PASSED |```std::string sout; ostringstream ssout; Kmer b("AA"); KmerFreq bf; bf.setKmer(b); bf.setFrequency(10); ssout << bf; sout = ssout.str();sout```|
+| 111 | T02_Intermediate.kmerFreq_print_ |  PASSED |```std::string sout; ostringstream ssout; Kmer b("AA"); KmerFreq bf; bf.setKmer(b); bf.setFrequency(10); ssout << bf; sout = ssout.str();sout```|
 | | | | should give ```"AA 10"```|
-| 116 | T02_Intermediate.KmerFreq_operatorGreaterThan_1 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf1; KmerFreq bf2; bf1.setKmer(b1); bf2.setKmer(b2); bf1.setFrequency(10); bf2.setFrequency(20);bf2>bf1```|
+| 112 | T02_Intermediate.KmerFreq_operatorGreaterThan_1 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf1; KmerFreq bf2; bf1.setKmer(b1); bf2.setKmer(b2); bf1.setFrequency(10); bf2.setFrequency(20);bf2>bf1```|
 | | | | should give ```true```|
-| 117 | T02_Intermediate.KmerFreq_operatorGreaterThan_2 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf1; KmerFreq bf2; bf1.setKmer(b1); bf2.setKmer(b2); bf1.setFrequency(10); bf2.setFrequency(10);bf1>bf2```|
+| 113 | T02_Intermediate.KmerFreq_operatorGreaterThan_2 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf1; KmerFreq bf2; bf1.setKmer(b1); bf2.setKmer(b2); bf1.setFrequency(10); bf2.setFrequency(10);bf1>bf2```|
 | | | | should give ```true```|
-| 118 | T02_Intermediate.KmerFreq_operatorEqual_3 |  PASSED |```Kmer b1("AA"); KmerFreq bf1; KmerFreq bf2; bf1.setKmer(b1); bf2.setKmer(b1); bf1.setFrequency(10); bf2.setFrequency(10);bf1==bf2```|
+| 114 | T02_Intermediate.KmerFreq_operatorEqual_3 |  PASSED |```Kmer b1("AA"); KmerFreq bf1; KmerFreq bf2; bf1.setKmer(b1); bf2.setKmer(b1); bf1.setFrequency(10); bf2.setFrequency(10);bf1==bf2```|
 | | | | should give ```true```|
-| 119 | T02_Intermediate.KmerFreq_operatorLessThan_4 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf1; KmerFreq bf2; bf1.setKmer(b1); bf2.setKmer(b2); bf1.setFrequency(10); bf2.setFrequency(20);bf2<bf1```|
+| 115 | T02_Intermediate.KmerFreq_operatorLessThan_4 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf1; KmerFreq bf2; bf1.setKmer(b1); bf2.setKmer(b2); bf1.setFrequency(10); bf2.setFrequency(20);bf2<bf1```|
 | | | | should give ```false```|
-| 120 | T02_Intermediate.KmerFreq_operatorLessEqual_5 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf1; KmerFreq bf2; bf1.setKmer(b1); bf2.setKmer(b2); bf1.setFrequency(10); bf2.setFrequency(10);bf1<=bf2```|
+| 116 | T02_Intermediate.KmerFreq_operatorLessEqual_5 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf1; KmerFreq bf2; bf1.setKmer(b1); bf2.setKmer(b2); bf1.setFrequency(10); bf2.setFrequency(10);bf1<=bf2```|
 | | | | should give ```false```|
-| 121 | T02_Intermediate.KmerFreq_operatorNotEqual_1 |  PASSED |```Kmer b1("AA"); Kmer b2("gg"); KmerFreq bf1; KmerFreq bf2; bf1.setKmer(b1); bf2.setKmer(b2); bf1.setFrequency(10); bf2.setFrequency(10);bf1!=bf2```|
+| 117 | T02_Intermediate.KmerFreq_operatorNotEqual_1 |  PASSED |```Kmer b1("AA"); Kmer b2("gg"); KmerFreq bf1; KmerFreq bf2; bf1.setKmer(b1); bf2.setKmer(b2); bf1.setFrequency(10); bf2.setFrequency(10);bf1!=bf2```|
 | | | | should give ```true```|
-| 122 | T02_Intermediate.Profile_operatorat_0 |  PASSED |```Kmer b("AA"); KmerFreq bf; bf.setKmer(b); bf.setFrequency(10); Profile prf; prf.append(bf);prf[0].inspectT()```|
+| 118 | T02_Intermediate.Profile_operatorat_0 |  PASSED |```Kmer b("AA"); KmerFreq bf; bf.setKmer(b); bf.setFrequency(10); Profile prf; prf.append(bf);prf[0].inspectT()```|
 | | | | should give ```"AA 10"```|
-| 123 | T02_Intermediate.Profile_operatorat_1 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf; bf.setKmer(b1); bf.setFrequency(10); Profile prf; prf.append(bf); bf.setKmer(b2); prf.append(bf);prf[0].inspectT()```|
+| 119 | T02_Intermediate.Profile_operatorat_1 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf; bf.setKmer(b1); bf.setFrequency(10); Profile prf; prf.append(bf); bf.setKmer(b2); prf.append(bf);prf[0].inspectT()```|
 | | | | should give ```"AA 10"```|
-| 124 | T02_Intermediate.Profile_operatorat_2 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf1; bf1.setKmer(b1); bf1.setFrequency(10); Profile prf; prf.append(bf1); bf1.setKmer(b2); prf.append(bf1); prf[0]=bf1;prf[0].inspectT()```|
+| 120 | T02_Intermediate.Profile_operatorat_2 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf1; bf1.setKmer(b1); bf1.setFrequency(10); Profile prf; prf.append(bf1); bf1.setKmer(b2); prf.append(bf1); prf[0]=bf1;prf[0].inspectT()```|
 | | | | should give ```"GG 10"```|
-| 125 | T02_Intermediate.Profile_operatorat_3 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf1; bf1.setKmer(b1); bf1.setFrequency(10); KmerFreq bf2; bf2.setKmer(b2); bf2.setFrequency(20); Profile prf; prf.append(bf1); prf.append(bf2); prf[1]=bf1;prf[1].inspectT()```|
+| 121 | T02_Intermediate.Profile_operatorat_3 |  PASSED |```Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf1; bf1.setKmer(b1); bf1.setFrequency(10); KmerFreq bf2; bf2.setKmer(b2); bf2.setFrequency(20); Profile prf; prf.append(bf1); prf.append(bf2); prf[1]=bf1;prf[1].inspectT()```|
 | | | | should give ```"AA 10"```|
-| 126 | T02_Intermediate.profile_print_ |  PASSED |```std::string sout; ostringstream ssout; Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf; bf.setKmer(b1); bf.setFrequency(10); Profile prf; prf.append(bf); prf.append(bf); bf.setKmer(b2); prf.append(bf); std::streambuf *old = std::cout.rdbuf(ssout.rdbuf()); ssout << prf; sout = ssout.str(); sout = std::regex_replace(sout, std::regex(ENDL), " "); std::cout.rdbuf(old);sout```|
+| 122 | T02_Intermediate.profile_print_ |  PASSED |```std::string sout; ostringstream ssout; Kmer b1("AA"); Kmer b2("GG"); KmerFreq bf; bf.setKmer(b1); bf.setFrequency(10); Profile prf; prf.append(bf); prf.append(bf); bf.setKmer(b2); prf.append(bf); std::streambuf *old = std::cout.rdbuf(ssout.rdbuf()); ssout << prf; sout = ssout.str(); sout = std::regex_replace(sout, std::regex(ENDL), " "); std::cout.rdbuf(old);sout```|
 | | | | should give ```"unknown 2 AA 20 GG 10 "```|
-| 127 | T02_Intermediate.Profile_read_ |  PASSED |```Profile prf; std::string sin="unknown"; sin=sin+ENDL+" 3 aa 10 ab 10 ac 10"; istringstream ssin(sin); ssin >> prf;prf.inspectT()```|
+| 123 | T02_Intermediate.Profile_read_ |  PASSED |```Profile prf; std::string sin="unknown"; sin=sin+ENDL+" 3 aa 10 ab 10 ac 10"; istringstream ssin(sin); ssin >> prf;prf.inspectT()```|
 | | | | should give ```"unknown 3 aa 10 ab 10 ac 10 "```|
-| 128 | T02_Intermediate.Profile_saveLoad_parameter_t |  PASSED |```Profile l1; Profile l2; l1.setProfileId("Test1"); KmerFreq kmf; for(int i=0; i < 10; i++) { Kmer kmer(i+1); kmf.setKmer(kmer); kmf.setFrequency(10-i); l1.append(kmf); kmer.at(0)='A'; kmf.setKmer(kmer); kmf.setFrequency(10-i); l1.append(kmf); } l1.sort(); const char* fileName = "tests/output/test_save1.prf"; l1.save(fileName,'t'); l2.load(fileName); bool iguales=true; iguales = l1.inspectT() == l2.inspectT();iguales```|
+| 124 | T02_Intermediate.Profile_saveLoad_parameter_t |  PASSED |```Profile l1; Profile l2; l1.setProfileId("Test1"); KmerFreq kmf; for(int i=0; i < 10; i++) { Kmer kmer(i+1); kmf.setKmer(kmer); kmf.setFrequency(10-i); l1.append(kmf); kmer.at(0)='A'; kmf.setKmer(kmer); kmf.setFrequency(10-i); l1.append(kmf); } l1.sort(); const char* fileName = "tests/output/test_save1.prf"; l1.save(fileName,'t'); l2.load(fileName); bool iguales=true; iguales = l1.inspectT() == l2.inspectT();iguales```|
 | | | | should give ```true```|
-| 129 | T02_Intermediate.Profile_saveLoad_parameter_b |  PASSED |```Profile l1; Profile l2; l1.setProfileId("Test1"); KmerFreq kmf; for(int i=0; i < 10; i++) { Kmer kmer(i+1); kmf.setKmer(kmer); kmf.setFrequency(10-i); l1.append(kmf); kmer.at(0)='A'; kmf.setKmer(kmer); kmf.setFrequency(10-i); l1.append(kmf); } l1.sort(); const char* fileName = "tests/output/testb_save.bgr"; l1.save(fileName,'b'); l2.load(fileName); bool iguales=true; iguales = l1.inspectT() == l2.inspectT();iguales```|
+| 125 | T02_Intermediate.Profile_saveLoad_parameter_b |  PASSED |```Profile l1; Profile l2; l1.setProfileId("Test1"); KmerFreq kmf; for(int i=0; i < 10; i++) { Kmer kmer(i+1); kmf.setKmer(kmer); kmf.setFrequency(10-i); l1.append(kmf); kmer.at(0)='A'; kmf.setKmer(kmer); kmf.setFrequency(10-i); l1.append(kmf); } l1.sort(); const char* fileName = "tests/output/testb_save.bgr"; l1.save(fileName,'b'); l2.load(fileName); bool iguales=true; iguales = l1.inspectT() == l2.inspectT();iguales```|
 | | | | should give ```true```|
-| 130 | T02_Intermediate.Counter_operator_joinCounter_1 |  PASSED |```int k = 2; string validChars = "GU"; KmerCounter ki(k,validChars); validChars = "_GU"; for(int i=0; i < validChars.size(); i++) for(int j=0; j < validChars.size(); j++) { Kmer b(string(1,validChars[i])+string(1,validChars[j])); ki.increaseFrequency(b,3); } ki += ki;ki.inspectT()```|
+| 126 | T02_Intermediate.Counter_operator_joinCounter_1 |  PASSED |```int k = 2; string validChars = "GU"; KmerCounter ki(k,validChars); validChars = "_GU"; for(int i=0; i < validChars.size(); i++) for(int j=0; j < validChars.size(); j++) { Kmer b(string(1,validChars[i])+string(1,validChars[j])); ki.increaseFrequency(b,3); } ki += ki;ki.inspectT()```|
 | | | | should give ```"_GU 2 6 6 6 6 6 6 6 6 6 "```|
-| 131 | T02_Intermediate.Counter_operatorAt_1 |  PASSED |```int f; int c; KmerCounter ki(2); Kmer b("TT"); ki.increaseFrequency(b,10); ki.getRowColumn(b,f,c);ki(f,c)```|
+| 127 | T02_Intermediate.Counter_operatorAt_1 |  PASSED |```int f; int c; KmerCounter ki(2); Kmer b("TT"); ki.increaseFrequency(b,10); ki.getRowColumn(b,f,c);ki(f,c)```|
 | | | | should give ```10```|
-| 132 | T03_Advanced.zip_2 |  PASSED |```Profile l1(1); KmerFreq kmf; Kmer km("AA"); kmf.setKmer(km); kmf.setFrequency(10); l1.append(kmf); Kmer km2("C_"); kmf.setKmer(km2); l1.append(kmf); Kmer km3("_G"); kmf.setKmer(km3); l1.append(kmf); l1.zip();l1.inspectT();```|
+| 128 | T03_Advanced.zip_2 |  PASSED |```Profile l1(1); KmerFreq kmf; Kmer km("AA"); kmf.setKmer(km); kmf.setFrequency(10); l1.append(kmf); Kmer km2("C_"); kmf.setKmer(km2); l1.append(kmf); Kmer km3("_G"); kmf.setKmer(km3); l1.append(kmf); l1.zip();l1.inspectT();```|
 | | | | should give ```"unknown 3 AA 10 C_ 10 _G 10 "```|
-| 133 | T03_Advanced.zip_3 |  PASSED |```Profile l1(1); KmerFreq kmf; Kmer km("A_"); kmf.setKmer(km); kmf.setFrequency(10); l1.append(kmf); Kmer km2("__"); kmf.setKmer(km2); l1.append(kmf); Kmer km3("TT"); kmf.setKmer(km3); l1.append(kmf); l1.zip(true);l1.inspectT();```|
+| 129 | T03_Advanced.zip_3 |  PASSED |```Profile l1(1); KmerFreq kmf; Kmer km("A_"); kmf.setKmer(km); kmf.setFrequency(10); l1.append(kmf); Kmer km2("__"); kmf.setKmer(km2); l1.append(kmf); Kmer km3("TT"); kmf.setKmer(km3); l1.append(kmf); l1.zip(true);l1.inspectT();```|
 | | | | should give ```"unknown 1 TT 10 "```|
-| 134| T03_Advanced.Integration_LEARN_missingParameters1-valgrind | PASSED | NO LEAKS |
-| 134 | T03_Advanced.Integration_LEARN_missingParameters1 | PASSED | [LEARN]: Running without arguments|
-| 135| T03_Advanced.Integration_LEARN_missingParameters2-valgrind | PASSED | NO LEAKS |
-| 135 | T03_Advanced.Integration_LEARN_missingParameters2 | PASSED | [LEARN -p human -o tests/output/human1.prf]: Running with missing arguments|
-| 136| T03_Advanced.Integration_LEARN_RunWithInvalidArguments1-valgrind | PASSED | NO LEAKS |
-| 136 | T03_Advanced.Integration_LEARN_RunWithInvalidArguments1 | PASSED | [LEARN -T -p human -o tests/output/human1.prf ../Genomes/human1.dna]: Running with invalid arguments (-T is not valid)|
-| 137| T03_Advanced.Integration_LEARN_RunWithInvalidArguments2-valgrind | PASSED | NO LEAKS |
-| 137 | T03_Advanced.Integration_LEARN_RunWithInvalidArguments2 | PASSED | [LEARN -K 1 -p human -o tests/output/human1.prf ../Genomes/human1.dna]: Running with invalid arguments (-K is not valid)|
-| 138| T03_Advanced.Integration_LEARN_RunWithInvalidArguments3-valgrind | PASSED | NO LEAKS |
-| 138 | T03_Advanced.Integration_LEARN_RunWithInvalidArguments3 | PASSED | [LEARN -k 1 -N ATGC -p human -o tests/output/human1.prf ../Genomes/human1.dna]: Running with invalid arguments (-N is not valid)|
-| 139| T03_Advanced.Integration_LEARN_1unknownACGT-valgrind | PASSED | NO LEAKS |
-| 139 | T03_Advanced.Integration_LEARN_1unknownACGT | PASSED | [LEARN -p bug -o tests/output/unknownACGT.prf ../Genomes/unknownACGT.dna]: Learn from unknownACGT.dna (a very short DNA file) using the default value for k [LEARN -p bug -o tests/output/unknownACGT.prf ../Genomes/unknownACGT.dna]|
-| 140| T03_Advanced.Integration_LEARN_unknownACGT2_k1-valgrind | PASSED | NO LEAKS |
-| 140 | T03_Advanced.Integration_LEARN_unknownACGT2_k1 | PASSED | Learn from unknownACGT.dna (a very short DNA file) using k=1 [LEARN -k 1 -o tests/output/unknownACGT_k1.prf ../Genomes/unknownACGT.dna]|
-| 141| T03_Advanced.Integration_LEARN_unknowACGT2-valgrind | PASSED | NO LEAKS |
-| 141 | T03_Advanced.Integration_LEARN_unknowACGT2 | PASSED | [LEARN -k 2 -p bug -o tests/output/unknownACGT+unknownACGT2_k2.prf ../Genomes/unknownACGT.dna ../Genomes/unknownACGT2.dna]: Learn from two very short DNA files (unknownACGT.dna and unknownACGT2.dna) using k=2|
-| 142| T03_Advanced.Integration_LEARN_unknownACGU-valgrind | PASSED | NO LEAKS |
-| 142 | T03_Advanced.Integration_LEARN_unknownACGU | PASSED | [LEARN -n ACGU -p bug -o tests/output/unknownACGU.prf ../Genomes/unknownACGU.rna]: Learn from a very short RNA file (unknownACGU.rna) using the default value for k|
-| 143| T03_Advanced.Integration_LEARN_unknownACGUk2-valgrind | PASSED | NO LEAKS |
-| 143 | T03_Advanced.Integration_LEARN_unknownACGUk2 | PASSED | [LEARN -k 2 -n ACGU -p bug -o tests/output/unknownACGU_k2.prf ../Genomes/unknownACGU.rna]: Learn from a very short RNA file (unknownACGU.rna) using k=2|
-| 144| T03_Advanced.Integration_LEARN_unknownACGUk3-valgrind | PASSED | NO LEAKS |
-| 144 | T03_Advanced.Integration_LEARN_unknownACGUk3 | PASSED | [LEARN -k 3 -n ACGU -p bug -o tests/output/unknownACGU_k3.prf ../Genomes/unknownACGU.rna]: Learn from a very short RNA file (unknownACGU.rna) using k=3|
-| 145| T03_Advanced.Integration_LEARN_human1k5-valgrind | PASSED | NO LEAKS |
-| 145 | T03_Advanced.Integration_LEARN_human1k5 | PASSED | [LEARN -p 'homo sapiens' -o tests/output/human1_k5.prf ../Genomes/human1.dna]: Learn from a short DNA file (human1.dna) using the default value for k|
-| 146| T03_Advanced.Integration_LEARN_human1k1-valgrind | PASSED | NO LEAKS |
-| 146 | T03_Advanced.Integration_LEARN_human1k1 | PASSED | [LEARN -k 1 -p 'homo sapiens' -o tests/output/human1_k1.prf ../Genomes/human1.dna]: Learn from a short DNA file (human1.dna) using k=1|
-| 147| T03_Advanced.Integration_LEARN_human1k2-valgrind | PASSED | NO LEAKS |
-| 147 | T03_Advanced.Integration_LEARN_human1k2 | PASSED | [LEARN -k 2 -p 'homo sapiens' -o tests/output/human1_k2.prf ../Genomes/human1.dna]: Learn from a short DNA file (human1.dna) using k=2|
-| 148| T03_Advanced.Integration_LEARN_worm1-valgrind | PASSED | NO LEAKS |
-| 148 | T03_Advanced.Integration_LEARN_worm1 | PASSED | [LEARN -p 'caenorhabditis elegans' -o tests/output/worm1.prf ../Genomes/worm1.dna]: Learn from a short DNA file (worm1.dna) using the default value for k|
-| 149| T03_Advanced.Integration_LEARN_learn_humanchr6-valgrind | PASSED | NO LEAKS |
-| 149 | T03_Advanced.Integration_LEARN_learn_humanchr6 | PASSED | [LEARN -p 'homo sapiens' -o tests/output/human_chr6.prf ../Genomes/human_chr6_s60000_l500000.dna]: Learn from a large DNA file (human_chr6_s60000_l500000.dna) using the default value for k|
-| 150| T03_Advanced.Integration_LEARN_covidFullGenomerna-valgrind | PASSED | NO LEAKS |
-| 150 | T03_Advanced.Integration_LEARN_covidFullGenomerna | PASSED | [LEARN -n ACGU -p 'severe acute respiratory syndrome coronavirus 2' -o tests/output/covidFullGenomeRNA.prf ../Genomes/covidFullGenome.rna]: Learn from a large RNA file (covidFullGenome.rna) using the default value for k|
-| 151| T03_Advanced.Integration_LEARN_binary-valgrind | PASSED | NO LEAKS |
-| 151 | T03_Advanced.Integration_LEARN_binary |  PASSED |```[LEARN -b -p 'homo sapiens' -o tests/output/human_chr9_s10000_l500000B.prf ../Genomes/human_chr9_s10000_l500000.dna]: Learn the homo sapiens as a binary profile from human_chr9_s10000_l500000.dna```|
+| 130| T03_Advanced.Integration_LEARN_missingParameters1-valgrind | PASSED | NO LEAKS |
+| 130 | T03_Advanced.Integration_LEARN_missingParameters1 | PASSED | [LEARN]: Running without arguments|
+| 131| T03_Advanced.Integration_LEARN_missingParameters2-valgrind | PASSED | NO LEAKS |
+| 131 | T03_Advanced.Integration_LEARN_missingParameters2 | PASSED | [LEARN -p human -o tests/output/human1.prf]: Running with missing arguments|
+| 132| T03_Advanced.Integration_LEARN_RunWithInvalidArguments1-valgrind | PASSED | NO LEAKS |
+| 132 | T03_Advanced.Integration_LEARN_RunWithInvalidArguments1 | PASSED | [LEARN -T -p human -o tests/output/human1.prf ../Genomes/human1.dna]: Running with invalid arguments (-T is not valid)|
+| 133| T03_Advanced.Integration_LEARN_RunWithInvalidArguments2-valgrind | PASSED | NO LEAKS |
+| 133 | T03_Advanced.Integration_LEARN_RunWithInvalidArguments2 | PASSED | [LEARN -K 1 -p human -o tests/output/human1.prf ../Genomes/human1.dna]: Running with invalid arguments (-K is not valid)|
+| 134| T03_Advanced.Integration_LEARN_RunWithInvalidArguments3-valgrind | PASSED | NO LEAKS |
+| 134 | T03_Advanced.Integration_LEARN_RunWithInvalidArguments3 | PASSED | [LEARN -k 1 -N ATGC -p human -o tests/output/human1.prf ../Genomes/human1.dna]: Running with invalid arguments (-N is not valid)|
+| 135| T03_Advanced.Integration_LEARN_1unknownACGT-valgrind | PASSED | NO LEAKS |
+| 135 | T03_Advanced.Integration_LEARN_1unknownACGT | PASSED | [LEARN -p bug -o tests/output/unknownACGT.prf ../Genomes/unknownACGT.dna]: Learn from unknownACGT.dna (a very short DNA file) using the default value for k [LEARN -p bug -o tests/output/unknownACGT.prf ../Genomes/unknownACGT.dna]|
+| 136| T03_Advanced.Integration_LEARN_unknownACGT2_k1-valgrind | PASSED | NO LEAKS |
+| 136 | T03_Advanced.Integration_LEARN_unknownACGT2_k1 | PASSED | Learn from unknownACGT.dna (a very short DNA file) using k=1 [LEARN -k 1 -o tests/output/unknownACGT_k1.prf ../Genomes/unknownACGT.dna]|
+| 137| T03_Advanced.Integration_LEARN_unknowACGT2-valgrind | PASSED | NO LEAKS |
+| 137 | T03_Advanced.Integration_LEARN_unknowACGT2 | PASSED | [LEARN -k 2 -p bug -o tests/output/unknownACGT+unknownACGT2_k2.prf ../Genomes/unknownACGT.dna ../Genomes/unknownACGT2.dna]: Learn from two very short DNA files (unknownACGT.dna and unknownACGT2.dna) using k=2|
+| 138| T03_Advanced.Integration_LEARN_unknownACGU-valgrind | PASSED | NO LEAKS |
+| 138 | T03_Advanced.Integration_LEARN_unknownACGU | PASSED | [LEARN -n ACGU -p bug -o tests/output/unknownACGU.prf ../Genomes/unknownACGU.rna]: Learn from a very short RNA file (unknownACGU.rna) using the default value for k|
+| 139| T03_Advanced.Integration_LEARN_unknownACGUk2-valgrind | PASSED | NO LEAKS |
+| 139 | T03_Advanced.Integration_LEARN_unknownACGUk2 | PASSED | [LEARN -k 2 -n ACGU -p bug -o tests/output/unknownACGU_k2.prf ../Genomes/unknownACGU.rna]: Learn from a very short RNA file (unknownACGU.rna) using k=2|
+| 140| T03_Advanced.Integration_LEARN_unknownACGUk3-valgrind | PASSED | NO LEAKS |
+| 140 | T03_Advanced.Integration_LEARN_unknownACGUk3 | PASSED | [LEARN -k 3 -n ACGU -p bug -o tests/output/unknownACGU_k3.prf ../Genomes/unknownACGU.rna]: Learn from a very short RNA file (unknownACGU.rna) using k=3|
+| 141| T03_Advanced.Integration_LEARN_human1k5-valgrind | PASSED | NO LEAKS |
+| 141 | T03_Advanced.Integration_LEARN_human1k5 | PASSED | [LEARN -p 'homo sapiens' -o tests/output/human1_k5.prf ../Genomes/human1.dna]: Learn from a short DNA file (human1.dna) using the default value for k|
+| 142| T03_Advanced.Integration_LEARN_human1k1-valgrind | PASSED | NO LEAKS |
+| 142 | T03_Advanced.Integration_LEARN_human1k1 | PASSED | [LEARN -k 1 -p 'homo sapiens' -o tests/output/human1_k1.prf ../Genomes/human1.dna]: Learn from a short DNA file (human1.dna) using k=1|
+| 143| T03_Advanced.Integration_LEARN_human1k2-valgrind | PASSED | NO LEAKS |
+| 143 | T03_Advanced.Integration_LEARN_human1k2 | PASSED | [LEARN -k 2 -p 'homo sapiens' -o tests/output/human1_k2.prf ../Genomes/human1.dna]: Learn from a short DNA file (human1.dna) using k=2|
+| 144| T03_Advanced.Integration_LEARN_worm1-valgrind | PASSED | NO LEAKS |
+| 144 | T03_Advanced.Integration_LEARN_worm1 | PASSED | [LEARN -p 'caenorhabditis elegans' -o tests/output/worm1.prf ../Genomes/worm1.dna]: Learn from a short DNA file (worm1.dna) using the default value for k|
+| 145| T03_Advanced.Integration_LEARN_learn_humanchr6-valgrind | PASSED | NO LEAKS |
+| 145 | T03_Advanced.Integration_LEARN_learn_humanchr6 | PASSED | [LEARN -p 'homo sapiens' -o tests/output/human_chr6.prf ../Genomes/human_chr6_s60000_l500000.dna]: Learn from a large DNA file (human_chr6_s60000_l500000.dna) using the default value for k|
+| 146| T03_Advanced.Integration_LEARN_covidFullGenomerna-valgrind | PASSED | NO LEAKS |
+| 146 | T03_Advanced.Integration_LEARN_covidFullGenomerna | PASSED | [LEARN -n ACGU -p 'severe acute respiratory syndrome coronavirus 2' -o tests/output/covidFullGenomeRNA.prf ../Genomes/covidFullGenome.rna]: Learn from a large RNA file (covidFullGenome.rna) using the default value for k|
+| 147| T03_Advanced.Integration_LEARN_binary-valgrind | PASSED | NO LEAKS |
+| 147 | T03_Advanced.Integration_LEARN_binary |  PASSED |```[LEARN -b -p 'homo sapiens' -o tests/output/human_chr9_s10000_l500000B.prf ../Genomes/human_chr9_s10000_l500000.dna]: Learn the homo sapiens as a binary profile from human_chr9_s10000_l500000.dna```|
 | | | | should give ```"unknown 1 TT 10 "```|
-| 152| T03_Advanced.Integration_CLASSIFY_missingParameters1-valgrind | PASSED | NO LEAKS |
-| 152 | T03_Advanced.Integration_CLASSIFY_missingParameters1 | PASSED | [CLASSIFY]: Classify with missing parameters|
-| 153| T03_Advanced.Integration_CLASSIFY_missingParameters2-valgrind | PASSED | NO LEAKS |
-| 153 | T03_Advanced.Integration_CLASSIFY_missingParameters2 | PASSED | [CLASSIFY ../Genomes/human1.dna]: Classify with missing parameters|
-| 154| T03_Advanced.Integration_CLASSIFY_RunWithInvalidArguments1-valgrind | PASSED | NO LEAKS |
-| 154 | T03_Advanced.Integration_CLASSIFY_RunWithInvalidArguments1 | PASSED | [CLASSIFY -K 5 ../Genomes/human1.dna ../Genomes/human2.prf ../Genomes/mouse1.prf]: Running with invalid arguments (-K is not valid)|
-| 155| T03_Advanced.Integration_CLASSIFY_RunWithInvalidArguments2-valgrind | PASSED | NO LEAKS |
-| 155 | T03_Advanced.Integration_CLASSIFY_RunWithInvalidArguments2 | PASSED | [CLASSIFY -N ACGT ../Genomes/human1.dna ../Genomes/human2.prf ../Genomes/mouse1.prf]: Running with invalid arguments (-N is not valid)|
-| 156| T03_Advanced.Integration_CLASSIFY_unknownACGT-valgrind | PASSED | NO LEAKS |
-| 156 | T03_Advanced.Integration_CLASSIFY_unknownACGT | PASSED | [CLASSIFY ../Genomes/unknownACGT.dna ../Genomes/human_chr6_s60000_l500000.prf ../Genomes/drosophila_chr2L_s1_l500000.prf]: Classify a very short DNA file (unknownACGT.dna) using the default value for k|
-| 157| T03_Advanced.Integration_CLASSIFY_human2_k2-valgrind | PASSED | NO LEAKS |
-| 157 | T03_Advanced.Integration_CLASSIFY_human2_k2 | PASSED | [CLASSIFY -k 2 ../Genomes/human1.dna ../Genomes/human_chr6_s60000_l500000_k2.prf ../Genomes/drosophila_chr2L_k2.prf]: Classify a short DNA file (human1.dna) using k=2|
-| 158| T03_Advanced.Integration_CLASSIFY_human_chr6-valgrind | PASSED | NO LEAKS |
-| 158 | T03_Advanced.Integration_CLASSIFY_human_chr6 | PASSED | [CLASSIFY ../Genomes/human_chr6_s60000_l500000.dna ../Genomes/brewers_yeast_chrVII.s1_l500000.prf ../Genomes/chimpanzee_chr9_s1_l500000.prf ../Genomes/covidFullGenomeDNA.prf ../Genomes/drosophila_chr2L_s1_l500000.prf ../Genomes/ebolaFullGenomeDNA.prf ../Genomes/human_chr9_s10000_l500000.prf ../Genomes/monkeypoxFullGenomeDNA.prf ../Genomes/mouse_chr6_s3050050_l500000.prf ../Genomes/nematode_chrI_s1l500000.prf ../Genomes/rat_chr6_s1l500000.prf ../Genomes/zebrafish_chr6_s1l500000.prf]: Classify a large DNA file (human_chr6_s60000_l500000.dna) using the default value for k|
-| 159| T03_Advanced.Integration_CLASSIFY_covidrna-valgrind | PASSED | NO LEAKS |
-| 159 | T03_Advanced.Integration_CLASSIFY_covidrna | PASSED | [CLASSIFY -n ACGU ../Genomes/covid.rna ../Genomes/covidFullGenomeRNA.prf ../Genomes/ebolaFullGenomeRNA.prf ../Genomes/monkeypoxFullGenomeRNA.prf]: Classify a short RNA file (covid.rna) using the default value for k|
-| 160| T03_Advanced.Integration_CLASSIFY_binary-valgrind | PASSED | NO LEAKS |
-| 160 | T03_Advanced.Integration_CLASSIFY_binary | PASSED | [CLASSIFY ../Genomes/human_chr6_s60000_l500000.dna ../Genomes/brewers_yeast_chrVII.s1_l500000.prf ../Genomes/chimpanzee_chr9_s1_l500000.prf ../Genomes/covidFullGenomeDNA.prf ../Genomes/drosophila_chr2L_s1_l500000.prf ../Genomes/ebolaFullGenomeDNA.prf ../Genomes/human_chr9_s10000_l500000B.prf ../Genomes/monkeypoxFullGenomeDNA.prf ../Genomes/mouse_chr6_s3050050_l500000.prf ../Genomes/nematode_chrI_s1l500000.prf ../Genomes/rat_chr6_s1l500000.prf ../Genomes/zebrafish_chr6_s1l500000.prf]: Classify ../Genomes/human_chr6_s60000_l500000.dna using several profiles, one of them in binary format|
+| 148| T03_Advanced.Integration_CLASSIFY_missingParameters1-valgrind | PASSED | NO LEAKS |
+| 148 | T03_Advanced.Integration_CLASSIFY_missingParameters1 | PASSED | [CLASSIFY]: Classify with missing parameters|
+| 149| T03_Advanced.Integration_CLASSIFY_missingParameters2-valgrind | PASSED | NO LEAKS |
+| 149 | T03_Advanced.Integration_CLASSIFY_missingParameters2 | PASSED | [CLASSIFY ../Genomes/human1.dna]: Classify with missing parameters|
+| 150| T03_Advanced.Integration_CLASSIFY_RunWithInvalidArguments1-valgrind | PASSED | NO LEAKS |
+| 150 | T03_Advanced.Integration_CLASSIFY_RunWithInvalidArguments1 | PASSED | [CLASSIFY -K 5 ../Genomes/human1.dna ../Genomes/human2.prf ../Genomes/mouse1.prf]: Running with invalid arguments (-K is not valid)|
+| 151| T03_Advanced.Integration_CLASSIFY_RunWithInvalidArguments2-valgrind | PASSED | NO LEAKS |
+| 151 | T03_Advanced.Integration_CLASSIFY_RunWithInvalidArguments2 | PASSED | [CLASSIFY -N ACGT ../Genomes/human1.dna ../Genomes/human2.prf ../Genomes/mouse1.prf]: Running with invalid arguments (-N is not valid)|
+| 152| T03_Advanced.Integration_CLASSIFY_unknownACGT-valgrind | PASSED | NO LEAKS |
+| 152 | T03_Advanced.Integration_CLASSIFY_unknownACGT | PASSED | [CLASSIFY ../Genomes/unknownACGT.dna ../Genomes/human_chr6_s60000_l500000.prf ../Genomes/drosophila_chr2L_s1_l500000.prf]: Classify a very short DNA file (unknownACGT.dna) using the default value for k|
+| 153| T03_Advanced.Integration_CLASSIFY_human2_k2-valgrind | PASSED | NO LEAKS |
+| 153 | T03_Advanced.Integration_CLASSIFY_human2_k2 | PASSED | [CLASSIFY -k 2 ../Genomes/human1.dna ../Genomes/human_chr6_s60000_l500000_k2.prf ../Genomes/drosophila_chr2L_k2.prf]: Classify a short DNA file (human1.dna) using k=2|
+| 154| T03_Advanced.Integration_CLASSIFY_human_chr6-valgrind | PASSED | NO LEAKS |
+| 154 | T03_Advanced.Integration_CLASSIFY_human_chr6 | PASSED | [CLASSIFY ../Genomes/human_chr6_s60000_l500000.dna ../Genomes/brewers_yeast_chrVII.s1_l500000.prf ../Genomes/chimpanzee_chr9_s1_l500000.prf ../Genomes/covidFullGenomeDNA.prf ../Genomes/drosophila_chr2L_s1_l500000.prf ../Genomes/ebolaFullGenomeDNA.prf ../Genomes/human_chr9_s10000_l500000.prf ../Genomes/monkeypoxFullGenomeDNA.prf ../Genomes/mouse_chr6_s3050050_l500000.prf ../Genomes/nematode_chrI_s1l500000.prf ../Genomes/rat_chr6_s1l500000.prf ../Genomes/zebrafish_chr6_s1l500000.prf]: Classify a large DNA file (human_chr6_s60000_l500000.dna) using the default value for k|
+| 155| T03_Advanced.Integration_CLASSIFY_covidrna-valgrind | PASSED | NO LEAKS |
+| 155 | T03_Advanced.Integration_CLASSIFY_covidrna | PASSED | [CLASSIFY -n ACGU ../Genomes/covid.rna ../Genomes/covidFullGenomeRNA.prf ../Genomes/ebolaFullGenomeRNA.prf ../Genomes/monkeypoxFullGenomeRNA.prf]: Classify a short RNA file (covid.rna) using the default value for k|
+| 156| T03_Advanced.Integration_CLASSIFY_binary-valgrind | PASSED | NO LEAKS |
+| 156 | T03_Advanced.Integration_CLASSIFY_binary | PASSED | [CLASSIFY ../Genomes/human_chr6_s60000_l500000.dna ../Genomes/brewers_yeast_chrVII.s1_l500000.prf ../Genomes/chimpanzee_chr9_s1_l500000.prf ../Genomes/covidFullGenomeDNA.prf ../Genomes/drosophila_chr2L_s1_l500000.prf ../Genomes/ebolaFullGenomeDNA.prf ../Genomes/human_chr9_s10000_l500000B.prf ../Genomes/monkeypoxFullGenomeDNA.prf ../Genomes/mouse_chr6_s3050050_l500000.prf ../Genomes/nematode_chrI_s1l500000.prf ../Genomes/rat_chr6_s1l500000.prf ../Genomes/zebrafish_chr6_s1l500000.prf]: Classify ../Genomes/human_chr6_s60000_l500000.dna using several profiles, one of them in binary format|
