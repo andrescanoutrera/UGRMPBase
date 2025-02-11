@@ -44,27 +44,26 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
 
 # Secuencia de prácticas
 
-Mira los vídeos de [introducción a la asignatura](https://drive.google.com/file/d/1VO7ib1QnUlEk1pHtn4F7D6QJwZZykgbo/view?usp=sharing)  y de [introducción a las prácticas](https://drive.google.com/file/d/1fJgfQACE46PscCkA4pj5bTEtSuzMwCSz/view)
+Mira los vídeos de [introducción a la asignatura](https://drive.google.com/file/d/1VO7ib1QnUlEk1pHtn4F7D6QJwZZykgbo/view?usp=sharing)  y de [introducción a las prácticas]()
 <!-- (https://drive.google.com/file/d/1peiNfwzRKYvCFHCJlSH2licuhCIuEeqL/view?usp=share_link) -->
 
 |Comienzo | Práctica <br> Entregable en Prado | Herramientas | Metodología
 | -----| -----|-----| ----- |
-|Semana1 19/feb/2024 || <ol><li>[**NetBeans 1**](#netbeans) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del proyecto [MP Geometry](#mpgeometry)<ul><li>Métodos `const`.<li>Parámetros por valor y por referencia. <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la enrtada</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MP Geometry](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MP Geometry](#mpgeometry)  <li> Opcional: Uso de bibliotecas con el proyecto [MP Geometry](#mpgeometry) </ol>|
-|<a name="Semana2"></a>Semana2	26/feb/2024 | [**Kmer0**](PDFs/kmer0.pdf) Identificación de Kmeros. Clase Kmer <br>[Tests detallados](NetBeansProjects/Kmer0/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer0/TestReport.HowToTestUnitTests.md) | <ol><li>[**NetBeans 2**](#netbeans) <ul><li>Compilación separada</ul>| <ol> <li>Calificador const para métodos y parámetros <li>Paso de parámetros por valor y referencia  <li> Devolución por valor y referencia </ol> |
-|Semana3	4/mar/2024 | |<ol><li>[**NetBeans 3**](#netbeans) <ul><li>El [depurador](#depurador) de programas</ul>|  |
-|Semana4	11/mar/2024 |[**Kmer1**](PDFs/kmer1.pdf)  Kmeros y frecuencias asociadas. Clase KmerFreq <br>[Tests detallados](NetBeansProjects/Kmer1/tests/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer1/tests/TestReport.HowToTestUnitTests.md)  |  |  <ol> <li>Calificador const para métodos y parámetros <li>Paso de parámetros por valor y referencia  <li> Devolución por valor y referencia <li>Paso de vectores a funciones y métodos </ol>|
-|Semana5	18/mar/2024 |  || |
-|Semana Santa	25/mar/2024 | **Semana Santa**| | |
-|Semana6	1/abr/2024 | [**Kmer2**](PDFs/kmer2.pdf) Modelo de una especie. Clase Profile con vector estático <br>[Tests detallados](NetBeansProjects/Kmer2/tests/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer2/tests/TestReport.HowToTestUnitTests.md)| | <ol><li> Clases con vectores estáticos. <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes <li> Uso de [parámetros](#parametrosmain) desde la línea de comandos.  CStrings  </ol>|
-|Semana7	8/abr/2024 | |
-|Semana8	15/abr/2024 |[**Kmer3**](PDFs/kmer3.pdf) Cálculo de distancias entre profiles. Clase Profile con vector estático <br>[Tests detallados](NetBeansProjects/Kmer3/tests/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer3/tests/TestReport.HowToTestUnitTests.md) | [**valgrind**](PDFs/valgrind.pdf) Detección de pérdidas de memoria| <ol> <li> Uso de memoria dinámica en C++. <li> Arrays dinámicos. <li> Detección de pérdidas de memoria </ol>|
-|Semana9	22/abr/2024 ||||
-|Semana10	29/abril/2024 | [**Kmer4**](PDFs/kmer4.pdf) Cálculo de distancias entre profiles. Clase Profile con vector en memoria dinámica <br>[Tests detallados](NetBeansProjects/Kmer4/tests/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer4/tests/TestReport.HowToTestUnitTests.md) | | <ol><li>Clases que contienen datos en memoria dinámica <li>Constructor de copia <li>Operador de asignación <li>Destructor</ol>|
-|Semana11	6/may/2024 |**Kmer4** <br>**Examen de laboratorio**<br>1 PUNTO | | |
-|Semana12	13/may/2024 |[**Kmer5**](PDFs/kmer5.pdf) Aprendizaje y clasificación. Clase KmerCounter <br>[Tests detallados](NetBeansProjects/Kmer5/tests/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Kmer5/tests/TestReport.HowToTestUnitTests.md) <br>2 PUNTOS | | <ol> <li>Sobrecarga de operadores. <li>Matrices bidimensionales dinámicas <li> Ficheros binarios .</ol>|
-|Semana13	20/may/2024 | | | |
-|Semana14	27/may/2024 | | | |
-|Semana15	3/jun/2024 | | | |
+|Semana1 17/feb/2025 || <ol><li>[**NetBeans 1**](#netbeans) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del proyecto [MP Geometry](#mpgeometry)<ul><li>Métodos `const`.<li>Parámetros por valor y por referencia. <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la entrada estándar</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MP Geometry](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MP Geometry](#mpgeometry)  <li> Opcional: Uso de bibliotecas con el proyecto [MP Geometry](#mpgeometry) </ol>|
+|<a name="Semana2"></a>Semana2	24/feb/2025 | [**Boston0**](PDFs/kmer0.pdf) Filtrado de crímenes por posición e instante de tiempo. Clases Coordinates y Crime <br>[Tests detallados](NetBeansProjects/Boston0/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Boston0/TestReport.HowToTestUnitTests.md) | <ol><li>[**NetBeans 2**](#netbeans) <ul><li>Compilación separada</ul>| <ol> <li>Calificador const para métodos y parámetros <li>Paso de parámetros por valor y referencia  <li> Devolución por valor y referencia </ol> |
+|Semana3	3/mar/2025 | |<ol><li>[**NetBeans 3**](#netbeans) <ul><li>El [depurador](#depurador) de programas</ul>|  |
+|Semana4	10/mar/2025 |[**Boston1**](PDFs/kmer1.pdf)  Obtención de frecuencias de crímenes por día de la semana y hora del día. Módulo para arrays de objetos Crime <br>[Tests detallados](NetBeansProjects/Boston1/tests/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Boston1/tests/TestReport.HowToTestUnitTests.md)  |  |  <ol> <li>Calificador const para métodos y parámetros <li>Paso de parámetros por valor y referencia  <li> Devolución por valor y referencia <li>Paso de vectores a funciones y métodos </ol>|
+|Semana5	17/mar/2025 |  || |
+|Semana6	24/mar/2025 | [**Boston2**](PDFs/kmer2.pdf) Fusión de ficheros de crímenes. Clase CrimeSet con vector estático. Módulo con funciones que reciben punteros como parámetro (puntero a array de objetos CrimeSet) <br>[Tests detallados](NetBeansProjects/Boston2/tests/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Boston2/tests/TestReport.HowToTestUnitTests.md)| | <ol><li> Clases con vectores estáticos. <li> Paso de punteros como parámetros de funciones. <li> Devolución de punteros por funciones. <li> Uso de memoria dinámica en C++. <li> Arrays dinámicos. <li> Detección de pérdidas de memoria. <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes <li> Uso de [parámetros](#parametrosmain) desde la línea de comandos.  CStrings  </ol>|
+|Semana7	31/mar/2025 | |
+|Semana8	7/abr/2025 |[**Boston3**](PDFs/kmer3.pdf) Fusión de ficheros de crímenes. Clase CrimeSet con vector en memoria dinámica <br>[Tests detallados](NetBeansProjects/Boston3/tests/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Boston3/tests/TestReport.HowToTestUnitTests.md) | [**valgrind**](PDFs/valgrind.pdf) Detección de pérdidas de memoria| <ol> <li>Clases que contienen datos (array dinámico) en memoria dinámica <li>Constructor de copia <li>Operador de asignación <li>Destructor</ol>|
+|Semana Santa	14/mar/2025 | **Semana Santa**| | |
+|Semana9	21/abr/2025 | **Examen de laboratorio**<br>1 PUNTO |||
+|Semana10	28/abril/2025 |  | | |
+|Semana11	5/may/2025 |[**Boston4**](PDFs/kmer4.pdf) Obtención de una imagen con el mapa de calor. Clase CrimeCounter (matriz en memoria dinámica) <br>[Tests detallados](NetBeansProjects/Boston4/tests/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Boston4/tests/TestReport.HowToTestUnitTests.md) <br>2 PUNTOS | | <ol> <li>Sobrecarga de operadores. <li>Matrices bidimensionales dinámicas <li> Ficheros binarios .</ol>|
+|Semana12	12/may/2025 | | | |
+|Semana13	19/may/2025 | | | |
+|Semana14	26/may/2025 | | | |
 |||||
 
 # Técnicas, herramientas y metodologías de prácticas
