@@ -2,9 +2,6 @@ Los tests de integración que vamos a pasar a vuestros programas son más o meno
 
 
 ``` cpp
-#include <sstream>
-#include <regex>
-
 const float INVALID_COORDINATE=181.0; 
 
 const string EMPTY_FIELD = "UNKNOWN";

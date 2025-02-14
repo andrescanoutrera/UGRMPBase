@@ -127,8 +127,8 @@ int main(int argc, char* argv[]) {
     // Read number n to define the number of Crime objects
     // Remember to take off the character \n after previous number 
    
-    // Using a loop to read n Crime object
-        // Read a Crime object, normalize and record the crime 
+    // Loop to read n Crime objects
+        // Read a Crime object, normalize and insert it in the array
         //     if its ID is not unknown and there is not any crime 
         //     in the array with identical ID
    

@@ -1,0 +1,11 @@
+%%%CALL
+%%%VALGRIND
+%%%DESCRIPTION Running without arguments
+%%%OUTPUT
+ERROR in boston2 parameters
+Run with the following arguments:
+boston2 <inputFile.txt> [<outputFile.crm>]
+
+Parameters:
+<inputFile.txt>: name of the input text file that contains the names of the crm files
+<outputFile.crm>: name of the output crm file (tests/output/output.crm by default)

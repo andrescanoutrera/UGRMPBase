@@ -1,0 +1,10 @@
+%%%CALL  data/input03.b2in tests/output/output.crm
+%%%VALGRIND
+%%%DESCRIPTION 2 nearly identic dataSet, resulting the same original dataset excepto 4 the comment.
+%%%FROMFILE tests/output/output.crm
+%%%OUTPUT
+MP-CRIME-T-1.0
+#Fusion of the crm files whose names are in the file: data/input03.b2in
+1
+0,225520077,3126,UNKNOWN,WARRANT ARREST - OUTSIDE OF BOSTON WARRANT,D14,786,1,2022-02-05 00:00:00,WASHINGTON ST,42.343082,-71.141724
+
