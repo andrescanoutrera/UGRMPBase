@@ -146,6 +146,15 @@ function doTest  {
             cp $TESTS_FOLDER/.real$k.utf8 $TESTS_FOLDER/.real$k
             REAL_OUTPUT=$(cat $TESTS_FOLDER/.real$k)
         fi 
+
+        # Remove empty/blank lines from $TESTS_FOLDER/.real (taken from https://serverfault.com/questions/252921/how-to-remove-empty-blank-lines-from-a-file-in-unix-including-spaces)
+        #REAL_OUTPUT=$(sed -i '/^$/d' $TESTS_FOLDER/.real$k)
+
+        # Remove leading and trailing whitespace from each line in $TESTS_FOLDER/.real and  $TESTS_FOLDER/.due$k (taken from https://unix.stackexchange.com/questions/102008/how-do-i-trim-leading-and-trailing-whitespace-from-each-line-of-some-output)
+        REAL_OUTPUT=$(sed 's/^[ \t]*//;s/[ \t]*$//' $TESTS_FOLDER/.real$k)
+        DUE_OUTPUT=$(sed 's/^[ \t]*//;s/[ \t]*$//' $TESTS_FOLDER/.due$k)
+
+
         # When both outputs (expected and real) differ or valgrind detects leaks of memory
         # the test FAILS
         if [ -f $TESTS_FOLDER/.timeout ]
