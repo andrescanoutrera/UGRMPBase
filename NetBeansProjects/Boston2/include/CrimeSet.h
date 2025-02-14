@@ -149,8 +149,7 @@ public:
      * CrimeSet. If found, it returns the position where it was found. If not,
      * it returns -1. We consider that position 0 is the first crime in the 
      * list of crimes and this->getSize()-1 the last crime.
-     * In order to find a crime, consider only equality in the ID and dateTime
-     * fields.
+     * In order to find a crime, consider only equality in the ID field.
      * Query method
      * @param crime A crime. Input parameter
      * @param initialPos initial position where to do the search. 
@@ -166,8 +165,7 @@ public:
      * CrimeSet. If found, it returns the position where it was found. If not,
      * it returns -1. We consider that position 0 is the first crime in the 
      * list of crimes and this->getSize()-1 the last crime.
-     * In order to find a crime consider only equality in the ID and dateTime
-     * fields.
+     * In order to find a crime consider only equality in the ID field.
      * Query method
      * @param crime A crime. Input parameter
      * @return If found, it returns the position where the crime 
