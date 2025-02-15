@@ -37,6 +37,8 @@
  * when each crime was committed. 
  * Usually the records appear in the order in which they were recorded when 
  * the crimes were collected by the police department.
+ * The public methods of this class do not allow a CrimeSet to contain two 
+ * Crime objects with identical IDs.
  * 
  * @see See the content of the files *.crm in the DataSets folder as examples
  * of files that contain information about CrimeSets
@@ -115,14 +117,17 @@ public:
     
     /**
      * @brief Appends the given Crime at the end of the array of Crimes of
-     * this CrimeSet object. 
+     * this CrimeSet object, but only if that Crime was not found in this 
+     * CrimeSet.  
      * @throw std::out_of_range Throws a std::out_of_range exception if the
      * number of elements in the array of Crimes is equals to the capacity
      * of that array. In that case, the array is full, and no more elements
      * can be appended to the array.
      * @param crime The Crime to append to this object. Input parameter
+     * @return true if the given Crime was inserted in this CrimeSet object;
+     * false otherwise
      */
-    void append(Crime crime);
+    bool append(Crime crime);
     
     /**
      * @brief Gets the crime at the provided position
@@ -133,17 +138,7 @@ public:
      * @return A reference to the Crime at the provided position
      */
     Crime at(int pos);
-    
-    /**
-     * @brief Gets the crime at the provided position. 
-     * Modifier method
-     * @param pos position in the CrimeSet. Input parameter
-     * @throw std::out_of_range Throws an std::out_of_range exception if the 
-     * given pos is not valid
-     * @return A reference to the Crime at the given position.
-     */
-    Crime at(int pos);
-    
+     
     /**
      * @brief Searches the provided Crime in the array of crimes in this
      * CrimeSet. If found, it returns the position where it was found. If not,
@@ -214,7 +209,7 @@ public:
      * Crime objects contained in the provided CrimeSet @p crimeSet that are
      * not found (using CrimeSet::findCrime(Crime)) in this CrimeSet. 
      * This method could be implemented with the help of the method 
-     * CrimeSet::append(CrimeSet  crimeSet), to append to this 
+     * CrimeSet::append(Crime crime), to append to this 
      * CrimeSet, the Crimes of the provided CrimeSet @p crimeSet.
      * Modifier method
      * @param crimeSet A CrimeSet object. Input parameter
@@ -306,6 +301,16 @@ private:
     int _nCrimes; ///< Number of used elements in _crimes
     
     /**
+     * @brief Gets the crime at the provided position. 
+     * Modifier method
+     * @param pos position in the CrimeSet. Input parameter
+     * @throw std::out_of_range Throws an std::out_of_range exception if the 
+     * given pos is not valid
+     * @return A reference to the Crime at the given position.
+     */
+    Crime at(int pos);
+    
+    /**
      * @brief Reads comment lines from the provided input stream and appends
      * them to the end of the string _comment. 
      * In the provided input stream, comment lines are text lines that 
@@ -329,7 +334,6 @@ private:
      * @param outputStream output stream where the comments will be saved
      */
     void saveComments(std::ostream outputStream);
-
 }; // end class CrimeSet
 
 /**
