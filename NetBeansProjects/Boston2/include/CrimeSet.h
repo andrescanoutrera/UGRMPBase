@@ -46,20 +46,11 @@
 class CrimeSet {
 public:
     /**
-     * @brief Basicructor and initializer. It builds a CrimeSet object
-     * with a set of @p size Crimes. 
-     * Each Crime is automatically initialized with the defaultructor of 
-     * the class Crime.
-     * @throw std::out_of_range Throws a std::out_of_range exception if
-     * @p size<0 or @p size > @p DIM_VECTOR_CRIMES. In this case, the fields 
-     * of the object are initialized as follows: 
-     * - _comment = ""
-     * - _nCrimes = 0
-     * After the fields are initialized as described above, the exception 
-     * is thrown.
-     * @param size The number of Crimes that will have the set
+     * @brief Basic constructor and initializer. It builds a CrimeSet object
+     * with a set 0 Crimes and a capacity of DIM_VECTOR_CRIMES. The field for
+     * the comments is set as an empty string
      */
-    CrimeSet(int size=0);
+    CrimeSet();
     
     /**
      * @brief Returns the number of crimes stored in the set. 
