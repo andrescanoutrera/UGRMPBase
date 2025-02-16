@@ -1,6 +1,6 @@
 # OUTCOME OF TESTS FOR PROJECT boston2_template
 
-As of Feb 14 2025 15:12:04
+As of Feb 16 2025 11:56:21
 
 | ID | NAME | RESULT | DESCRIPTION | 
 | :--- | :--- | :--- | :--- |
@@ -116,123 +116,117 @@ As of Feb 14 2025 15:12:04
 | | | | should give ```"1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"```|
 | 56 | T01_Basics.CrimeSet_CrimeSet_1 |  PASSED |```CrimeSet crimSet;crimSet.inspectT()```|
 | | | | should give ```" 0 "```|
-| 57 | T01_Basics.CrimeSet_CrimeSet_2 |  PASSED |```string s = " 1 " + CRIME_DEFAULT +" "; CrimeSet crimSet(1);crimSet.inspectT().c_str()```|
-| | | | should give ```" 1 0,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,1,2017-01-20 02:00:00,UNKNOWN,181.000000,181.000000 "```|
-| 58 | T01_Basics.CrimeSet_CrimeSet_3 |  PASSED |```CrimeSet crimSet(DIM_VECTOR_CRIMES_LOC);crimSet._nCrimes```|
-| | | | should give ```2000```|
-| 59 | T01_Basics.CrimeSet_getComment_1 |  PASSED |```CrimeSet crimSet(2);crimSet.getComment()```|
+| 57 | T01_Basics.CrimeSet_getComment_1 |  PASSED |```CrimeSet crimSet;crimSet.getComment()```|
 | | | | should give ```""```|
-| 60 | T01_Basics.CrimeSet_getSize |  PASSED |```CrimeSet crimSet(2);crimSet.getSize()```|
-| | | | should give ```2```|
-| 61 | T01_Basics.CrimeSet_getComment_2 |  PASSED |```CrimeSet crimSet(2); string s = "COMMENT"; crimSet._comment = s;crimSet.getComment().c_str()```|
+| 58 | T01_Basics.CrimeSet_getSize |  PASSED |```CrimeSet crimSet;crimSet.getSize()```|
+| | | | should give ```0```|
+| 59 | T01_Basics.CrimeSet_getComment_2 |  PASSED |```CrimeSet crimSet; string s = "COMMENT"; crimSet._comment = s;crimSet.getComment().c_str()```|
 | | | | should give ```"COMMENT"```|
-| 62 | T01_Basics.CrimeSet_setComment |  PASSED |```CrimeSet crimSet(2); string s = "COMMENT"; s = s + ENDL; crimSet.setComment(s);std::regex_replace(crimSet.getComment(),std::regex(ENDL)," ")```|
+| 60 | T01_Basics.CrimeSet_setComment |  PASSED |```CrimeSet crimSet; string s = "COMMENT"; s = s + ENDL; crimSet.setComment(s);std::regex_replace(crimSet.getComment(), std::regex(ENDL), " ")```|
 | | | | should give ```"COMMENT "```|
-| 63 | T01_Basics.CrimeSet_toString |  PASSED |```string s="2 "+OTHER+OTHER; Crime crm1(OTHER); Crime crm2(OTHER); CrimeSet crimeSet(2); crimeSet._crimes[0]= crm1; crimeSet._crimes[1]= crm2;std::regex_replace(crimeSet.toString(),std::regex(ENDL)," ")```|
+| 61 | T01_Basics.CrimeSet_toString |  PASSED |```string s = "2 " + OTHER + OTHER; Crime crm1(OTHER); Crime crm2(OTHER); CrimeSet crimeSet; crimeSet._nCrimes = 2; crimeSet._crimes[0] = crm1; crimeSet._crimes[1] = crm2;std::regex_replace(crimeSet.toString(), std::regex(ENDL), " ")```|
 | | | | should give ```"2 1,111,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,111,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 "```|
-| 64 | T01_Basics.CrimeSet_Clear_0 |  PASSED |```CrimeSet crimSet; crimSet.clear();crimSet._nCrimes;```|
+| 62 | T01_Basics.CrimeSet_Clear_0 |  PASSED |```CrimeSet crimSet; crimSet.clear();crimSet._nCrimes;```|
 | | | | should give ```0```|
-| 65 | T01_Basics.CrimeSet_Clear_1 |  PASSED |```CrimeSet crimSet(DIM_VECTOR_CRIMES_LOC); crimSet.clear();crimSet.getSize()```|
+| 63 | T01_Basics.CrimeSet_Clear_1 |  PASSED |```CrimeSet crimSet; crimSet._nCrimes = DIM_VECTOR_CRIMES_LOC; crimSet.clear();crimSet.getSize()```|
 | | | | should give ```0```|
-| 66 | T01_Basics.CrimeSet_append_0 |  PASSED |```Crime crm(OTHER); CrimeSet crimeSet; string s = " 1 " + OTHER; crimeSet.append(crm);crimeSet.inspectT().c_str()```|
+| 64 | T01_Basics.CrimeSet_append_0 |  PASSED |```Crime crm(OTHER); CrimeSet crimeSet; string s = " 1 " + OTHER; crimeSet.append(crm);crimeSet.inspectT().c_str()```|
 | | | | should give ```" 1 1,111,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 "```|
-| 67 | T01_Basics.CrimeSet_append_1 |  PASSED |```Crime crm(OTHER); string ss = " 2 "+OTHER+OTHER; CrimeSet crimeSet; crimeSet.append(crm);crimeSet.append(crm);crimeSet.inspectT().c_str()```|
-| | | | should give ```" 2 1,111,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,111,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 "```|
-| 68 | T01_Basics.CrimeSet_at_0 |  PASSED |```CrimeSet crimSet(2);crimSet.at(0).inspectT().c_str()```|
-| | | | should give ```"0,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,1,2017-01-20 02:00:00,UNKNOWN,181.000000,181.000000"```|
-| 69 | T01_Basics.CrimeSet_at_1 |  PASSED |```CrimeSet crimSet(2)crimSet.at(1).inspectT().c_str()```|
-| | | | should give ```"0,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,1,2017-01-20 02:00:00,UNKNOWN,181.000000,181.000000"```|
-| 70 | T01_Basics.CrimeSet_findCrime_0 |  PASSED |```Crime crm; CrimeSet crimSet;crimSet.findCrime(crm);```|
-| | | | should give ```-1```|
-| 71 | T01_Basics.CrimeSet_findCrime_1 |  PASSED |```Crime crm1(OTHER); Crime crm2; string s2 = "222"; crm2.setId(s2); CrimeSet crimeSet(2); crimeSet._crimes[0] = crm1; crimeSet._crimes[2] = crm2;crimeSet.findCrime(crm1);```|
-| | | | should give ```0```|
-| 72 | T01_Basics.CrimeSet_findCrime_2 |  PASSED |```Crime crm1(OTHER); Crime crm2; string s2 = "222"; crm2.setId(s2); CrimeSet crimeSet(2); crimeSet._crimes[0] = crm1; crimeSet._crimes[1] = crm2;crimeSet.findCrime(crm2);```|
-| | | | should give ```1```|
-| 73 | T01_Basics.CrimeSet_findCrime_3 |  PASSED |```Crime crm(OTHER); CrimeSet crimeSet(5);crimeSet.findCrime(crm);```|
-| | | | should give ```-1```|
-| 74 | T01_Basics.CrimeSet_findCrime_4 |  PASSED |```CrimeSet crimeSet(DIM_VECTOR_CRIMES_LOC); Crime crm(OTHER); crimeSet._crimes[DIM_VECTOR_CRIMES_LOC - 1] = crm;crimeSet.findCrime(crm);```|
-| | | | should give ```1999```|
-| 75 | T01_Basics.CrimeSet_getCapacity |  PASSED |```CrimeSet crimSet(2);crimSet.getCapacity()```|
-| | | | should give ```2000```|
-| 76 | T02_Intermediate.Crime_Crime_parcial2 |  PASSED |```string s="1,  111  ,,,,,,7,2025-02-17 12:30:00,,180.000000,180.000000"; string due="1,111,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000"; Crime crime(s);crime.inspectT()```|
-| | | | should give ```"1,111,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000"```|
-| 77 | T02_Intermediate.Crime_Crime_parcial1_exception |  PASSED |```string s="1,,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000";Crime crime(s)```|
-| | | | should THROW an exception std::invalid_argument|
-| 78 | T02_Intermediate.Crime_normalize2 |  PASSED |```string s="1,111,222b,333c,444d,555e,666f,1,2025-02-17 12:30:00,999i,180.000000,180.000000"; string due="1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"; Crime crime(s); crime.normalize();crime.inspectT();```|
-| | | | should give ```"1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"```|
-| 79 | T02_Intermediate.Crime_normalize3_whitesp |  PASSED |```string s="1,111,  222b,  333c,  444d,  555e,  666f,1,2025-02-17 12:30:00,  999i,180.000000,180.000000"; string due="1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"; Crime crime(s); crime.normalize();crime.inspectT();```|
-| | | | should give ```"1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"```|
-| 80 | T02_Intermediate.Crime_normalize4_whitesp |  PASSED |```string s="1,111,  222b  ,  333c  ,  444d  ,  555e  ,  666f  ,1,2025-02-17 12:30:00,  999i  ,180.000000,180.000000"; string due="1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"; Crime crime(s); crime.normalize();crime.inspectT();```|
-| | | | should give ```"1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"```|
-| 81 | T02_Intermediate.Crime_normalize5_empty |  PASSED |```string s="1,111,,  333c  ,  444d  ,  555e  ,  666f  ,1,2025-02-17 12:30:00,  999i  ,180.000000,180.000000"; string due="1,111,,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"; Crime crime(s); crime.normalize();crime.inspectT();```|
-| | | | should give ```"1,111,,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"```|
-| 82 | T02_Intermediate.CrimeSet_CrimeSet_4 |  PASSED |```CrimeSet crimSet(-1);```|
-| | | | should THROW an exception std::out_of_range|
-| 83 | T02_Intermediate.CrimeSet_at_exception |  PASSED |```CrimeSet crimSet(2);crimSet.at(2).inspectT()```|
-| | | | should THROW an exception std::out_of_range|
-| 84 | T02_Intermediate.CrimeSet_saveLoad |  PASSED |```CrimeSet l1(10); CrimeSet l2(10); l1.setComment("Test1"); Crime crm(OTHER); for (int i = 0; i < 10; i++) { crm.setId(to_string(i)); l1.at(i) = crm; } const char* fileName = "tests/output/test_save1.crm"; l1.save(fileName); l2.load(fileName);l1.inspectT() == l2.inspectT();```|
-| | | | should give ```true```|
-| 85 | T02_Intermediate.CrimeSet_loadLoad |  PASSED |```CrimeSet l1; int n; const char* fileName = "../DataSets/crimes_20.crm"; l1.load(fileName); n = l1.getSize(); l1.load(fileName);l1.getSize()```|
-| | | | should give ```20```|
-| 86 | T02_Intermediate.CrimeSet_Save_1_exception |  PASSED |```CrimeSet l1; string fileName; fileName= "tests/outp/imposibleToCreateFile.crm";l1.save(fileName);```|
-| | | | should THROW an exception std::ios_base::failure|
-| 87 | T02_Intermediate.CrimeSet_Load_2_exception |  PASSED |```CrimeSet l1; string fileName; fileName = "../DataSets/test_noHeader.crm";l1.load(fileName);```|
-| | | | should THROW an exception std::invalid_argument|
-| 88 | T02_Intermediate.CrimeSet_Load_3_exception |  PASSED |```CrimeSet l1; string fileName; fileName = "tests/output/test_xxx.crm";l1.load(fileName);```|
-| | | | should THROW an exception std::ios_base::failure|
-| 89 | T02_Intermediate.CrimeSet_join_intersection_empy_1 |  PASSED |```Crime crm; CrimeSet l1(5); CrimeSet l2(5); for (int i = 0; i < 5; i++) { crm.setId(to_string(i)); l1.at(i) = crm; } for (int i = 0; i < 5; i++) { crm.setId(to_string(i+5)); l2.at(i) = crm; } int initialSize; initialSize = l1._nCrimes;; l1.join(l2);l1.getSize()```|
-| | | | should give ```10```|
-| 90 | T02_Intermediate.CrimeSet_joinShouldRemainEqual_1 |  PASSED |```Crime crm; CrimeSet l1(5); CrimeSet l2(5); for (int i = 0; i < 5; i++) { crm.setId(to_string(i)); l1.at(i) = crm; l2.at(i) = crm; } int initialSize; initialSize = l1._nCrimes; l1.join(l2);l1.getSize()```|
-| | | | should give ```5```|
-| 91 | T02_Intermediate.CrimeSet_normalize_0 |  PASSED |```CrimeSet l1(2); Crime crm(OTHER); l1._crimes[1]= crm; l1.normalize(); string s=" 2 "+CRIME_DEFAULT+" "+OTHER;l1.inspectT();```|
+| 65 | T01_Basics.CrimeSet_append_1 |  PASSED |```Crime crm1; Crime crm2(OTHER); string ss = " 2 " + CRIME_DEFAULT + " " + OTHER; CrimeSet crimeSet; crimeSet.append(crm1); crimeSet.append(crm2);crimeSet.inspectT().c_str()```|
 | | | | should give ```" 2 0,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,1,2017-01-20 02:00:00,UNKNOWN,181.000000,181.000000 1,111,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 "```|
-| 92 | T02_Intermediate.CrimeSet_normalize_1 |  PASSED |```CrimeSet l1(2); Crime crm; crm.setCode(" unknown "); crm.setDescription(" unknown "); l1._crimes[0]= crm; l1._crimes[1]= crm; l1.normalize(); string s=" 2 "+CRIME_DEFAULT+" "+CRIME_DEFAULT+" ";l1.inspectT();```|
+| 66 | T01_Basics.CrimeSet_at_0 |  PASSED |```CrimeSet crimSet; crimSet._nCrimes = 2;crimSet.at(0).inspectT().c_str()```|
+| | | | should give ```"0,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,1,2017-01-20 02:00:00,UNKNOWN,181.000000,181.000000"```|
+| 67 | T01_Basics.CrimeSet_at_1 |  PASSED |```CrimeSet crimSet; crimSet._nCrimes = 2;crimSet.at(1).inspectT().c_str()```|
+| | | | should give ```"0,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,1,2017-01-20 02:00:00,UNKNOWN,181.000000,181.000000"```|
+| 68 | T01_Basics.CrimeSet_findCrime_0 |  PASSED |```Crime crm; CrimeSet crimSet;crimSet.findCrime(crm);```|
+| | | | should give ```-1```|
+| 69 | T01_Basics.CrimeSet_findCrime_1 |  PASSED |```Crime crm1(OTHER); Crime crm2; string s2 = "222"; crm2.setId(s2); CrimeSet crimeSet; crimeSet._nCrimes = 2; crimeSet._crimes[0] = crm1; crimeSet._crimes[2] = crm2;crimeSet.findCrime(crm1);```|
+| | | | should give ```0```|
+| 70 | T01_Basics.CrimeSet_findCrime_2 |  PASSED |```Crime crm1(OTHER); Crime crm2; string s2 = "222"; crm2.setId(s2); CrimeSet crimeSet; crimeSet._nCrimes = 2; crimeSet._crimes[0] = crm1; crimeSet._crimes[1] = crm2;crimeSet.findCrime(crm2);```|
+| | | | should give ```1```|
+| 71 | T01_Basics.CrimeSet_findCrime_3 |  PASSED |```Crime crm(OTHER); CrimeSet crimeSet; crimeSet._nCrimes = 2;crimeSet.findCrime(crm);```|
+| | | | should give ```-1```|
+| 72 | T01_Basics.CrimeSet_findCrime_4 |  PASSED |```CrimeSet crimeSet; crimeSet._nCrimes = DIM_VECTOR_CRIMES_LOC; Crime crm(OTHER); crimeSet._crimes[DIM_VECTOR_CRIMES_LOC - 1] = crm;crimeSet.findCrime(crm);```|
+| | | | should give ```1999```|
+| 73 | T01_Basics.CrimeSet_getCapacity |  PASSED |```CrimeSet crimSet; crimSet._nCrimes = 2;crimSet.getCapacity()```|
+| | | | should give ```2000```|
+| 74 | T02_Intermediate.Crime_Crime_parcial2 |  PASSED |```string s="1,  111  ,,,,,,7,2025-02-17 12:30:00,,180.000000,180.000000"; string due="1,111,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000"; Crime crime(s);crime.inspectT()```|
+| | | | should give ```"1,111,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000"```|
+| 75 | T02_Intermediate.Crime_Crime_parcial1_exception |  PASSED |```string s="1,,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000";Crime crime(s)```|
+| | | | should THROW an exception std::invalid_argument|
+| 76 | T02_Intermediate.Crime_normalize2 |  PASSED |```string s="1,111,222b,333c,444d,555e,666f,1,2025-02-17 12:30:00,999i,180.000000,180.000000"; string due="1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"; Crime crime(s); crime.normalize();crime.inspectT();```|
+| | | | should give ```"1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"```|
+| 77 | T02_Intermediate.Crime_normalize3_whitesp |  PASSED |```string s="1,111,  222b,  333c,  444d,  555e,  666f,1,2025-02-17 12:30:00,  999i,180.000000,180.000000"; string due="1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"; Crime crime(s); crime.normalize();crime.inspectT();```|
+| | | | should give ```"1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"```|
+| 78 | T02_Intermediate.Crime_normalize4_whitesp |  PASSED |```string s="1,111,  222b  ,  333c  ,  444d  ,  555e  ,  666f  ,1,2025-02-17 12:30:00,  999i  ,180.000000,180.000000"; string due="1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"; Crime crime(s); crime.normalize();crime.inspectT();```|
+| | | | should give ```"1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"```|
+| 79 | T02_Intermediate.Crime_normalize5_empty |  PASSED |```string s="1,111,,  333c  ,  444d  ,  555e  ,  666f  ,1,2025-02-17 12:30:00,  999i  ,180.000000,180.000000"; string due="1,111,,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"; Crime crime(s); crime.normalize();crime.inspectT();```|
+| | | | should give ```"1,111,,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"```|
+| 80 | T02_Intermediate.CrimeSet_at_exception |  PASSED |```CrimeSet crimSet; crimSet._nCrimes = 2;crimSet.at(2).inspectT()```|
+| | | | should THROW an exception std::out_of_range|
+| 81 | T02_Intermediate.CrimeSet_saveLoad |  PASSED |```CrimeSet l1; CrimeSet l2; l1._nCrimes = 10; l2._nCrimes = 10; l1.setComment("Test1"); Crime crm(OTHER); for (int i = 0; i < 10; i++) { crm.setId(to_string(i)); l1.at(i) = crm; } const char* fileName = "tests/output/test_save1.crm"; l1.save(fileName); l2.load(fileName);l1.inspectT() == l2.inspectT();```|
+| | | | should give ```true```|
+| 82 | T02_Intermediate.CrimeSet_loadLoad |  PASSED |```CrimeSet l1; int n; const char* fileName = "../DataSets/crimes_20.crm"; l1.load(fileName); n = l1.getSize(); l1.load(fileName);l1.getSize()```|
+| | | | should give ```20```|
+| 83 | T02_Intermediate.CrimeSet_Save_1_exception |  PASSED |```CrimeSet l1; string fileName; fileName = "tests/outp/imposibleToCreateFile.crm";l1.save(fileName);```|
+| | | | should THROW an exception std::ios_base::failure|
+| 84 | T02_Intermediate.CrimeSet_Load_2_exception |  PASSED |```CrimeSet l1; string fileName; fileName = "../DataSets/test_noHeader.crm";l1.load(fileName);```|
+| | | | should THROW an exception std::invalid_argument|
+| 85 | T02_Intermediate.CrimeSet_Load_3_exception |  PASSED |```CrimeSet l1; string fileName; fileName = "tests/output/test_xxx.crm";l1.load(fileName);```|
+| | | | should THROW an exception std::ios_base::failure|
+| 86 | T02_Intermediate.CrimeSet_join_intersection_empy_1 |  PASSED |```Crime crm; CrimeSet l1; CrimeSet l2; l1._nCrimes = 5; l2._nCrimes = 5; for (int i = 0; i < 5; i++) { crm.setId(to_string(i)); l1.at(i) = crm; } for (int i = 0; i < 5; i++) { crm.setId(to_string(i + 5)); l2.at(i) = crm; } int initialSize; initialSize = l1._nCrimes;; l1.join(l2);l1.getSize()```|
+| | | | should give ```10```|
+| 87 | T02_Intermediate.CrimeSet_joinShouldRemainEqual_1 |  PASSED |```Crime crm; CrimeSet l1; CrimeSet l2; l1._nCrimes = 5; l2._nCrimes = 5; for (int i = 0; i < 5; i++) { crm.setId(to_string(i)); l1.at(i) = crm; l2.at(i) = crm; } int initialSize; initialSize = l1._nCrimes; l1.join(l2);l1.getSize()```|
+| | | | should give ```5```|
+| 88 | T02_Intermediate.CrimeSet_normalize_0 |  PASSED |```CrimeSet l1; l1._nCrimes = 2; Crime crm(OTHER); l1._crimes[1]= crm; l1.normalize(); string s=" 2 "+CRIME_DEFAULT+" "+OTHER;l1.inspectT();```|
+| | | | should give ```" 2 0,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,1,2017-01-20 02:00:00,UNKNOWN,181.000000,181.000000 1,111,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 "```|
+| 89 | T02_Intermediate.CrimeSet_normalize_1 |  PASSED |```CrimeSet l1; l1._nCrimes = 2; Crime crm; crm.setCode(" unknown "); crm.setDescription(" unknown "); l1._crimes[0]= crm; l1._crimes[1]= crm; l1.normalize(); string s=" 2 "+CRIME_DEFAULT+" "+CRIME_DEFAULT+" ";l1.inspectT();```|
 | | | | should give ```" 2 0,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,1,2017-01-20 02:00:00,UNKNOWN,181.000000,181.000000 0,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,UNKNOWN,1,2017-01-20 02:00:00,UNKNOWN,181.000000,181.000000 "```|
-| 93 | T02_Intermediate.CrimeSet_selectWhereEQ_1 |  PASSED |```int sizeOriginal = 5; CrimeSet l1(sizeOriginal); Crime crm; CrimeSet l2; l2 = l1.selectWhereEQ("Code",EMPTY_FIELD);l2.getSize()```|
+| 90 | T02_Intermediate.CrimeSet_selectWhereEQ_1 |  PASSED |```int sizeOriginal = 5; CrimeSet l1; l1._nCrimes = sizeOriginal; Crime crm; CrimeSet l2; for (int i = 0; i < sizeOriginal; i++) { l1._crimes[i].setId(std::to_string(i+1)); } l2 = l1.selectWhereEQ("Code",EMPTY_FIELD);l2.getSize()```|
 | | | | should give ```5```|
-| 94 | T02_Intermediate.CrimeSet_selectWhereEQ_2 |  PASSED |```CrimeSet l1(5); Crime crm; CrimeSet l2; l2 = l1.selectWhereEQ("Shooting","0");l2.getSize()```|
+| 91 | T02_Intermediate.CrimeSet_selectWhereEQ_2 |  PASSED |```CrimeSet l1; l1._nCrimes = 5; Crime crm; CrimeSet l2; l2 = l1.selectWhereEQ("Shooting","0");l2.getSize()```|
 | | | | should give ```0```|
-| 95 | T02_Intermediate.CrimeSet_selectWhereEQ_3 |  PASSED |```CrimeSet l1(5); Crime crm; CrimeSet l2; l2 = l1.selectWhereEQ("Code",EMPTY_FIELD); l2.setComment("");l1.inspectN() == l2.inspectN();```|
+| 92 | T02_Intermediate.CrimeSet_selectWhereEQ_3 |  PASSED |```CrimeSet l1; l1._nCrimes = 5; for (int i = 0; i < 5; i++) { l1._crimes[i].setId(std::to_string(i + 1)); } CrimeSet l2; l2 = l1.selectWhereEQ("Code", EMPTY_FIELD); l2.setComment("");l1.inspectN() == l2.inspectN();```|
 | | | | should give ```true```|
-| 96 | T02_Intermediate.CrimeSet_selectValidLocation_1 |  PASSED |```CrimeSet l1(5); Crime crm; CrimeSet l2; l2 = l1.selectValidLocation();l2.getSize()```|
+| 93 | T02_Intermediate.CrimeSet_selectValidLocation_1 |  PASSED |```CrimeSet l1; l1._nCrimes = 5; Crime crm; CrimeSet l2; l2 = l1.selectValidLocation();l2.getSize()l2._nCrimes;```|
 | | | | should give ```0```|
-| 97 | T02_Intermediate.CrimeSet_selectValidLocation_2 |  PASSED |```int sizeOriginal = 5; CrimeSet l1(sizeOriginal); Crime crm(OTHER); for (int i = 0; i < sizeOriginal; i++) { l1.at(i) = crm; } CrimeSet l2; l2 = l1.selectValidLocation();l2.getSize()```|
+| 94 | T02_Intermediate.CrimeSet_selectValidLocation_2 |  PASSED |```int sizeOriginal = 5; CrimeSet l1; l1._nCrimes = sizeOriginal; Crime crm(OTHER); for (int i = 0; i < sizeOriginal; i++) { l1.at(i) = crm; crm.setId(std::to_string(i + 1)); } CrimeSet l2; l2 = l1.selectValidLocation();l2.getSize()```|
 | | | | should give ```5```|
-| 98 | T02_Intermediate.CrimeSet_selectValidLocation_3 |  PASSED |```int sizeOriginal = 5; CrimeSet l1(sizeOriginal); Crime crm(OTHER); for (int i = 0; i < sizeOriginal; i++) { l1.at(i) = crm; } CrimeSet l2; l2 = l1.selectValidLocation(); l2.setComment("");l1.inspectN() == l2.inspectN();```|
+| 95 | T02_Intermediate.CrimeSet_selectValidLocation_3 |  PASSED |```int sizeOriginal = 5; CrimeSet l1; l1._nCrimes = sizeOriginal; Crime crm(OTHER); for (int i = 0; i < sizeOriginal; i++) { l1.at(i) = crm; crm.setId(std::to_string(i + 1)); } CrimeSet l2; l2 = l1.selectValidLocation(); l2.setComment("");l1.inspectN() == l2.inspectN();```|
 | | | | should give ```true```|
-| 99 | T02_Intermediate.CrimeSet_sort_1_no_change |  PASSED |```int sizeOriginal = 3; string ss=" 3 "; CrimeSet l1(sizeOriginal); Crime crm(OTHER); for (int i = 0; i < sizeOriginal; i++) { crm.setId(std::to_string(i+1)); l1.at(i) = crm; ss += crm.toString(); ss += " "; } l1.sort();l1.inspectT();```|
+| 96 | T02_Intermediate.CrimeSet_sort_1_no_change |  PASSED |```int sizeOriginal = 3; string ss = " 3 "; CrimeSet l1; l1._nCrimes = sizeOriginal; Crime crm(OTHER); for (int i = 0; i < sizeOriginal; i++) { crm.setId(std::to_string(i + 1)); l1.at(i) = crm; ss += crm.toString(); ss += " "; } l1.sort();l1.inspectT();```|
 | | | | should give ```" 3 1,1,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,2,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,3,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 "```|
-| 100 | T02_Intermediate.CrimeSet_sort_2 |  PASSED |```int sizeOriginal = 3; string ss; CrimeSet l1(sizeOriginal); Crime crm(OTHER); for (int i = 0; i < sizeOriginal; i++) { crm.setId(std::to_string(sizeOriginal - i)); l1.at(i) = crm; ss = crm.toString() + " " + ss; } ss = " 3 " + ss; l1.sort();l1.inspectT();```|
+| 97 | T02_Intermediate.CrimeSet_sort_2 |  PASSED |```int sizeOriginal = 3; string ss; CrimeSet l1; l1._nCrimes = sizeOriginal; Crime crm(OTHER); for (int i = 0; i < sizeOriginal; i++) { crm.setId(std::to_string(sizeOriginal - i)); l1.at(i) = crm; ss = crm.toString() + " " + ss; } ss = " 3 " + ss; l1.sort();l1.inspectT();```|
 | | | | should give ```" 3 1,1,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,2,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,3,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 "```|
-| 101 | T02_Intermediate.CrimeSet_assign_01 |  PASSED |```Crime crm(OTHER); CrimeSet crmS1(5); CrimeSet crmS2; string ss; for (int i = 0; i < 5; i++) { crm.setId(std::to_string(i)); crmS1.at(i) = crm; ss = crm.toString() + " " + ss; } crmS2=crmS1;crmS2.inspectT();```|
+| 98 | T02_Intermediate.CrimeSet_assign_01 |  PASSED |```Crime crm(OTHER); CrimeSet crmS1; crmS1._nCrimes=5; CrimeSet crmS2; string ss; for (int i = 0; i < 5; i++) { crm.setId(std::to_string(i)); crmS1.at(i) = crm; ss = crm.toString() + " " + ss; } crmS2=crmS1;crmS2.inspectT();```|
 | | | | should give ```" 5 1,0,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,1,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,2,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,3,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,4,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 "```|
-| 102 | T02_Intermediate.CrimeSet_assign_02 |  PASSED |```Crime crm(OTHER); CrimeSet crmS1(5); CrimeSet crmS2; string ss; for (int i = 0; i < 5; i++) { crm.setId(std::to_string(i)); crmS1.at(i) = crm; ss = crm.toString() + " " + ss; } crmS2=crmS1; ss = crmS1.inspectT(); crmS1.at(0) = crm;crmS2.inspectT();```|
+| 99 | T02_Intermediate.CrimeSet_assign_02 |  PASSED |```Crime crm(OTHER); CrimeSet crmS1; crmS1._nCrimes = 5; CrimeSet crmS2; string ss; for (int i = 0; i < 5; i++) { crm.setId(std::to_string(i)); crmS1.at(i) = crm; ss = crm.toString() + " " + ss; } crmS2 = crmS1; ss = crmS1.inspectT(); crmS1.at(0) = crm;crmS2.inspectT();```|
 | | | | should give ```" 5 1,0,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,1,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,2,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,3,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 1,4,222,333,444,555,666,1,2025-02-17 12:30:00,999,90.000000,180.000000 "```|
-| 103 | T02_Intermediate.CrimeSet_CrimeSet_5 |  PASSED |```CrimeSet crimSet(CrimeSet::DIM_VECTOR_CRIMES + 1);```|
+| 100 | T02_Intermediate.CrimeSet_out_of_range__append_4 |  PASSED |```Crime crm; CrimeSet crimeSet; crimeSet._nCrimes = CrimeSet::DIM_VECTOR_CRIMES; crimeSet.append(crm);crimeSet._nCrimes;```|
+| | | | should give ```2000```|
+| 101 | T02_Intermediate.CrimeSet_out_of_range__append_5 |  PASSED |```Crime crm(OTHER); CrimeSet crimeSet; crimeSet._nCrimes = CrimeSet::DIM_VECTOR_CRIMES;crimeSet.append(crm);```|
 | | | | should THROW an exception std::out_of_range|
-| 104 | T02_Intermediate.CrimeSet_out_of_range__append_4 |  PASSED |```Crime crm; CrimeSet crimeSet(CrimeSet::DIM_VECTOR_CRIMES);crimeSet.append(crm);```|
-| | | | should THROW an exception std::out_of_range|
-| 105| T03_Advanced.Integration_InvalidArguments_1-valgrind | PASSED | NO LEAKS |
-| 105 | T03_Advanced.Integration_InvalidArguments_1 | PASSED | [boston2]: Running without arguments.|
-| 106| T03_Advanced.Integration00_emptyfile-valgrind | PASSED | NO LEAKS |
-| 106 | T03_Advanced.Integration00_emptyfile | PASSED | [Boston2 data/input00.b2in]: File in correct format but with no crimes.|
-| 107| T03_Advanced.Integration01_Resulting_emptyFile-valgrind | PASSED | NO LEAKS |
-| 107 | T03_Advanced.Integration01_Resulting_emptyFile | PASSED | [Boston2 data/input01.b2in]: File with only one input file. The input file without any comment, the crime does not pass the filter.|
-| 108| T03_Advanced.Integration02_OnlyOneInputFile-valgrind | PASSED | NO LEAKS |
-| 108 | T03_Advanced.Integration02_OnlyOneInputFile | PASSED | [Boston2 data/input02.b2in]: File with only one input file. The input file, with comment and one crime is normalized in the outcome.|
-| 109| T03_Advanced.Integration03_FusionOf2Files-valgrind | PASSED | NO LEAKS |
-| 109 | T03_Advanced.Integration03_FusionOf2Files | PASSED | [Boston2 data/input03.b2in]: 2 nearly identic dataSet, resulting the same original dataset excepto 4 the comment.|
-| 110| T03_Advanced.Integration04_FusionOf2Files-valgrind | PASSED | NO LEAKS |
-| 110 | T03_Advanced.Integration04_FusionOf2Files | PASSED | [Boston2 data/input04.b2in]: The first file is empty, the second one is ordered. The filter removes one component from the original.|
-| 111| T03_Advanced.Integration05_FusionOf2Files-valgrind | PASSED | NO LEAKS |
-| 111 | T03_Advanced.Integration05_FusionOf2Files | PASSED | [Boston2 data/input05.b2in] : The first with one crime, the second one with 5. The outcome has 5.|
-| 112| T03_Advanced.Integration06_FusionOf2Files-valgrind | PASSED | NO LEAKS |
-| 112 | T03_Advanced.Integration06_FusionOf2Files | PASSED | [Boston2 data/input06.b2in] : The first with one crime, the second one with 5. Filtered by validLocation.|
-| 113| T03_Advanced.Integration07_FusionOf2Files-valgrind | PASSED | NO LEAKS |
-| 113 | T03_Advanced.Integration07_FusionOf2Files | PASSED | [Boston2 data/input07.b2in] : The first with 20 crimes, the second one with 5.|
-| 114| T03_Advanced.Integration08_FusionOf2Files-valgrind | PASSED | NO LEAKS |
-| 114 | T03_Advanced.Integration08_FusionOf2Files | PASSED | [Boston2 data/input08.b2in] : The first one with 5 crimes, the second one with 20.|
-| 115| T03_Advanced.Integration09_FusionOf6Files-valgrind | PASSED | NO LEAKS |
-| 115 | T03_Advanced.Integration09_FusionOf6Files | PASSED | [Boston2 data/input09.b2in] : Fusion of 6 files. The fusion outcome is identical to the test input06.|
-| 116| T03_Advanced.Integration10_DefaultOutput-valgrind | PASSED | NO LEAKS |
-| 116 | T03_Advanced.Integration10_DefaultOutput | PASSED | [Boston2 data/input06.b2in] : The fusion outcome is identical to the test input06.|
+| 102| T03_Advanced.Integration_InvalidArguments_1-valgrind | PASSED | NO LEAKS |
+| 102 | T03_Advanced.Integration_InvalidArguments_1 | PASSED | [boston2]: Running without arguments.|
+| 103| T03_Advanced.Integration00_emptyfile-valgrind | PASSED | NO LEAKS |
+| 103 | T03_Advanced.Integration00_emptyfile | PASSED | [Boston2 data/input00.b2in]: File in correct format but with no crimes.|
+| 104| T03_Advanced.Integration01_Resulting_emptyFile-valgrind | PASSED | NO LEAKS |
+| 104 | T03_Advanced.Integration01_Resulting_emptyFile | PASSED | [Boston2 data/input01.b2in]: File with only one input file. The input file without any comment, the crime does not pass the filter.|
+| 105| T03_Advanced.Integration02_OnlyOneInputFile-valgrind | PASSED | NO LEAKS |
+| 105 | T03_Advanced.Integration02_OnlyOneInputFile | PASSED | [Boston2 data/input02.b2in]: File with only one input file. The input file, with comment and one crime is normalized in the outcome.|
+| 106| T03_Advanced.Integration03_FusionOf2Files-valgrind | PASSED | NO LEAKS |
+| 106 | T03_Advanced.Integration03_FusionOf2Files | PASSED | [Boston2 data/input03.b2in]: 2 nearly identic dataSet, resulting the same original dataset excepto 4 the comment.|
+| 107| T03_Advanced.Integration04_FusionOf2Files-valgrind | PASSED | NO LEAKS |
+| 107 | T03_Advanced.Integration04_FusionOf2Files | PASSED | [Boston2 data/input04.b2in]: The first file is empty, the second one is ordered. The filter removes one component from the original.|
+| 108| T03_Advanced.Integration05_FusionOf2Files-valgrind | PASSED | NO LEAKS |
+| 108 | T03_Advanced.Integration05_FusionOf2Files | PASSED | [Boston2 data/input05.b2in] : The first with one crime, the second one with 5. The outcome has 5.|
+| 109| T03_Advanced.Integration06_FusionOf2Files-valgrind | PASSED | NO LEAKS |
+| 109 | T03_Advanced.Integration06_FusionOf2Files | PASSED | [Boston2 data/input06.b2in] : The first with one crime, the second one with 5. Filtered by validLocation.|
+| 110| T03_Advanced.Integration07_FusionOf2Files-valgrind | PASSED | NO LEAKS |
+| 110 | T03_Advanced.Integration07_FusionOf2Files | PASSED | [Boston2 data/input07.b2in] : The first with 20 crimes, the second one with 5.|
+| 111| T03_Advanced.Integration08_FusionOf2Files-valgrind | PASSED | NO LEAKS |
+| 111 | T03_Advanced.Integration08_FusionOf2Files | PASSED | [Boston2 data/input08.b2in] : The first one with 5 crimes, the second one with 20.|
+| 112| T03_Advanced.Integration09_FusionOf6Files-valgrind | PASSED | NO LEAKS |
+| 112 | T03_Advanced.Integration09_FusionOf6Files | PASSED | [Boston2 data/input09.b2in] : Fusion of 6 files. The fusion outcome is identical to the test input06.|
+| 113| T03_Advanced.Integration10_DefaultOutput-valgrind | PASSED | NO LEAKS |
+| 113 | T03_Advanced.Integration10_DefaultOutput | PASSED | [Boston2 data/input06.b2in] : The fusion outcome is identical to the test input06.|
