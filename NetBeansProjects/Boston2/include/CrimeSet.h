@@ -47,7 +47,7 @@ class CrimeSet {
 public:
     /**
      * @brief Basic constructor and initializer. It builds a CrimeSet object
-     * with a set 0 Crimes and a capacity of DIM_VECTOR_CRIMES. The field for
+     * with a set of 0 Crimes and a capacity of DIM_VECTOR_CRIMES. The field for
      * the comments is set as an empty string
      */
     CrimeSet();

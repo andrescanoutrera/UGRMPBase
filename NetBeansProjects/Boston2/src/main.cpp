@@ -99,7 +99,7 @@ int main(int argc, char* argv[]) {
    
     // Make the fusion of all the CrimeSets in the array
     
-    // Sort the array
-    // Save in the output file 
+    // Sort the array of the resulting CrimeSet
+    // Save the CrimeSet in the output crm file 
 
 }
