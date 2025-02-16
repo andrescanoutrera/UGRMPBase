@@ -24,11 +24,11 @@ string FormatAsComment(string comment, char commentCharacter){
     string formatedComment;
     if (comment.size() > 0) { // If comment has at least one character
         while ((end = comment.find('\n', start)) != std::string::npos) {
-            formatedComment += "#" + comment.substr(start, end - start) + "\n";
+            formatedComment += commentCharacter + comment.substr(start, end - start) + "\n";
             start = end + 1;
         }
         if(start<comment.size()){ // This happens when last line of comment does not have \n
-            formatedComment += "#" + comment.substr(start, comment.size() - start) + "\n";
+            formatedComment += commentCharacter + comment.substr(start, comment.size() - start) + "\n";
         }
     }
     return formatedComment;
