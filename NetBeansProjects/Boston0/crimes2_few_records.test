@@ -1,0 +1,6 @@
+%%%CALL < data/input04.b0in
+%%%DESCRIPTION Test to read less crimes than available, no crimes inserted in the array, no outcomes.
+%%%OUTPUT
+Total number of crimes inserted in the array: 0
+
+Crimes within the given geographic area:

@@ -1,0 +1,6 @@
+%%%CALL < data/input03.b0in
+%%%DESCRIPTION Test to control period of time, no crimes inserted in in the array, no outcomes.
+%%%OUTPUT
+Total number of crimes inserted in the array: 0
+
+Crimes within the given geographic area:
