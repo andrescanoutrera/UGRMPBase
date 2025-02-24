@@ -331,7 +331,7 @@ public:
      * @pre The string for the SHOOTING field must contain "0" or "1"; 
      * otherwise an unpredictable behavior or runtime error will be obtained
      * @pre The string for both latitud and longitude fields must contain 
-     * an integer number; otherwise an unpredictable behavior or runtime error 
+     * a real number; otherwise an unpredictable behavior or runtime error
      * will be obtained
      * @pre The string for the OCCURRED_ON_DATE field must be in valid format 
      * "year-month-day hour:minutes:seconds"; otherwise an unpredictable 
