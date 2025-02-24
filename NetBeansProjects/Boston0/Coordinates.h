@@ -55,10 +55,10 @@ public:
      * @brief Constructor that builds an object with the given latitude 
      * and longitude parameters. Both parameters have the value
      * INVALID_COORDINATE as default value. 
-     * @param _latitude The latitude value to set. Default value 
+     * @param latitude The latitude value to set. Default value
      * INVALID_COORDINATE. 
      * Input parameter
-     * @param _longitude The longitude value to set. Default value 
+     * @param longitude The longitude value to set. Default value
      * INVALID_COORDINATE. 
      * Input parameter
      */
