@@ -62,8 +62,8 @@ public:
      * INVALID_COORDINATE. 
      * Input parameter
      */
-    Coordinates(float _latitude = INVALID_COORDINATE, 
-            float _longitude = INVALID_COORDINATE);
+    Coordinates(float latitude = INVALID_COORDINATE,
+            float longitude = INVALID_COORDINATE);
 
     /**
      * @brief Gets the latitude value
