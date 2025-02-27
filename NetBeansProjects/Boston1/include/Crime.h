@@ -46,7 +46,7 @@
  *      a gunshot.
  * - 8  OCCURRED_ON_DATE: date and time when the crime took place. 
  * - 9  STREET: name of the street where it took place. 
- * - 10 LOCATION (latitud, longitude) where it took place. 
+ * - 10 LOCATION (latitude, longitude) where it took place. 
 
  * Example of a crime:
  * 2784,182102975,3820,Motor Vehicle Accident Response,M/V ACCIDENT INVOLVING PEDESTRIAN - INJURY,C6,175,0,2018-12-22 00:45:00,SOUTHAMPTON ST,42.331680,-71.067986 <br>
@@ -331,7 +331,7 @@ public:
      * behavior or runtime error will be obtained
      * @pre The string for the SHOOTING field must contain "0" or "1"; 
      * otherwise an unpredictable behavior or runtime error will be obtained
-     * @pre The string for both latitud and longitude fields must contain 
+     * @pre The string for both latitude and longitude fields must contain 
      * an integer number; otherwise an unpredictable behavior or runtime error 
      * will be obtained
      * @pre The string for the OCCURRED_ON_DATE field must be in valid format 
