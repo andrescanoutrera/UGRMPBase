@@ -2,6 +2,7 @@
 #ifndef MPTOOLS_H
 #define MPTOOLS_H
 
+#include <string>
 #ifndef __RELEASE__
     #define CVAL std::cerr
     #define INSPECT(VAR) CVAL << std::endl<< "["<<#VAR<<"] "<< VAR.inspect() << std::endl;

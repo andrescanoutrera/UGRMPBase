@@ -76,6 +76,7 @@ sdue_exception="";\
 TEST_EXPRESSION(__VA_ARGS__)\
 if(bexception){\
     REPORT_UNIT_TEST_EXCEPTION(false);\
+    ASSERT_FALSE(bexception) << string("Unexpected exception in SETUP_TEST code: ")+sreal_exception << endl;\
 }\
 __VA_ARGS__;\
 
@@ -330,9 +331,6 @@ sbadvalue=string(" an unexpected exception ")+sreal_exception;\
     REPORT_UNIT_TEST_EXCEPTION(false)\
     ASSERT_TRUE(bexception) << GOOD_EXCEPTION_ASCII+NO_EXCEPTION_ASCII<< endl;\
     } else {\
-       EXPECTED_EXCEPTION=#TYPE;\
-       REPLACE(OBTAINED_EXCEPTION,"St12","");\
-       REPLACE(OBTAINED_EXCEPTION,"St16","");\
        if(EXPECTED_EXCEPTION==OBTAINED_EXCEPTION) {\
             REPORT_UNIT_TEST_EXCEPTION(true)\
             ASSERT_TRUE(bexception) << GOOD_EXCEPTION_ASCII+BAD_EXCEPTION_ASCII<<endl;\
@@ -498,6 +496,18 @@ protected:
     }\
     } while(0); \
     CLEANUP(STRINGVAR);
+
+#define LOAD2(STRINGVAR, FILENAME) \
+    do { \
+    std::ifstream fi(FILENAME); \
+    if (fi) {\
+        std::stringstream ss;\
+        ss << fi.rdbuf(); \
+        STRINGVAR = ss.str();\
+    } else {\
+        STRINGVAR=""; \
+    }\
+    } while(0); 
 
 /**
  * Save the content of a std::string into a file
@@ -726,6 +736,10 @@ return ret;\
     LOAD(_output, FILENAME)\
     SAVE(_output,FILEKEYBOARD)
 
+#define FROM_FILE2(FILENAME) \
+    LOAD2(_output, FILENAME)\
+    SAVE(_output,FILEKEYBOARD)
+
 /**
  * @brief Some programs produce the output on certain datafiles. These two macros
  * define which are those files in  order to validate them after the execution ends
@@ -891,7 +905,6 @@ nfilenames=0;
  */
 #define DETECT_MEMORY_LEAKS() \
     if (!__defReport) {\
-        SKIP_IF_MEMORY_LEAKS();\
         if (leakdetector.length()>0){\
             cmdline=""; \
             cmdline = cmdline +"../Scripts/doCheckMemoryLeaks.sh " + leakdetector+ " "+stestname+ "  \"" + binary+"\""; \
@@ -921,6 +934,8 @@ nfilenames=0;
         MLHead = MLHead +"| "+ idtest + "| "+::testing::UnitTest::GetInstance()->current_test_info()->test_suite_name()+"."+ ::testing::UnitTest::GetInstance()->current_test_info()->name()+ leakdetector+" | ";\
         APPEND(MLHead, FILEREPORT);\
         APPEND((string)(string)"PASSED | NO LEAKS |\n", FILEREPORT);\
+        APPEND("T"+idtest+" MLEAKS"+SEPCSV, FILEREPORT_HEAD_CSV);\
+        APPEND((string)"T"+idtest+" PASSED: NO LEAKS"+SEPCSV, FILEREPORT_CSV);\
         PASS_TEST();\
         PASS_MEMORY_LEAKS();\
         deltaFCounter("__nReport", (-1));\
@@ -928,6 +943,8 @@ nfilenames=0;
         MLHead = MLHead +"| "+ idtest + "| "+::testing::UnitTest::GetInstance()->current_test_info()->test_suite_name()+"."+ ::testing::UnitTest::GetInstance()->current_test_info()->name()+ leakdetector+"** | ";\
         APPEND(MLHead, FILEREPORT);\
         APPEND("**FAILED** | **HAS MEMORY LEAKS** (!) |\n", FILEREPORT);\
+        APPEND("T"+idtest+" MLEAKS"+SEPCSV, FILEREPORT_HEAD_CSV);\
+        APPEND((string)"T"+idtest+" FAILED: HAS MEMORY LEAKS"+SEPCSV, FILEREPORT_CSV);\
         REPLACE(leakreport,"#[", "\n[");\
            cout << leakreport <<endl;\
         FAIL_TEST();\
