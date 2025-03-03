@@ -151,11 +151,11 @@ Esta es una técnica muy habitual para introducir datos en un programa desde la 
 ## Construcción manual de makefiles (Material de ampliación)
 - Manual para la elaboración de [makefiles](PDFs/Adicional/makefile.pdf)
 
-## Manejo de errores y excepciones  (Material de ampliación)
+## Manejo de excepciones y señales de error (Material de ampliación)
 Breve introducción a la gestión de señales de error durante la ejecución de un programa y la gestión controlada de estos mediante el uso de excepciones. Videotutorial 
 
-- Manejo de señales de error. [Videotutorial](https://drive.google.com/file/d/1U0pBUxBrklBKLkZcgsIkClCeQxyf1Bv0/view?usp=sharing)
 - Manejo de excepciones [Videotutorial](https://drive.google.com/file/d/1aPJP1ft4OiQZED2dVGs7pbzy3nf7kQ1J/view?usp=sharing)
+- Manejo de señales de error. [Videotutorial](https://drive.google.com/file/d/1U0pBUxBrklBKLkZcgsIkClCeQxyf1Bv0/view?usp=sharing) 
 
 
 
