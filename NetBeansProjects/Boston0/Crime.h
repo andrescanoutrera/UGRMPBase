@@ -404,7 +404,7 @@ void Capitalize(std::string & myString);
  * -# It removes spaces and \t characters at the beginning and at the end 
  * of every string field 
  * -# It converts to uppercase every string field
- * For the ID field only the conversion to uppercase is necesary because an 
+ * For the ID field only the conversion to uppercase is necessary because an 
  * ID cannot contains leading or trailing blanks
  */
 void Normalize(Crime & crime);
