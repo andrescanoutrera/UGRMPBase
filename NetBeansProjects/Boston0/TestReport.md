@@ -1,6 +1,6 @@
 # OUTCOME OF TESTS FOR PROJECT boston0_template
 
-As of Feb 14 2025 13:02:18
+As of Mar  4 2025 18:14:13
 
 | ID | NAME | RESULT | DESCRIPTION | 
 | :--- | :--- | :--- | :--- |
@@ -86,7 +86,7 @@ As of Feb 14 2025 13:02:18
 | | | | should give ```false```|
 | 41 | T01_Basics.Crime_toString |  PASSED |```string s="1,111,222,333,444,555,666,1,2025-02-17 12:30:00,999,180.000000,180.000000"; Crime crime(s);crime.toString();```|
 | | | | should give ```"1,111,222,333,444,555,666,1,2025-02-17 12:30:00,999,180.000000,180.000000"```|
-| 42 | T02_Intermediate.Crime_Crime_parcial2 |  PASSED |```string s="1,  111  ,,,,,,7,2025-02-17 12:30:00,,180.000000,180.000000"; string due="1,111,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000"; Crime crime(s);crime.inspectT()```|
+| 42 | T02_Intermediate.Crime_Crime_parcial2 |  PASSED |```string s="1,  111  ,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000"; string due="1,111,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000"; Crime crime(s);crime.inspectT()```|
 | | | | should give ```"1,111,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000"```|
 | 43 | T02_Intermediate.Crime_Crime_parcial1_exception |  PASSED |```string s="1,,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000";Crime crime(s)```|
 | | | | should THROW an exception std::invalid_argument|
