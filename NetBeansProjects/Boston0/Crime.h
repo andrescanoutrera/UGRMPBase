@@ -243,7 +243,6 @@ public:
      * Modifier method
      * @param description the offense description value to be set. 
      * Input parameter
-     * @return A string that contains some keys words for the description
      */
     void setDescription(const std::string & description);
     
@@ -258,7 +257,6 @@ public:
      * @brief Sets the coded area where the offense took place. 
      * Modifier method
      * @param areaReport the area value to be set. Input parameter
-     * @return A string that may contain a letter and a number
      */
     void setAreaReport(const std::string &areaReport);
     
