@@ -53,7 +53,7 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 |Comienzo | Práctica <br> Entregable en Prado | Herramientas | Metodología
 | -----| -----|-----| ----- |
 |Semana1 17/feb/2025 || <ol><li>[**NetBeans 1**](#netbeans) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del proyecto [MP Geometry](#mpgeometry)<ul><li>Métodos `const`.<li>Parámetros por valor y por referencia. <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la entrada estándar</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MP Geometry](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MP Geometry](#mpgeometry)  <li> Opcional: Uso de bibliotecas con el proyecto [MP Geometry](#mpgeometry) </ol>|
-|<a name="Semana2"></a>Semana2	24/feb/2025 | [**Boston0**](PDFs/boston0.pdf) Filtrado de crímenes por posición e instante de tiempo. Clases Coordinates y Crime <br>[Tests detallados](NetBeansProjects/Boston0/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Boston0/TestReport.HowToTestUnitTests.md) | <ol><li>[**NetBeans 2**](#netbeans): Compilación separada  </ol> | <ol> <li>Calificador const para métodos y parámetros. <li>Paso de parámetros por valor y referencia.  <li> Devolución de objetos por valor.  </ol> |
+|<a name="Semana2"></a>Semana2	24/feb/2025 | [**Boston0**](PDFs/boston0.pdf) Filtrado de crímenes por posición e instante de tiempo. Clases Coordinates y Crime <br>[Tests detallados](NetBeansProjects/Boston0/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Boston0/TestReport.HowToTestUnitTests.md) <br> Vídeo de ayuda a la creación del proyecto Boston0 (https://drive.google.com/file/d/19Aj0dwH0VF3PZnseJsQOTXyLzs-FNEQG/view?usp=sharing)  | <ol><li>[**NetBeans 2**](#netbeans): Compilación separada  </ol> | <ol> <li>Calificador const para métodos y parámetros. <li>Paso de parámetros por valor y referencia.  <li> Devolución de objetos por valor.  </ol> |
 |Semana3	3/mar/2025 | |<ol><li>[**NetBeans 3**](#netbeans): El [depurador](#depurador) de programas  </ol>|  |
 |Semana4	10/mar/2025 |[**Boston1**](PDFs/boston1.pdf)  Obtención de frecuencias de crímenes por día de la semana y hora del día. Módulo para arrays de objetos Crime <br>[Tests detallados](NetBeansProjects/Boston1/tests/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Boston1/tests/TestReport.HowToTestUnitTests.md)  |  |  <ol> <li>Calificador const para métodos y parámetros. <li>Paso de parámetros por valor y referencia.  <li> Devolución de objetos por valor. <li>Paso de vectores a funciones y métodos. </ol>|
 |Semana5	17/mar/2025 |  || |
@@ -111,7 +111,7 @@ Es una metodología de desarrollo de proyectos software en la que primero se def
 - Pasar todos los tests unitarios. [Videotutorial](https://drive.google.com/file/d/1R0zEd_yxQ51Yo0N3VTNH-s7pYzgefXMg/view?usp=sharing)
 - Los tests de integración. [Videotutorial](https://drive.google.com/file/d/13weHJA5zQhC9YADoqyVhUHxc7WHoPE1O/view?usp=sharing)
 - Proyecto `MyVector`  
-- [Manual completo TDD](PDFs/Adicional/TDDGTEST_V2.pdf)
+- [Manual completo TDD](PDFs/MaterialAdicional/TDDGTEST_V2.pdf)
 -->
 
 ## <a name="depurador"></a>Depuración de programas
@@ -126,7 +126,7 @@ El depurador es una herramienta que suele estar incorporada en los IDE (Integrat
 Valgrind es una herramienta para la detección, sobre todo, de pérdidas de memoria, pero también de otros problemas de gestión de la memoria dinámica.
 
 - Manual sobre el uso de [Valgrind](PDFs/valgrind.pdf)
-<!-- - Manual sobre el uso de [Dr Memory](Adicional/drmemory.pdf) -->
+<!-- - Manual sobre el uso de [Dr Memory](MaterialAdicional/drmemory.pdf) -->
 - Proyecto Interactivo [ValgrindShowcase](NetBeansProjects/ValgrindShowcase)
   - Descomprimir
   - Cargar en Netbeans
@@ -149,7 +149,7 @@ Esta es una técnica muy habitual para introducir datos en un programa desde la 
 - [Videotutorial 2](https://drive.google.com/file/d/1HaYIyECXYuZ1FAMSlSB1P7PSj9qCXlXG/view?usp=sharing)
 
 ## Construcción manual de makefiles (Material de ampliación)
-- Manual para la elaboración de [makefiles](PDFs/Adicional/makefile.pdf)
+- Manual para la elaboración de [makefiles](PDFs/MaterialAdicional/makefile.pdf)
 
 ## Manejo de excepciones y señales de error (Material de ampliación)
 Breve introducción a la gestión de señales de error durante la ejecución de un programa y la gestión controlada de estos mediante el uso de excepciones. Videotutorial 
