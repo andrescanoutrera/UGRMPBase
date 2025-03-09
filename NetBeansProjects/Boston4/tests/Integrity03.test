@@ -1,0 +1,10 @@
+%%%CALL  -h 3 -w 3 -o tests/output/output.ppm ../DataSets/crimes_05.crm
+%%%VALGRIND
+%%%DESCRIPTION3x3, all coordinates are INTO, but only two cells are reached with frequency 4 and 1.
+%%%FROMFILE tests/output/output.ppm
+%%%OUTPUT
+P3
+#Running parameters: -h 3 -w 3 -o tests/output/output.ppm ../DataSets/crimes_05.crm
+3 3
+255
+0 0 255 255 0 0 0 0 255 0 0 255 0 255 127 0 0 255 0 0 255 0 0 255 0 0 255 

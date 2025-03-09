@@ -1,0 +1,10 @@
+%%%CALL -h 4 -w 3 -o tests/output/output.ppm  ../DataSets/crimes_20.crm
+%%%VALGRIND
+%%%DESCRIPTION 4x3, maximum frequency 9, 20 crimes entry but only 17 computed.
+%%%FROMFILE tests/output/output.ppm
+%%%OUTPUT
+P3
+#Running parameters: -h 4 -w 3 -o tests/output/output.ppm ../DataSets/crimes_20.crm
+3 4
+255
+0 255 255 0 255 0 0 0 255 128 255 0 255 0 0 0 0 255 0 255 255 0 255 255 0 0 255 0 0 255 0 0 255 0 0 255 

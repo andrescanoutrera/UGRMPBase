@@ -1,0 +1,11 @@
+%%%CALL
+%%%VALGRIND
+%%%DESCRIPTION Running without arguments
+%%%OUTPUT
+ERROR in boston3 parameters
+Run with the following arguments:
+boston3 [-o <outputFile.crm>] <inputFile1.crm> {<inputFile.crm>}
+
+Parameters:
+-o <outputFile.crm>: name of the output file (tests/output/output.crm by default)
+<inputFile1.crm> {<inputFile.crm>}: input crm files

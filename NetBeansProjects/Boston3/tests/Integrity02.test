@@ -1,0 +1,11 @@
+%%%CALL -o tests/output/output.crm  ../DataSets/crimes_01.crm
+%%%VALGRIND
+%%%DESCRIPTION File with only one input file. The input file, with comment and one crime is normalized in the outcome.
+%%%FROMFILE tests/output/output.crm
+%%%OUTPUT
+MP-CRIME-T-1.0
+#Fusion of the following crm files: 
+#../DataSets/crimes_01.crm
+1
+0,225520077,3126,UNKNOWN,WARRANT ARREST - OUTSIDE OF BOSTON WARRANT,D14,786,1,2022-02-05 00:00:00,WASHINGTON ST,42.343082,-71.141724
+

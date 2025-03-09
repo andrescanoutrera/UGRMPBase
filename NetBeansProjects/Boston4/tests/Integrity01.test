@@ -1,0 +1,10 @@
+%%%CALL -h 3 -w 3 -o tests/output/output.ppm ../DataSets/crimes_04invalid.crm
+%%%VALGRIND
+%%%DESCRIPTION  3x3 all red, file with invalid coordinates for crimes.
+%%%FROMFILE tests/output/output.ppm
+%%%OUTPUT
+P3
+#Running parameters: -h 3 -w 3 -o tests/output/output.ppm ../DataSets/crimes_04invalid.crm
+3 3
+255
+255 0 0 255 0 0 255 0 0 255 0 0 255 0 0 255 0 0 255 0 0 255 0 0 255 0 0 

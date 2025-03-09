@@ -1,0 +1,5 @@
+P3
+#Running parameters: -h 3 -w 3 -o tests/output/output.ppm ../DataSets/empty.crm ../DataSets/crimes_05b.crm
+3 3
+255
+0 0 255 255 0 0 0 0 255 0 0 255 0 255 127 0 0 255 0 0 255 0 0 255 0 0 255 

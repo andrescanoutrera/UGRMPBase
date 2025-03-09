@@ -1,0 +1,19 @@
+%%%CALL -f ../DataSets/crimes_easy01.crm ../DataSets/crimes_easy01.crm
+%%%VALGRIND
+%%%DESCRIPTION Running with invalid arguments
+%%%OUTPUT
+ERROR in boston4 parameters
+Run with the following arguments:
+boston4 [-o outputFilename] [-c text] [-h int] [-w int] [-d int] [-b int] [-g int] [-y int] <inputFile1.crm> {<inputFile.crm>}
+
+Parameters:
+-o outputFilename: name of the output PPM file (tests/output/output.ppm by default)
+-c text: extra comment to be included in the output PPM file (list of program parameters, by default)
+-h high: number of rows (19  by default)
+-w width: number of columns (23  by default)
+-d number: number of dark blue tones in the color palette (2 by default)
+-b number: number of blue tones in the color palette (2 by default)
+-g number: number of green tones in the color palette (2 by default)
+-y number: number of yellow tones in the color palette (2 by default)
+<inputFile1.crm> {<inputFile.crm>}: input crm files
+

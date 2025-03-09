@@ -1,0 +1,5 @@
+P3
+#Running parameters: -h 4 -w 3 ../DataSets/crimes_15.crm ../DataSets/crimes_20.crm ../DataSets/crimes_100.crm
+3 4
+255
+0 255 0 255 255 0 0 0 255 0 255 0 255 0 0 0 128 255 128 255 0 255 255 0 0 0 255 0 255 255 0 0 255 0 0 255 

@@ -1,0 +1,9 @@
+%%%CALL -o tests/output/output.crm ../DataSets/empty.crm
+%%%VALGRIND
+%%%DESCRIPTION File with only one input file. The input file without any comment, the crime does not pass the filter.
+%%%FROMFILE tests/output/output.crm
+%%%OUTPUT
+MP-CRIME-T-1.0
+#Fusion of the following crm files: 
+#../DataSets/empty.crm
+0
