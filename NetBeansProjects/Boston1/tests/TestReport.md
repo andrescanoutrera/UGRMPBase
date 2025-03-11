@@ -1,6 +1,6 @@
 # OUTCOME OF TESTS FOR PROJECT boston1_template
 
-As of Feb 15 2025 21:33:59
+As of Mar 11 2025 14:27:06
 
 | ID | NAME | RESULT | DESCRIPTION | 
 | :--- | :--- | :--- | :--- |
@@ -116,7 +116,7 @@ As of Feb 15 2025 21:33:59
 | | | | should give ```"1,111,222B,333C,444D,555E,666F,1,2025-02-17 12:30:00,999I,180.000000,180.000000"```|
 | 56 | T01_Basics.ArrayCrimes_PosMinArray_1 |  PASSED |```Crime arrayC[MAX]; fillACrimes(arrayC);PosMinArrayCrimes(arrayC,0,2);```|
 | | | | should give ```0```|
-| 57 | T02_Intermediate.Crime_Crime_parcial2 |  PASSED |```string s="1,  111  ,,,,,,7,2025-02-17 12:30:00,,180.000000,180.000000"; string due="1,111,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000"; Crime crime(s);crime.inspectT()```|
+| 57 | T02_Intermediate.Crime_Crime_parcial2 |  PASSED |```string s="1,  111  ,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000"; string due="1,111,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000"; Crime crime(s);crime.inspectT()```|
 | | | | should give ```"1,111,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000"```|
 | 58 | T02_Intermediate.Crime_Crime_parcial1_exception |  PASSED |```string s="1,,,,,,,1,2025-02-17 12:30:00,,180.000000,180.000000";Crime crime(s)```|
 | | | | should THROW an exception std::invalid_argument|
@@ -164,7 +164,7 @@ As of Feb 15 2025 21:33:59
 | | | | should give ```"0 0 10 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "```|
 | 80 | T02_Intermediate.ArrayCrimes_ComputeHistogram_3 |  PASSED |```string res; string sdate; string s; int arrayI[MAXH]; Crime arrayC[MAX]; InitializeArrayInts(arrayI, 7); sdate = arrayC[0].getDateTime().toString(); for (int i = 0; i < MAX; i++) { s = to_string(10 + i); sdate.replace(sdate.begin() + 8, sdate.begin() + 10, s); arrayC[i].setDateTime(sdate); } ComputeHistogramArrayCrimes(arrayC, MAX, 0, arrayI); for (int i = 0; i < 7; i++) { res += to_string(arrayI[i]) + " "; }res.c_str();```|
 | | | | should give ```"1 1 2 2 2 1 1 "```|
-| 81 | T02_Intermediate.ArrayCrimes_ComputeHistogram_4 |  PASSED |```string res; string sdate; string s; int arrayI[MAXH]; Crime arrayC[MAX]; InitializeArrayInts(arrayI, MAX); sdate = arrayC[0].getDateTime().toString(); for (int i = 0; i < MAX; i++) { s = to_string(i); sdate.replace(sdate.end() -7, sdate.end() -6, s); arrayC[i].setDateTime(sdate); } ComputeHistogramArrayCrimes(arrayC, MAX, 1, arrayI); for (int i = 0; i < MAXH; i++) { res += to_string(arrayI[i]) + " "; }res.c_str();```|
+| 81 | T02_Intermediate.ArrayCrimes_ComputeHistogram_4 |  PASSED |```string res; string sdate; string s; int arrayI[MAXH]; Crime arrayC[MAX]; sdate = arrayC[0].getDateTime().toString(); for (int i = 0; i < MAX; i++) { s = to_string(i); sdate.replace(sdate.end() -7, sdate.end() -6, s); arrayC[i].setDateTime(sdate); } ComputeHistogramArrayCrimes(arrayC, MAX, 1, arrayI); for (int i = 0; i < MAXH; i++) { res += to_string(arrayI[i]) + " "; }res.c_str();```|
 | | | | should give ```"1 1 1 1 1 1 1 1 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 "```|
 | 82 | T02_Intermediate.ArrayCrimes_SelectWhereEQ0_0 |  PASSED |```int nS; string res; string sfield = "Code"; Crime arrayC[MAX]; Crime arrayS[MAX]; SelectWhereEQArrayCrimes(arrayC, MAX, sfield, "222", arrayS, nS); res=toStringCrimes(arrayS, nS);res.c_str();```|
 | | | | should give ```""```|
