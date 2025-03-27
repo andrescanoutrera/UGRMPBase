@@ -454,3 +454,5 @@ void Capitalize(std::string & myString);
  * ID cannot contains leading or trailing blanks
  */
 void Normalize(Crime & crime);
+
+#endif /* CRIME_H */
