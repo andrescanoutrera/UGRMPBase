@@ -278,8 +278,8 @@ public:
     void sort();
     
 private:
-    static int DIM_VECTOR_CRIMES = 2000; ///< The capacity of the array _crimes
-    static std::string MAGIC_STRING_T; ///< A string with the magic string for text files
+    static const int DIM_VECTOR_CRIMES = 2000; ///< The capacity of the array _crimes
+    static const std::string MAGIC_STRING_T; ///< A string with the magic string for text files
     
     /**
      * string that contains several lines of comments (text in natural 
