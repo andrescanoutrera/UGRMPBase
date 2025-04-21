@@ -68,7 +68,8 @@ public:
      * - _crimes = nullptr 
      * After the fields are initialized as described above, the exception 
      * is thrown.
-     * @param size The number of Crimes that will have the set
+     * @param size The capacity that will have the dynamic array of Crimes
+     * for this object
      */
     CrimeSet(int size=0);
     
