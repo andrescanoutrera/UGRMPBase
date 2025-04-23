@@ -35,7 +35,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/src/ArrayCrimeSetFunctions.o \
 	${OBJECTDIR}/src/Coordinates.o \
 	${OBJECTDIR}/src/Crime.o \
 	${OBJECTDIR}/src/CrimeSet.o \
@@ -61,16 +60,11 @@ LDLIBSOPTIONS=
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boston2
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boston3
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boston2: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boston3: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boston2 ${OBJECTFILES} ${LDLIBSOPTIONS}
-
-${OBJECTDIR}/src/ArrayCrimeSetFunctions.o: src/ArrayCrimeSetFunctions.cpp
-	${MKDIR} -p ${OBJECTDIR}/src
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/src/ArrayCrimeSetFunctions.o src/ArrayCrimeSetFunctions.cpp
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boston3 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
 ${OBJECTDIR}/src/Coordinates.o: src/Coordinates.cpp
 	${MKDIR} -p ${OBJECTDIR}/src

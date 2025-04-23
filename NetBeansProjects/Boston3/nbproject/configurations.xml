@@ -4,7 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>include/ArrayCrimeSetFunctions.h</itemPath>
       <itemPath>include/Coordinates.h</itemPath>
       <itemPath>include/Crime.h</itemPath>
       <itemPath>include/CrimeSet.h</itemPath>
@@ -17,7 +16,6 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>src/ArrayCrimeSetFunctions.cpp</itemPath>
       <itemPath>src/Coordinates.cpp</itemPath>
       <itemPath>src/Crime.cpp</itemPath>
       <itemPath>src/CrimeSet.cpp</itemPath>
@@ -53,8 +51,6 @@
           <commandLine>-Wall -pedantic</commandLine>
         </ccTool>
       </compileType>
-      <item path="include/ArrayCrimeSetFunctions.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="include/Coordinates.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/Crime.h" ex="false" tool="3" flavor2="0">
@@ -62,8 +58,6 @@
       <item path="include/CrimeSet.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/DateTime.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="src/ArrayCrimeSetFunctions.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Coordinates.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -96,8 +90,6 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
-      <item path="include/ArrayCrimeSetFunctions.h" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="include/Coordinates.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/Crime.h" ex="false" tool="3" flavor2="0">
@@ -105,8 +97,6 @@
       <item path="include/CrimeSet.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="include/DateTime.h" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="src/ArrayCrimeSetFunctions.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="src/Coordinates.cpp" ex="false" tool="1" flavor2="0">
       </item>
