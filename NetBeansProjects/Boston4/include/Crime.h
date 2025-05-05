@@ -79,6 +79,29 @@ private:
 
 };
 
+// Retrieve all previous declarations of external functions: Trim, Capitalize 
+// and Normalize 
+
+/**
+ * @brief Overloading of the stream insertion operator for Crime class. 
+ * It inserts every field of the object separated by commas (,) in 
+ * the output string.
+ * @param os The output stream to be used. Input/Output parameter
+ * @param crime the Crime object. Input parameter
+ * @return @p os A reference to the output stream
+ */
+std::ostream operator<<(std::ostream os, Crime crime);
+
+/**
+ * @brief Overloading of the stream extraction operator for Crime class. It
+ * reads a record  from the input string that will set the
+ * list of fields of the provided crime object.
+ * @param is The input stream to be used. Input/Output parameter
+ * @param crime the Crime object. Input Output parameter
+ * @return @p is the input stream
+ */
+std::istream operator>>(std::istream is, Crime crime);
+
 /**
  * @brief Overloading of the relational operator < for Crime class
  * @param crime1 The first object to be compared. Input parameter
@@ -135,3 +158,5 @@ bool operator<=(Crime crime1, Crime crime2);
  * @return true if crime1 >= crime2; false otherwise
  */
 bool operator>=(Crime crime1, Crime crime2);
+
+#endif /* CRIME_H */
