@@ -1,6 +1,6 @@
 # OUTCOME OF TESTS FOR PROJECT boston4_template
 
-As of Mar  9 2025 14:10:25
+As of Apr 29 2025 18:38:19
 
 | ID | NAME | RESULT | DESCRIPTION | 
 | :--- | :--- | :--- | :--- |
@@ -178,7 +178,7 @@ As of Mar  9 2025 14:10:25
 | | | | should give ```4```|
 | 87 | T01_Basics.Counter_getMaxFrequency_3 |  PASSED |```int nr = 2; int nc = 4; CrimeCounter crmC(nr, nc); crmC._frequency[nr-1][nc-1]=nc;crmC.getMaxFrequency();```|
 | | | | should give ```4```|
-| 88 | T01_Basics.Counter_clear |  PASSED |```int nr = 2; int nc = 4; string s; CrimeCounter crmC(nr, nc); for (int i = 0; i < nr * nc; i++) crmC._frequency[0][i] = i; crmC.clear(); s = to_string(nr) + "x" + to_string(nc) + " "; for (int i = 0; i < nr * nc; i++) { s += "0 "; }crmC.inspectT()```|
+| 88 | T01_Basics.Counter_clear |  PASSED |```int nr = 2; int nc = 4; string s; CrimeCounter crmC(nr, nc); int count = 0; for (int i = 0; i < nr; i++) { for (int j = 0; j < nc; j++) { crmC._frequency[i][j] = count; count++; } } crmC.clear(); s = to_string(nr) + "x" + to_string(nc) + " "; for (int i = 0; i < nr * nc; i++) { s += "0 "; }crmC.inspectT()```|
 | | | | should give ```"2x4 0 0 0 0 0 0 0 0 "```|
 | 89 | T01_Basics.Counter_increaseFrequency_0 |  PASSED |```int nr = 2; int nc = 4; Coordinates una(0, 0); Coordinates dos(10, 10); CrimeCounter crmC(nr, nc, una, dos); Crime crm; float stepLat = 0; for (int i = 0; i < nr; i++) { float stepLong = 0; for (int j = 0; j < nc; j++, stepLong += 2.5) { Coordinates cood(stepLat, stepLong); crm.setId(to_string(i * nc + j)); crmC.increaseFrequency(crm); } }crmC.inspectT();```|
 | | | | should give ```"2x4 0 0 0 0 0 0 0 0 "```|
@@ -288,5 +288,4 @@ As of Mar  9 2025 14:10:25
 | 141 | T03_Advanced.Integration10_FusionOf3Files | PASSED | [Boston4 -h 4 -w 3 -o tests/output/output.ppm ../DataSets/crimes_15.crm ../DataSets/crimes_20.crm ../DataSets/crimes_100.crm]: 4x3, interseccion not null between the 3 datasets.|
 | 142| T03_Advanced.Integration11_FusionOf3Files-valgrind | PASSED | NO LEAKS |
 | 142 | T03_Advanced.Integration11_FusionOf3Files | PASSED | [Boston4 -h 4 -w 3 ../DataSets/crimes_15.crm ../DataSets/crimes_20.crm ../DataSets/crimes_100.crm]: 4x3, interseccion not null between the 3 datasets.|
-| 143| T03_Advanced.Integration12_TheBigOne-valgrind | PASSED | NO LEAKS |
 | 143 | T03_Advanced.Integration12_TheBigOne | PASSED | [Boston4 -h 37 -w 45 -o tests/output/output.ppm ../DataSets/crimes_all.crm]: 37x45, with the complete BostonCrime datasets, max freq 8679.|
