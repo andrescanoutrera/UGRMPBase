@@ -50,6 +50,30 @@ public:
      // Retrieve all previous declarations and take into account
      // the new declarations included here... 
      // 
+    
+    /**
+     * @brief Removes all the Crimes from this object, leaving the container 
+     * with a size of 0, a capacity equals to INITIAL_CAPACITY and an 
+     * empty comment
+     * Modifier method
+     */
+    void clear();
+
+    /**
+     * @brief Appends the given Crime at the end of the array of Crimes of
+     * this CrimeSet object, but only if that Crime was not found in this 
+     * CrimeSet. 
+     * If the dynamic array of crimes was full, this
+     * method automatically reallocates a new array with a capacity equals to 
+     * ceil(getSize() * GROWING_RATIO), but take into account that if 
+     * this calculated new capacity is less or equal than the old capacity, 
+     * then the new capacity will be getSize() + 1
+     * Modifier method
+     * @param crime an object Crime. Input parameter
+     * @return true if the given Crime was inserted in this CrimeSet object;
+     * false otherwise
+     */
+    bool append(Crime crime);
 
     /**
      * @brief Basic constructor and initializer. It builds a CrimeSet object
@@ -93,7 +117,7 @@ public:
      * @return A reference to this object
      */
     CrimeSet operator=(CrimeSet orig);
-    
+     
 private:
     static const int INITIAL_CAPACITY = 8; ///< Default initial capacity for the dynamic array _crimes. Should be a number >= 0
 
