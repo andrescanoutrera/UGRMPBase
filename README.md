@@ -63,7 +63,7 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 |Semana Santa	14/mar/2025 | **Semana Santa**| | |
 |Semana9	21/abr/2025 | **Examen de laboratorio**<br>1 PUNTO |||
 |Semana10	28/abril/2025 |  | | |
-|Semana11	5/may/2025 |[**Boston4**](PDFs/boston4.pdf) Obtención de una imagen con el mapa de calor. Clase CrimeCounter (matriz en memoria dinámica) <br>[Tests detallados](NetBeansProjects/Boston4/tests/TestReport.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Boston4/tests/TestReport.HowToTestUnitTests.md) <br>2 PUNTOS | | <ol> <li>Sobrecarga de operadores. <li>Matrices bidimensionales dinámicas <li> Ficheros binarios .</ol>|
+|Semana11	5/may/2025 |[**Boston4**](PDFs/boston4.pdf) Obtención de una imagen con el mapa de calor. Clase CrimeCounter (matriz en memoria dinámica) <br>[Tests detallados](NetBeansProjects/Boston4/tests/TestReport.md) <br>[Tests adicionales para la sobrecarga de operadores](NetBeansProjects/Boston4/tests/TestReport_Operators.md) <br>[Cómo probar tests de unidad](NetBeansProjects/Boston4/tests/TestReport.HowToTestUnitTests.md) <br>2 PUNTOS | | <ol> <li>Sobrecarga de operadores. <li>Matrices bidimensionales dinámicas <li> Ficheros binarios .</ol>|
 |Semana12	12/may/2025 | | | |
 |Semana13	19/may/2025 | | | |
 |Semana14	26/may/2025 | | | |
