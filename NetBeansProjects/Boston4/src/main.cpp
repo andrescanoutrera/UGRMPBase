@@ -76,7 +76,7 @@ void showHelp(ostream& outputStream) {
  * line in the comment string, using the function FormatAsComment().
  * 
  * Running sintax:
- * > dist/Debug/GNU-Linux/boston4 boston4 [-o outputFilename] [-c text]  
+ * > dist/Debug/GNU-Linux/boston4 [-o outputFilename] [-c text]  
  *      [-h int] [-w int] [-d int] [-b int] [-g int] [-y int]
  *      <inputFile1.crm> {<inputFile.crm>}
  * 
