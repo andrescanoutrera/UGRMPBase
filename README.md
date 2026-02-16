@@ -81,9 +81,9 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 
 |Comienzo | Práctica <br> Entregable en Prado | Herramientas | Metodología
 | -----| -----|-----| ----- |
-|Semana1 16/feb/2026 || <ol><li>[**VSCode 1**](#vscode) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del proyecto [MP Geometry](#mpgeometry)<ul><li>Métodos `const`.<li>Parámetros por valor y por referencia. <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la entrada estándar</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MP Geometry](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MP Geometry](#mpgeometry)  <li> Opcional: Uso de bibliotecas con el proyecto [MP Geometry](#mpgeometry) </ol>|
-|<a name="Semana2"></a>Semana2 23/feb/2026 | [**Fraud0**](PDFs/fraud0.pdf) Paso de arrays como parámetros de funciones. Filtrado y unión de conjuntos de datos de entrada <br>[Tests detallados](CodeProjects/Fraud0/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud0/TestReport.HowToTestUnitTests.md) <br>[Vídeo](https://drive.google.com/file/d/19Aj0dwH0VF3PZnseJsQOTXyLzs-FNEQG/view?usp=sharing) de ayuda a la creación del proyecto Fraud0 | <ol><li>[**VSCode 2**](#vscode): Compilación separada  </ol> | <ol> <li>Calificador const para métodos y parámetros. <li>Paso de parámetros por valor y referencia.  <li> Devolución de objetos por valor.  </ol> |
-|Semana3 2/mar/2026 | |<ol><li>[**VSCode 3**](#vscode): El [depurador](#depurador) de programas  </ol>|  |
+|Semana1 16/feb/2026 || <ol><li>[**VSCode 1**](#vscode1) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del proyecto [MP Geometry](#mpgeometry)<ul><li>Métodos `const`.<li>Parámetros por valor y por referencia. <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la entrada estándar</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MP Geometry](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MP Geometry](#mpgeometry)  <li> Opcional: Uso de bibliotecas con el proyecto [MP Geometry](#mpgeometry) </ol>|
+|<a name="Semana2"></a>Semana2 23/feb/2026 | [**Fraud0**](PDFs/fraud0.pdf) Paso de arrays como parámetros de funciones. Filtrado y unión de conjuntos de datos de entrada <br>[Tests detallados](CodeProjects/Fraud0/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud0/TestReport.HowToTestUnitTests.md) <br>[Vídeo](https://drive.google.com/file/d/19Aj0dwH0VF3PZnseJsQOTXyLzs-FNEQG/view?usp=sharing) de ayuda a la creación del proyecto Fraud0 | <ol><li>[**VSCode 2**](#vscode2): Compilación separada  </ol> | <ol> <li>Calificador const para métodos y parámetros. <li>Paso de parámetros por valor y referencia.  <li> Devolución de objetos por valor.  </ol> |
+|Semana3 2/mar/2026 | |<ol><li>[**VSCode 3**](#vscode1): El [depurador](#depurador) de programas  </ol>|  |
 |Semana4	 9/mar/2026 ||  |  |
 |Semana5 16/mar/2026 | [**Fraud1**](PDFs/fraud1.pdf)  Implementación de un algoritmo de clustering <br>[Tests detallados](CodeProjects/Fraud1/tests/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud1/tests/TestReport.HowToTestUnitTests.md)   || <ol> <li>Calificador const para métodos y parámetros. <li>Paso de parámetros por valor y referencia.  <li> Devolución de objetos por valor. <li>Paso de vectores a funciones y métodos. </ol>|
 |Semana6	 23/mar/2026 | [**Fraud2**](PDFs/fraud2.pdf) Introducción al uso de memoria dinámica. Comparativa entre procesos de clustering <br>[Tests detallados](CodeProjects/Fraud2/tests/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud2/tests/TestReport.HowToTestUnitTests.md)| <ol><li> [**valgrind**](PDFs/valgrind.pdf) Detección de pérdidas de memoria </ol> | <ol><li> Clases con vectores estáticos.  <li> Devolución de objetos por valor y por referencia. <li> Paso de punteros como parámetros de funciones. <li> Devolución de punteros por funciones. <li> Uso de memoria dinámica en C++. <li> Arrays dinámicos. <li> Detección de pérdidas de memoria. <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes <li> Uso de [parámetros](#parametrosmain) desde la línea de comandos.  CStrings  </ol>|
@@ -113,11 +113,11 @@ NetBeans es un entorno de desarrollo integrado libre y multiplataforma, creado p
 -->
 
 ## Visual Studio Code
-- <a name="vscode"></a>Manual de introducción a VSCode [VSCode](PDFs/vscode.pdf)
+- <a name="vscode1"></a>Manual de introducción a VSCode [VSCode](PDFs/vscode.pdf)
   - Carpeta HelloW con el fichero HelloWorld.cpp [HelloW](CodeProjects/Seminar1/HelloW)
 
 ## Compilación separada
-Es una metodología de desarrollo de proyectos de software que divide el proyecto en unidades funcionales, llamados módulos o paquetes o bibliotecas (librerías), que se compilan por separado y se enlazan en un único fichero
+<a name="vscode2">Es una metodología de desarrollo de proyectos de software que divide el proyecto en unidades funcionales, llamados módulos o paquetes o bibliotecas (librerías), que se compilan por separado y se enlazan en un único fichero
 
 - Primera parte. De un proyecto monolítico a un proyecto modularizado.
   - Ver Sección 5 del manual de [VSCode](PDFs/vscode.pdf)
@@ -128,10 +128,8 @@ Es una metodología de desarrollo de proyectos de software que divide el proyect
   - Proyecto VSCode [MPGeometry sep](CodeProjects/Seminar1/MPGeometrySep)
 -->
 
-
-
 - Segunda parte. Uso de bibliotecas (librerías). 
-  - Ver Sección 6 del manual de [VSCode](PDFs/vscode.pdf))
+  - Ver Sección 6 del manual de [VSCode](PDFs/vscode.pdf)
   <!-- - [Videotutorial](https://drive.google.com/file/d/1m9pC3XWjz6BS9Srfu_4B_Bimw_jfw5xP/view?usp=sharing) -->
 
 ## <a name="doxygen"></a> Documentación con Doxygen
