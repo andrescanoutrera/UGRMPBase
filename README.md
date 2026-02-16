@@ -32,7 +32,7 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
 -->
 - En la asignatura usaremos el Sistema Operativo Linux. Nos sirve cualquier distribución de linux, aunque en las aulas de la ETSIIT usaremos la distribución de KUbuntu.
 - Usaremos el entorno de desarrollo Visual Studio Code, junto con la extensión C/C++ Extension Pack32.
-- Otros paquetes de Linux que deben estar presentes durante las prácticas (sudo apt install) `gcc` `make` `valgrind`  `wdiff` `meld` `doxygen` `ImageMagick` `git` `graphviz`
+- Otros paquetes de Linux que debemos tener instalados para realizar las prácticas (sudo apt install) `gcc` `make` `valgrind`  `wdiff` `meld` `doxygen` `ImageMagick` `git` `graphviz`
 
 
 <!--
@@ -61,7 +61,7 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
       - Usuario: `mp`
       - Password: `.CambiaEsto`
 -->
-- Laboratorios de prácticas de la ETSIIT. Arranque con KUbuntu. Las herramientas que usaremos en la asignatura ya están instaladas.
+- En los laboratorios de prácticas de la ETSIIT arrancaremos con KUbuntu. Las herramientas que usaremos en la asignatura ya están instaladas en esta imagen de Linux.
 
 <!--
 - Y, finalmente una última opción: el servidor de imágenes virtuales de la [ETSIIT](https://turing.ugr.es/). Arrancar con Ubuntu 18. Ya tiene instalado NetBeans 11.2 y C++. 
