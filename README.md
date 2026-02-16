@@ -94,6 +94,7 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 
 En esta sección encontrarás manuales y videotutoriales sobre temas específicos de las prácticas que irán complementando al tema principal de la práctica.
 
+<!--
 ## <a name="netbeans"></a> El entorno de desarrollo NetBeans
 NetBeans es un entorno de desarrollo integrado libre y multiplataforma, creado principalmente para el lenguaje de programación Java, pero que ofrece soporte para otros muchos lenguajes de programación. Existe además un número importante de módulos para extenderlo. NetBeans es un producto libre y gratuito sin restricciones de uso. 
 - [Manual de referencia](PDFs/netbeans.pdf)
@@ -101,6 +102,7 @@ NetBeans es un entorno de desarrollo integrado libre y multiplataforma, creado p
    </ul>
 - <a name="helloworld"></a>Hello world!<ul><li>[Videotutorial](https://drive.google.com/drive/u/1/folders/1QOu1xYpdQd_FwKzcOo-HlXZ8dlmMcCSs)<li>Abrir [Proyecto Netbeans](NetBeansProjects/HelloWorld)<li>Vistas Lógica (Projects) y Física (Files) <li> Editor<li>Estándar C++14<li>Compilar y enlazar<li> Carpetas build y dist<li> Ejecutar<ul><li>Pestaña de salida del programa<li>Desde Netbeans<li>Desde la terminal de ordenes<li>Ficheros de datos de validación</ul></ul>
 - Directivas del precompilador<ul><li>[Videotutorial](https://drive.google.com/file/d/1-nneQyafIa58DgtlcD3x2bCDXL93N1au/view?usp=sharing)</ul>
+-->
 
 ## <a name="doxygen"></a> Documentación con Doxygen
 
@@ -109,6 +111,7 @@ Doxygen es un programa de apoyo a la documentación (comentarios) de proyectos d
 - [Manual de doxygen](PDFs/doxygen.pdf)
 - [Videotutorial](https://drive.google.com/drive/u/1/folders/1Ki1RYMaBIORurj7MiQUqWsCBt_lsbPfv) 
 
+<!--
 ## Compilación separada
 Es una metodología de desarrollo de proyectos de software que divide el proyecto en unidades funcionales, llamados módulos o paquetes o bibliotecas (librerías), que se compilan por separado y se enlazan en un único fichero
 
@@ -120,6 +123,7 @@ Es una metodología de desarrollo de proyectos de software que divide el proyect
   - Proyecto NetBeans [MPGeometry modularizado](NetBeansProjects/MPGeometry_MOD)
 - Segunda parte. Uso de bibliotecas (librerías)
   - [Videotutorial](https://drive.google.com/file/d/1m9pC3XWjz6BS9Srfu_4B_Bimw_jfw5xP/view?usp=sharing)
+-->
 
 <!--
 ## Test-Driven Development
