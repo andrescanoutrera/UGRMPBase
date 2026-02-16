@@ -112,8 +112,8 @@ NetBeans es un entorno de desarrollo integrado libre y multiplataforma, creado p
 - Directivas del precompilador<ul><li>[Videotutorial](https://drive.google.com/file/d/1-nneQyafIa58DgtlcD3x2bCDXL93N1au/view?usp=sharing)</ul>
 -->
 
-## Visual Studio Code
-- <a name="vscode1"></a>Manual de introducción a VSCode [VSCode](PDFs/vscode.pdf)
+## <a name="vscode1"></a>Visual Studio Code
+- Manual de introducción a VSCode [VSCode](PDFs/vscode.pdf)
   - Carpeta HelloW con el fichero HelloWorld.cpp [HelloW](CodeProjects/Seminar1/HelloW)
 
 ## <a name="vscode2">Compilación separada
