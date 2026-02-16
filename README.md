@@ -23,22 +23,42 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
     git pull
     ```
 - [Videotutorial](https://drive.google.com/file/d/1HkdEueUfbA9n8aLdPhaF0WxcK4q6xl70/view?usp=drive_link) Primeros pasos (descarga del repositorio UGMPBase).
+- En la asignatura usaremos el Sistema Operativo Linux. Nos sirve cualquier distribución de linux, aunque en las aulas de la ETSIIT usaremos la distribución de KUbuntu.
+- Usaremos el entorno de desarrollo Visual Studio Code, junto con la extensión C/C++ Extension Pack32.
 - Paquetes de Linux que deben estar presentes durante las prácticas (sudo apt install) `gcc` `make` `valgrind`  `wdiff` `meld` `doxygen` `ImageMagick` `git` `graphviz`
+
+
+<!--
 - Para aquellos que decidáis la opción de VirtualBox, tenéis disponible una copia de máquina virtual ya preparada con Linux, NetBeans y C++. Aquí tenéis las instrucciones  para instalarla. Son tres pasos muy sencillos (1.- Instalar Virtual Box; 2.- Descargar la imagen de la máquina virtual; 3.- Importarla en Virtual Box) ![MP_VBOXc](https://user-images.githubusercontent.com/9058636/152649408-c228ab4f-d8c1-4ef8-8e56-81230dd63986.png)
- 
+-->
+
+<!--
    - <a name="virtualbox"></a>Descargar e Instalar [Virtualbox](https://www.oracle.com/emea/virtualization/solutions/try-oracle-vm-virtualbox/?source=:ad:pas:go:dg:a_emea:71700000086137880-58700007342953610-p65823631225:RC_WWMK201210P00009C0001:&SC=:ad:pas:go:dg:a_emea::RC_WWMK201210P00009C0001::&gclid=CjwKCAiAl-6PBhBCEiwAc2GOVOk47paaZegmnUyyKtx-WFrjIcTIDntJfqxW40Kk8E3DFxK2_RPZBBoCUzwQAvD_BwE&gclsrc=aw.ds)
+-->
+
+<!--
    - Descargar la [Máquina virtual Ubuntu 24 de la asignatura](https://drive.google.com/file/d/1vVDvf9jQJmxzDwZmFu369I3YCOIlQjTP/view) desde Google Drive (tardará un poco porque son más de 8 GB). Esta imagen ha sido proporcionada por José Miguel Castillo García de la [Oficina de Software Libre](https://osl.ugr.es) de la Universidad de Granada en febrero de 2025. Es una versión de `Ubuntu 24`, la cual ya viene empaquetada para consumir la mínima cantidad de recursos dado que se va a usar dentro de una VirtualBox sobre Windows. Esta imagen ya está configurada para la asignatura MP y lleva todo el software necesario instalado. Por ejemplo, tiene ya instalado netbeans 24.04.2 con el plugin de c++, el compilador de c++ (g++), make, doxygen, diff, wdiff, meld, valgrind, okular, git, ImageMagick, firefox.
       - Importar la máquina virtual y acceder a ella: [guía de importación](PDFs/importVBOX.pdf)
       - Usuario: `usuario`
       - Password: `usuario`
+-->
+
+<!--
   - Imagen `Ubuntu 22` [Máquina virtual Ubuntu 22](https://drive.google.com/file/d/199qZAdcO_iIb1QTubGkuF7APseNESvNk/view?usp=sharing) Proporcionada también por por José Miguel Castillo García de la [Oficina de Software Libre](https://osl.ugr.es) de la Universidad de Granada en febrero de 2024. Ocupa algo más de 10GB. Es una versión de `Ubuntu 22` que también está configurada para la asignatura MP y lleva todo el software necesario instalado.
       - Usuario: `usuario`
       - Password: `usuario`
+-->
+
+<!--
   - Imagen `Ubuntu 20` (conocida como `LUbuntu 16.04 LTS`) [Máquina virtual Ubuntu 20](https://drive.google.com/drive/u/1/folders/1HMwctEsaFuICZpuHUF5rZuM6IpXPJqy8)
       - Usuario: `mp`
       - Password: `.CambiaEsto`
-- Laboratorios de prácticas de la ETSIIT. Arranque con Ubuntu 20.04. El resto de herramientas ya están instaladas.
+-->
+- Laboratorios de prácticas de la ETSIIT. Arranque con KUbuntu. Las herramientas que usaremos en la asignatura ya están instaladas.
+
+<!--
 - Y, finalmente una última opción: el servidor de imágenes virtuales de la [ETSIIT](https://turing.ugr.es/). Arrancar con Ubuntu 18. Ya tiene instalado NetBeans 11.2 y C++. 
+-->
 - Enlaces interesantes
    - [Descargar la imagen de Ubuntu](https://ubuntu.com/download/desktop)
    - [Tutorial sobre la instalación dual Linux/Windows](https://www.youtube.com/watch?v=qSbRnYWwnxI)
