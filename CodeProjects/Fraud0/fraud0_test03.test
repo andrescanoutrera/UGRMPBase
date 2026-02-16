@@ -1,0 +1,8 @@
+%%%CALL < ../Datasets/dataP0/princeton_4blocations_1side.p0in
+%%%DESCRIPTION Test to read a set of 4 locations from 1 side
+%%%OUTPUT
+4
+23.700000 14.800000 Cannon Dial Elm
+20.900000 15.400000 Frist Campus Center
+25.600000 14.900000 Ivy
+24.800000 14.900000 Quadrangle
