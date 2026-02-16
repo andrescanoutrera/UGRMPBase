@@ -1,0 +1,8 @@
+10
+
+%%%CALL < tests/incremento10.txt
+%%%OUTPUT
+10
+A 15
+B 15
+C 110
