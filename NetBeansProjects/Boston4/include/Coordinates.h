@@ -73,7 +73,7 @@ private:
  * convert latitude and longitude to strings.
  * @param os The output stream to be used. Input/output parameter
  * @param obj The Coordinates object. Input parameter
- * @return @p os A reference to the output stream
+ * @return A reference to the output stream
  */
 std::ostream operator<<(std::ostream os, Coordinates obj);
 
@@ -85,6 +85,6 @@ std::ostream operator<<(std::ostream os, Coordinates obj);
  * Coordinates object.
  * @param is The input stream to be used. Input/output parameter
  * @param obj The Coordinates object. Output parameter
- * @return @p A reference to the input stream
+ * @return A reference to the input stream
  */
 std::istream operator>>(std::istream is, Coordinates obj);
