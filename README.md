@@ -7,11 +7,15 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
  - Grupo de Telegram del [Doble Grado Informática y Matemáticas](https://t.me/+QJjPGdaLXrRkOTVk) -->
 
 # <a name="preping"></a>Preparándolo todo
+
+
+<!--
 -  [Videotutorial](https://drive.google.com/file/d/1VO7ib1QnUlEk1pHtn4F7D6QJwZZykgbo/view?usp=sharing) Preparando el entorno de trabajo.
+-->
 <!--- introducción a la asignatura.-->
 <!--- Documentos de apoyo al videotutorial para la preparación del entorno de trabajo en el ordenador. En él se describe, a rasgos generales, cómo preparar el ordenador para la asignatura e incluye enlaces a otros videotutoriales, PDF, o Webs con descripciones más precisas de cada aspecto concreto. Este documento en PDF que aparece aquí son las transparencias del videotutorial y contiene los enlaces desde los que acceder a las herramientas y documentos que se citan en el vídeo.  -->
 <!--  - Las transparencias del vídeo con enlaces  -->
-- Repositorio en github de las prácticas de la asignatura:  https://github.com/andrescanoutrera/UGRMPBase
+- Repositorio en Github de las prácticas de la asignatura:  https://github.com/andrescanoutrera/UGRMPBase
 
   - <a name="repo"></a>Descargar el repo:
     ```
@@ -22,10 +26,13 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
     cd UGRMPBase
     git pull
     ```
-- [Videotutorial](https://drive.google.com/file/d/1HkdEueUfbA9n8aLdPhaF0WxcK4q6xl70/view?usp=drive_link) Primeros pasos (descarga del repositorio UGMPBase).
+
+
+<!-- - [Videotutorial](https://drive.google.com/file/d/1HkdEueUfbA9n8aLdPhaF0WxcK4q6xl70/view?usp=drive_link) Primeros pasos (descarga del repositorio UGMPBase).
+-->
 - En la asignatura usaremos el Sistema Operativo Linux. Nos sirve cualquier distribución de linux, aunque en las aulas de la ETSIIT usaremos la distribución de KUbuntu.
 - Usaremos el entorno de desarrollo Visual Studio Code, junto con la extensión C/C++ Extension Pack32.
-- Paquetes de Linux que deben estar presentes durante las prácticas (sudo apt install) `gcc` `make` `valgrind`  `wdiff` `meld` `doxygen` `ImageMagick` `git` `graphviz`
+- Otros paquetes de Linux que deben estar presentes durante las prácticas (sudo apt install) `gcc` `make` `valgrind`  `wdiff` `meld` `doxygen` `ImageMagick` `git` `graphviz`
 
 
 <!--
@@ -68,8 +75,9 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
 
 # Secuencia de prácticas
 
-Mira los vídeos de [introducción a la asignatura](https://drive.google.com/file/d/1VO7ib1QnUlEk1pHtn4F7D6QJwZZykgbo/view?usp=sharing)  y de [introducción a las prácticas]()
-<!-- (https://drive.google.com/file/d/1peiNfwzRKYvCFHCJlSH2licuhCIuEeqL/view?usp=share_link) -->
+<!--
+Mira los vídeos de [introducción a la asignatura](https://drive.google.com/file/d/1VO7ib1QnUlEk1pHtn4F7D6QJwZZykgbo/view?usp=sharing)  y de [introducción a las prácticas] 
+(https://drive.google.com/file/d/1peiNfwzRKYvCFHCJlSH2licuhCIuEeqL/view?usp=share_link) -->
 
 |Comienzo | Práctica <br> Entregable en Prado | Herramientas | Metodología
 | -----| -----|-----| ----- |
@@ -115,16 +123,14 @@ Doxygen es un programa de apoyo a la documentación (comentarios) de proyectos d
 ## Compilación separada
 Es una metodología de desarrollo de proyectos de software que divide el proyecto en unidades funcionales, llamados módulos o paquetes o bibliotecas (librerías), que se compilan por separado y se enlazan en un único fichero
 
-- Primera parte.De un proyecto monolítico a un proyecto modularizado.
-  - <a name="mpgeometry"></a>Proyecto VSCode [MPGeometry monolítico](CodeProjects/Seminar1/MPGeometry0)
+- Primera parte. De un proyecto monolítico a un proyecto modularizado.
+  - <a name="mpgeometry"></a>Proyecto VSCode no modularizado [MPGeometry monolítico](CodeProjects/Seminar1/MPGeometry0)
+  - Proyecto VSCode modularizado y terminado [MPGeometry modularizado](CodeProjects/Seminar1/MPGeometry_MOD)
 <!--
   - [Videotutorial]( https://drive.google.com/file/d/1-KiBquuuHJ5_zNeSLqWH88PqazuoTVmy/view?usp=sharin) modularización y compilación  separada
--->
-
-<!--
   - Proyecto VSCode [MPGeometry sep](CodeProjects/Seminar1/MPGeometrySep)
 -->
-  - Proyecto NetBeans [MPGeometry modularizado](CodeProjects/Seminar1/MPGeometry_MOD)
+
 
 <!--
 - Segunda parte. Uso de bibliotecas (librerías)
