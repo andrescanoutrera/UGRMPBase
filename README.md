@@ -116,7 +116,7 @@ NetBeans es un entorno de desarrollo integrado libre y multiplataforma, creado p
 - Manual de introducción a VSCode [VSCode](PDFs/vscode.pdf)
   - Carpeta HelloW con el fichero HelloWorld.cpp [HelloW](CodeProjects/Seminar1/HelloW)
 
-## <a name="vscode2">Compilación separada
+## <a name="vscode2"></a>Compilación separada
 Es una metodología de desarrollo de proyectos de software que divide el proyecto en unidades funcionales, llamados módulos o paquetes o bibliotecas (librerías), que se compilan por separado y se enlazan en un único fichero
 
 - Primera parte. De un proyecto monolítico a un proyecto modularizado.
