@@ -111,16 +111,22 @@ Doxygen es un programa de apoyo a la documentación (comentarios) de proyectos d
 - [Manual de doxygen](PDFs/doxygen.pdf)
 - [Videotutorial](https://drive.google.com/drive/u/1/folders/1Ki1RYMaBIORurj7MiQUqWsCBt_lsbPfv) 
 
-<!--
+
 ## Compilación separada
 Es una metodología de desarrollo de proyectos de software que divide el proyecto en unidades funcionales, llamados módulos o paquetes o bibliotecas (librerías), que se compilan por separado y se enlazan en un único fichero
 
 - Primera parte.De un proyecto monolítico a un proyecto modularizado.
-  - <a name="mpgeometry"></a>Proyecto NetBeans [MPGeometry monolítico](NetBeansProjects/MPGeometry)
+  - <a name="mpgeometry"></a>Proyecto VSCode [MPGeometry monolítico](CodeProjects/Seminar1/MPGeometry0)
+<!--
   - [Videotutorial]( https://drive.google.com/file/d/1-KiBquuuHJ5_zNeSLqWH88PqazuoTVmy/view?usp=sharin) modularización y compilación  separada
-  - Proyecto NetBeans [MPGeometry sep](NetBeansProjects/MPGeometrySep)
+-->
 
-  - Proyecto NetBeans [MPGeometry modularizado](NetBeansProjects/MPGeometry_MOD)
+<!--
+  - Proyecto VSCode [MPGeometry sep](CodeProjects/Seminar1/MPGeometrySep)
+-->
+  - Proyecto NetBeans [MPGeometry modularizado](CodeProjects/Seminar1/MPGeometry_MOD)
+
+<!--
 - Segunda parte. Uso de bibliotecas (librerías)
   - [Videotutorial](https://drive.google.com/file/d/1m9pC3XWjz6BS9Srfu_4B_Bimw_jfw5xP/view?usp=sharing)
 -->
