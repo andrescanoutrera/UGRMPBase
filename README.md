@@ -59,11 +59,12 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
 <!--
 - Y, finalmente una última opción: el servidor de imágenes virtuales de la [ETSIIT](https://turing.ugr.es/). Arrancar con Ubuntu 18. Ya tiene instalado NetBeans 11.2 y C++. 
 -->
+
 - Enlaces interesantes
-   - [Descargar la imagen de Ubuntu](https://ubuntu.com/download/desktop)
+   <!-- - [Descargar la imagen de Ubuntu](https://ubuntu.com/download/desktop)-->
    - [Tutorial sobre la instalación dual Linux/Windows](https://www.youtube.com/watch?v=qSbRnYWwnxI)
-   - [Tutorial instalación NetBeans](https://www.youtube.com/watch?v=zCJpPZ548Oo)
-   - [Tutorial instalación plugin C++ para NetBeans](https://www.youtube.com/watch?v=ZA1iRNznGug)
+   <!--- [Tutorial instalación NetBeans](https://www.youtube.com/watch?v=zCJpPZ548Oo)-->
+   <!-- - [Tutorial instalación plugin C++ para NetBeans](https://www.youtube.com/watch?v=ZA1iRNznGug)-->
 
 # Secuencia de prácticas
 
