@@ -81,9 +81,9 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 
 |Comienzo | Práctica <br> Entregable en Prado | Herramientas | Metodología
 | -----| -----|-----| ----- |
-|Semana1 16/feb/2026 || <ol><li>[**VSCode 1**](#netbeans) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del proyecto [MP Geometry](#mpgeometry)<ul><li>Métodos `const`.<li>Parámetros por valor y por referencia. <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la entrada estándar</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MP Geometry](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MP Geometry](#mpgeometry)  <li> Opcional: Uso de bibliotecas con el proyecto [MP Geometry](#mpgeometry) </ol>|
-|<a name="Semana2"></a>Semana2 23/feb/2026 | [**Fraud0**](PDFs/fraud0.pdf) Paso de arrays como parámetros de funciones. Filtrado y unión de conjuntos de datos de entrada <br>[Tests detallados](CodeProjects/Fraud0/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud0/TestReport.HowToTestUnitTests.md) <br>[Vídeo](https://drive.google.com/file/d/19Aj0dwH0VF3PZnseJsQOTXyLzs-FNEQG/view?usp=sharing) de ayuda a la creación del proyecto Fraud0 | <ol><li>[**VSCode 2**](#netbeans): Compilación separada  </ol> | <ol> <li>Calificador const para métodos y parámetros. <li>Paso de parámetros por valor y referencia.  <li> Devolución de objetos por valor.  </ol> |
-|Semana3 2/mar/2026 | |<ol><li>[**VSCode 3**](#netbeans): El [depurador](#depurador) de programas  </ol>|  |
+|Semana1 16/feb/2026 || <ol><li>[**VSCode 1**](#vscode) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del proyecto [MP Geometry](#mpgeometry)<ul><li>Métodos `const`.<li>Parámetros por valor y por referencia. <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la entrada estándar</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MP Geometry](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MP Geometry](#mpgeometry)  <li> Opcional: Uso de bibliotecas con el proyecto [MP Geometry](#mpgeometry) </ol>|
+|<a name="Semana2"></a>Semana2 23/feb/2026 | [**Fraud0**](PDFs/fraud0.pdf) Paso de arrays como parámetros de funciones. Filtrado y unión de conjuntos de datos de entrada <br>[Tests detallados](CodeProjects/Fraud0/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud0/TestReport.HowToTestUnitTests.md) <br>[Vídeo](https://drive.google.com/file/d/19Aj0dwH0VF3PZnseJsQOTXyLzs-FNEQG/view?usp=sharing) de ayuda a la creación del proyecto Fraud0 | <ol><li>[**VSCode 2**](#vscode): Compilación separada  </ol> | <ol> <li>Calificador const para métodos y parámetros. <li>Paso de parámetros por valor y referencia.  <li> Devolución de objetos por valor.  </ol> |
+|Semana3 2/mar/2026 | |<ol><li>[**VSCode 3**](#vscode): El [depurador](#depurador) de programas  </ol>|  |
 |Semana4	 9/mar/2026 ||  |  |
 |Semana5 16/mar/2026 | [**Fraud1**](PDFs/fraud1.pdf)  Implementación de un algoritmo de clustering <br>[Tests detallados](CodeProjects/Fraud1/tests/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud1/tests/TestReport.HowToTestUnitTests.md)   || <ol> <li>Calificador const para métodos y parámetros. <li>Paso de parámetros por valor y referencia.  <li> Devolución de objetos por valor. <li>Paso de vectores a funciones y métodos. </ol>|
 |Semana6	 23/mar/2026 | [**Fraud2**](PDFs/fraud2.pdf) Introducción al uso de memoria dinámica. Comparativa entre procesos de clustering <br>[Tests detallados](CodeProjects/Fraud2/tests/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud2/tests/TestReport.HowToTestUnitTests.md)| <ol><li> [**valgrind**](PDFs/valgrind.pdf) Detección de pérdidas de memoria </ol> | <ol><li> Clases con vectores estáticos.  <li> Devolución de objetos por valor y por referencia. <li> Paso de punteros como parámetros de funciones. <li> Devolución de punteros por funciones. <li> Uso de memoria dinámica en C++. <li> Arrays dinámicos. <li> Detección de pérdidas de memoria. <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes <li> Uso de [parámetros](#parametrosmain) desde la línea de comandos.  CStrings  </ol>|
@@ -112,30 +112,35 @@ NetBeans es un entorno de desarrollo integrado libre y multiplataforma, creado p
 - Directivas del precompilador<ul><li>[Videotutorial](https://drive.google.com/file/d/1-nneQyafIa58DgtlcD3x2bCDXL93N1au/view?usp=sharing)</ul>
 -->
 
-## <a name="doxygen"></a> Documentación con Doxygen
-
-Doxygen es un programa de apoyo a la documentación (comentarios) de proyectos de software que usa una sintaxis de anotación de los comentarios en el código que podríamos llamar, estándar, y común a otros lenguajes.
-
-- [Manual de doxygen](PDFs/doxygen.pdf)
-- [Videotutorial](https://drive.google.com/drive/u/1/folders/1Ki1RYMaBIORurj7MiQUqWsCBt_lsbPfv) 
-
+## Visual Studio Code
+- Manual de introducción a VSCode [VSCode](PDFs/vscode.pdf)
+  - Carpeta HelloW con el fichero HelloWorld.cpp [HelloW](CodeProjects/Seminar1/HelloW)
 
 ## Compilación separada
 Es una metodología de desarrollo de proyectos de software que divide el proyecto en unidades funcionales, llamados módulos o paquetes o bibliotecas (librerías), que se compilan por separado y se enlazan en un único fichero
 
 - Primera parte. De un proyecto monolítico a un proyecto modularizado.
-  - <a name="mpgeometry"></a>Proyecto VSCode no modularizado [MPGeometry monolítico](CodeProjects/Seminar1/MPGeometry0)
-  - Proyecto VSCode modularizado y terminado [MPGeometry modularizado](CodeProjects/Seminar1/MPGeometry_MOD)
+  - Ver Sección 5 del manual de [VSCode](PDFs/vscode.pdf))
+  - <a name="mpgeometry"></a>Proyecto VSCode no modularizado [MPGeometry0](CodeProjects/Seminar1/MPGeometry0)
+  - Proyecto VSCode modularizado y terminado [MPGeometry_MOD](CodeProjects/Seminar1/MPGeometry_MOD)
 <!--
   - [Videotutorial]( https://drive.google.com/file/d/1-KiBquuuHJ5_zNeSLqWH88PqazuoTVmy/view?usp=sharin) modularización y compilación  separada
   - Proyecto VSCode [MPGeometry sep](CodeProjects/Seminar1/MPGeometrySep)
 -->
 
 
-<!--
-- Segunda parte. Uso de bibliotecas (librerías)
-  - [Videotutorial](https://drive.google.com/file/d/1m9pC3XWjz6BS9Srfu_4B_Bimw_jfw5xP/view?usp=sharing)
--->
+
+- Segunda parte. Uso de bibliotecas (librerías). 
+  - Ver Sección 6 del manual de [VSCode](PDFs/vscode.pdf))
+  <!-- - [Videotutorial](https://drive.google.com/file/d/1m9pC3XWjz6BS9Srfu_4B_Bimw_jfw5xP/view?usp=sharing) -->
+
+## <a name="doxygen"></a> Documentación con Doxygen
+
+Doxygen es un programa de apoyo a la documentación (comentarios) de proyectos de software que usa una sintaxis de anotación de los comentarios en el código que podríamos llamar, estándar, y común a otros lenguajes.
+
+- [Manual de doxygen](PDFs/doxygen.pdf)
+- [Videotutorial](https://drive.google.com/drive/u/1/folders/1Ki1RYMaBIORurj7MiQUqWsCBt_lsbPfv)
+
 
 <!--
 ## Test-Driven Development
@@ -152,38 +157,42 @@ Es una metodología de desarrollo de proyectos software en la que primero se def
 -->
 
 ## <a name="depurador"></a>Depuración de programas
-El depurador es una herramienta que suele estar incorporada en los IDE (Integrated Development Environment) como NetBeans. Se utiliza para ejecutar el programa paso a paso e intentar encontrar errores en el código.
+El depurador es una herramienta que suele estar incorporada en los IDE (Integrated Development Environment) como VSCode, NetBeans, CLion, etc. Se utiliza para ejecutar el programa paso a paso e intentar encontrar errores en el código.
 
-- Manual sobre el [depurador de NetBeans](PDFs/Debugger.pdf)
-- [Videotutorial 1](https://drive.google.com/file/d/1vtFSsMQKnaHpsGD25TCPHCAdmDVJ_a1k/view?usp=sharing)
-- [Videotutorial 2](https://drive.google.com/file/d/1cStDUlagLLo_UQk5HOvZNWuqg3dxxCNl/view?usp=sharing)
-- Proyectos de NetBeans para depurar incluídos en el videotutorial: `Debugger1` `Debugger2` `Debugger3`
+- Manual sobre el [depurador de VSCode](PDFs/Debugger.pdf)
+- Proyecto [Errores](CodeProjects/Seminar2/Errores)
+- Proyecto [CNN](CodeProjects/Seminar2/CNN)
+<!-- - [Videotutorial 1](https://drive.google.com/file/d/1vtFSsMQKnaHpsGD25TCPHCAdmDVJ_a1k/view?usp=sharing) -->
+<!-- - [Videotutorial 2](https://drive.google.com/file/d/1cStDUlagLLo_UQk5HOvZNWuqg3dxxCNl/view?usp=sharing) -->
+<!-- - Proyectos de NetBeans para depurar incluídos en el videotutorial: `Debugger1` `Debugger2` `Debugger3` -->
 
 ## Detección de pérdidas de memoria y errores en la gestión de la memoria
 Valgrind es una herramienta para la detección, sobre todo, de pérdidas de memoria, pero también de otros problemas de gestión de la memoria dinámica.
 
 - Manual sobre el uso de [Valgrind](PDFs/valgrind.pdf)
 <!-- - Manual sobre el uso de [Dr Memory](MaterialAdicional/drmemory.pdf) -->
-- Proyecto Interactivo [ValgrindShowcase](NetBeansProjects/ValgrindShowcase)
+<!-- - Proyecto Interactivo [ValgrindShowcase](NetBeansProjects/ValgrindShowcase)
   - Descomprimir
   - Cargar en Netbeans
-  - Ejecutar y seguir las instrucciones. Se puede volver a empezar de nuevo sin más que descomprimir de nuevo.
+  - Ejecutar y seguir las instrucciones. Se puede volver a empezar de nuevo sin más que descomprimir de nuevo. -->
 
 ## <a name="ficheros"></a>Manejo de ficheros de texto (muy básico)
 Los ficheros de texto permiten almacenar datos que  pueden leer los programas de forma masiva para procesarlos. Este apartado es una (muy breve) introducción al manejo de ficheros que se verá en teoría.
 
 - Manual sobre el manejo (muy básico) de [ficheros de texto](PDFs/Ficheros.pdf)
-- Videotutorial 1. [Ficheros de entrada](https://drive.google.com/file/d/1A3ToJaVXrF1k2bl0dz2xz1e3Hu4arvR8/view?usp=sharing)
-- Videotutorial 2. [Ficheros de salida](https://drive.google.com/file/d/1xllMQyf0sQP-cfrGSabFi5shA4bUzMZc/view?usp=sharing)
-- Videotutorial 3. Gestión de [errores en el manejo de ficheros](https://drive.google.com/file/d/19us64WCMXZyEd5um_MuZpLp5IqQU3nMV/view?usp=sharing)
+- Proyecto [Ficheros](CodeProjects/Seminar3/Ficheros)
+- Videotutorial 1. [Ficheros de entrada (Usando Netbeans)](https://drive.google.com/file/d/1A3ToJaVXrF1k2bl0dz2xz1e3Hu4arvR8/view?usp=sharing)
+- Videotutorial 2. [Ficheros de salida (Usando Netbeans)](https://drive.google.com/file/d/1xllMQyf0sQP-cfrGSabFi5shA4bUzMZc/view?usp=sharing)
+- Videotutorial 3. Gestión de [errores en el manejo de ficheros (Usando Netbeans)](https://drive.google.com/file/d/19us64WCMXZyEd5um_MuZpLp5IqQU3nMV/view?usp=sharing)
 
 ## <a name="parametrosmain"></a>Paso de parámetros a la función main() desde la línea de órdenes
 
 Esta es una técnica muy habitual para introducir datos en un programa desde la línea de comandos. Absolutamente imprescindible en programas de consola de Linux/Unix.
 
 - Manual sobre el [paso de argumentos a main()](PDFs/ArgumentosMain.pdf)
-- [Videotutorial 1](https://drive.google.com/file/d/1xlVzVTwbFSWfhdaHGgNSq67bQo0c46nJ/view?usp=sharing)
-- [Videotutorial 2](https://drive.google.com/file/d/1HaYIyECXYuZ1FAMSlSB1P7PSj9qCXlXG/view?usp=sharing)
+- Proyecto [ArgumentosMain](CodeProjects/Seminar3/ArgumentosMain)
+- [Videotutorial 1 (Usando Netbeans)](https://drive.google.com/file/d/1xlVzVTwbFSWfhdaHGgNSq67bQo0c46nJ/view?usp=sharing) 
+- [Videotutorial 2 (Usando Netbeans)](https://drive.google.com/file/d/1HaYIyECXYuZ1FAMSlSB1P7PSj9qCXlXG/view?usp=sharing)
 
 ## Construcción manual de makefiles (Material de ampliación)
 - Manual para la elaboración de [makefiles](PDFs/MaterialAdicional/makefile.pdf)
@@ -191,8 +200,8 @@ Esta es una técnica muy habitual para introducir datos en un programa desde la 
 ## Manejo de excepciones y señales de error (Material de ampliación)
 Breve introducción a la gestión de señales de error durante la ejecución de un programa y la gestión controlada de estos mediante el uso de excepciones. Videotutorial 
 
-- Manejo de excepciones [Videotutorial](https://drive.google.com/file/d/1aPJP1ft4OiQZED2dVGs7pbzy3nf7kQ1J/view?usp=sharing)
-- Manejo de señales de error. [Videotutorial](https://drive.google.com/file/d/1U0pBUxBrklBKLkZcgsIkClCeQxyf1Bv0/view?usp=sharing) 
+- Manejo de excepciones [Videotutorial (Usando Netbeans)](https://drive.google.com/file/d/1aPJP1ft4OiQZED2dVGs7pbzy3nf7kQ1J/view?usp=sharing)
+- Manejo de señales de error. [Videotutorial (Usando Netbeans)](https://drive.google.com/file/d/1U0pBUxBrklBKLkZcgsIkClCeQxyf1Bv0/view?usp=sharing) 
 
 
 
