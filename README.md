@@ -207,7 +207,8 @@ Breve introducción a la gestión de señales de error durante la ejecución de 
 
 En esta sección incluimos erratas que se detecten en los distintos guiones y proyectos Netbeans. Esperemos que no sean muchas.
 
-
+# Repositorio de cursos anteriores
+- [Curso 2024/2025](https://github.com/andrescanoutrera/UGRMP25)
 
 
 
