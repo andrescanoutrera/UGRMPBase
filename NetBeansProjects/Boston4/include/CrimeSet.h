@@ -91,7 +91,7 @@ private:
  * format as the one described in the Crime::toString() method
  * @param os The output stream to be used. Input/output parameter
  * @param crimeSet the CrimeSet object. Input parameter
- * @return @p os A reference to the output stream
+ * @return A reference to the output stream
  */
 std::ostream operator<<(std::ostream os, const CrimeSet crimeSet);
 
@@ -110,6 +110,6 @@ std::ostream operator<<(std::ostream os, const CrimeSet crimeSet);
  * read from the file is negative.
  * @param is The input stream to be used. Input/output parameter
  * @param crimeSet The CrimeSet object to be filled. Input/output parameter
- * @return @p is A reference to the input stream
+ * @return A reference to the input stream
  */
 std::istream  operator>>(std::istream is, CrimeSet crimeSet);
