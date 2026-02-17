@@ -119,10 +119,11 @@ NetBeans es un entorno de desarrollo integrado libre y multiplataforma, creado p
 ## <a name="vscode2"></a>Compilación separada
 Es una metodología de desarrollo de proyectos de software que divide el proyecto en unidades funcionales, llamados módulos o paquetes o bibliotecas (librerías), que se compilan por separado y se enlazan en un único fichero
 
-- Primera parte. De un proyecto monolítico a un proyecto modularizado.
+- <a name="mpgeometry"></a>Primera parte. De un proyecto monolítico a un proyecto modularizado.
   - Ver Sección 5 del manual de [VSCode](PDFs/vscode.pdf)
-  - <a name="mpgeometry"></a>Carpeta con el proyecto MPGeometry no modularizado [MPGeometry0](CodeProjects/Seminar1/MPGeometry0)
-  - Proyecto VSCode modularizado y terminado [MPGeometry_MOD](CodeProjects/Seminar1/MPGeometry_MOD)
+  - Carpeta con el programa MPGeometry no modularizado: [MPGeometry0](CodeProjects/Seminar1/MPGeometry0)
+  - Carpeta con el programa MPGeometry, separado en ficheros .h y .cpp (falta por rellenar el contenido de Point2D.h y Point2D.cpp): [MPGeometrySep](CodeProjects/Seminar1/MPGeometrySep)
+  - Proyecto MPGeometry ya modularizado: [MPGeometry_MOD](CodeProjects/Seminar1/MPGeometry_MOD)
 <!--
   - [Videotutorial]( https://drive.google.com/file/d/1-KiBquuuHJ5_zNeSLqWH88PqazuoTVmy/view?usp=sharin) modularización y compilación  separada
   - Proyecto VSCode [MPGeometry sep](CodeProjects/Seminar1/MPGeometrySep)
@@ -208,7 +209,7 @@ Breve introducción a la gestión de señales de error durante la ejecución de 
 
 En esta sección incluimos erratas que se detecten en los distintos guiones y proyectos VSCode. Esperemos que no sean muchas.
 
-# Repositorio de cursos anteriores
+# Repositorios de cursos anteriores
 - [Curso 2024/2025](https://github.com/andrescanoutrera/UGRMP25)
 
 
