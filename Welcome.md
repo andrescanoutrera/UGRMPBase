@@ -18,5 +18,5 @@ Tienes toda la información en el [README](README.md) pero te apuntamos lo más 
 
 Eso es todo por ahora. Nos vemos en clase la semana que viene.
 
-Tus profesores de Metodología de la Programación
+Tus profesores de Metodología de la Programación<br>
 Andrés y Sylvia
