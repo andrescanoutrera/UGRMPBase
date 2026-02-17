@@ -35,6 +35,11 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
 - Otros paquetes de Linux que debemos tener instalados para realizar las prácticas (sudo apt install) `gcc` `make` `valgrind`  `wdiff` `meld` `doxygen` `ImageMagick` `git` `graphviz`
 
 
+- Para aquellos que decidáis la opción de VirtualBox, tenéis disponible una copia de máquina virtual ya preparada con Linux, NetBeans y C++. Aquí tenéis las instrucciones  para instalarla. Son tres pasos muy sencillos:
+    1. <a name="virtualbox"></a>Descargar e Instalar [Virtualbox](https://www.oracle.com/emea/virtualization/solutions/try-oracle-vm-virtualbox/?source=:ad:pas:go:dg:a_emea:71700000086137880-58700007342953610-p65823631225:RC_WWMK201210P00009C0001:&SC=:ad:pas:go:dg:a_emea::RC_WWMK201210P00009C0001::&gclid=CjwKCAiAl-6PBhBCEiwAc2GOVOk47paaZegmnUyyKtx-WFrjIcTIDntJfqxW40Kk8E3DFxK2_RPZBBoCUzwQAvD_BwE&gclsrc=aw.ds)
+    1. Descargar la imagen de la máquina virtual de Linux. **Enlace disponible próximamente**
+    1. Importarla en Virtual Box
+
 <!--
 - Para aquellos que decidáis la opción de VirtualBox, tenéis disponible una copia de máquina virtual ya preparada con Linux, NetBeans y C++. Aquí tenéis las instrucciones  para instalarla. Son tres pasos muy sencillos (1.- Instalar Virtual Box; 2.- Descargar la imagen de la máquina virtual; 3.- Importarla en Virtual Box) ![MP_VBOXc](https://user-images.githubusercontent.com/9058636/152649408-c228ab4f-d8c1-4ef8-8e56-81230dd63986.png)
 -->
@@ -120,14 +125,14 @@ NetBeans es un entorno de desarrollo integrado libre y multiplataforma, creado p
 Es una metodología de desarrollo de proyectos de software que divide el proyecto en unidades funcionales, llamados módulos o paquetes o bibliotecas (librerías), que se compilan por separado y se enlazan en un único fichero
 
 - <a name="mpgeometry"></a>Primera parte. De un proyecto monolítico a un proyecto modularizado.
-  - Ver Sección 5 del manual de [VSCode](PDFs/vscode.pdf)
-  - Carpeta con el programa MPGeometry no modularizado: [MPGeometry0](CodeProjects/Seminar1/MPGeometry0)
-  - Carpeta con el programa MPGeometry, separado en ficheros .h y .cpp (falta por rellenar el contenido de Point2D.h y Point2D.cpp): [MPGeometrySep](CodeProjects/Seminar1/MPGeometrySep)
-  - Proyecto MPGeometry ya modularizado: [MPGeometry_MOD](CodeProjects/Seminar1/MPGeometry_MOD)
+    - Ver Sección 5 del manual de [VSCode](PDFs/vscode.pdf)
+    - Carpeta con el programa MPGeometry no modularizado: [MPGeometry0](CodeProjects/Seminar1/MPGeometry0)
+    - Carpeta con el programa MPGeometry, separado en ficheros .h y .cpp (falta por rellenar el contenido de Point2D.h y Point2D.cpp): [MPGeometrySep](CodeProjects/Seminar1/MPGeometrySep)
+    - Proyecto MPGeometry ya modularizado: [MPGeometry_MOD](CodeProjects/Seminar1/MPGeometry_MOD)
 <!--  - [Videotutorial]( https://drive.google.com/file/d/1-KiBquuuHJ5_zNeSLqWH88PqazuoTVmy/view?usp=sharin) modularización y compilación  separada
-  - Proyecto VSCode [MPGeometry sep](CodeProjects/Seminar1/MPGeometrySep) -->
+    - Proyecto VSCode [MPGeometry sep](CodeProjects/Seminar1/MPGeometrySep) -->
 - Segunda parte. Uso de bibliotecas (librerías). Se desarrolla de forma voluntaria y autónoma
-  - Ver Sección 6 del manual de [VSCode](PDFs/vscode.pdf)
+    - Ver Sección 6 del manual de [VSCode](PDFs/vscode.pdf)
   <!-- - [Videotutorial](https://drive.google.com/file/d/1m9pC3XWjz6BS9Srfu_4B_Bimw_jfw5xP/view?usp=sharing) -->
 
 ## <a name="doxygen"></a> Documentación con Doxygen
