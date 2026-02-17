@@ -24,6 +24,7 @@
 /CodeProjects/**/vgcore.*
 /CodeProjects/**/.projectname
 /CodeProjects/**/.idea
+/CodeProjects/**/.dep.inc
 /Tex/*.log
 /Tex/*/*.aux
 /Tex/*/*.log
