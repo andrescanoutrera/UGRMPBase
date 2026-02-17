@@ -4,8 +4,16 @@ También es necesario incluir previamente las siguientes declaraciones (que tras
 
 
 ``` cpp
+// Inclusión de ficheros .h que deben eliminarse tras comprobar los tests de unidad
 #include <sstream>
 #include <regex>
+#include <cmath>
+#include <string>
+
+// Macros que deben eliminarse tras comprobar los tests de unidad
+#define ENDL "\n"
+#define LOCATION_DEFAULT "0.000000 0.000000"
+#define LOCATION_OTHER "37.200000 -3.600000 Granada"
 
 ```
 
