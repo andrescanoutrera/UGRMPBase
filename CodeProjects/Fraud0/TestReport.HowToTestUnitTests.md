@@ -22,8 +22,16 @@ Como puedes ver, se usa el método inspectT() con un objeto de la clase Location
 De esta forma, el contenido que debería tener main() para probar el anterior test de unidad sería:
 
 ``` cpp
+// Inclusión de ficheros .h que deben eliminarse tras comprobar los tests de unidad
 #include <sstream>
 #include <regex>
+#include <cmath>
+#include <string>
+
+// Macros que deben eliminarse tras comprobar los tests de unidad
+#define ENDL "\n"
+#define LOCATION_DEFAULT "0.000000 0.000000"
+#define LOCATION_OTHER "37.200000 -3.600000 Granada"
 
 int main(int argc, char* argv[]) {
     Location loc; 
