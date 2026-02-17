@@ -36,7 +36,7 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
 
 
 - Para aquellos que decidáis la opción de VirtualBox, tenéis disponible una copia de máquina virtual ya preparada con Linux, NetBeans y C++. Aquí tenéis las instrucciones  para instalarla. Son tres pasos muy sencillos:
-    1. <a name="virtualbox"></a>Descargar e Instalar [Virtualbox](https://www.oracle.com/emea/virtualization/solutions/try-oracle-vm-virtualbox/?source=:ad:pas:go:dg:a_emea:71700000086137880-58700007342953610-p65823631225:RC_WWMK201210P00009C0001:&SC=:ad:pas:go:dg:a_emea::RC_WWMK201210P00009C0001::&gclid=CjwKCAiAl-6PBhBCEiwAc2GOVOk47paaZegmnUyyKtx-WFrjIcTIDntJfqxW40Kk8E3DFxK2_RPZBBoCUzwQAvD_BwE&gclsrc=aw.ds)
+    1. <a name="virtualbox"></a>Descargar e Instalar [Virtualbox](https://www.virtualbox.org/wiki/Linux_Downloads)
     1. Descargar la imagen de la máquina virtual de Linux. **Enlace disponible próximamente**
     1. Importarla en Virtual Box
 
