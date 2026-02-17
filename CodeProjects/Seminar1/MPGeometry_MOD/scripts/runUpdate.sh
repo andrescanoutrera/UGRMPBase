@@ -8,9 +8,10 @@ HELPTEXT='# Script runUpdate.sh   \n'\
 # Load configuration & moves to the project root folder
 if [ -d ../../Scripts ]
 then
+    cp ../../Scripts/settingsIDE.sh .
     source ../../Scripts/doConfig.sh $*
     cp ../Scripts/run*.sh ./scripts
-    sh ../Scripts/getProjectName.sh
+    #sh ../Scripts/getProjectName.sh $IDE
 else
     printf "\n${RED}Unable to find Scripts library"
     printf "${WHITE}"
