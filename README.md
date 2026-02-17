@@ -81,7 +81,7 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 
 |Comienzo | Práctica <br> Entregable en Prado | Herramientas | Metodología
 | -----| -----|-----| ----- |
-|Semana1 16/feb/2026 || <ol><li>[**VSCode 1**](#vscode1) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li>[**VSCode 2**](#vscode2): Compilación separada <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del proyecto [MPGeometry0](#mpgeometry)<ul><li>Métodos `const`<li>Parámetros por valor y por referencia <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la entrada estándar</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MPGeometry0](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MPGeometry0](#mpgeometry)  <li> Opcional: Uso de bibliotecas con el proyecto [MPGeometry](#mpgeometry) </ol>|
+|Semana1 16/feb/2026 || <ol><li>[**VSCode 1**](#vscode1) <ul><li>Primeros pasos <li>HelloWorld <li>Directivas del precompilador</ul> <li>[**VSCode 2**](#vscode2): Compilación separada <li> Gestión de la documentación con [Doxygen](#doxygen) </ol>| <ol><li>Caso práctico: Análisis del proyecto [MPGeometry0](#mpgeometry)<ul><li>Métodos `const`<li>Parámetros por valor y por referencia <li>Funciones friend<li>Validación simple de programas. Lectura de datos con redirección de la entrada estándar</ul><li>Caso práctico: Separación de la declaración e implementación de los métodos con el proyecto [MPGeometrySep](#mpgeometry)<li> Caso práctico: Compilación separada con el proyecto [MPGeometry_MOD](#mpgeometry)  <li> Opcional: Uso de bibliotecas con el proyecto [MPGeometry](#mpgeometry) </ol>|
 |<a name="Semana2"></a>Semana2 23/feb/2026 | [**Fraud0**](PDFs/fraud0.pdf) Paso de arrays como parámetros de funciones. Filtrado y unión de conjuntos de datos de entrada <br>[Tests detallados](CodeProjects/Fraud0/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud0/TestReport.HowToTestUnitTests.md) <br>[Vídeo](https://drive.google.com/file/d/19Aj0dwH0VF3PZnseJsQOTXyLzs-FNEQG/view?usp=sharing) de ayuda a la creación del proyecto Fraud0 |  | <ol> <li>Calificador const para métodos y parámetros <li>Paso de parámetros por valor y referencia  <li> Devolución de objetos por valor <li>Paso de vectores a funciones y métodos  </ol> |
 |Semana3 2/mar/2026 | |<ol><li>[**VSCode 3**](#depurador): El [depurador](#depurador) de programas  </ol>|  |
 |Semana4	 9/mar/2026 ||  |  |
@@ -90,10 +90,10 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 |Semana Santa 30/mar/2026 |  **Semana Santa**| | |
 |Semana7	 6/abr/2026 | [**Fraud2**](PDFs/fraud2.pdf) Introducción al uso de memoria dinámica. Comparativa entre procesos de clustering <br>[Tests detallados](CodeProjects/Fraud2/tests/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud2/tests/TestReport.HowToTestUnitTests.md)| <li> [**valgrind**](#valgrind) Detección de pérdidas de memoria | <ol> <li>Uso del tipo de dato puntero <li> Uso de memoria dinámica en C++ <li>Arrays dinámicos: construcción de un array dinámico mediante un struct<li>Definición de funciones para reserva y liberación de espacio en memoria dinámica <li>Paso de objetos struct como parámetro de funciones <li> Detección de pérdidas de memoria <li>Acceso a [datos en disco](#ficheros). Lectura de datos de ficheros. Errores frecuentes <li> Uso de [parámetros](#parametrosmain) desde la línea de comandos.  CStrings </ol>|
 |Semana8	 13/abr/2026 | |||
-|Semana9 20/abril/2026 | **Examen de laboratorio**<br>1.5 PUNTOS  | | |
-|Semana10 27/abril/2026 |[**Fraud3**](PDFs/fraud3.pdf) Clases con memoria dinámica. Reducción de la dimensionalidad de un dataset <br>[Tests detallados](CodeProjects/Fraud3/tests/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud3/tests/TestReport.HowToTestUnitTests.md) | | <ol> <li>Clases que contienen datos (array dinámico) en memoria dinámica <li>Constructor de copia <li>Operador de asignación <li>Destructor <li>Clase con una matriz bidimensional dinámica <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes  </ol> |
+|Semana9 20/abril/2026 | **Examen de laboratorio** (**1.5 PUNTOS**) <br>[**Fraud3**](PDFs/fraud3.pdf) Clases con memoria dinámica. Reducción de la dimensionalidad de un dataset <br>[Tests detallados](CodeProjects/Fraud3/tests/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud3/tests/TestReport.HowToTestUnitTests.md)   | | <ol> <li>Clases que contienen datos (array dinámico) en memoria dinámica <li>Constructor de copia <li>Operador de asignación <li>Destructor <li>Clase con una matriz bidimensional dinámica <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes  </ol>|
+|Semana10 27/abril/2026 || | |
 |Semana11	4/may/2026 | | | |
-|Semana12	11/may/2026 | [**Fraud4**](PDFs/fraud4.pdf) Sobrecarga de operadores. Clasificación con algoritmo KNN<br>[Tests detallados](CodeProjects/Fraud4/tests/TestReport.md) <br>[Tests adicionales para la sobrecarga de operadores](CodeProjects/Fraud4/tests/TestReport_Operators.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud4/tests/TestReport.HowToTestUnitTests.md) <br>1.5 PUNTOS| | <ol> <li>Sobrecarga de operadores </ol>|
+|Semana12	11/may/2026 | [**Fraud4**](PDFs/fraud4.pdf) Sobrecarga de operadores. Clasificación con algoritmo KNN. (**1.5 PUNTOS**) <br>[Tests detallados](CodeProjects/Fraud4/tests/TestReport.md) <br>[Tests adicionales para la sobrecarga de operadores](CodeProjects/Fraud4/tests/TestReport_Operators.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud4/tests/TestReport.HowToTestUnitTests.md) | | <ol> <li>Sobrecarga de operadores </ol>|
 |Semana13	18/may/2026 | | | |
 |Semana14	25/may/2026 | | | |
 |||||
@@ -124,12 +124,9 @@ Es una metodología de desarrollo de proyectos de software que divide el proyect
   - Carpeta con el programa MPGeometry no modularizado: [MPGeometry0](CodeProjects/Seminar1/MPGeometry0)
   - Carpeta con el programa MPGeometry, separado en ficheros .h y .cpp (falta por rellenar el contenido de Point2D.h y Point2D.cpp): [MPGeometrySep](CodeProjects/Seminar1/MPGeometrySep)
   - Proyecto MPGeometry ya modularizado: [MPGeometry_MOD](CodeProjects/Seminar1/MPGeometry_MOD)
-<!--
-  - [Videotutorial]( https://drive.google.com/file/d/1-KiBquuuHJ5_zNeSLqWH88PqazuoTVmy/view?usp=sharin) modularización y compilación  separada
-  - Proyecto VSCode [MPGeometry sep](CodeProjects/Seminar1/MPGeometrySep)
--->
-
-- Segunda parte. Uso de bibliotecas (librerías). 
+<!--  - [Videotutorial]( https://drive.google.com/file/d/1-KiBquuuHJ5_zNeSLqWH88PqazuoTVmy/view?usp=sharin) modularización y compilación  separada
+  - Proyecto VSCode [MPGeometry sep](CodeProjects/Seminar1/MPGeometrySep) -->
+- Segunda parte. Uso de bibliotecas (librerías). Se desarrolla de forma voluntaria y autónoma
   - Ver Sección 6 del manual de [VSCode](PDFs/vscode.pdf)
   <!-- - [Videotutorial](https://drive.google.com/file/d/1m9pC3XWjz6BS9Srfu_4B_Bimw_jfw5xP/view?usp=sharing) -->
 
