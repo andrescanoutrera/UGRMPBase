@@ -1,0 +1,3 @@
+%%%CALL < ../Datasets/dataP1/princeton_K0.p1in
+%%%DESCRIPTION Test for K=0 incorrect number of clusters
+%%%OUTPUT
