@@ -88,7 +88,7 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 |Semana5 16/mar/2026 | [**Fraud1**](PDFs/fraud1.pdf)  Implementación de un algoritmo de clustering <br>[Tests detallados](CodeProjects/Fraud1/tests/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud1/tests/TestReport.HowToTestUnitTests.md)   || <ol> <li>Calificador const para métodos y parámetros <li>Paso de parámetros por valor y referencia  <li> Devolución de objetos por valor y por referencia  <li> Clases con vectores estáticos  </ol>|
 |Semana6	 23/mar/2026 | |  | |
 |Semana Santa 30/mar/2026 |  **Semana Santa**| | |
-|Semana7	 6/abr/2026 | [**Fraud2**](PDFs/fraud2.pdf) Introducción al uso de memoria dinámica. Comparativa entre procesos de clustering <br>[Tests detallados](CodeProjects/Fraud2/tests/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud2/tests/TestReport.HowToTestUnitTests.md)| <li> [**valgrind**](PDFs/valgrind.pdf) Detección de pérdidas de memoria | <ol> <li> Uso de memoria dinámica en C++ <li>Arrays dinámicos: construcción de un array dinámico mediante un struct<li>Definición de funciones para reserva y liberación de espacio en memoria dinámica <li>Paso de objetos struct como parámetro de funciones <li> Detección de pérdidas de memoria <li>Acceso a [datos en disco](#ficheros). Lectura de datos de ficheros. Errores frecuentes <li> Uso de [parámetros](#parametrosmain) desde la línea de comandos.  CStrings </ol>|
+|Semana7	 6/abr/2026 | [**Fraud2**](PDFs/fraud2.pdf) Introducción al uso de memoria dinámica. Comparativa entre procesos de clustering <br>[Tests detallados](CodeProjects/Fraud2/tests/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud2/tests/TestReport.HowToTestUnitTests.md)| <li> [**valgrind**](PDFs/valgrind.pdf) Detección de pérdidas de memoria | <ol> <li>Uso del tipo de dato puntero <li> Uso de memoria dinámica en C++ <li>Arrays dinámicos: construcción de un array dinámico mediante un struct<li>Definición de funciones para reserva y liberación de espacio en memoria dinámica <li>Paso de objetos struct como parámetro de funciones <li> Detección de pérdidas de memoria <li>Acceso a [datos en disco](#ficheros). Lectura de datos de ficheros. Errores frecuentes <li> Uso de [parámetros](#parametrosmain) desde la línea de comandos.  CStrings </ol>|
 |Semana8	 13/abr/2026 | |||
 |Semana9 20/abril/2026 | **Examen de laboratorio**<br>1.5 PUNTOS  | | |
 |Semana10 27/abril/2026 |[**Fraud3**](PDFs/fraud3.pdf) Clases con memoria dinámica. Reducción de la dimensionalidad de un dataset <br>[Tests detallados](CodeProjects/Fraud3/tests/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud3/tests/TestReport.HowToTestUnitTests.md) | | <ol> <li>Clases que contienen datos (array dinámico) en memoria dinámica <li>Constructor de copia <li>Operador de asignación <li>Destructor <li>Clase con una matriz bidimensional dinámica <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes  </ol> |
@@ -114,14 +114,14 @@ NetBeans es un entorno de desarrollo integrado libre y multiplataforma, creado p
 
 ## <a name="vscode1"></a>Visual Studio Code
 - Manual de introducción a VSCode [VSCode](PDFs/vscode.pdf)
-  - Carpeta HelloW con el fichero HelloWorld.cpp [HelloW](CodeProjects/Seminar1/HelloW)
+  - Carpeta con el fichero HelloWorld.cpp [HelloW](CodeProjects/Seminar1/HelloW)
 
 ## <a name="vscode2"></a>Compilación separada
 Es una metodología de desarrollo de proyectos de software que divide el proyecto en unidades funcionales, llamados módulos o paquetes o bibliotecas (librerías), que se compilan por separado y se enlazan en un único fichero
 
 - Primera parte. De un proyecto monolítico a un proyecto modularizado.
   - Ver Sección 5 del manual de [VSCode](PDFs/vscode.pdf)
-  - <a name="mpgeometry"></a>Proyecto VSCode no modularizado [MPGeometry0](CodeProjects/Seminar1/MPGeometry0)
+  - <a name="mpgeometry"></a>Carpeta con el proyecto MPGeometry no modularizado [MPGeometry0](CodeProjects/Seminar1/MPGeometry0)
   - Proyecto VSCode modularizado y terminado [MPGeometry_MOD](CodeProjects/Seminar1/MPGeometry_MOD)
 <!--
   - [Videotutorial]( https://drive.google.com/file/d/1-KiBquuuHJ5_zNeSLqWH88PqazuoTVmy/view?usp=sharin) modularización y compilación  separada
@@ -158,7 +158,7 @@ Es una metodología de desarrollo de proyectos software en la que primero se def
 El depurador es una herramienta que suele estar incorporada en los IDE (Integrated Development Environment) como VSCode, NetBeans, CLion, etc. Se utiliza para ejecutar el programa paso a paso e intentar encontrar errores en el código.
 
 - Manual sobre el [depurador de VSCode](PDFs/Debugger.pdf)
-- Proyecto [Errores](CodeProjects/Seminar2/Errores)
+- Carpeta con programas de ejemplo [Errores](CodeProjects/Seminar2/Errores)
 - Proyecto [CNN](CodeProjects/Seminar2/CNN)
 <!-- - [Videotutorial 1](https://drive.google.com/file/d/1vtFSsMQKnaHpsGD25TCPHCAdmDVJ_a1k/view?usp=sharing) -->
 <!-- - [Videotutorial 2](https://drive.google.com/file/d/1cStDUlagLLo_UQk5HOvZNWuqg3dxxCNl/view?usp=sharing) -->
@@ -169,6 +169,7 @@ Valgrind es una herramienta para la detección, sobre todo, de pérdidas de memo
 
 - Manual sobre el uso de [Valgrind](PDFs/valgrind.pdf)
 <!-- - Manual sobre el uso de [Dr Memory](MaterialAdicional/drmemory.pdf) -->
+- Carpeta con programas de ejemplo [Seminar4](CodeProjects/Seminar4)
 <!-- - Proyecto Interactivo [ValgrindShowcase](NetBeansProjects/ValgrindShowcase)
   - Descomprimir
   - Cargar en Netbeans
