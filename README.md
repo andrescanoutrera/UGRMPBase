@@ -179,7 +179,7 @@ Valgrind es una herramienta para la detección, sobre todo, de pérdidas de memo
 Los ficheros de texto permiten almacenar datos que  pueden leer los programas de forma masiva para procesarlos. Este apartado es una (muy breve) introducción al manejo de ficheros que se verá en teoría.
 
 - Manual sobre el manejo (muy básico) de [ficheros de texto](PDFs/Ficheros.pdf)
-- Proyecto [Ficheros](CodeProjects/Seminar3/Ficheros)
+- Carpeta con ejemplos [Ficheros](CodeProjects/Seminar3/Ficheros)
 - Videotutorial 1. [Ficheros de entrada (Usando Netbeans)](https://drive.google.com/file/d/1A3ToJaVXrF1k2bl0dz2xz1e3Hu4arvR8/view?usp=sharing)
 - Videotutorial 2. [Ficheros de salida (Usando Netbeans)](https://drive.google.com/file/d/1xllMQyf0sQP-cfrGSabFi5shA4bUzMZc/view?usp=sharing)
 - Videotutorial 3. Gestión de [errores en el manejo de ficheros (Usando Netbeans)](https://drive.google.com/file/d/19us64WCMXZyEd5um_MuZpLp5IqQU3nMV/view?usp=sharing)
@@ -189,7 +189,7 @@ Los ficheros de texto permiten almacenar datos que  pueden leer los programas de
 Esta es una técnica muy habitual para introducir datos en un programa desde la línea de comandos. Absolutamente imprescindible en programas de consola de Linux/Unix.
 
 - Manual sobre el [paso de argumentos a main()](PDFs/ArgumentosMain.pdf)
-- Proyecto [ArgumentosMain](CodeProjects/Seminar3/ArgumentosMain)
+- Carpeta con ejemplos [ArgumentosMain](CodeProjects/Seminar3/ArgumentosMain)
 - [Videotutorial 1 (Usando Netbeans)](https://drive.google.com/file/d/1xlVzVTwbFSWfhdaHGgNSq67bQo0c46nJ/view?usp=sharing) 
 - [Videotutorial 2 (Usando Netbeans)](https://drive.google.com/file/d/1HaYIyECXYuZ1FAMSlSB1P7PSj9qCXlXG/view?usp=sharing)
 
@@ -206,7 +206,7 @@ Breve introducción a la gestión de señales de error durante la ejecución de 
 
 # Erratas
 
-En esta sección incluimos erratas que se detecten en los distintos guiones y proyectos Netbeans. Esperemos que no sean muchas.
+En esta sección incluimos erratas que se detecten en los distintos guiones y proyectos VSCode. Esperemos que no sean muchas.
 
 # Repositorio de cursos anteriores
 - [Curso 2024/2025](https://github.com/andrescanoutrera/UGRMP25)
