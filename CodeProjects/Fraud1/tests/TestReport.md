@@ -1,6 +1,6 @@
 # OUTCOME OF TESTS FOR PROJECT Fraud1_TEMPLATE
 
-As of Feb 17 2026 19:11:12
+As of Feb 20 2026 12:22:11
 
 | ID | NAME | RESULT | DESCRIPTION | 
 | :--- | :--- | :--- | :--- |
@@ -136,139 +136,113 @@ As of Feb 17 2026 19:11:12
 | | | | should give ```1761560597```|
 | 66 | T01_Basics.Clustering_Clustering_def2 |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations,2,12345); string ss="K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: ";std::regex_replace(clt.inspectT(), std::regex(ENDL), " ")```|
 | | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 67 | T01_Basics.Clustering_Clustering_gets4 |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt(locations, 3, 12345);```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 67 | T01_Basics.Clustering_Clustering_gets4 |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt(locations, 3, 12345);```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 67 | T01_Basics.Clustering_Clustering_gets4 |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt(locations, 3, 12345);```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 67 | T01_Basics.Clustering_Clustering_gets4 |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt(locations, 3, 12345);```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 67 | T01_Basics.Clustering_Clustering_gets4 |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt(locations, 3, 12345);```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 67 | T01_Basics.Clustering_Clustering_gets4 |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt(locations, 3, 12345);```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 67 | T01_Basics.Clustering_Clustering_gets4 |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt(locations, 3, 12345);```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 68 | T01_Basics.Clustering_getCentroids |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 5, 12345); const VectorLocation centroids = clt.getCentroids();centroids.getSize()```|
-| | | | should give ```5```|
-| 69 | T01_Basics.Clustering_clusterOf_BeforeRun |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345);clt.clusterOf(1)```|
+| 67 | T01_Basics.Clustering_Clustering_gets_5functions |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt; clt.set(locations, 3, 12345); string ss="3 5 3 0.000000 0";std::to_string(clt.getK())+" "+std::to_string(clt.getNumLocations())+" "+ std::to_string(clt.getCentroids().getSize())+" "+std::to_string(clt.getSumWCV())+" "+ std::to_string(clt.getNumIterations())```|
+| | | | should give ```"3 5 3 0.000000 0"```|
+| 68 | T01_Basics.Clustering_clusterOf_BeforeRun |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345);clt.clusterOf(1)```|
 | | | | should give ```-1```|
-| 70 | T01_Basics.Clustering_getSumWCV_BeforeRun |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345);clt.getSumWCV()```|
+| 69 | T01_Basics.Clustering_getSumWCV_BeforeRun |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345);clt.getSumWCV()```|
 | | | | should give ```0.000000```|
-| 71 | T01_Basics.Clustering_clusterInfo2_InvalidCluster |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345);std::regex_replace(clt.clusterInfo(2), std::regex(ENDL), " ")```|
+| 70 | T01_Basics.Clustering_clusterInfo2_InvalidCluster |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345);std::regex_replace(clt.clusterInfo(2), std::regex(ENDL), " ")```|
 | | | | should give ```""```|
-| 72 | T01_Basics.Clustering_toString |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345); string ss = "K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: ";std::regex_replace(clt.toString(), std::regex(ENDL), " ")```|
+| 71 | T01_Basics.Clustering_isEquivalentTo_1 |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt1; clt1.set(locations, 2, 12345); Clustering clt2; clt2.set(locations, 2, 12345); clt1.run(); clt2.run();clt1.isEquivalentTo(clt2)```|
+| | | | should give ```true```|
+| 72 | T01_Basics.Clustering_isEquivalentTo_2 |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt1; clt1.set(locations, 2, 12345); Clustering clt2; clt2.set(locations, 2, 12345); clt1.run();clt1.isEquivalentTo(clt2)```|
+| | | | should give ```false```|
+| 73 | T01_Basics.Clustering_toString |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345); string ss = "K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: ";std::regex_replace(clt.toString(), std::regex(ENDL), " ")```|
 | | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 73 | T01_Basics.Clustering_set |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt; clt.set(locations, 3, 12345);```|
+| 74 | T01_Basics.Clustering_set |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345); string ss="K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: ";std::regex_replace(clt.inspectT(), std::regex(ENDL), " ")```|
 | | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 73 | T01_Basics.Clustering_set |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt; clt.set(locations, 3, 12345);```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 73 | T01_Basics.Clustering_set |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt; clt.set(locations, 3, 12345);```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 73 | T01_Basics.Clustering_set |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt; clt.set(locations, 3, 12345);```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 73 | T01_Basics.Clustering_set |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt; clt.set(locations, 3, 12345);```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 73 | T01_Basics.Clustering_set |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt; clt.set(locations, 3, 12345);```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 73 | T01_Basics.Clustering_set |  PASSED |```VectorLocation locations; fill_vlocation(locations,5); Clustering clt; clt.set(locations, 3, 12345);```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 0.000000 Number of iterations: 0 Cluster number for each location: 3 0 0 0 Centroids: 2 0.000000 0.000000 0.000000 0.000000 Cluster 0 information: Cluster 1 information: "```|
-| 74 | T01_Basics.Clustering_set_InvalidK |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt;clt.set(locations, 0, 12345)```|
+| 75 | T01_Basics.Clustering_set_InvalidK |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt;clt.set(locations, 0, 12345)```|
 | | | | should THROW an exception std::invalid_argument|
-| 75 | T02_Intermediate.VectorLocation_VectorLocation_def4 |  PASSED |```VectorLocation vloc(VectorLocation::DIM_VECTOR_LOCATIONS+1);```|
+| 76 | T02_Intermediate.VectorLocation_VectorLocation_def4 |  PASSED |```VectorLocation vloc(VectorLocation::DIM_VECTOR_LOCATIONS+1);```|
 | | | | should THROW an exception std::out_of_range|
-| 76 | T02_Intermediate.VectorLocation_findLocation_4 |  PASSED |```Location loc; loc.setName("OTHER"); VectorLocation vloc(VectorLocation::DIM_VECTOR_LOCATIONS); vloc._locations[VectorLocation::DIM_VECTOR_LOCATIONS - 1] = loc;vloc.findLocation(loc);```|
+| 77 | T02_Intermediate.VectorLocation_findLocation_4 |  PASSED |```Location loc; loc.setName("OTHER"); VectorLocation vloc(VectorLocation::DIM_VECTOR_LOCATIONS); vloc._locations[VectorLocation::DIM_VECTOR_LOCATIONS - 1] = loc;vloc.findLocation(loc);```|
 | | | | should give ```99```|
-| 77 | T02_Intermediate.VectorLocation_out_of_range__append_4 |  PASSED |```Location loc; loc.set(37.2, -3.6,"Granada"); VectorLocation vloc; vloc._size = VectorLocation::DIM_VECTOR_LOCATIONS; vloc._locations[0]=loc; vloc.append(loc);vloc._size;```|
+| 78 | T02_Intermediate.VectorLocation_out_of_range__append_4 |  PASSED |```Location loc; loc.set(37.2, -3.6,"Granada"); VectorLocation vloc; vloc._size = VectorLocation::DIM_VECTOR_LOCATIONS; vloc._locations[0]=loc; vloc.append(loc);vloc._size;```|
 | | | | should give ```100```|
-| 78 | T02_Intermediate.VectorLocation_out_of_range__append_5 |  PASSED |```Location loc; loc.set(0,0,"Terrace"); VectorLocation vloc; vloc._size = VectorLocation::DIM_VECTOR_LOCATIONS;vloc.append(loc);```|
+| 79 | T02_Intermediate.VectorLocation_out_of_range__append_5 |  PASSED |```Location loc; loc.set(0,0,"Terrace"); VectorLocation vloc; vloc._size = VectorLocation::DIM_VECTOR_LOCATIONS;vloc.append(loc);```|
 | | | | should THROW an exception std::out_of_range|
-| 79 | T02_Intermediate.VectorLocation_VectorLocation_def5 |  PASSED |```VectorLocation vloc(-1);```|
+| 80 | T02_Intermediate.VectorLocation_VectorLocation_def5 |  PASSED |```VectorLocation vloc(-1);```|
 | | | | should THROW an exception std::out_of_range|
-| 80 | T02_Intermediate.VectorLocation_append_2 |  PASSED |```Location loc; loc.set(37.2, -3.6, "Granada"); string ss = "1 " + string(LOCATION_OTHER)+" "; VectorLocation vloc; vloc.append(loc); vloc.append(loc);vloc.inspectT().c_str()```|
+| 81 | T02_Intermediate.VectorLocation_append_2 |  PASSED |```Location loc; loc.set(37.2, -3.6, "Granada"); string ss = "1 " + string(LOCATION_OTHER)+" "; VectorLocation vloc; vloc.append(loc); vloc.append(loc);vloc.inspectT().c_str()```|
 | | | | should give ```"1 37.200000 -3.600000 Granada "```|
-| 81 | T02_Intermediate.VectorLocation_at_exception0 |  PASSED |```VectorLocation vloc(2);vloc.at(-1).inspectT()```|
+| 82 | T02_Intermediate.VectorLocation_at_exception0 |  PASSED |```VectorLocation vloc(2);vloc.at(-1).inspectT()```|
 | | | | should THROW an exception std::out_of_range|
-| 82 | T02_Intermediate.VectorLocation_at_exception1 |  PASSED |```VectorLocation vloc(2);vloc.at(2).inspectT()```|
+| 83 | T02_Intermediate.VectorLocation_at_exception1 |  PASSED |```VectorLocation vloc(2);vloc.at(2).inspectT()```|
 | | | | should THROW an exception std::out_of_range|
-| 83 | T02_Intermediate.VectorLocation_select_0 |  PASSED |```int n = 5; Location loc0; Location loc1; Location loc2; loc1.set(1,1,"1"); loc2.set(n,n,std::to_string(n)); VectorLocation l1(n); VectorLocation l2; for (int i = 1; i <= n; i++) { l1._locations[i-1].set(-i,i,std::to_string(i)); } l2 = l1.select(loc0,loc2);l2._size;```|
+| 84 | T02_Intermediate.VectorLocation_select_0 |  PASSED |```int n = 5; Location loc0; Location loc1; Location loc2; loc1.set(1,1,"1"); loc2.set(n,n,std::to_string(n)); VectorLocation l1(n); VectorLocation l2; for (int i = 1; i <= n; i++) { l1._locations[i-1].set(-i,i,std::to_string(i)); } l2 = l1.select(loc0,loc2);l2._size;```|
 | | | | should give ```0```|
-| 84 | T02_Intermediate.VectorLocation_select_1 |  PASSED |```int sizeOriginal = 5; Location loc1; Location loc2; loc2.set(sizeOriginal,sizeOriginal,std::to_string(sizeOriginal)); VectorLocation l1(sizeOriginal); VectorLocation l2; for (int i = 1; i <= sizeOriginal; i++) { l1._locations[i-1].set(i,i,std::to_string(i)); } l2 = l1.select(loc1,loc2);l2._size;```|
+| 85 | T02_Intermediate.VectorLocation_select_1 |  PASSED |```int sizeOriginal = 5; Location loc1; Location loc2; loc2.set(sizeOriginal,sizeOriginal,std::to_string(sizeOriginal)); VectorLocation l1(sizeOriginal); VectorLocation l2; for (int i = 1; i <= sizeOriginal; i++) { l1._locations[i-1].set(i,i,std::to_string(i)); } l2 = l1.select(loc1,loc2);l2._size;```|
 | | | | should give ```5```|
-| 85 | T02_Intermediate.VectorLocation_select_2 |  PASSED |```int n = 5; Location loc0; Location loc1; Location loc2; loc1.set(1.0,1.0,"1"); loc2.set(n,n,std::to_string(n)); VectorLocation l1(n+1); VectorLocation l2; for (int i = 0; i <= n; i++) { l1._locations[i].set(i*(n+1),i*(n+1),std::to_string(i)); } l2 = l1.select(loc0,loc2);l2._size;```|
+| 86 | T02_Intermediate.VectorLocation_select_2 |  PASSED |```int n = 5; Location loc0; Location loc1; Location loc2; loc1.set(1.0,1.0,"1"); loc2.set(n,n,std::to_string(n)); VectorLocation l1(n+1); VectorLocation l2; for (int i = 0; i <= n; i++) { l1._locations[i].set(i*(n+1),i*(n+1),std::to_string(i)); } l2 = l1.select(loc0,loc2);l2._size;```|
 | | | | should give ```1```|
-| 86 | T02_Intermediate.VectorLocation_select_3 |  PASSED |```int n = 5; Location loc0; Location loc1; Location loc2; loc0.set(0,0,"0"); loc1.set(1,1,"1"); loc2.set(n,n,std::to_string(n)); VectorLocation l1(n+1); VectorLocation l2; VectorLocation sol; sol.append(loc0); for (int i = 0; i <= n; i++) { l1._locations[i].set(i*(n+1),i*(n+1),std::to_string(i)); } l2 = l1.select(loc0,loc2);l2.inspectT().c_str()```|
+| 87 | T02_Intermediate.VectorLocation_select_3 |  PASSED |```int n = 5; Location loc0; Location loc1; Location loc2; loc0.set(0,0,"0"); loc1.set(1,1,"1"); loc2.set(n,n,std::to_string(n)); VectorLocation l1(n+1); VectorLocation l2; VectorLocation sol; sol.append(loc0); for (int i = 0; i <= n; i++) { l1._locations[i].set(i*(n+1),i*(n+1),std::to_string(i)); } l2 = l1.select(loc0,loc2);l2.inspectT().c_str()```|
 | | | | should give ```"1 0.000000 0.000000 0 "```|
-| 87 | T02_Intermediate.VectorLocation_select_4 |  PASSED |```int sizeOriginal = 5; Location loc0; Location loc1; Location loc2; loc1.set(1,1,"1"); loc2.set(sizeOriginal,sizeOriginal,std::to_string(sizeOriginal)); VectorLocation l1(sizeOriginal); VectorLocation l2; VectorLocation sol; for (int i = 1; i <= sizeOriginal; i++) { l1._locations[i-1].set(i,i,std::to_string(i)); sol.append(l1._locations[i-1]); } l2 = l1.select(loc1,loc2);l2.inspectT().c_str()```|
+| 88 | T02_Intermediate.VectorLocation_select_4 |  PASSED |```int sizeOriginal = 5; Location loc0; Location loc1; Location loc2; loc1.set(1,1,"1"); loc2.set(sizeOriginal,sizeOriginal,std::to_string(sizeOriginal)); VectorLocation l1(sizeOriginal); VectorLocation l2; VectorLocation sol; for (int i = 1; i <= sizeOriginal; i++) { l1._locations[i-1].set(i,i,std::to_string(i)); sol.append(l1._locations[i-1]); } l2 = l1.select(loc1,loc2);l2.inspectT().c_str()```|
 | | | | should give ```"5 1.000000 1.000000 1 2.000000 2.000000 2 3.000000 3.000000 3 4.000000 4.000000 4 5.000000 5.000000 5 "```|
-| 88 | T02_Intermediate.VectorLocation_sort_1_no_change |  PASSED |```int sizeOriginal = 3; Location loc; VectorLocation l1(sizeOriginal); VectorLocation sol; for (int i = 0; i < sizeOriginal; i++) { loc.setName(std::to_string(i)); l1.at(i) = loc; sol.append(loc); } l1.sort();sol.inspectT() == l1.inspectT();```|
+| 89 | T02_Intermediate.VectorLocation_sort_1_no_change |  PASSED |```int sizeOriginal = 3; Location loc; VectorLocation l1(sizeOriginal); VectorLocation sol; for (int i = 0; i < sizeOriginal; i++) { loc.setName(std::to_string(i)); l1.at(i) = loc; sol.append(loc); } l1.sort();sol.inspectT() == l1.inspectT();```|
 | | | | should give ```true```|
-| 89 | T02_Intermediate.VectorLocation_sort_2 |  PASSED |```int sizeOriginal = 3; Location loc; VectorLocation l1(sizeOriginal); VectorLocation sol; for (int i = 0; i < sizeOriginal; i++) { loc.setName(std::to_string(i)); l1.at(sizeOriginal-(i+1)) = loc; sol.append(loc); } l1.sort();sol.inspectT() == l1.inspectT();```|
+| 90 | T02_Intermediate.VectorLocation_sort_2 |  PASSED |```int sizeOriginal = 3; Location loc; VectorLocation l1(sizeOriginal); VectorLocation sol; for (int i = 0; i < sizeOriginal; i++) { loc.setName(std::to_string(i)); l1.at(sizeOriginal-(i+1)) = loc; sol.append(loc); } l1.sort();sol.inspectT() == l1.inspectT();```|
 | | | | should give ```true```|
-| 90 | T02_Intermediate.VectorLocatioin_join_intersection_empy_0 |  PASSED |```int n = 5; VectorLocation l1(n); VectorLocation l2(n); for (int i = 0; i < n; i++) { l1._locations[i].set(i,i,std::to_string(i)); l2._locations[i].set((i+1)*n,(i+1)*n,std::to_string((i+1)*n)); } l1.join(l2);l1.getSize()```|
+| 91 | T02_Intermediate.VectorLocatioin_join_intersection_empy_0 |  PASSED |```int n = 5; VectorLocation l1(n); VectorLocation l2(n); for (int i = 0; i < n; i++) { l1._locations[i].set(i,i,std::to_string(i)); l2._locations[i].set((i+1)*n,(i+1)*n,std::to_string((i+1)*n)); } l1.join(l2);l1.getSize()```|
 | | | | should give ```10```|
-| 91 | T02_Intermediate.VectorLocatioin_joinShouldRemainEqual_1 |  PASSED |```int n = 5; VectorLocation l1(n); VectorLocation l2(n); for (int i = 0; i < n; i++) { l1._locations[i].set(i,i,std::to_string(i)); l2._locations[i].set(i,i,std::to_string(i)); } l1.join(l2);l1.getSize()```|
+| 92 | T02_Intermediate.VectorLocatioin_joinShouldRemainEqual_1 |  PASSED |```int n = 5; VectorLocation l1(n); VectorLocation l2(n); for (int i = 0; i < n; i++) { l1._locations[i].set(i,i,std::to_string(i)); l2._locations[i].set(i,i,std::to_string(i)); } l1.join(l2);l1.getSize()```|
 | | | | should give ```5```|
-| 92 | T02_Intermediate.VectorLocatioin_joinShouldRemainEqual_2 |  PASSED |```string ss = "1 " + string(LOCATION_OTHER)+" "; VectorLocation l1(1); VectorLocation l2(1); l1._locations[0].set(37.2, -3.6,"Granada"); l2._locations[0].set(37.2, -3.6,"Granada"); l1.join(l2);l1.inspectT().c_str()```|
+| 93 | T02_Intermediate.VectorLocatioin_joinShouldRemainEqual_2 |  PASSED |```string ss = "1 " + string(LOCATION_OTHER)+" "; VectorLocation l1(1); VectorLocation l2(1); l1._locations[0].set(37.2, -3.6,"Granada"); l2._locations[0].set(37.2, -3.6,"Granada"); l1.join(l2);l1.inspectT().c_str()```|
 | | | | should give ```"1 37.200000 -3.600000 Granada "```|
-| 93 | T02_Intermediate.VectorLocation_assign_01 |  PASSED |```int n=5; Location loc; loc.set(37.2, -3.6,"Granada"); VectorLocation sol(n); VectorLocation l2(n); for (int i = 0; i < 5; i++) { sol._locations[i]= loc; } l2.assign(loc);l2.inspectT();```|
+| 94 | T02_Intermediate.VectorLocation_assign_01 |  PASSED |```int n=5; Location loc; loc.set(37.2, -3.6,"Granada"); VectorLocation sol(n); VectorLocation l2(n); for (int i = 0; i < 5; i++) { sol._locations[i]= loc; } l2.assign(loc);l2.inspectT();```|
 | | | | should give ```"5 37.200000 -3.600000 Granada 37.200000 -3.600000 Granada 37.200000 -3.600000 Granada 37.200000 -3.600000 Granada 37.200000 -3.600000 Granada "```|
-| 94 | T02_Intermediate.VectorLocation_assign_02 |  PASSED |```int n=5; Location loc0; Location loc1; loc1.set(37.2, -3.6,"Granada"); VectorLocation sol(n); VectorLocation l2(n); for (int i = 0; i < 5; i++) { l2._locations[i]= loc1; } l2.assign(loc0);l2.inspectT();```|
+| 95 | T02_Intermediate.VectorLocation_assign_02 |  PASSED |```int n=5; Location loc0; Location loc1; loc1.set(37.2, -3.6,"Granada"); VectorLocation sol(n); VectorLocation l2(n); for (int i = 0; i < 5; i++) { l2._locations[i]= loc1; } l2.assign(loc0);l2.inspectT();```|
 | | | | should give ```"5 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 "```|
-| 95 | T02_Intermediate.VectorLocation_loadLoad_2 |  PASSED |```int n=1; VectorLocation l1(n); string ss = std::string("1 ") + string(LOCATION_OTHER)+ " "; istringstream ssin(ss); l1.load(ssin); l1.load(ssin);l1.inspectT().c_str()```|
+| 96 | T02_Intermediate.VectorLocation_loadLoad_2 |  PASSED |```int n=1; VectorLocation l1(n); string ss = std::string("1 ") + string(LOCATION_OTHER)+ " "; istringstream ssin(ss); l1.load(ssin); l1.load(ssin);l1.inspectT().c_str()```|
 | | | | should give ```"1 37.200000 -3.600000 Granada "```|
-| 96 | T02_Intermediate.VectorLocation_Load_3_exception |  PASSED |```int n=1; VectorLocation l1(n); double d1; double d2; string name; string ss = std::string("-1 ") + string(LOCATION_OTHER)+ " "; std::string sin=ss; istringstream ssin(sin);l1.load(ssin);```|
+| 97 | T02_Intermediate.VectorLocation_Load_3_exception |  PASSED |```int n=1; VectorLocation l1(n); double d1; double d2; string name; string ss = std::string("-1 ") + string(LOCATION_OTHER)+ " "; std::string sin=ss; istringstream ssin(sin);l1.load(ssin);```|
 | | | | should THROW an exception std::out_of_range|
-| 97 | T02_Intermediate.VectorLocation_Load_4_exception |  PASSED |```int n=1; VectorLocation l1(n); std::string sin= std::to_string(VectorLocation::DIM_VECTOR_LOCATIONS+1); istringstream ssin(sin);l1.load(ssin);```|
+| 98 | T02_Intermediate.VectorLocation_Load_4_exception |  PASSED |```int n=1; VectorLocation l1(n); std::string sin= std::to_string(VectorLocation::DIM_VECTOR_LOCATIONS+1); istringstream ssin(sin);l1.load(ssin);```|
 | | | | should THROW an exception std::out_of_range|
-| 98 | T02_Intermediate.VectorInt_VectorInt_def3 |  PASSED |```VectorInt v(VectorInt::DIM_VECTOR_VALUES+1)```|
+| 99 | T02_Intermediate.VectorInt_VectorInt_def3 |  PASSED |```VectorInt v(VectorInt::DIM_VECTOR_VALUES+1)```|
 | | | | should THROW an exception std::out_of_range|
-| 99 | T02_Intermediate.VectorInt_append_2_full |  PASSED |```VectorInt v(VectorInt::DIM_VECTOR_VALUES)v.append(7)```|
+| 100 | T02_Intermediate.VectorInt_append_2_full |  PASSED |```VectorInt v(VectorInt::DIM_VECTOR_VALUES)v.append(7)```|
 | | | | should THROW an exception std::out_of_range|
-| 100 | T02_Intermediate.VectorInt_VectorInt_def2 |  PASSED |```VectorInt v(5);std::regex_replace(v.inspectT(), std::regex(ENDL), " ")```|
+| 101 | T02_Intermediate.VectorInt_VectorInt_def2 |  PASSED |```VectorInt v(5);std::regex_replace(v.inspectT(), std::regex(ENDL), " ")```|
 | | | | should give ```"5 0 0 0 0 0 "```|
-| 101 | T02_Intermediate.VectorInt_at_exception0 |  PASSED |```VectorInt v(2);v.at(-1)```|
+| 102 | T02_Intermediate.VectorInt_at_exception0 |  PASSED |```VectorInt v(2);v.at(-1)```|
 | | | | should THROW an exception std::out_of_range|
-| 102 | T02_Intermediate.VectorInt_at_exception1 |  PASSED |```VectorInt v(2);v.at(2)```|
+| 103 | T02_Intermediate.VectorInt_at_exception1 |  PASSED |```VectorInt v(2);v.at(2)```|
 | | | | should THROW an exception std::out_of_range|
-| 103 | T02_Intermediate.VectorInt_distance_fail1 |  PASSED |```VectorInt v1(3); VectorInt v2(5);v1.distance(v2)```|
+| 104 | T02_Intermediate.VectorInt_distance_fail1 |  PASSED |```VectorInt v1(3); VectorInt v2(5);v1.distance(v2)```|
 | | | | should THROW an exception std::invalid_argument|
-| 104 | T02_Intermediate.VectorInt__distance_fail2 |  PASSED |```VectorInt v1; VectorInt v2;v1.distance(v2)```|
+| 105 | T02_Intermediate.VectorInt__distance_fail2 |  PASSED |```VectorInt v1; VectorInt v2;v1.distance(v2)```|
 | | | | should THROW an exception std::invalid_argument|
-| 105 | T02_Intermediate.VectorInt_countIdenticalElements2_excep |  PASSED |```VectorInt v1(3); VectorInt v2(2);v1.countIdenticalElements(v2)```|
+| 106 | T02_Intermediate.VectorInt_countIdenticalElements2_excep |  PASSED |```VectorInt v1(3); VectorInt v2(2);v1.countIdenticalElements(v2)```|
 | | | | should THROW an exception std::invalid_argument|
-| 106 | T02_Intermediate.Clustering_run_0 |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations,2,12345); clt.run(); string ss="K=2 Sum of within-cluster variances: 1.000000 Number of iterations: 2 Cluster number for each location: 3 0 1 1 Centroids: 2 0.000000 0.000000 1.500000 1.500000 Cluster 0 information: 0 0.000000 0.000000 Location0 Cluster 1 information: 1 1.000000 1.000000 Location1 2 2.000000 2.000000 Location2 ";std::regex_replace(clt.inspectT(), std::regex(ENDL), " ")```|
+| 107 | T02_Intermediate.Clustering_run_0 |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations,2,12345); clt.run(); string ss="K=2 Sum of within-cluster variances: 1.000000 Number of iterations: 2 Cluster number for each location: 3 0 1 1 Centroids: 2 0.000000 0.000000 1.500000 1.500000 Cluster 0 information: 0 0.000000 0.000000 Location0 Cluster 1 information: 1 1.000000 1.000000 Location1 2 2.000000 2.000000 Location2 ";std::regex_replace(clt.inspectT(), std::regex(ENDL), " ")```|
 | | | | should give ```"K=2 Sum of within-cluster variances: 1.000000 Number of iterations: 2 Cluster number for each location: 3 0 1 1 Centroids: 2 0.000000 0.000000 1.500000 1.500000 Cluster 0 information: 0 0.000000 0.000000 Location0 Cluster 1 information: 1 1.000000 1.000000 Location1 2 2.000000 2.000000 Location2 "```|
-| 107 | T02_Intermediate.Clustering_clusterOf_AfterRun |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345); clt.run();```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 1.000000 Number of iterations: 2 Cluster number for each location: 3 0 1 1 Centroids: 2 0.000000 0.000000 1.500000 1.500000 Cluster 0 information: 0 0.000000 0.000000 Location0 Cluster 1 information: 1 1.000000 1.000000 Location1 2 2.000000 2.000000 Location2 "```|
-| 107 | T02_Intermediate.Clustering_clusterOf_AfterRun |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345); clt.run();```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 1.000000 Number of iterations: 2 Cluster number for each location: 3 0 1 1 Centroids: 2 0.000000 0.000000 1.500000 1.500000 Cluster 0 information: 0 0.000000 0.000000 Location0 Cluster 1 information: 1 1.000000 1.000000 Location1 2 2.000000 2.000000 Location2 "```|
-| 107 | T02_Intermediate.Clustering_clusterOf_AfterRun |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345); clt.run();```|
-| | | | should give ```"K=2 Sum of within-cluster variances: 1.000000 Number of iterations: 2 Cluster number for each location: 3 0 1 1 Centroids: 2 0.000000 0.000000 1.500000 1.500000 Cluster 0 information: 0 0.000000 0.000000 Location0 Cluster 1 information: 1 1.000000 1.000000 Location1 2 2.000000 2.000000 Location2 "```|
-| 108 | T02_Intermediate.Clustering_getSumWCV_AfterRun |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345); clt.run();clt.getSumWCV()```|
+| 108 | T02_Intermediate.Clustering_clusterOf_AfterRun |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; string ss; clt.set(locations, 2, 12345); clt.run(); ss="0 1 1";std::to_string(clt.clusterOf(0))+" "+std::to_string(clt.clusterOf(1))+" "+std::to_string(clt.clusterOf(2))```|
+| | | | should give ```"0 1 1"```|
+| 109 | T02_Intermediate.Clustering_getSumWCV_AfterRun |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345); clt.run();clt.getSumWCV()```|
 | | | | should give ```1.000000```|
-| 109 | T02_Intermediate.Clustering_getNumIterations_AfterRun |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345); clt.run();clt.getNumIterations()```|
+| 110 | T02_Intermediate.Clustering_getNumIterations_AfterRun |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345); clt.run();clt.getNumIterations()```|
 | | | | should give ```2```|
-| 110 | T02_Intermediate.Clustering_clusterInfo1 |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations,2, 12345); clt.run();std::regex_replace(clt.clusterInfo(1), std::regex(ENDL), " ")```|
+| 111 | T02_Intermediate.Clustering_clusterInfo1 |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations,2, 12345); clt.run();std::regex_replace(clt.clusterInfo(1), std::regex(ENDL), " ")```|
 | | | | should give ```"1 1.000000 1.000000 Location1 2 2.000000 2.000000 Location2 "```|
-| 111 | T02_Intermediate.Clustering_getStatistics |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345); clt.run();std::regex_replace(clt.getStatistics(), std::regex(ENDL), " ")```|
+| 112 | T02_Intermediate.Clustering_getStatistics |  PASSED |```VectorLocation locations; fill_vlocation(locations,3); Clustering clt; clt.set(locations, 2, 12345); clt.run();std::regex_replace(clt.getStatistics(), std::regex(ENDL), " ")```|
 | | | | should give ```"K=2 Sum of within-cluster variances: 1.000000 Number of iterations: 2 "```|
-| 112| T03_Advanced.Integration_test01-valgrind | PASSED | NO LEAKS |
-| 112 | T03_Advanced.Integration_test01 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_K4L3.p1in]: Test for K=3 less location than number of clusters|
-| 113| T03_Advanced.Integration_test02-valgrind | PASSED | NO LEAKS |
-| 113 | T03_Advanced.Integration_test02 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_K4L3.p1in]: Test for K=3 less location than number of clusters|
-| 114| T03_Advanced.Integration_test03-valgrind | PASSED | NO LEAKS |
-| 114 | T03_Advanced.Integration_test03 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_K3L0.p1in]: Test for K=3 with empty location|
-| 115| T03_Advanced.Integration_test04-valgrind | PASSED | NO LEAKS |
-| 115 | T03_Advanced.Integration_test04 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_K1.p1in]: Test for K=1 all the locations belong to the same cluster|
-| 116| T03_Advanced.Integration_test05-valgrind | PASSED | NO LEAKS |
-| 116 | T03_Advanced.Integration_test05 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_5locationsK2.p1in]: Test with 5 chosen locations using K=2 clusters|
-| 117| T03_Advanced.Integration_test06-valgrind | PASSED | NO LEAKS |
-| 117 | T03_Advanced.Integration_test06 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_5locationsK3.p1in]: Test with 5 chosen locations (the same as previously) using K=3 clusters|
-| 118| T03_Advanced.Integration_test07-valgrind | PASSED | NO LEAKS |
-| 118 | T03_Advanced.Integration_test07 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_5locationsK5.p1in]: Test with 5 chosen locations (the same as previously) using K=5 clusters|
-| 119| T03_Advanced.Integration_test08-valgrind | PASSED | NO LEAKS |
-| 119 | T03_Advanced.Integration_test08 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton.p1in]: Test to make clustering with K=5 with locations in princeton.p1in|
-| 120| T03_Advanced.Integration_test09-valgrind | PASSED | NO LEAKS |
-| 120 | T03_Advanced.Integration_test09 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/simple_5Locations.p1in]: Test to make clustering with K=1 with simplified locations.|
+| 113| T03_Advanced.Integration_test01-valgrind | PASSED | NO LEAKS |
+| 113 | T03_Advanced.Integration_test01 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_K4L3.p1in]: Test for K=3 less location than number of clusters|
+| 114| T03_Advanced.Integration_test02-valgrind | PASSED | NO LEAKS |
+| 114 | T03_Advanced.Integration_test02 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_K4L3.p1in]: Test for K=3 less location than number of clusters|
+| 115| T03_Advanced.Integration_test03-valgrind | PASSED | NO LEAKS |
+| 115 | T03_Advanced.Integration_test03 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_K3L0.p1in]: Test for K=3 with empty location|
+| 116| T03_Advanced.Integration_test04-valgrind | PASSED | NO LEAKS |
+| 116 | T03_Advanced.Integration_test04 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_K1.p1in]: Test for K=1 all the locations belong to the same cluster|
+| 117| T03_Advanced.Integration_test05-valgrind | PASSED | NO LEAKS |
+| 117 | T03_Advanced.Integration_test05 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_5locationsK2.p1in]: Test with 5 chosen locations using K=2 clusters|
+| 118| T03_Advanced.Integration_test06-valgrind | PASSED | NO LEAKS |
+| 118 | T03_Advanced.Integration_test06 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_5locationsK3.p1in]: Test with 5 chosen locations (the same as previously) using K=3 clusters|
+| 119| T03_Advanced.Integration_test07-valgrind | PASSED | NO LEAKS |
+| 119 | T03_Advanced.Integration_test07 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton_5locationsK5.p1in]: Test with 5 chosen locations (the same as previously) using K=5 clusters|
+| 120| T03_Advanced.Integration_test08-valgrind | PASSED | NO LEAKS |
+| 120 | T03_Advanced.Integration_test08 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/princeton.p1in]: Test to make clustering with K=5 with locations in princeton.p1in|
+| 121| T03_Advanced.Integration_test09-valgrind | PASSED | NO LEAKS |
+| 121 | T03_Advanced.Integration_test09 | PASSED | [Fraud1_TEMPLATE < ../Datasets/dataP1/simple_5Locations.p1in]: Test to make clustering with K=1 with simplified locations.|
