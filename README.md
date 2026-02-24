@@ -40,11 +40,13 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
     1. Descargar la imagen de la máquina virtual de Linux para la asignatura: [KUbuntu 24 24.04.4 x64](https://drive.google.com/file/d/1qL01uy1TrHcOjLM-SuGnxm_d1mM03ywh/view?usp=sharing) <br>
      Esta imagen ha sido proporcionada por José Miguel Castillo García de la [Oficina de Software Libre](https://osl.ugr.es) de la Universidad de Granada en febrero de 2026. Es una versión de `KUbuntu 24`, la cual ya viene empaquetada para consumir la mínima cantidad de recursos (2 cores y 4 GB de RAM) dado que se va a usar dentro de una VirtualBox sobre Windows. También tiene un disco que ofrece almacenamiento de hasta 64 GB. <br>
      Esta imagen ya está configurada para la asignatura MP y lleva todo el software necesario instalado.
-     Tiene ya instalado Visual Studio Code, el compilador de c++ (g++), make, doxygen, diff, wdiff, meld, valgrind, okular, git, ImageMagick, firefox.<br>
-     **Importante:** Una vez arranque Visual Studio Code, debe instalarle la extensión C++ Extension Pack (Microsoft).
-    1. Importarla en Virtual Box.  **Próximamente incluiremos una guia actualizada de importación, mientras tanto puede usarse la siguiente** [guía de importación](PDFs/importVBOX.pdf)
+     Tiene ya instalado Visual Studio Code, el compilador de c++ (g++), make, doxygen, diff, wdiff, meld, valgrind, okular, git, ImageMagick, firefox.
+    1. Instalar Virtual Box. La Oficina de Software Libre de la Universidad de Granada nos ha proporcionado una [guia de instalación de Virtual Box](https://osl.ugr.es/2026/02/24/como-instalar-virtualbox-en-maquinas-windows-7-10-11/)
+    1. Importar la máquina virtual de Kubuntu en Virtual Box. El usuario y contraseña del Linux es:
       - Usuario: `usuario`
-      - Password: `usuario` 
+      - Password: `usuario` <br>
+    **Importante:** Una vez arranque Visual Studio Code, debe instalarle la extensión C++ Extension Pack (Microsoft).
+
       
    
 
