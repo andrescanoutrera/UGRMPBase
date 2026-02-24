@@ -35,7 +35,7 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
 - Otros paquetes de Linux que debemos tener instalados para realizar las prácticas (sudo apt install) `gcc` `make` `valgrind`  `wdiff` `meld` `doxygen` `ImageMagick` `git` `graphviz`
 
 
-- Para aquellos que decidáis la opción de VirtualBox, tenéis disponible una copia de máquina virtual ya preparada con Linux, NetBeans y C++. Aquí tenéis las instrucciones  para instalarla. Son tres pasos muy sencillos:
+- Para aquellos que decidáis la opción de VirtualBox, tenéis disponible una copia de máquina virtual ya preparada con Linux, Visual Studio Code y C++. Aquí tenéis las instrucciones  para instalarla. Son tres pasos muy sencillos:
     1. <a name="virtualbox"></a>Descargar e Instalar [Virtualbox](https://www.virtualbox.org/wiki/Linux_Downloads)
     1. Descargar la imagen de la máquina virtual de Linux para la asignatura: [KUbuntu 24 24.04.4 x64](https://drive.google.com/file/d/1qL01uy1TrHcOjLM-SuGnxm_d1mM03ywh/view?usp=sharing) <br>
      Esta imagen ha sido proporcionada por José Miguel Castillo García de la [Oficina de Software Libre](https://osl.ugr.es) de la Universidad de Granada en febrero de 2026. Es una versión de `KUbuntu 24`, la cual ya viene empaquetada para consumir la mínima cantidad de recursos (2 cores y 4 GB de RAM) dado que se va a usar dentro de una VirtualBox sobre Windows. También tiene un disco que ofrece almacenamiento de hasta 64 GB. <br>
