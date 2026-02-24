@@ -1,0 +1,17 @@
+K=2
+Sum of within-cluster variances: 50.500000
+Number of iterations: 2
+Cluster number for each location:
+5
+1 1 1 0 0
+Centroids:
+2
+1.500000 5.000000
+0.000000 5.000000
+Cluster 0 information:
+3 1.000000 5.000000 Free Border
+4 2.000000 5.000000 HereAndThere
+Cluster 1 information:
+0 0.000000 0.000000 Art Museum Store
+1 0.000000 10.000000 Princeton University Store
+2 0.000000 5.000000 Labyrinth Books

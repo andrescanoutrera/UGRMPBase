@@ -1,0 +1,10 @@
+ERROR in Fraud2 parameters. Error opening input file: ../Datasets/dataP2/file_noSTa.loc
+Run with the following arguments:
+Fraud2 <inputFile.loc> <K> <minSeed> <maxSeed>
+
+Parameters:
+<inputFile.loc>: name of the location file
+<K>: an integer with the number of clusters to use in the K-means algorithm
+<minSeed>: an integer with the minimum seed value to use
+<maxSeed>: an integer with the maximum seed value to use
+

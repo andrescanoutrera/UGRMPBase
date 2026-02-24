@@ -1,0 +1,15 @@
+Clustering 0:
+K=3
+Sum of within-cluster variances: 2.000000
+Number of iterations: 4
+
+Clustering 1:
+K=3
+Sum of within-cluster variances: 4.000000
+Number of iterations: 2
+
+Clustering 2:
+K=3
+Sum of within-cluster variances: 4.000000
+Number of iterations: 3
+

@@ -1,0 +1,20 @@
+Resulting clustering:
+K=3
+Sum of within-cluster variances: 14.946667
+Number of iterations: 4
+Cluster number for each location:
+5
+0 0 0 1 2
+Centroids:
+3
+12.933333 20.100000
+30.300000 39.100000
+3.300000 9.100000
+Cluster 0 information:
+0 12.600000 17.500000 Admission Information Center
+1 12.500000 20.000000 Rockefeller College
+2 13.700000 22.800000 Art Museum Store
+Cluster 1 information:
+3 30.300000 39.100000 ICE Quarter
+Cluster 2 information:
+4 3.300000 9.100000 Graduate College
