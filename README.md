@@ -43,8 +43,8 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
      Tiene ya instalado Visual Studio Code, el compilador de c++ (g++), make, doxygen, diff, wdiff, meld, valgrind, okular, git, ImageMagick, firefox.
     1. Instalar Virtual Box. La Oficina de Software Libre de la Universidad de Granada nos ha proporcionado una [guia de instalación de Virtual Box](https://osl.ugr.es/2026/02/24/como-instalar-virtualbox-en-maquinas-windows-7-10-11/)
     1. Importar la máquina virtual de Kubuntu en Virtual Box. El usuario y contraseña de Linux es:
-      + Usuario: `usuario`
-      + Password: `usuario` <br>
+      * Usuario: `usuario` 
+      * Password: `usuario` <br>
     **Importante:** Una vez arranque Visual Studio Code, debe instalarle la extensión C++ Extension Pack (Microsoft).
 
       
