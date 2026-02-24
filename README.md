@@ -37,8 +37,15 @@ Para estar al día de las incidencias de la asignatura y tener contacto directo 
 
 - Para aquellos que decidáis la opción de VirtualBox, tenéis disponible una copia de máquina virtual ya preparada con Linux, NetBeans y C++. Aquí tenéis las instrucciones  para instalarla. Son tres pasos muy sencillos:
     1. <a name="virtualbox"></a>Descargar e Instalar [Virtualbox](https://www.virtualbox.org/wiki/Linux_Downloads)
-    1. Descargar la imagen de la máquina virtual de Linux. **Enlace disponible próximamente**
-    1. Importarla en Virtual Box
+    1. Descargar la imagen de la máquina virtual de Linux para la asignatura: [KUbuntu 24 24.04.4 x64](https://drive.google.com/file/d/1qL01uy1TrHcOjLM-SuGnxm_d1mM03ywh/view?usp=sharing) <br>
+     Esta imagen ha sido proporcionada por José Miguel Castillo García de la [Oficina de Software Libre](https://osl.ugr.es) de la Universidad de Granada en febrero de 2026. Es una versión de `KUbuntu 24`, la cual ya viene empaquetada para consumir la mínima cantidad de recursos (2 cores y 4 GB de RAM) dado que se va a usar dentro de una VirtualBox sobre Windows. También tiene un disco que ofrece almacenamiento de hasta 64 GB. <br>
+     Esta imagen ya está configurada para la asignatura MP y lleva todo el software necesario instalado. Por ejemplo, tiene ya instalado Visual Studio Code con la extensión para C++, el compilador de c++ (g++), make, doxygen, diff, wdiff, meld, valgrind, okular, git, ImageMagick, firefox.
+    1. Importarla en Virtual Box.  **Próximamente incluiremos una guia actualizada de importación, mientras tanto puede usarse la siguiente ** [guía de importación](PDFs/importVBOX.pdf)
+      - Usuario: `usuario`
+      - Password: `usuario` 
+      
+   
+
 
 <!--
 - Para aquellos que decidáis la opción de VirtualBox, tenéis disponible una copia de máquina virtual ya preparada con Linux, NetBeans y C++. Aquí tenéis las instrucciones  para instalarla. Son tres pasos muy sencillos (1.- Instalar Virtual Box; 2.- Descargar la imagen de la máquina virtual; 3.- Importarla en Virtual Box) ![MP_VBOXc](https://user-images.githubusercontent.com/9058636/152649408-c228ab4f-d8c1-4ef8-8e56-81230dd63986.png)
