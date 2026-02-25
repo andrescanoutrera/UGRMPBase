@@ -450,7 +450,8 @@ function doValgrindExtended() {
 # Main
 # Load IDE variables
 DIR=$(dirname $0)
-source $DIR/settingsIDE.sh
+#source $DIR/settingsIDE.sh
+source settingsIDE.sh
 # Moves to root folder
 CDRootFolder
 

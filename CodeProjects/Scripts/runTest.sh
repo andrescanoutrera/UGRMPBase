@@ -196,6 +196,11 @@ function doTest  {
 # Main Body
 #
 # Load configuration & moves to the project root folder
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+#echo "El script está en: $SCRIPT_DIR"
+cd $SCRIPT_DIR # Move to the scripts folder of the Project
+
 if [ -d ../Scripts ]
 then
     source ../Scripts/doConfig.sh
