@@ -7,6 +7,10 @@ HELPTEXT='# Script runDocumentation.sh   \n
 + It runs a specific function that parses test files in the ./tests/ folder and generates a Markdown [formatted output](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) which describes the set of Unit and Integration tests to be passed.\n \n
 Both documents are stored in the ./doc/ folder for further reference \n \n'
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+#echo "El script está en: $SCRIPT_DIR"
+cd $SCRIPT_DIR # Move to the scripts folder of the Project
+
 # Load configuration & moves to the project root folder
 if [ -d ../Scripts ]
 then
