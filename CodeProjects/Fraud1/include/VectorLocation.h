@@ -131,7 +131,8 @@ public:
     /**
      * @brief Appends a copy of the given Location object at the first free
      * position in the array of Location in this object. The location is
-     * not appended to this object if it was already found in this object.
+     * not appended to this object if it was already found in this object or 
+     * its name is an empty string.
      * @throw std::out_of_range Throws a std::out_of_range exception if the
      * provided location is going to be appended but the array of Location 
      * was full (its capacity was full). If the provided location is not going 
