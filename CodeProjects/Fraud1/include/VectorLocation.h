@@ -55,14 +55,21 @@ public:
      */
     int getCapacity() const;
 
-    /**
-     * @brief Obtains a string with information about this VectorLocation object,
+   /**
+     * @brief Obtains a string with information about this VectorLocation object, 
      * in the following format:
-     * - First line, the number of Location objects in this vector converted to
-     * a string (using the to_string(int) C++ function).
-     * - For each Location, a line with its x and y coordinates, converted to
-     * a string (using the to_string(int) C++ function) and separated by a
-     * whitespace.
+     * - First line, the number of Location objects in this vector, converted to
+     * a string (using the to_string(int) C++ function). 
+     * - For each Location, a line with its information, converted to
+     * a string with the Location::toString() method.
+     * 
+     * For example, the following is the content of the string for a 
+     * VectorLocation object with 4 locations:
+4
+24.8 14.9 Quadrangle
+25.6 14.9 Ivy
+26.4 14.9 Cottage
+27.3 14.5 Cap & Gown
      * Query method
      * @return string with information about this VectorLocation object
      */
