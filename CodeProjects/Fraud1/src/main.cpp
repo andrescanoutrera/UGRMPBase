@@ -111,10 +111,13 @@ int main(int argc, char* argv[]) {
     int K; // number of clusters
 
     // Read de number of clusters
+    cin >> K;
 
     // Read the locations directly into the VectorLocation object
+    locations.load(cin);
     
     // Define the parameters of the clustering object
+    clustering.set(locations, K);
 
     // Execute the clustering algorithm
     
