@@ -1,6 +1,6 @@
 # OUTCOME OF TESTS FOR PROJECT Fraud0_TEMPLATE
 
-As of Feb 17 2026 13:13:19
+As of Mar 10 2026 14:05:30
 
 | ID | NAME | RESULT | DESCRIPTION | 
 | :--- | :--- | :--- | :--- |
@@ -123,7 +123,7 @@ As of Feb 17 2026 13:13:19
 | 59 | T02_Intermediate.ArrayLocation_ToArrayLocation_0 |  PASSED |```const int DIM=10; Location array[DIM]; int n=5; int size=0; VectorLocation l1(DIM); VectorLocation l2(DIM); for (int i = 0; i < n; i++) { l1._locations[i].set(i,i,std::to_string(i)); } ToArrayLocation(l1,array,DIM,size); for (int i = 0; i < size; i++) { l2._locations[i] = array[i]; }l2.inspectT();```|
 | | | | should give ```"10 0.000000 0.000000 0 1.000000 1.000000 1 2.000000 2.000000 2 3.000000 3.000000 3 4.000000 4.000000 4 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 "```|
 | 60 | T02_Intermediate.ArrayLocation_ToArrayLocation_1 |  PASSED |```const int DIM=10; Location array[DIM]; int n=5; int size=0; VectorLocation l1(DIM); VectorLocation l2(DIM); for (int i = 0; i < n; i++) { l1._locations[i].set(i,i,std::to_string(i)); }ToArrayLocation(l1,array,n,size)```|
-| | | | should THROW an exception std::invalid_argument|
+| | | | should THROW an exception std::out_of_range|
 | 61 | T02_Intermediate.ArrayLocation_ToVectorLocation_0 |  PASSED |```const int DIM=10; Location array[DIM]; int n=5; int size=0; VectorLocation l1(n); VectorLocation l2; for (int i = 0; i < n; i++) { l1._locations[i].set(i,i,std::to_string(i)); array[i]=l1._locations[i]; } size=n; l2=ToVectorLocation(array,size);l2.inspectT();```|
 | | | | should give ```"5 0.000000 0.000000 0 1.000000 1.000000 1 2.000000 2.000000 2 3.000000 3.000000 3 4.000000 4.000000 4 "```|
 | 62 | T02_Intermediate.ArrayLocation_ToVectorLocation_1 |  PASSED |```const int DIM=10; Location array[DIM]; int n=5; int size=0; VectorLocation l1(n); for (int i = 0; i < n; i++) { l1._locations[i].set(i,i,std::to_string(i)); array[i]=l1._locations[i]; } size=-1;ToVectorLocation(array,size);```|
