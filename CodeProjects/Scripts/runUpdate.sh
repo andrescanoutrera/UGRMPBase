@@ -12,7 +12,7 @@ cd $SCRIPT_DIR # Move to the scripts folder of the Project
 # Load configuration & moves to the project root folder
 if [ -d ../../Scripts ]
 then
-    cp ../../Scripts/settingsIDE.sh .
+    #cp ../../Scripts/settingsIDE.sh .
     source ../../Scripts/doConfig.sh $*
     cp ../Scripts/run*.sh ./scripts
     #sh ../Scripts/getProjectName.sh $IDE

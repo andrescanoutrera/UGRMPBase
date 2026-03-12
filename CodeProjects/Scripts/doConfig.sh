@@ -448,10 +448,21 @@ function doValgrindExtended() {
 }
 
 # Main
+
 # Load IDE variables
-DIR=$(dirname $0)
-#source $DIR/settingsIDE.sh
-source settingsIDE.sh
+if [ -d ../Scripts ] # Si estamos en carpeta raiz del proyecto
+then
+    source ../Scripts/settingsIDE.sh
+else
+    if [ -d ../../Scripts ] # Si estamos en carpeta scripts del proyecto
+    then
+        source ../../Scripts/settingsIDE.sh
+    else
+        printf "\n${RED}Error in doConfig: Unable to find Scripts library${WHITE}\n\n"
+        exit
+   fi
+fi
+
 # Moves to root folder
 CDRootFolder
 
