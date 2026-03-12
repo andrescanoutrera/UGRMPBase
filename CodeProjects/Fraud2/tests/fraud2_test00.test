@@ -1,0 +1,13 @@
+%%%CALL 5 ../Datasets/dataP2/simple_5locations.loc
+%%%VALGRIND
+%%%DESCRIPTION Not enough arguments
+%%%OUTPUT
+ERROR in Fraud2 parameters. Not enough arguments
+Run with the following arguments:
+Fraud2 <K> <minSeed> <maxSeed> <inputFile.loc> 
+
+Parameters:
+<K>: an integer with the number of clusters to use in the K-means algorithm
+<minSeed>: an integer with the minimum seed value to use
+<maxSeed>: an integer with the maximum seed value to use
+<inputFile.loc>: name of the location file

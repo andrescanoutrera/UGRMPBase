@@ -1,0 +1,9 @@
+%%%CALL 5 3 3 ../Datasets/dataP2/simple_5locations.loc
+%%%VALGRIND
+%%%DESCRIPTION interval for only one seed. Only one clustering is done.
+%%%FROMFILE ../Datasets/dataP2/fraud2_test03.p2out
+%%%OUTPUT
+Clustering 0:
+K=5
+Sum of within-cluster variances: 1.000000
+Number of iterations: 3
