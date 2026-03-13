@@ -26,6 +26,8 @@ function CDRootFolder() {
         if [ $DIR == '/' ] 
         then
             echo "Ups! Something went wrong...sorry!"
+            echo "Do you have the "$ROOT_FOLDER" folder in your project. If not, create it in the project's root folder with:"
+            echo "mkdir "$ROOT_FOLDER
             exit 1
         fi
     done 
