@@ -211,12 +211,12 @@ private:
     static const int DIM_VECTOR_LOCATIONS = 100;
 
     /**
-     * Pointer to a dynamic array of Locations
+     * Array of Locations
      */
     Location _locations[DIM_VECTOR_LOCATIONS];
 
     /**
-     * Number of Location objects contained in the dynamic array _locations
+     * Number of Location objects contained in the array _locations
      */
     int _size;
 }; // end of class VectorLocation
