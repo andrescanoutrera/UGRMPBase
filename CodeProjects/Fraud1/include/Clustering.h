@@ -266,7 +266,7 @@ Cluster 4 information:
      *       Each location is assigned to the cluster that provides 
      *       the shortest distance to its centroid.
      * 
-     * Query method
+     * Modifier method
      */
     void run();
 
