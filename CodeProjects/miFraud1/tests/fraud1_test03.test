@@ -1,0 +1,16 @@
+%%%CALL < ../Datasets/dataP1/princeton_K3L0.p1in
+%%%DESCRIPTION Test for K=3 less location than number of clusters
+%%%OUTPUT
+K=3
+Sum of within-cluster variances: 0.000000
+Number of iterations: 1
+Cluster number for each location:
+0
+Centroids:
+3
+0.000000 0.000000
+0.000000 0.000000
+0.000000 0.000000
+Cluster 0 information:
+Cluster 1 information:
+Cluster 2 information:

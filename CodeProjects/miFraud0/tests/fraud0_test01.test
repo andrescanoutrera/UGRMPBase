@@ -1,0 +1,4 @@
+%%%CALL < ../Datasets/dataP0/princeton_5blocations.p0in
+%%%DESCRIPTION Test to read a set of 5 b-locations all aways
+%%%OUTPUT
+0

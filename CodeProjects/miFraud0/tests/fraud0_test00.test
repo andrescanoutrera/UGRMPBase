@@ -1,0 +1,8 @@
+%%%CALL < ../Datasets/dataP0/princeton_5locations.p0in
+%%%DESCRIPTION Test to read a set of 5 locations
+%%%OUTPUT
+4
+23.700000 14.800000 Cannon Dial Elm
+26.400000 14.900000 Cottage
+25.600000 14.900000 Ivy
+24.800000 14.900000 Quadrangle
