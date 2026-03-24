@@ -1,0 +1,42 @@
+%%%CALL < ../Datasets/dataP1/princeton.p1in
+%%%DESCRIPTION Test for K=5 and 21 locations
+%%%OUTPUT
+K=5
+Sum of within-cluster variances: 161.136889
+Number of iterations: 5
+Cluster number for each location:
+21
+0 2 2 2 2 2 1 1 1 1 1 4 4 4 4 4 4 4 4 4 3
+Centroids:
+5
+3.300000 9.100000
+14.880000 21.280000
+12.600000 9.460000
+18.500000 6.700000
+26.088889 15.366667
+Cluster 0 information:
+0 3.300000 9.100000 Graduate College
+Cluster 1 information:
+6 12.600000 17.500000 Admission Information Center
+7 12.500000 20.000000 Rockefeller College
+8 13.700000 22.800000 Art Museum Store
+9 17.000000 23.300000 Princeton University Store
+10 18.600000 22.800000 Labyrinth Books
+Cluster 2 information:
+1 11.800000 6.900000 Wawa Public Restrooms
+2 12.600000 7.300000 Princeton Station
+3 10.100000 9.700000 Forbes College
+4 13.300000 12.200000 Dinky Bar & Kitchen
+5 15.200000 11.200000 Whitman College
+Cluster 3 information:
+20 18.500000 6.700000 Yeh College
+Cluster 4 information:
+11 20.900000 15.400000 Frist Campus Center
+12 23.700000 14.800000 Cannon Dial Elm
+13 24.800000 14.900000 Quadrangle
+14 25.600000 14.900000 Ivy
+15 26.400000 14.900000 Cottage
+16 27.300000 14.500000 Cap & Gown
+17 28.200000 15.000000 Cloister
+18 29.100000 15.200000 Charter
+19 28.800000 18.700000 Engineering Quadrangle
