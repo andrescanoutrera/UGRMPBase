@@ -9,5 +9,3 @@ set(CMAKE_CXX_FLAGS "-Wall -Wextra -pedantic")
 include_directories(include)
 add_executable(miFraud0 src/Location.cpp src/VectorLocation.cpp src/ArrayLocation.cpp src/main.cpp)
 
-
-

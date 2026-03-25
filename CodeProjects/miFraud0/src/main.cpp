@@ -21,8 +21,8 @@
 #include "VectorLocation.h"
 #include "ArrayLocation.h"
 
-/*
 
+/*
 #include <sstream>
 #include <regex>
 #include <cmath>
@@ -33,8 +33,9 @@
 
 #define ENDL "\n"
 #define LOCATION_DEFAULT "0.000000 0.000000"
-//#define LOCATION_OTHER "37.200000 -3.600000 Granada"
+#define LOCATION_OTHER "37.200000 -3.600000 Granada"
 */
+
 
 using namespace std;
 
@@ -88,6 +89,8 @@ using namespace std;
 
 
 int main(int argc, char *argv[]) {
+
+    
     const int MAX_NLOCATIONS = 20;   // capacity of the location arrays
     Location bottomLeft1, topRight1, // coordinates that define the first input area
         bottomLeft2, topRight2;      // coordinates that define the second input area
@@ -150,9 +153,16 @@ int main(int argc, char *argv[]) {
 
     // Print the resulting array of Location objects in the standard output
     PrintArrayLocation(arrayUnionLocations, nLocs);
+    
+
+
+    
    
 
+
+    
 }
+
 
 
 
