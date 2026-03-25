@@ -354,7 +354,7 @@ private:
      * $\sum_{p_i \in C_j} squaredDistance(p_i, centroid_{C_j})$
      * @return A double with the sum of within-cluster variances of this 
      * Clustering
-     * Modifier method
+     * Query method
      */
     double calculateSumWCV();
 }; // end of class Clustering
