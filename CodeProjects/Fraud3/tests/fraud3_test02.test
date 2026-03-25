@@ -1,0 +1,20 @@
+%%%CALL -K 1 -o  tests/output/output_1Location.dts ../Datasets/dataP3/simple_5Locations.dts 
+%%%VALGRIND
+%%%DESCRIPTION minimum clustering
+%%%FROMFILE ../Datasets/dataP3/simple_1Location.dts
+%%%OUTPUT
+MP-FRAUD_DATASET-T-1.0
+1
+2.000000 2.000000
+10
+0 1 1 1 0 0 0 0 0 0
+15
+4246
+2656
+4133
+60
+22
+167
+145
+30
+5
