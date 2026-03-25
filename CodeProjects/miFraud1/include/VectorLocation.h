@@ -221,4 +221,8 @@ private:
     int _size;
 }; // end of class VectorLocation
 
+
+//Ts is added from the arrayLocation in fraud0 cause it could be useful for the vectorLocation in fraud1
+void ReadArrayLocation(Location arrayLocations[], const int &capacity, int &nLocs);
+
 #endif /* VECTORLOCATION_H */
