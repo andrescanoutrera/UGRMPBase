@@ -1,3 +1,10 @@
+Fraud0: DONE
+Fraud1: Clustering implementation and header & main remaining
+
+
+
+ORIGINAL DESCRIPTION:
+
 ![image](https://user-images.githubusercontent.com/9058636/218943684-ca9d21ba-4bfe-4cb0-9cd8-7ace0827c742.png)
 
 # UGRMPBase Un repo base para la asignatura Metodología de la programación
