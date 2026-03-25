@@ -179,14 +179,14 @@ using namespace std;
                 
         while(i<_size && !repeated){
             
-            if (location.getName() == _locations[i].getName()){
+            if (location.getName() == _locations[i].getName()&& location.getName() != ""){
                 repeated = true;
             }
            
             i++;
         }
         
-        if(!repeated && location.getName() != ""){
+        if(!repeated){
             if (i >= DIM_VECTOR_LOCATIONS){ //Solo entraria si al añadir 1 se pasaria de DIM
                 throw out_of_range("No cabe");
             }
