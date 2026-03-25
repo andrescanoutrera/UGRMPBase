@@ -1,6 +1,5 @@
 
 #include "Location.h"
-#include "ArrayLocation.h"
 #include "VectorLocation.h"
 #include <string>
 
@@ -234,5 +233,100 @@ using namespace std;
                     _locations[j+1] = temp;
                 }
             }
+        }
+    }
+
+
+
+
+    int VectorLocation::nearest(const Location &location) const{
+        //The best approach i've thought about is going with a for across all the locations in this
+        //Array and doing the abs(location.getx - arraylocation pos whatever x) and with that we sum the y 
+        //and the one where we have the lowest one of the sum of both abs would be the closest locattion to
+        //The one as a parameter
+        //this is stupid i already have squared distance SHOULD USE THAT INSTEAD
+         int pos = -1; //position with the least distance to location parameter 
+        for(int i = 0; i < getSize(); i++){
+            if (i == 0){
+                pos = 0;
+            }           
+
+            if (location.squaredDistance(_locations[i]) < location.squaredDistance(_locations[pos])){
+                pos = i;
+            }
+
+        }
+        return pos;
+    }
+
+
+    void VectorLocation::assign(const Location &location){
+        for(int i = 0; i < getSize(); i++){
+            _locations[i] = location;
+        }
+    }
+
+
+
+    void VectorLocation::load(std::istream &is){
+        Location temp[DIM_VECTOR_LOCATIONS];
+        int capacity = 0; //we initialize to 0 just so there isn't garbage
+        clear(); //jic there's an exception
+
+        ReadArrayLocation(temp, DIM_VECTOR_LOCATIONS, capacity, is);
+
+        //if it isn't valid no worries cause an exception would've been thrown
+        for(int i = 0; i < capacity; i++){
+            _locations[i] = temp[i];
+
+        }
+
+        _size = capacity;
+
+
+    }
+
+    //Ts is added from the arrayLocation in fraud0 cause it could be useful for the vectorLocation in fraud1
+    void ReadArrayLocation(Location arrayLocations[], const int &capacity, int &nLocs, istream &is)
+    { // put nlocs w reference bcuz it will change
+
+        // suppose that capacity is the max, and that nlocs is like the util the ones being used
+        // first input number of elements to add
+        // then we individually add each of the locations (x, y and name)
+
+
+        //The array location doesn't matter the contents if it's given we can using without caring
+        int toAdd;
+
+        is >> toAdd;
+        if (toAdd >= 0 && toAdd <= capacity) //no importa nlocs porque lo que vamos nlocs al final sera = toAdd 
+        {
+            for (int i = 0; i < toAdd; i++){
+                
+                double x, y;
+                string name;
+
+                is >> x >> y;
+
+
+                is.ignore(); //ignores the extra enter that ight skip the getline with empty contents when filling up the x & y
+                getline(is, name); // apparently the source of the input (which is the first parameter of the getline)
+                // can just be put as is no >> no nothing
+
+                arrayLocations[i].set(x, y, name);
+                // pq como es 0 based va a la siguiente
+                
+                
+            }
+
+            nLocs = toAdd;
+        } else
+        {
+            nLocs = 0; //For some reason we should put nlocs to 0 which makes no sense
+            //Why would i put nLocs to 0 instad of leaving it as is 
+
+            //code aftee an exception isn't run so i shouldn't put anything below
+
+            throw std::out_of_range(" NO PUEDES PONER ELEMENTOS NEGATIVOS O NO PUEDES PONER MAS ELEMENTOS QUE LA CAPACIDAD");
         }
     }
