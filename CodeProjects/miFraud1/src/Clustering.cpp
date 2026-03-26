@@ -147,7 +147,7 @@ std::string Clustering::getStatistics() const {
     return result;
 }
 
-bool Clustering::isEquivalent(const Clustering& other) const { // Se cambia tamb esto no?
+bool Clustering::isEquivalentTo(const Clustering& other) const { // Se cambia tamb esto no?
     bool EsVerdad = false; 
     if (!(_K != other._K || _sumWCV != other._sumWCV || _numIterations != other._numIterations)) {
         EsVerdad = true; 
