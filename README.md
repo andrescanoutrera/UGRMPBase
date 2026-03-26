@@ -1,5 +1,5 @@
-Fraud0: DONE
-Fraud1: Clustering implementation and header & main remaining
+Fraud0: DONE <br>
+Fraud1: main & clustering (ONLY run & calculateSumWCV) remaining
 
 
 
