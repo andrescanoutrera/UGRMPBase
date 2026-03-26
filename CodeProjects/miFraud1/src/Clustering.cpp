@@ -12,6 +12,9 @@
  * Created on 22 de octubre de 2025, 11:57
  */
 
+#include "VectorInt.h"
+#include "VectorLocation.h"
+
  std::string Clustering::toString() const {
     string result = getStatistics();
     result += "Cluster number for each location:\n";
@@ -78,3 +81,112 @@ void Clustering::run() {
     ....
 }
 
+Clustering::Clustering() {
+    _K = 0;
+    _isDone = false;
+    _sumWCV = 0.0;
+    _numInterations = 0;
+    _seed = DEFAULT_RANDOM_SEED;
+}
+
+int Clustering::getK() const {
+    return _K;
+}
+
+VectorLocation Clustering::getCentroids() const {
+    return _centroids;
+}
+
+bool Clustering::isDone() const {
+    return _isDone;
+}
+
+int Clustering::getNumLocations() const {
+    return _locations.getSize();
+}
+
+int Clustering::clusterOf(int locationIndex) const {
+    if (!_isDone || locationIndex < 0 || locationIndex >= _locations.getSize()) {
+        return -1;
+    }
+    return _clusters.at(locationIndex);
+}
+
+double Clustering::getSumWCV() const {
+    if (!_isDone) {
+        return -1.0; +
+    }
+    return _sumWCV;
+}
+
+int Clustering::getNumIterations() const {
+    if (!_isDone) {
+        return -1;
+    }
+    return _numIterations;
+}
+
+std::string Clustering::clusterInfo(int cluster) const {
+    string result = "";
+    if (!_isDone || cluster < 0 || cluster >= _K) {
+    } else {
+        for (int i = 0; i < _locations.getSize(); i++) {
+            if (_clusters.at(i) == cluster) {
+                result += to_string(i) + " " + _locations.at(i).toString() + "\n";
+            }
+        }
+    }
+    return result;
+}
+
+std::string Clustering::getStatistics() const {
+    string result = "";
+    result += "K: " + to_string(_K) + "\n";
+    result += "Suma de varianzas: " + to_string(_sumWCV) + "\n";
+    result += "Iteraciones: " + to_string(_numIterations) + "\n";
+    return result;
+}
+
+bool Clustering::isEquivalent(const Clustering& other) const { // Se cambia tamb esto no?
+    bool EsVerdad = false; 
+    if (!(_K != other._K || _sumWCV != other._sumWCV || _numIterations != other._numIterations)) {
+        EsVerdad = true; 
+    }
+    return EsVerdad;
+}
+
+Clustering::std::string toString() const{
+    string result = getStatistics();
+    result += "Numero de clusters de cada ubicación:\n";
+    result += _clusters.toString();
+    result += "Centroides:\n";
+    result += _centroids.toString();
+    for(int i=0; i<_K; i++){
+        result += "Cluster " + to_string(i) + " information:\n";
+        result += clusterInfo(i);
+    }
+
+    return result;
+}
+
+void Clustering::set(VectorLocation locations, int K, unsigned int seed=DEFAULT_RANDOM_SEED) {
+    _locations = locations;
+    if (K < 1 || K > _locations.getSize()) {
+        throw std::out_of_range("Mal valor para K");
+    }else {
+        _K = K;
+    }
+    _seed = seed;
+    _isDone = false;
+    _clusters = VectorInt(locations.getSize());
+    _centroids = VectorLocation(K);
+    _sumWCV = 0.0;
+    _numInterations = 0;
+}
+
+void run(){
+    _centroids = VectorLocation();
+    _clusters = VectorInt(_locations.getSize());
+    _isDone = true; 
+    _sumWCV = calculateSumWithinClusterVariances(); 
+}
