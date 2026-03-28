@@ -26,6 +26,11 @@
 
 using namespace std;
 
+//needed for linking if not it has a hard time using them because it's static
+//no idea why this is needed as mifraud0 also had static vars in the class
+//but without it the tests refuse to run
+const unsigned int Clustering::DEFAULT_RANDOM_SEED;
+
 Clustering::Clustering() {
     _K = 0;
     _isDone = false;
@@ -137,9 +142,9 @@ bool Clustering::isEquivalentTo(const Clustering& other) const {
 //the positions that form that cluster
 string Clustering::toString() const{
     string result = getStatistics();
-    result += "Numero de clusters de cada ubicación:\n";
+    result += "Cluster number for each location:\n";
     result += _clusters.toString();
-    result += "Centroides:\n";
+    result += "Centroids:\n";
     result += _centroids.toString();
     for(int i=0; i<_K; i++){
         result += "Cluster " + to_string(i) + " information:\n";

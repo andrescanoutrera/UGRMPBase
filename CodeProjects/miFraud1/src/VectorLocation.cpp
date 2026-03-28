@@ -2,9 +2,14 @@
 #include "Location.h"
 #include "VectorLocation.h"
 #include <string>
-
+#include <istream>
 
 using namespace std;
+
+//needed for linking if not it has a hard time using them because it's static
+//no idea why this is needed as mifraud0 also had static vars in the class
+//but without it the tests refuse to run
+const int VectorLocation::DIM_VECTOR_LOCATIONS;
 
 
     VectorLocation::VectorLocation(int size){ //Se quita lo del = 0, en el .h

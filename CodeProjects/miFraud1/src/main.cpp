@@ -7,7 +7,6 @@
  * @file main.cpp
  * @author estudiante1: Romero Lopez, Ulises
  * @author estudiante2: Ruiz Cano, Juan
- * Created on 24 de octubre de 2025, 9:27
  */
 
 #include <iostream>
@@ -123,7 +122,7 @@ int main(int argc, char* argv[]) {
 
 
     // Show the resulting clustering in the standard output
-    clustering.toString();
+    cout << clustering.toString();
 
 
     return 0;

@@ -16,6 +16,11 @@
 #define VECTORLOCATION_H
 
 #include "Location.h"
+#include <istream>
+
+
+
+using namespace std;
 
 /**
  * @class VectorLocation
