@@ -1,6 +1,5 @@
 Fraud0: DONE <br>
-Fraud1: main & tests remaining
-
+Fraud1: passed integrity tests and unity tests up to num64, need to check the ones after 64
 
 
 ORIGINAL DESCRIPTION:
