@@ -1,3 +1,9 @@
+/**
+ * @file idk
+ * @author estudiante1: Romero Lopez, Ulises
+ * @author estudiante2: Ruiz Cano, Juan
+ */
+
 
 #include "Location.h"
 #include "VectorLocation.h"
@@ -5,6 +11,7 @@
 #include <istream>
 
 using namespace std;
+
 
 //needed for linking if not it has a hard time using them because it's static
 //no idea why this is needed as mifraud0 also had static vars in the class

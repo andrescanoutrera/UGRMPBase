@@ -5,7 +5,7 @@
 
 /**
  * @file main.cpp
- * @author estudiante1: Romero Lopez, Ulises
+ * @author estudiante1: Romero López, Ulises
  * @author estudiante2: Ruiz Cano, Juan
  */
 
