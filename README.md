@@ -1,5 +1,5 @@
 Fraud0: DONE <br>
-Fraud1: main & clustering (ONLY run & calculateSumWCV) remaining
+Fraud1: main & tests remaining
 
 
 
