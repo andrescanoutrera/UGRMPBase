@@ -24,6 +24,11 @@ const int VectorLocation::DIM_VECTOR_LOCATIONS;
         return _size; 
     }
 
+    //ADDED THIS SOLELY FOR UNITY TESTS
+    void VectorLocation::setSize(const int& input) {
+        _size = input; 
+    }
+
     int VectorLocation::getCapacity() const{
         return DIM_VECTOR_LOCATIONS; 
     }
@@ -280,13 +285,18 @@ const int VectorLocation::DIM_VECTOR_LOCATIONS;
 
         ReadArrayLocation(temp, DIM_VECTOR_LOCATIONS, capacity, is);
 
+
+       
+
+
         //if it isn't valid no worries cause an exception would've been thrown
         for(int i = 0; i < capacity; i++){
-            _locations[i] = temp[i];
+            
+            append(temp[i]); // append enforces no duplicate names and capacity
 
         }
 
-        _size = capacity;
+        
 
 
     }

@@ -53,6 +53,9 @@ public:
      */
     int getSize() const;
 
+    //ADDED THIS SOLELY FOR UNITY TESTS
+    void setSize(const int& input);
+
     /**
      * @brief Gets the capacity of the vector in this object
      * Query method
