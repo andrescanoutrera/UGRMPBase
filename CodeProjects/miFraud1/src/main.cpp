@@ -118,8 +118,13 @@ int main(int argc, char* argv[]) {
     clustering.set(locations, K);
 
     // Execute the clustering algorithm
-    
+    clustering.run();
+
+
+
     // Show the resulting clustering in the standard output
-    
+    clustering.toString();
+
+
     return 0;
 }
