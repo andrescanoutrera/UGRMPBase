@@ -42,8 +42,8 @@ loc.set(i,i,string("Location"+std::to_string(i)));
 locs.append(loc);
 }
 }
-*/
 
+*/
 
 
 
@@ -156,8 +156,6 @@ int main(int argc, char* argv[]) {
 
     // Show the resulting clustering in the standard output
     cout << clustering.toString();
-    
-    
     
     
     

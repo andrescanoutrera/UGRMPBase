@@ -75,24 +75,15 @@ int Clustering::clusterOf(const int& locationIndex) const {
 
 
 
-
-//literally just gets the SumWCV unless the algorithm hasn't run yet in which case a -1 is return
+//Self explanatory
 double Clustering::getSumWCV() const {
-    double result;
-    if (!_isDone) {
-        result = -1.0; 
-    } else {
-        result = _sumWCV;
-    }
-    return result;
+    
+    return _sumWCV;
 }
 
-
-//literally just gets the numIterations unless the algorithm hasn't run yet in which case a -1 is return
+//Self explanatory
 int Clustering::getNumIterations() const {
-    if (!_isDone) {
-        return -1;
-    }
+    
     return _numIterations;
 }
 
