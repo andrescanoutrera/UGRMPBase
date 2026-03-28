@@ -13,13 +13,14 @@
  */
 
 
-//TODO: Finish run & calculateSumWCV
-
 
 
 #include "VectorInt.h"
 #include "VectorLocation.h"
+#include "Location.h"
 #include "Clustering.h"
+
+#include <cmath>
 
 
 
@@ -192,12 +193,17 @@ void run(){
 void Clustering::run() {
     VectorInt counter(_K);
     int best;
-    ...
+    bool change = true;
+    Location zeroLocation; //Constructor assigns 0 to it's x & y automatically
+    int whilecounter = 0;
 
     initialClusterAssignment();
 
     //REPEAT until no change is obtained in clusters assignment
-    while { //Complete the run isn't done at all
+    while (change) { //Complete the run isn't done at all
+        
+        change = false;
+        
         // Initialize the counter
         counter.assign(0);
 
@@ -212,30 +218,62 @@ void Clustering::run() {
 
             //Obtain separately the sum of the x and y coordinates
             double x = _centroids.at(_clusters.at(i)).getX() + _locations.at(i).getX();
-            _centroids.at(_clusters.at(i)).setX(x);
-            double y = ... 
-            ....
+            //se debe sumar al centroide del cluster al que esta de la posicion esa la localizacion
+            _centroids.at(_clusters.at(i)).setX(x); //y tras calcular eso ese es el nuevo centroide 
+            double y = _centroids.at(_clusters.at(i)).getY() + _locations.at(i).getY();
+            _centroids.at(_clusters.at(i)).setY(y);
+            
+            
+
+            //SUMMARY OF THIS AND THE BELOW CLASS WE HAVE WHATEVER ASSIGNED TO THE CENTROIDS RIGHT
+            //OR THAT 0,0 of the zeroLocation it doesn't matter 
+            //WITH THAT WE GO THROUGH EACH LOCATION AND WE RECALCULATE THE CENTROID OF THE CLUSTER 
+            //OF WHICH THAT LOCATION "BELONGS" TO
+            //WE CALCULATE THE NEW CENTROID BY GETTING THE CENTROID WE HAD FOR THAT CLUSTER AND ADDING
+            //THE COORDS OF THIS LOCATION
+            //AS WE CAN SEE HERE WE'VE DONE IT FIRST FOR X AND THEN Y
+
+            //BUT THAT AIN'T ALL WE ALSO NEED TO DO AN EXTRA STEP GIVEN BU THE EQUATION
+            //WHICH IS LITERALLY TO THE CENTROIDS WE OBTAINED FROM THIS FOR LOOP WE HAVE TO
+            //DIVIDE THAT BY THE ELEMENTS THAT "ARE" IN THAT CLUSTER, HENCE WHY WE HAD IN THIS FOR LOOP
+            //THAT COUNTER
         }
         // Step 2: normalize the sum of each cluster, dividing by the number
         // of locations in each cluster
-        for (int i = 0; i < _K; i++) {
-            if (counter.at(i) > 0) { 
+        for (int i = 0; i < _K; i++) { //here we don't do it for each location, just for each cluster so we divide by the counter for each var, FOR EACH cluster
+            if (counter.at(i) > 0) { //FAILSAFE SO WE DONT / BY 0
                 double x = _centroids.at(i).getX() / counter.at(i);
-	            ...
-            }
+	            double y = _centroids.at(i).getY() / counter.at(i);
+                //We finalize ts by giving centroid the new x and y values
+                _centroids.at(i).setX(x);
+                _centroids.at(i).setY(y);
+            } 
         }
 
         // Calculate a new cluster for each Location
         for (int i = 0; i < _locations.getSize(); i++) {
-            best = _centroids.nearest(_locations.at(i)); 
+
+
+            //With this literally i need to go through each location and
+            //see with of the centroids is the closest
+            //and the closest of the options must be assigned ot it in the _clusters
+            //array WE CAN DO THIS for each location seeing which of the centroids is 
+            //the closest
+            best = _centroids.nearest(_locations.at(i)); //This returns a pos
             if (_clusters.at(i) != best) { 
- 		        ...
+ 		        _clusters.at(i) = best;
+                change = true;
             }
         }
+
+
+        whilecounter++;
     } // end REPEAT
 
     // Update the data members _isDone, _sumWCV and _numIterations
-    ....
+    _isDone = true;
+    _sumWCV = calculateSumWCV(); //need to do ts cause the sumWCV is a query method
+    _numIterations= whilecounter;
 }
 
 
@@ -247,14 +285,36 @@ void Clustering::initialClusterAssignment(){
     }
 }
 
-
-double Clustering::calculateSumWCV(){
+//really darn weird function but what it must do is
+//[LOOK EQUATIONS IN FRAUD1 PDF]
+//do the square distance for all the points that correspond to a cluster
+//and obv have them all summed up, and then sum up all the different cluster
+//sums
+double Clustering::calculateSumWCV() const{
     double result = 0;
 
-    for (int i = 0; i < _K; i++){ //the getsize of the centroids is to get the number of clusters bcuz each cluster has a single centroid
-        result += 
+    //TS was a more logical attempt by doing the sum of sums
+    /*for (int i = 0; i < _K; i++){ 
+        
+        for (int j = 0; j < _clusters.getSize();j++){
+            if(i == _clusters.at(j)){
+                result += _locations.at(j).squaredDistance(_centroids.at(i))
+                
+                //the thing below should be done with squaredDistance as there is a function for it already
+                //result += pow( _locations.at(j).getX() - _centroids.at(i).getX(), 2 ) + pow( _locations.at(j).getY() - _centroids.at(i).getY(), 2 );
+                //important to remember that centroids size = num of Ks, so we must access it with i
+            }
+        }
     
     
+    }*/
+
+    //TS is more efficient cause it doesn't do 2 sums (fors) therefore it just does a sum of squareDistances
+    //of each location with it's corresponding centroid
+    for(int i = 0; i < _locations.getSize();i++){
+        
+        result += _locations.at(i).squaredDistance(_centroids.at(_clusters.at(i))); //The centroids at clusters at mess basically 
+        //just gives me the centroid for the cluster of the location
     }
 
     return result;
