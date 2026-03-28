@@ -268,7 +268,7 @@ Cluster 4 information:
      *       Each location is assigned to the cluster that provides 
      *       the shortest distance to its centroid.
      * 
-     * Query method
+     * Modifier method
      */
     void run();
 
@@ -356,9 +356,9 @@ private:
      * $\sum_{p_i \in C_j} squaredDistance(p_i, centroid_{C_j})$
      * @return A double with the sum of within-cluster variances of this 
      * Clustering
-     * Modifier method
+     * query method
      */
-    double calculateSumWCV();
+    double calculateSumWCV() const;
 }; // end of class Clustering
 
 #endif /* CLUSTERING_H */
