@@ -1,3 +1,4 @@
+
 cmake_minimum_required(VERSION 3.12)
 project(Fraud1)
 
@@ -11,3 +12,4 @@ set(BINARY ${CMAKE_PROJECT_NAME})
 set(SOURCES src/VectorInt.cpp src/Clustering.cpp src/Location.cpp src/VectorLocation.cpp src/main.cpp)
 
 add_executable(${BINARY} ${SOURCES})
+

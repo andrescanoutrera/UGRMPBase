@@ -2,9 +2,14 @@
 #include "Location.h"
 #include "VectorLocation.h"
 #include <string>
-
+#include <istream>
 
 using namespace std;
+
+//needed for linking if not it has a hard time using them because it's static
+//no idea why this is needed as mifraud0 also had static vars in the class
+//but without it the tests refuse to run
+const int VectorLocation::DIM_VECTOR_LOCATIONS;
 
 
     VectorLocation::VectorLocation(int size){ //Se quita lo del = 0, en el .h
@@ -17,6 +22,11 @@ using namespace std;
 
     int VectorLocation::getSize() const{
         return _size; 
+    }
+
+    //ADDED THIS SOLELY FOR UNITY TESTS
+    void VectorLocation::setSize(const int& input) {
+        _size = input; 
     }
 
     int VectorLocation::getCapacity() const{
@@ -275,13 +285,18 @@ using namespace std;
 
         ReadArrayLocation(temp, DIM_VECTOR_LOCATIONS, capacity, is);
 
+
+       
+
+
         //if it isn't valid no worries cause an exception would've been thrown
         for(int i = 0; i < capacity; i++){
-            _locations[i] = temp[i];
+            
+            append(temp[i]); // append enforces no duplicate names and capacity
 
         }
 
-        _size = capacity;
+        
 
 
     }

@@ -7,15 +7,45 @@
  * @file main.cpp
  * @author estudiante1: Romero Lopez, Ulises
  * @author estudiante2: Ruiz Cano, Juan
- * Created on 24 de octubre de 2025, 9:27
  */
 
 #include <iostream>
+#include <iomanip>
 
 #include "VectorLocation.h" 
 #include "Clustering.h"
+#include "VectorInt.h"
 
 using namespace std;
+
+
+
+
+
+/*
+// Inclusión de ficheros .h que deben eliminarse tras comprobar los tests de unidad
+#include <sstream>
+#include <regex>
+#include <cmath>
+#include <string>
+#include <fstream>
+// Macros que deben eliminarse tras comprobar los tests de unidad
+#define ENDL "\n"
+#define LOCATION_DEFAULT "0.000000 0.000000"
+#define LOCATION_OTHER "37.200000 -3.600000 Granada"
+#define VECTOR_527 "5 7 7 7 7 7 "
+#define VECTOR_DEFAULT5 "5 0 0 0 0 0 "
+void fill_vlocation(VectorLocation & locs, int size){
+Location loc;
+for (int i=0; i < size; i++) {
+loc.set(i,i,string("Location"+std::to_string(i)));
+locs.append(loc);
+}
+}
+*/
+
+
+
 
 /**
  * The purpose of this program is to read a set of locations from
@@ -104,6 +134,8 @@ Cluster 4 information:
 19 28.800000 18.700000 Engineering Quadrangle
  */
 int main(int argc, char* argv[]) {
+
+    
     VectorLocation locations; // VectorLocation object to store the input locations
     Clustering clustering; // Clustering object
     int K; // number of clusters
@@ -118,8 +150,16 @@ int main(int argc, char* argv[]) {
     clustering.set(locations, K);
 
     // Execute the clustering algorithm
-    
+    clustering.run();
+
+
+
     // Show the resulting clustering in the standard output
+    cout << clustering.toString();
+    
+    
+    
+    
     
     return 0;
 }
