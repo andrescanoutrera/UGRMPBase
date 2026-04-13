@@ -1,0 +1,20 @@
+%%%CALL 4 3 5 ../Datasets/dataP2/simple_5locations.loc
+%%%VALGRIND
+%%%DESCRIPTION interval for three clustering. K=3. Three clustering
+%%%FROMFILE ../Datasets/dataP2/fraud2_test05.p2out
+%%%OUTPUT
+Clustering 0:
+K=4
+Sum of within-cluster variances: 1.000000
+Number of iterations: 1
+
+Clustering 1:
+K=4
+Sum of within-cluster variances: 2.000000
+Number of iterations: 4
+
+Clustering 2:
+K=4
+Sum of within-cluster variances: 4.000000
+Number of iterations: 3
+

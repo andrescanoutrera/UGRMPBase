@@ -1,0 +1,4 @@
+%%%CALL 5 3 0 ../Datasets/dataP2/simple_5locations.loc
+%%%VALGRIND
+%%%DESCRIPTION empty interval for seed. No clustering is done, nothing happen
+%%%OUTPUT
