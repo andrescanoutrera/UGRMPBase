@@ -94,7 +94,7 @@ As of Mar 11 2026 18:08:05
 | | | | should give ```"5 0.000000 0.000000 0 1.000000 1.000000 1 2.000000 2.000000 2 3.000000 3.000000 3 4.000000 4.000000 4 "```|
 | 45 | T01_Basics.VectorLocation_loadFromCin_1 |  PASSED |```int n=1; VectorLocation l1(n); double d1; double d2; string name; string ss = std::string("1 ") + string(LOCATION_OTHER)+ " "; istringstream ssin(ss); l1.load(ssin);l1.inspectT().c_str()```|
 | | | | should give ```"1 37.200000 -3.600000 Granada "```|
-| 46 | T01_Basics.VectorLocation_loadEmptyName_4 |  PASSED |```int n=1; VectorLocation l1(n); string ss = std::string("1 ") + string(LOCATION_DEFAULT)+ " "; istringstream ssin(ss); l1.load(ssin); l1.load(ssin);l1.inspectT().c_str()```|
+| 46 | T01_Basics.VectorLocation_loadEmptyName_4 |  PASSED |```int n=1; VectorLocation l1(n); string ss = std::string("1 ") + string(LOCATION_DEFAULT)+ " "; istringstream ssin(ss); l1.load(ssin);l1.inspectT().c_str()```|
 | | | | should give ```"1 0.000000 0.000000 "```|
 | 47 | T01_Basics.VectorInt_VectorInt_getCapacity |  PASSED |```VectorInt v; v._size=2;v.getCapacity()```|
 | | | | should give ```100```|
