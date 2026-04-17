@@ -6,7 +6,6 @@
 /CodeProjects/**/doc/html/
 /CodeProjects/**/doc/latex/
 /CodeProjects/**/doc/markdown/
-/CodeProjects/**/tests/TestReport.md
 /CodeProjects/**/tests/.call*
 /CodeProjects/**/tests/.due*
 /CodeProjects/**/tests/.fail*
