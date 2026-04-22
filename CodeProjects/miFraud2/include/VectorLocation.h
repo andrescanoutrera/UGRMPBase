@@ -16,6 +16,11 @@
 #define VECTORLOCATION_H
 
 #include "Location.h"
+#include <istream>
+
+
+
+using namespace std;
 
 /**
  * @class VectorLocation
@@ -47,6 +52,9 @@ public:
      * @return The number of elements
      */
     int getSize() const;
+
+    //ADDED THIS SOLELY FOR UNITY TESTS
+    void setSize(const int& input);
 
     /**
      * @brief Gets the capacity of the vector in this object
@@ -126,7 +134,7 @@ public:
      * @param pos position in the VectorLocation object. Input parameter
      * @return A reference to the Location element at the given position.
      */
-    Location &at(int pos);
+     Location &at(int pos);
 
     /**
      * @brief Appends a copy of the given Location object at the first free
@@ -175,14 +183,14 @@ public:
      * location.
      * If returns -1 if this vector is empty
      */
-    int nearest(Location location);
+    int nearest(const Location &location) const;
 
     /**
      * Assigns the provided value to all the elements in this vector
      * Modifier method
      * @param location A Location object. Input parameter
      */
-    void assign(Location location);
+    void assign(const Location &location);
 
     /**
      * @brief Reads from the provided input stream the information
@@ -202,7 +210,7 @@ public:
      * of this VectorLocation object.
      * @param is Input stream. Input/output parameter
      */
-    void load(std::istream is);
+    void load(std::istream &is);
 
 private:
     /**
@@ -220,5 +228,9 @@ private:
      */
     int _size;
 }; // end of class VectorLocation
+
+
+//Ts is added from the arrayLocation in fraud0 cause it could be useful for the vectorLocation in fraud1
+void ReadArrayLocation(Location arrayLocations[], const int &capacity, int &nLocs, istream &is);
 
 #endif /* VECTORLOCATION_H */
