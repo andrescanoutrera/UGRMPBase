@@ -1,0 +1,34 @@
+%%%CALL -K2 2 -nr -o tests/output/predictionK22_princeton_3individuals_NO_reduction.dts ../Datasets/dataP3/princeton_3individuals.dts ../Datasets/dataP3/princeton_3individuals.dts
+%%%VALGRIND
+%%%DESCRIPTION [fraud4]: K2=2 without reduction, dataset princeton_3individuals.dts training and tst are the same
+%%%FROMFILE ../Datasets/dataP4/prediction000_princeton_3individuals.dts
+%%%OUTPUT
+MP-FRAUD_DATASET-T-1.0
+21
+3.300000 9.100000 Graduate College
+11.800000 6.900000 Wawa Public Restrooms
+12.600000 7.300000 Princeton Station
+10.100000 9.700000 Forbes College
+13.300000 12.200000 Dinky Bar & Kitchen
+15.200000 11.200000 Whitman College
+12.600000 17.500000 Admission Information Center
+12.500000 20.000000 Rockefeller College
+13.700000 22.800000 Art Museum Store
+17.000000 23.300000 Princeton University Store
+18.600000 22.800000 Labyrinth Books
+20.900000 15.400000 Frist Campus Center
+23.700000 14.800000 Cannon Dial Elm
+24.800000 14.900000 Quadrangle
+25.600000 14.900000 Ivy
+26.400000 14.900000 Cottage
+27.300000 14.500000 Cap & Gown
+28.200000 15.000000 Cloister
+29.100000 15.200000 Charter
+28.800000 18.700000 Engineering Quadrangle
+18.500000 6.700000 Yeh College
+3
+0 0 0
+1757 0 27 33 0 36 23 10 1520 0 0 0 1877 0 75 39 39 0 1889 8 0
+0 46 1751 1668 0 9 0 39 43 21 16 61 11 2126 22 27 15 0 1932 0 12
+87 63 5 1918 70 1603 44 45 59 0 17 3422 11 54 33 0 29 45 111 40 80
+
