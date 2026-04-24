@@ -1,0 +1,15 @@
+%%%CALL ../Datasets/dataP4/simple_5Locations_tr10.dts
+%%%VALGRIND
+%%%DESCRIPTION testing file not provided. Only training dataset provided
+%%%OUTPUT
+ERROR in Fraud4 parameters. Name of test dataset not provided
+Run with the following arguments:
+Fraud4 [-K1 <K1>] [-K2 <K2>] [-nr] [-o <classifiedDataset.dts>] <trainingDataset.dts> <testClassify.dts>
+
+Parameters:
+-K1 <K1>: an integer with the number of clusters to use in the reduction dimensionality algorithm (5 by default)
+-K2 <K2>: an integer with the number of neighbouring instances to use in the KNN algoritm (6 by default)
+-nr: Indicates that dimensionality reduction should not be applied in the clustering algorithm (by default dimensionality reduction is done)
+[-o <classifiedDataset.dts>]: name of the file where the classified dataset will be saved (tests/output/output.dts by default)
+<trainingDataset.dts>: name of the dataset file used as model (training dataset)
+<testClassify.dts>: name of the dataset file to be classified (test dataset)
