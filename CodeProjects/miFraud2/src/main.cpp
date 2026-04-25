@@ -89,9 +89,11 @@ Sum of within-cluster variances: 250.044571
 Number of iterations: 3
  */
 int main(int argc, char* argv[]) {
+
+
+    
     ArrayClustering arrayClustering; // Object to store the different clusterings
     VectorLocation locations; // Object to store the input locations
-    Clustering clustering; // Clustering object
     int K; // Number of clusters to use
     unsigned int minSeed, maxSeed; // Range of seeds
     ifstream inputFile; // Input file stream for the loc file
@@ -116,6 +118,7 @@ int main(int argc, char* argv[]) {
         exit(0);
     }
     locations.load(inputFile);
+    inputFile.close();
 
 
     // Initialize the arrayClustering object with an initial capacity of 2
@@ -135,7 +138,7 @@ int main(int argc, char* argv[]) {
     SortArrayClustering(arrayClustering);
 
     // Show statistics of each clustering in the sorted order
-    for(unsigned int i = 0; i < arrayClustering.size; i++){
+    for(int i = 0; i < arrayClustering.size; i++){
         
         cout << "Clustering " << i << ":" << endl;
         cout << arrayClustering.clustering[i].getStatistics() << endl;
