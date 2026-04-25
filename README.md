@@ -115,7 +115,7 @@ Mira los vídeos de [introducción a la asignatura](https://drive.google.com/fil
 |Semana9 20/abril/2026 | **Examen de laboratorio** (**1.5 PUNTOS**) <br>[**Fraud3**](PDFs/fraud3.pdf) Clases con memoria dinámica. Reducción de la dimensionalidad de un dataset <br>[Tests detallados](CodeProjects/Fraud3/tests/TestReport.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud3/tests/TestReport.HowToTestUnitTests.md)   | | <ol> <li>Clases que contienen datos (array dinámico) en memoria dinámica <li>Constructor de copia <li>Operador de asignación <li>Destructor <li>Clase con una matriz bidimensional dinámica <li>Acceso a [datos en disco](#ficheros). Lectura y escritura. Errores frecuentes  </ol>|
 |Semana10 27/abril/2026 || | |
 |Semana11	4/may/2026 | | | |
-|Semana12	11/may/2026 | [**Fraud4**](PDFs/fraud4.pdf) Sobrecarga de operadores. Clasificación con algoritmo KNN. (**1.5 PUNTOS**) <br>[Tests detallados](CodeProjects/Fraud4/tests/TestReport.md) <br>[Tests adicionales para la sobrecarga de operadores](CodeProjects/Fraud4/tests/TestReport_Operators.md) <br>[Cómo probar tests de unidad](CodeProjects/Fraud4/tests/TestReport.HowToTestUnitTests.md) | | <ol> <li>Sobrecarga de operadores </ol>|
+|Semana12	11/may/2026 | [**Fraud4**](PDFs/fraud4.pdf) Sobrecarga de operadores. Clasificación con algoritmo KNN. (**1.5 PUNTOS**) <br>[Tests detallados](CodeProjects/Fraud4/tests/TestReport.md)  <br>[Cómo probar tests de unidad](CodeProjects/Fraud4/tests/TestReport.HowToTestUnitTests.md) | | <ol> <li>Sobrecarga de operadores </ol>|
 |Semana13	18/may/2026 | | | |
 |Semana14	25/may/2026 | | | |
 |||||

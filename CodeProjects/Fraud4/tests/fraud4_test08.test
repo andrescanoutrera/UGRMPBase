@@ -1,0 +1,17 @@
+%%%CALL -K2 3 -nr -o tests/output/predictionK2_3_simple_5Locations_tst2.dts ../Datasets/dataP4/simple_5Locations_tr10.dts ../Datasets/dataP4/simple_5Locations_tst2.dts
+%%%VALGRIND
+%%%DESCRIPTION [fraud4]: K1=1 K2=1. Valid arguments without -nr flag (dimensionality reduction)
+%%%FROMFILE ../Datasets/dataP4/prediction01_simple_5Locations_tst2.dts
+%%%OUTPUT
+MP-FRAUD_DATASET-T-1.0
+5
+0.000000 0.000000 locA
+1.000000 1.000000 locB
+2.000000 2.000000 locC
+3.000000 3.000000 locD
+4.000000 4.000000 locE
+2
+0 1
+10 10 5 1 1
+1000 20 1000 80 1000
+
