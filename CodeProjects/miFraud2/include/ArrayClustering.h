@@ -40,7 +40,7 @@ struct ArrayClustering{
  * @param arrayClustering The ArrayClustering to initialize. Output parameter
  * @param capacity The initial capacity of the array. Input parameter
  */
-void InitializeArrayClustering(ArrayClustering arrayClustering, 
+void InitializeArrayClustering(ArrayClustering &arrayClustering, 
     int capacity=INITIAL_ARRAY_CLUSTERING_CAPACITY);
 
 /**
@@ -49,7 +49,7 @@ void InitializeArrayClustering(ArrayClustering arrayClustering,
  * capacity and size fields to 0.
  * @param arrayClustering The ArrayClustering to deallocate. Output parameter
  */
-void DeallocateArrayClustering(ArrayClustering arrayClustering);
+void DeallocateArrayClustering(ArrayClustering &arrayClustering);
 
 /**
  * @brief Searches for a given Clustering object in the provided
@@ -62,8 +62,8 @@ void DeallocateArrayClustering(ArrayClustering arrayClustering);
  * @return The position of the Clustering object in the array if found;
  * -1 otherwise.
  */
-int FindArrayClustering(ArrayClustering arrayClustering,
-                        Clustering clustering);
+int FindArrayClustering(const ArrayClustering &arrayClustering,
+                        const Clustering &clustering);
 
 /**
  * @brief Appends the given Clustering object to the provided ArrayClustering
@@ -77,8 +77,8 @@ int FindArrayClustering(ArrayClustering arrayClustering,
  * be appended. Output parameter
  * @param clustering The Clustering object to append. Input parameter
  */
-void AppendArrayClustering(ArrayClustering arrayClustering,
-                           Clustering clustering);
+void AppendArrayClustering(ArrayClustering &arrayClustering,
+                           const Clustering &clustering);
 
 /**
  * @brief Sorts the Clustering objects in the provided ArrayClustering in
@@ -87,6 +87,6 @@ void AppendArrayClustering(ArrayClustering arrayClustering,
  * further sorted by their number of iterations in ascending order.
  * @param arrayClustering The ArrayClustering to sort. Output parameter
  */
-void SortArrayClustering(ArrayClustering arrayClustering);
+void SortArrayClustering(ArrayClustering &arrayClustering);
 
 #endif /* ARRAYCLUSTERING_H */
