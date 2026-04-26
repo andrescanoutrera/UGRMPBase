@@ -89,33 +89,61 @@ Sum of within-cluster variances: 250.044571
 Number of iterations: 3
  */
 int main(int argc, char* argv[]) {
+
+
+    
     ArrayClustering arrayClustering; // Object to store the different clusterings
     VectorLocation locations; // Object to store the input locations
-    Clustering clustering; // Clustering object
     int K; // Number of clusters to use
     unsigned int minSeed, maxSeed; // Range of seeds
     ifstream inputFile; // Input file stream for the loc file
 
     // Check if the number of arguments is valid.
-
+    if(argc != 5){
+        showHelp(cerr, "Not enough arguments");
+        exit(0);
+    }
     // Read K from the command line arguments
-
+    K = atoi(argv[1]);
     // Read the seed range from the command line arguments 
     // (use stoul to convert string to unsigned int)
-
+    minSeed= stoul(argv[2]);
+    maxSeed= stoul(argv[3]);
+    
     // Read from the input file the locations directly into the VectorLocation object
+    
+    inputFile.open(argv[4]);
+    if(!inputFile.is_open()){ //We check if it's actually open 
+        showHelp(cerr, "Error opening input file: " + string(argv[4]));
+        exit(0);
+    }
+    locations.load(inputFile);
+    inputFile.close();
+
 
     // Initialize the arrayClustering object with an initial capacity of 2
     
+    InitializeArrayClustering(arrayClustering, 2);
     // For each seed in the given range, perform a clustering and store it in
     // arrayClustering
-
+    
+    for(unsigned int i = minSeed; i <= maxSeed; i++){
+        Clustering add;
+        add.set(locations, K, i);
+        add.run();
+        AppendArrayClustering(arrayClustering, add);
+    }
 
     // Sort the different Clustering objects stored in arrayClustering
+    SortArrayClustering(arrayClustering);
 
     // Show statistics of each clustering in the sorted order
-
+    for(int i = 0; i < arrayClustering.size; i++){
+        
+        cout << "Clustering " << i << ":" << endl;
+        cout << arrayClustering.clustering[i].getStatistics() << endl;
+    }
     // Deallocate the dynamic memory used by arrayClustering
-    
+    DeallocateArrayClustering(arrayClustering);
     return 0;
 }

@@ -334,6 +334,7 @@ const int VectorLocation::DIM_VECTOR_LOCATIONS;
                 is.ignore(); //ignores the extra enter that ight skip the getline with empty contents when filling up the x & y
                 getline(is, name); // apparently the source of the input (which is the first parameter of the getline)
                 // can just be put as is no >> no nothing
+                Trim(name);
 
                 arrayLocations[i].set(x, y, name);
                 // pq como es 0 based va a la siguiente
