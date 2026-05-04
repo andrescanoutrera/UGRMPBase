@@ -27,7 +27,8 @@ std::string DataSet::toString() const {
     result += _labels.toString();
     for(int instance=0; instance<getNumInstances(); instance++){
         for(int location=0; location<getNumLocations(); location++){
-            result += to_string((*this)(instance,location));
+            //result += to_string((*this)(instance,location));
+            result += to_string(this->getValue(instance,location));
             if(location<getNumLocations()-1){
                 result += " ";
             }
