@@ -1,7 +1,7 @@
-%%%CALL -K 2 -o  tests/output/simple_2NewLocations.dts ../Datasets/dataP3/simple_5Locations.dts 
+%%%CALL -K 2 -o tests/output/simple_2NewLocations.dts ../Datasets/dataP3/simple_5Locations.dts
 %%%VALGRIND
 %%%DESCRIPTION K=2, group the expenses in 2 clusters
-%%%FROMFILE ../Datasets/dataP3/simple_2NewLocations.dts
+%%%FROMFILE tests/output/simple_2NewLocations.dts
 %%%OUTPUT
 MP-FRAUD_DATASET-T-1.0
 2

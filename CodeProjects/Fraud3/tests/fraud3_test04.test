@@ -1,7 +1,7 @@
-%%%CALL -K 5 -o  tests/output/output_5NewLocations.dts ../Datasets/dataP3/simple_5Locations.dts 
+%%%CALL -K 5 -o tests/output/output_5NewLocations.dts ../Datasets/dataP3/simple_5Locations.dts
 %%%VALGRIND
 %%%DESCRIPTION Silly clustering K >= size locations. Some clusters are empty
-%%%FROMFILE ../Datasets/dataP3/simple_5NewLocations.dts
+%%%FROMFILE tests/output/output_5NewLocations.dts
 %%%OUTPUT
 MP-FRAUD_DATASET-T-1.0
 5

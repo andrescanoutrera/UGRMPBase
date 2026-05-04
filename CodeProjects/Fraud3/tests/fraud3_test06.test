@@ -1,7 +1,7 @@
 %%%CALL ../Datasets/dataP3/princeton_3individuals.dts
 %%%VALGRIND
 %%%DESCRIPTION same execution than K=5, group the expenses in 5 clusters for only 3 individuals
-%%%FROMFILE ../Datasets/dataP3/princeton_3individuals_reduced.dts
+%%%FROMFILE tests/output/output.dts
 %%%OUTPUT
 MP-FRAUD_DATASET-T-1.0
 5
