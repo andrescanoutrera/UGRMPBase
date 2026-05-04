@@ -1,7 +1,7 @@
 %%%CALL -K1 5 -K2 6 ../Datasets/princeton_training.dts ../Datasets/princeton_test.dts
 %%%VALGRIND
 %%%DESCRIPTION Parameters -K1 5 -K2 6 and using the complete dataset princeton 21 locs, training and test
-%%%FROMFILE ../Datasets/dataP4/prediction_princeton_test.dts
+%%%FROMFILE tests/output/output.dts
 %%%OUTPUT
 MP-FRAUD_DATASET-T-1.0
 21

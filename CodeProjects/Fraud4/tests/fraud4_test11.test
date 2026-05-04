@@ -1,7 +1,7 @@
 %%%CALL ../Datasets/dataP4/princeton_training_reduced5L.dts ../Datasets/dataP4/princeton_3individuals_reduced5L.dts
 %%%VALGRIND
 %%%DESCRIPTION without parameters, using princeton_training and test reduced to 5Locations datasets
-%%%FROMFILE ../Datasets/dataP4/prediction011_princeton_reduced5L_3individuals.dts
+%%%FROMFILE tests/output/output.dts
 %%%OUTPUT
 MP-FRAUD_DATASET-T-1.0
 5
