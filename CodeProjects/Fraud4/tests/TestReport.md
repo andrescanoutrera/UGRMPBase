@@ -1,6 +1,6 @@
 # OUTCOME OF TESTS FOR PROJECT Fraud4_TEMPLATE
 
-As of Mar 25 2026 12:18:16
+As of May  5 2026 11:13:48
 
 | ID | NAME | RESULT | DESCRIPTION | 
 | :--- | :--- | :--- | :--- |
@@ -166,11 +166,11 @@ As of Mar 25 2026 12:18:16
 | | | | should give ```"0 0"```|
 | 81 | T01_Basics.DataSet_setValue_0_all_value10 |  PASSED |```int nr = 2; int nc = 4; DataSet dataS(nr, nc); for (int i=0; i< nr; i++) for (int j=0; j< nc; j++) dataS.setValue(i,j,10); bool isEq = true; for (int i=0; i< nr; i++) for (int j=0; j< nc; j++) isEq = isEq && (dataS._values[i][j] == 10);isEq```|
 | | | | should give ```true```|
-| 82 | T01_Basics.DataSet_setLabel_0_all_value_2i |  PASSED |```int nr = 2; int nc = 4; DataSet dataS(nr, nc); for (int i=0; i< nr; i++) dataS.setLabel(i,i); bool isEq = true; for (int i=0; i< nr; i++) isEq = isEq && (dataS._labels[i] == i);isEq```|
+| 82 | T01_Basics.DataSet_setLabel_0_all_value_2i |  PASSED |```int nr = 2; int nc = 4; DataSet dataS(nr, nc); for (int i=0; i< nr; i++) dataS.setLabel(i,i); bool isEq = true; for (int i=0; i< nr; i++) isEq = isEq && (dataS._labels._values[i] == i);isEq```|
 | | | | should give ```true```|
-| 83 | T01_Basics.DataSet_getVectorLabels_0_all_value_2i |  PASSED |```int nr = 2; int nc = 4; DataSet dataS(nr, nc); string ss=to_string(nr)+" "; for (int i=0; i< nr; i++) { dataS._labels[i]=i; ss += to_string(i)+" "; }dataS.getVectorLabels().inspectT().c_str()```|
+| 83 | T01_Basics.DataSet_getVectorLabels_0_all_value_2i |  PASSED |```int nr = 2; int nc = 4; DataSet dataS(nr, nc); string ss=to_string(nr)+" "; for (int i=0; i< nr; i++) { dataS._labels._values[i]=i; ss += to_string(i)+" "; }dataS.getVectorLabels().inspectT().c_str()```|
 | | | | should give ```"2 0 1 "```|
-| 84 | T01_Basics.DataSet_getVectorLocation_0_all_value_set |  PASSED |```int nr = 2; int nc = 2; DataSet dataS(nr, nc); Location loc; loc.set(1.0, 1.0, "A"); string ss=to_string(nc)+" "; for (int i=0; i< nr; i++) { dataS._locations[i]=loc; ss += loc.inspectT() + " "; }dataS.getVectorLocation().inspectT().c_str()```|
+| 84 | T01_Basics.DataSet_getVectorLocation_0_all_value_set |  PASSED |```int nr = 2; int nc = 2; DataSet dataS(nr, nc); Location loc; loc.set(1.0, 1.0, "A"); string ss=to_string(nc)+" "; for (int i=0; i< nr; i++) { dataS._locations._locations[i]=loc; ss += loc.inspectT() + " "; }dataS.getVectorLocation().inspectT().c_str()```|
 | | | | should give ```"2 1.000000 1.000000 A 1.000000 1.000000 A "```|
 | 85 | T01_Basics.DataSet_clear |  PASSED |```int nr = 2; int nc = 4; string s="0 0 "; DataSet dataS(nr, nc); dataS.clear();dataS.inspectT()```|
 | | | | should give ```"0 0 "```|
@@ -252,7 +252,7 @@ As of Mar 25 2026 12:18:16
 | | | | should THROW an exception std::out_of_range|
 | 124 | T02_Intermediate.DataSet_getLabel_2_except |  PASSED |```int nr = 2; int nc = 4; DataSet dataS(nr, nc);dataS.getLabel(2)```|
 | | | | should THROW an exception std::out_of_range|
-| 125 | T02_Intermediate.DataSet_saveLoad |  PASSED |```int nr = 2; int nc = 2; DataSet dataS1(nr, nc); DataSet dataS2; Location loc; loc.set(1.0, 1.0, "A"); string ss=to_string(nc)+" "; for (int i=0; i< nr; i++) { dataS1._locations[i]=loc; ss += loc.inspectT() + " "; loc.set(1.0,1.0,"B"); } string fileName = "tests/output/test_save1.dts"; dataS1.save(fileName); dataS2.load(fileName);dataS1.inspectT() == dataS2.inspectT();```|
+| 125 | T02_Intermediate.DataSet_saveLoad |  PASSED |```int nr = 2; int nc = 2; DataSet dataS1(nr, nc); DataSet dataS2; Location loc; loc.set(1.0, 1.0, "A"); string ss=to_string(nc)+" "; for (int i=0; i< nr; i++) { dataS1._locations._locations[i]=loc; ss += loc.inspectT() + " "; loc.set(1.0,1.0,"B"); } string fileName = "tests/output/test_save1.dts"; dataS1.save(fileName); dataS2.load(fileName);dataS1.inspectT() == dataS2.inspectT();```|
 | | | | should give ```true```|
 | 126 | T02_Intermediate.DataSet_loadLoad |  PASSED |```DataSet dataS; string fileName = "../Datasets/dataP3/simple_5Locations.dts"; dataS.load(fileName); int n; n = dataS.getNumInstances(); dataS.load(fileName);dataS.getNumInstances()```|
 | | | | should give ```10```|
