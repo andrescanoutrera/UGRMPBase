@@ -1,7 +1,7 @@
 %%%CALL -K2 1 -nr -o tests/output/predictionK1_simple_5Locations_tst2.dts ../Datasets/dataP4/simple_5Locations_tr10.dts ../Datasets/dataP4/simple_5Locations_tst2.dts
 %%%VALGRIND
 %%%DESCRIPTION K2=1 the neareast neighbour. Valid arguments with -nr flag (no dimensionality reduction)
-%%%FROMFILE ../Datasets/dataP4/prediction01_simple_5Locations_tst2.dts
+%%%FROMFILE tests/output/predictionK1_simple_5Locations_tst2.dts
 %%%OUTPUT
 MP-FRAUD_DATASET-T-1.0
 5

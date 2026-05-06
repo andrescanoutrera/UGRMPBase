@@ -1,7 +1,7 @@
 %%%CALL -K 5 ../Datasets/princeton_training.dts
 %%%VALGRIND
 %%%DESCRIPTION K=5, group the expenses in 5 clusters
-%%%FROMFILE ../Datasets/dataP3/princeton_training_reduced.dts
+%%%FROMFILE tests/output/output.dts
 %%%OUTPUT
 MP-FRAUD_DATASET-T-1.0
 5

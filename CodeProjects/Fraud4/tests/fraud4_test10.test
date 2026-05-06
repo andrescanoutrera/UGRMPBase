@@ -1,7 +1,7 @@
 %%%CALL -K1 2 -K2 2 -o tests/output/predictionK12K26_princeton_3individuals.dts ../Datasets/dataP4/princeton_3individuals.dts ../Datasets/dataP4/princeton_3individuals.dts
 %%%VALGRIND
 %%%DESCRIPTION K2 = 2 neigbours, dimensionality reduction to 2, dataset princeton_3individuals training and tst are the same
-%%%FROMFILE ../Datasets/dataP4/prediction000_princeton_3individuals.dts
+%%%FROMFILE tests/output/predictionK12K26_princeton_3individuals.dts
 %%%OUTPUT
 MP-FRAUD_DATASET-T-1.0
 21

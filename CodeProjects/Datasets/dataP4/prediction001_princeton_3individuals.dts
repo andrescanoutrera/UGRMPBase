@@ -1,8 +1,3 @@
-%%%CALL -K2 2 -nr -o tests/output/predictionK22_princeton_3individuals_NO_reduction.dts ../Datasets/dataP3/princeton_3individuals.dts ../Datasets/dataP3/princeton_3individuals.dts
-%%%VALGRIND
-%%%DESCRIPTION [fraud4]: K2=2 without reduction, dataset princeton_3individuals.dts training and tst are the same
-%%%FROMFILE tests/output/predictionK22_princeton_3individuals_NO_reduction.dts
-%%%OUTPUT
 MP-FRAUD_DATASET-T-1.0
 21
 3.300000 9.100000 Graduate College
@@ -27,7 +22,7 @@ MP-FRAUD_DATASET-T-1.0
 28.800000 18.700000 Engineering Quadrangle
 18.500000 6.700000 Yeh College
 3
-0 0 0
+0 0 1
 1757 0 27 33 0 36 23 10 1520 0 0 0 1877 0 75 39 39 0 1889 8 0
 0 46 1751 1668 0 9 0 39 43 21 16 61 11 2126 22 27 15 0 1932 0 12
 87 63 5 1918 70 1603 44 45 59 0 17 3422 11 54 33 0 29 45 111 40 80

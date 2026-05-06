@@ -98,10 +98,10 @@ public:
     /**
      * @brief Gets the value for the instance instanceIndex at the localization
      * locationIndex.
-     * @throw Throws a std::out_of_range exception if instanceIndex is not 
-     * a valid index for an instance in this DataSet.
-     * @throw Throws a std::out_of_range exception if locationIndex is not a
-     * valid index for an location in this DataSet.
+     * @throw std::out_of_range Throws a std::out_of_range exception if 
+     * instanceIndex is not a valid index for an instance in this DataSet.
+     * @throw std::out_of_range Throws a std::out_of_range exception if 
+     * locationIndex is not a valid index for an location in this DataSet.
      * Query method
      * @param instanceIndex An integer with the index of the selected instance. 
      * Input parameter
@@ -115,8 +115,8 @@ public:
     /**
      * @brief Gets the label (integer value) of the instance at the provided
      * position (instanceIndex)
-     * @throw Throws a std::out_of_range exception if instanceIndex is not 
-     * a valid index for an instance in this DataSet.
+     * @throw std::out_of_range Throws a std::out_of_range exception if 
+     * instanceIndex is not a valid index for an instance in this DataSet.
      * Query method
      * @param instanceIndex An integer with the index of the selected instance.
      * Input parameter
@@ -163,6 +163,10 @@ public:
     /**
      * @brief Sets a new value for the instance instanceIndex at the 
      * localization locationIndex.
+     * @throw std::out_of_range Throws a std::out_of_range exception if 
+     * instanceIndex is out of the valid range
+     * @throw std::out_of_range Throws a std::out_of_range exception if 
+     * locationIndex is out of the valid range
      * Modifier method
      * @param instanceIndex An integer with the index of the selected instance. 
      * Input parameter

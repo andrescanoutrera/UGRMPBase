@@ -1,8 +1,3 @@
-%%%CALL -K2 2 -nr -o tests/output/predictionK22_princeton_3individuals_NO_reduction.dts ../Datasets/dataP3/princeton_3individuals.dts ../Datasets/dataP3/princeton_3individuals.dts
-%%%VALGRIND
-%%%DESCRIPTION [fraud4]: K2=2 without reduction, dataset princeton_3individuals.dts training and tst are the same
-%%%FROMFILE tests/output/predictionK22_princeton_3individuals_NO_reduction.dts
-%%%OUTPUT
 MP-FRAUD_DATASET-T-1.0
 21
 3.300000 9.100000 Graduate College

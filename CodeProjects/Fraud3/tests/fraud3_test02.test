@@ -1,7 +1,7 @@
-%%%CALL -K 1 -o  tests/output/output_1Location.dts ../Datasets/dataP3/simple_5Locations.dts 
+%%%CALL -K 1 -o tests/output/output_1Location.dts ../Datasets/dataP3/simple_5Locations.dts
 %%%VALGRIND
 %%%DESCRIPTION minimum clustering
-%%%FROMFILE ../Datasets/dataP3/simple_1Location.dts
+%%%FROMFILE tests/output/output_1Location.dts
 %%%OUTPUT
 MP-FRAUD_DATASET-T-1.0
 1
