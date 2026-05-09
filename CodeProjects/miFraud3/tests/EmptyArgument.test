@@ -1,0 +1,12 @@
+%%%CALL
+%%%VALGRIND
+%%%DESCRIPTION Running without arguments
+%%%OUTPUT
+ERROR in Fraud3 parameters. Input file not provided
+Run with the following arguments:
+Fraud3 [-K <K>] [-o <outputFile.dts>] <inputFile.dts>
+
+Parameters:
+-K <K>: an integer with the number of clusters to use (5 by default)
+-o <outputFile.dts>: name of the output dataset file (tests/output/output.dts by default)
+<inputFile.dts>: name of the input dataset file
