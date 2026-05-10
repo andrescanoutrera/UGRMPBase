@@ -1,6 +1,6 @@
 # OUTCOME OF TESTS FOR PROJECT Fraud3_TEMPLATE
 
-As of May  4 2026 13:00:33
+As of May  4 2026 23:52:44
 
 | ID | NAME | RESULT | DESCRIPTION | 
 | :--- | :--- | :--- | :--- |
@@ -256,8 +256,8 @@ As of May  4 2026 13:00:33
 | | | | should THROW an exception std::invalid_argument|
 | 126 | T02_Intermediate.DataSet_Load_3_exception |  PASSED |```DataSet dataS; string fileName; fileName = "tests/output/test_xxx.dst";dataS.load(fileName);```|
 | | | | should THROW an exception std::ios_base::failure|
-| 127 | T02_Intermediate.DataSet_getReduced_0 |  PASSED |```DataSet dataS1; string fileName = "../Datasets/dataP3/simple_5Locations.dts"; dataS1.load(fileName); int nInstances=dataS1.getNumInstances(); Clustering clt; clt.set(dataS1.getVectorLocation(), 1, 12345); clt.run(); DataSet dataS2=dataS1.getReducedDataSet(clt); string ss="1 "+ to_string(nInstances)+" "+ to_string(nInstances)+" 0 0";```|
-| | | | should give ```std::ios_base::failure```|
+| 127 | T02_Intermediate.DataSet_getReduced_0 |  PASSED |```DataSet dataS1; string fileName = "../Datasets/dataP3/simple_5Locations.dts"; dataS1.load(fileName); int nInstances=dataS1.getNumInstances(); Clustering clt; clt.set(dataS1.getVectorLocation(), 1, 12345); clt.run(); DataSet dataS2=dataS1.getReducedDataSet(clt); string ss="1 "+ to_string(nInstances)+" "+ to_string(nInstances)+" 0 0";((to_string(dataS2.getNumLocations())+" "+to_string(dataS2.getNumInstances())+" "+to_string(dataS2.getVectorLabels().getSize())+" "+to_string(dataS2.getVectorLabels().at(0))+" "+ to_string(dataS1.getVectorLabels().at(nInstances-1))).c_str())```|
+| | | | should give ```"1 10 10 0 0"```|
 | 128 | T02_Intermediate.DataSet_getReduced_3except |  PASSED |```DataSet dataS1; string fileName = "../Datasets/dataP3/simple_5Locations.dts"; dataS1.load(fileName); Location loc; VectorLocation locs; loc.set(1,1,string("Location1")); locs.append(loc); Clustering clt; clt.set(locs, 1, 12345); DataSet dataS2; ;dataS1.getReducedDataSet(clt)```|
 | | | | should THROW an exception std::invalid_argument|
 | 129 | T02_Intermediate.DataSet_getReduced_4except |  PASSED |```DataSet dataS1; string fileName = "../Datasets/dataP3/simple_5Locations.dts"; dataS1.load(fileName); Location loc; VectorLocation locs; loc.set(1,1,string("Location1")); locs.append(loc); Clustering clt; clt.set(locs, 1, 12345); clt.run(); DataSet dataS2; ;dataS1.getReducedDataSet(clt)```|
