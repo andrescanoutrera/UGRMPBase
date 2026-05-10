@@ -13,19 +13,62 @@
 using namespace std;
 
 
-//needed for linking if not it has a hard time using them because it's static
-//no idea why this is needed as mifraud0 also had static vars in the class
-//but without it the tests refuse to run
-const int VectorLocation::DIM_VECTOR_LOCATIONS;
 
 
     VectorLocation::VectorLocation(int size){ //Se quita lo del = 0, en el .h
+        /*
         if (size >= 0 && size <= DIM_VECTOR_LOCATIONS){
             _size = size; 
         } else {
             throw std::out_of_range (string("VectorLocation(int size)") + to_string(size)); //con string ("") hemos pasado de cstring a string y con el + por q deja strings de c++ hemos pasado el tostring el num problematico
         }
+        */
+
+        if(size < 0){
+        throw out_of_range("size cannot be lower than 0");
+        }
+
+        _locations = new Location[size];
+        _size = _capacity = size;
+
+
     }
+
+    VectorLocation::VectorLocation(const VectorLocation &orig){
+        
+        _size = orig._size;
+        _capacity = orig._capacity;
+        Location* temp = new Location[_capacity];
+        for(int i = 0; i < orig._size; i++){
+            temp[i] = orig._locations[i];
+        }
+        
+        _locations = temp;
+    }
+
+    VectorLocation::~VectorLocation(){
+        delete[] _locations;
+    }
+
+
+    VectorLocation& VectorLocation::operator=(const VectorLocation &orig){
+        
+        //Edge case detection needed
+        if(this == &orig){
+
+            Location* temp = new Location[orig._capacity];
+            
+            for(int i = 0; i < orig._size; i++){
+                temp[i] = orig._locations[i];
+            }
+            delete[] _locations;
+            _size = orig._size;
+            _capacity = orig._capacity;
+            _locations = temp;
+        }
+        return *(this);
+    }
+
 
     int VectorLocation::getSize() const{
         return _size; 
@@ -37,7 +80,7 @@ const int VectorLocation::DIM_VECTOR_LOCATIONS;
     }
 
     int VectorLocation::getCapacity() const{
-        return DIM_VECTOR_LOCATIONS; 
+        return _capacity; 
     }
 
     /**
@@ -95,7 +138,8 @@ const int VectorLocation::DIM_VECTOR_LOCATIONS;
         } 
 
         return result;
-    };
+    }
+    //Same i think 
 
     /**
      * @brief Returns a VectorLocation object with those locations whose
@@ -170,19 +214,17 @@ const int VectorLocation::DIM_VECTOR_LOCATIONS;
     }
 
      /**
-     * @brief Appends a copy of the given Location object at the first free
+     * @brief Appends a copy of the given Location object at the first free 
      * position in the array of Location in this object. The location is only
      * appended to this object if it was not already found in this object or 
      * its name is an empty string.
-     * @throw std::out_of_range Throws a std::out_of_range exception if the
-     * provided location is going to be appended but the array of Location 
-     * was full (its capacity was full). If the provided location is not going 
-     * to be appended because it was already found in this object or its name 
-     * is an empty string, then no exception is thrown.
+     * If the dynamic array of Location was full (its capacity was full), this
+     * method automatically reallocates a new array with a capacity equal to 
+     * the current capacity plus an extra block of size equal to BLOCK_SIZE.
      * Modifier method
      * @param value the new Location object to be appended. Input parameter
-     * @return true if the given Location could be inserted in this
-     * VectorLocation object; false otherwise (the location was already found
+     * @return true if the given Location could be inserted in this 
+     * VectorLocation object; false otherwise (the location was already found 
      * in this object)
      */
     bool VectorLocation::append(const Location &location){
@@ -200,13 +242,13 @@ const int VectorLocation::DIM_VECTOR_LOCATIONS;
             }
            
             i++;
-        }
+        } //detecter
         
         if(!repeated){
-            if (i >= DIM_VECTOR_LOCATIONS){ //Solo entraria si al añadir 1 se pasaria de DIM
-                throw out_of_range("No cabe");
+            if (_size >= _capacity){
+                grow();
             }
-            _locations[i] = location;
+            _locations[_size] = location; 
             finalCondition = true;
             _size++;
         }
@@ -286,26 +328,19 @@ const int VectorLocation::DIM_VECTOR_LOCATIONS;
 
 
     void VectorLocation::load(std::istream &is){
-        Location temp[DIM_VECTOR_LOCATIONS];
-        int capacity = 0; //we initialize to 0 just so there isn't garbage
         clear(); //jic there's an exception
 
-        ReadArrayLocation(temp, DIM_VECTOR_LOCATIONS, capacity, is);
-
-
-       
-
-
-        //if it isn't valid no worries cause an exception would've been thrown
-        for(int i = 0; i < capacity; i++){
-            
-            append(temp[i]); // append enforces no duplicate names and capacity
-
+        int toAdd;
+        is >> toAdd;
+        if (toAdd < 0) {
+            throw std::out_of_range("not less than 0");
         }
 
-        
-
-
+        for (int i = 0; i < toAdd; ++i) {
+            Location tempLoc;
+            tempLoc.load(is); 
+            append(tempLoc); 
+        }
     }
 
     //Ts is added from the arrayLocation in fraud0 cause it could be useful for the vectorLocation in fraud1
@@ -353,3 +388,61 @@ const int VectorLocation::DIM_VECTOR_LOCATIONS;
             throw std::out_of_range(" NO PUEDES PONER ELEMENTOS NEGATIVOS O NO PUEDES PONER MAS ELEMENTOS QUE LA CAPACIDAD");
         }
     }
+
+    VectorLocation& VectorLocation::grow(int capMod){
+        //The sizemod is how much to grow by
+        if(capMod <0){
+            throw out_of_range("this is a grow not a decrease");
+        }
+        
+        
+        
+        Location* temp = new Location[_capacity + capMod];
+        _capacity += capMod;
+        for(int i = 0; i < getSize();i++){
+            temp[i] = _locations[i];
+        }
+
+        delete[] _locations;
+        _locations=temp;
+        //Doesn't crew with the size that's appends job
+        return *(this); //works as a void but we do this to allow multiple functions calls in a single line
+    }
+
+
+
+    VectorLocation& VectorLocation::resize(int toRes){
+
+
+    if(_capacity + toRes < 1){ //the problem is with negative toRes because we make it smalle
+        throw out_of_range("you cannot remove positions to make the size 0 or lower");
+    }
+    //after that check we can modify the capacity as we please
+
+    Location* temp = new Location[_capacity + toRes]; //This could throw an exception that's why we modify the capacity afterwards
+    _capacity += toRes;
+    
+    //Size doesn't change
+    //OFC IT CHANGES if it shrinks
+
+    if(_size >= _capacity){
+        for(int i = 0; i < _capacity;i++){ 
+            temp[i] = _locations[i];
+        }
+        _size = _capacity;
+    } else {
+        for(int i = 0; i < getSize();i++){
+            temp[i] = _locations[i];
+        }
+    }
+    delete[] _locations;
+    _locations = temp;
+ 
+
+    return *(this);
+}
+
+
+
+
+

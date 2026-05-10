@@ -57,7 +57,7 @@ public:
      * parameter
      * @return A reference to this object
      */
-    VectorInt operator=(VectorInt orig);
+    VectorInt& operator=(const VectorInt& orig);
     
     /**
      * @brief Gets the number of elements in the vector of this object
@@ -155,7 +155,7 @@ public:
      * given position is not valid.
      * @return A const reference to the integer element at the given position
      */
-    const int&  VectorInt::at(int pos) const;
+    const int& at(int pos) const;
     
     /**
      * @brief Gets a reference to the integer element at the given position. 
@@ -165,10 +165,12 @@ public:
      * given position is not valid
      * @return A reference to the integer element at the given position.
      */
-    int& VectorInt::at(int pos);
+    int& at(int pos);
 
 
     VectorInt& grow(int capMod = BLOCK_SIZE);
+
+    VectorInt& resize(int toRes = 0);
     
 private:
     /**

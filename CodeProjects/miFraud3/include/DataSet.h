@@ -65,7 +65,7 @@ public:
      * @param orig the DataSet object used as source for the copy. 
      * Input parameter
      */
-    DataSet(DataSet orig);
+    DataSet(const DataSet &orig);
     
     /**
      * @brief Destructor
@@ -79,21 +79,21 @@ public:
      * Input parameter
      * @return A reference to this object
      */
-    DataSet operator=(DataSet orig);
+    DataSet& operator=(const DataSet &orig);
 
     /**
      * @brief Gets the number of instances in this DataSet
      * Query method
      * @return The number of instances in this DataSet
      */
-    int getNumInstances();
+    int getNumInstances() const;
     
     /**
      * @brief Gets the number of localizations in this DataSet
      * Query method
      * @return The number of localizations in this DataSet
      */
-    int getNumLocations(); 
+    int getNumLocations() const; 
     
     /**
      * @brief Gets the value for the instance instanceIndex at the localization
@@ -110,7 +110,7 @@ public:
      * @return The value for the instance instanceIndex at the localization
      * locationIndex
      */   
-    int getValue(int instanceIndex, int locationIndex);
+    int getValue(int instanceIndex, int locationIndex) const;
     
     /**
      * @brief Gets the label (integer value) of the instance at the provided
@@ -123,7 +123,7 @@ public:
      * @return The label (integer value) of the instance at the provided
      * position
      */
-    int getLabel(int instanceIndex);
+    int getLabel(int instanceIndex) const;
     
     /**
      * @brief Gets a const reference to the vector of Location objects in this
@@ -132,14 +132,14 @@ public:
      * @return A const reference to the vector of Location objects in this
      * DataSet
      */
-    VectorLocation getVectorLocation();
+    const VectorLocation& getVectorLocation() const;
 
     /**
      * @brief Gets a const reference to the vector of labels in this DataSet
      * Query method
      * @return A const reference to the vector of labels in this DataSet
      */
-    VectorInt getVectorLabels();
+    const VectorInt& getVectorLabels() const;
     
     /**
      * @brief Obtains a string with information about this DataSet object, 
@@ -158,7 +158,7 @@ public:
      * Query method
      * @return string with information about this CrimeSet object
      */
-    std::string toString() ;
+    std::string toString() const;
 
     /**
      * @brief Sets a new value for the instance instanceIndex at the 

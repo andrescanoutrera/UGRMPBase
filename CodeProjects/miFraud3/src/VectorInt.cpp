@@ -74,8 +74,28 @@ VectorInt::~VectorInt(){
     //no need to delete the rest as they are just stack variables
 }
 
-//No idea of how to do the overload yet 
-VectorInt VectorInt::operator=(VectorInt orig){
+VectorInt& VectorInt::operator=(const VectorInt& orig){
+ // we wanna replace the contents of our current class with the ones in the parameter one
+ //deep copy
+    //This could perfectly be a void assignment, but y reterning a reference to this class we can do multiple assignments in the same line
+
+    //EDGE CASE assignment to itself
+
+
+    if( !(this == &orig) ){ //This checks if this which is the mem adress to this instance is the same to the orig one, if that's the case it doesn't do anything 
+        int* temp = new int[orig._capacity];
+        for(int i=0; i < orig._size; i++){
+            temp[i] = orig._values[i];
+        }
+        delete[] _values;
+        _size = orig._size;
+        _capacity= orig._capacity;
+        _values = temp;
+        //With this we have done a deep copy of orig to our current instance
+        //As we can now have them identical to each other with the main diff that they are both in different places in the heap
+    }   
+
+    return *(this);
 
 }
 
@@ -211,4 +231,35 @@ VectorInt& VectorInt::grow(int capMod){
     _values=temp;
     //Doesn't crew with the size that's appends job
     return *(this); //works as a void but we do this to allow multiple functions calls in a single line
+}
+
+VectorInt& VectorInt::resize(int toRes){
+
+
+    if(_capacity + toRes < 1){ //the problem is with negative toRes because we make it smalle
+        throw out_of_range("you cannot remove positions to make the size 0 or lower");
+    }
+    //after that check we can modify the capacity as we please
+
+    int* temp = new int[_capacity + toRes]; //This could throw an exception that's why we modify the capacity afterwards
+    _capacity += toRes;
+    
+    //Size doesn't change
+    //OFC IT CHANGES if it shrinks
+
+    if(_size >= _capacity){
+        for(int i = 0; i < _capacity;i++){ 
+            temp[i] = _values[i];
+        }
+        _size = _capacity;
+    } else {
+        for(int i = 0; i < getSize();i++){
+            temp[i] = _values[i];
+        }
+    }
+    delete[] _values;
+    _values = temp;
+ 
+
+    return *(this);
 }

@@ -44,7 +44,7 @@ public:
      * @param orig the VectorLocation object used as source for the copy. 
      * Input parameter
      */
-    VectorLocation(VectorLocation orig);
+    VectorLocation(const VectorLocation &orig); //Copy 
     
     /**
      * @brief Destructor
@@ -58,7 +58,7 @@ public:
      * Input parameter
      * @return A reference to this object
      */
-    VectorLocation operator=(VectorLocation orig);
+    VectorLocation& operator=(const VectorLocation &orig);
     
     /**
      * @brief Gets the number of elements in the vector of this object
@@ -66,6 +66,9 @@ public:
      * @return The number of elements
      */
     int getSize() const;
+
+
+    void setSize(const int& input);
     
     /**
      * @brief Gets the capacity of the vector in this object
@@ -192,14 +195,14 @@ public:
      * location.
      * If returns -1 if this vector is empty
      */
-    int nearest(Location location);
+    int nearest(const Location &location) const;
     
     /**
      * Assigns the provided value to all the elements in this vector
      * Modifier method
      * @param location A Location object. Input parameter
      */
-    void assign(Location location);
+    void assign(const Location &location);
 
     /**
      * @brief Reads from the provided input stream the information
@@ -216,7 +219,12 @@ public:
      * number of Location read from the input stream is negative.
      * @param is Input stream. Input/output parameter
      */
-    void load(std::istream is);
+    void load(std::istream &is);
+
+
+    VectorLocation& grow(int capMod=BLOCK_SIZE);
+
+    VectorLocation& resize(int toRes);
 
 private:
     /**
