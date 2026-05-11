@@ -104,6 +104,32 @@ DataSet::~DataSet(){
 
 DataSet& DataSet::operator=(const DataSet &orig){
 
+    if(this != &orig){
+        
+        for(int i = 0; i < _nInstances; i++){
+            delete[] _values[i];
+        }
+        delete[] _values;
+
+        _values = new int*[orig._nInstances];
+        for(int i = 0; i < orig._nInstances; i++){
+            _values[i] = new int[orig._nLocations];
+        }
+        
+        //After identical size creation assignment is needed
+        for(int i = 0; i < orig._nInstances; i++){
+            for(int j = 0; j < orig._nLocations; j++){
+                _values[i][j] = orig._values[i][j];
+            }
+        }
+
+        _nInstances = orig._nInstances;
+        _nLocations = orig._nLocations;
+        //use the already existing = when doable
+        _labels = orig._labels;
+        _locations = orig._locations;
+    }
+    return *(this);
 }
 
 int DataSet::getNumInstances() const{
@@ -180,6 +206,105 @@ void DataSet::clear(){
     _nInstances = _nLocations = 0;
 }
 
-void save(std::string fileName){ //do ts one next
+void DataSet::save(const std::string& fileName){ //do ts one next
+    ofstream outputter; //output file stream
 
+    
+    outputter.open(fileName); //i suppose that to output it must be inside miFraud3
+    if (!outputter.is_open()) {
+        throw std::ios_base::failure("couldn't open it");
+    }
+    
+ 
+
+    outputter << MAGIC_STRING_T << endl;
+    
+    //Execute to string to print everything about the dataset
+    outputter<< toString() << endl;
+    if (outputter.fail()) {
+        throw std::ios_base::failure("couldn't write");
+    }
+    outputter.close();
+}
+
+
+void DataSet::load(const std::string& fileName){
+
+   
+    clear();
+
+    
+    ifstream inputted(fileName);
+    if (!inputted.is_open()) {
+        throw std::ios_base::failure("Cannot open file: " + fileName);
+    }
+    
+    
+    string currLine;
+    getline(inputted, currLine);
+    if (currLine != MAGIC_STRING_T){
+        clear(); 
+        throw invalid_argument("no match of magic string");
+    }
+    
+    //when a line is read inputted only "has available" the lines after the read one
+    _locations.load(inputted);
+    //because it reads the first line which is the num of locations it knows when to stop loading
+    _nLocations = _locations.getSize();
+
+
+    inputted >> _nInstances;
+    if (_nInstances < 0 || _nLocations < 0) {
+        clear();
+        throw out_of_range("instances/locations cannot be negative");
+    }
+    
+    
+    for(int i = 0; i <_nInstances; i++){
+        int tempLabel;
+        inputted >> tempLabel; //The >> allows us to read things with spaces automatically changes to the next line after it finishes
+        _labels.append(tempLabel);
+    }
+    
+
+    _values = new int*[_nInstances];
+    for(int i = 0; i < _nInstances; i++){
+        _values[i] = new int[_nLocations];
+    }
+
+    for(int i = 0; i < _nInstances; i++){
+        for(int j = 0; j < _nLocations; j++){
+            inputted >> _values[i][j];
+        }
+    }
+}
+
+
+DataSet DataSet::getReducedDataSet(const Clustering& clustering) const{
+    if(clustering.isDone() == false){
+        throw invalid_argument("nothing was done w it");
+    }
+
+    if(clustering.getNumLocations() != _nLocations){
+        throw invalid_argument("mismatch of loc num");
+    }
+
+    // The returned DataSet has K columns (number of clusters)
+    DataSet toRet(_nInstances, clustering.getK());
+
+    for(int i = 0; i < _nInstances; i++){ // For each instance (row)
+        for(int j = 0; j < _nLocations; j++){ // For each original location (column)
+            int cluster = clustering.clusterOf(j); // Get the cluster for this location
+            toRet._values[i][cluster] += _values[i][j]; // Sum into the new cluster column
+        }
+    }
+
+
+    //copy vector centroids and locations
+    toRet._labels = VectorInt(_labels); //it modifies stuff but not
+    toRet._locations = VectorLocation(clustering.getCentroids());
+
+
+    
+    return toRet;
 }

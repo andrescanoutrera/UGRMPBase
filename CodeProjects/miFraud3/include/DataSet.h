@@ -224,7 +224,7 @@ public:
      * @param fileName The name of the file where the DataSet will be saved. 
      * Input parameter
      */
-    void save(std::string fileName);
+    void save(const std::string& fileName);
 
     /**
      * @brief Loads into this object the DataSet information stored in the 
@@ -248,7 +248,7 @@ public:
      * if the given file cannot be opened or if an error occurs while reading
      * from the file. 
      */
-    void load(std::string fileName);
+    void load(const std::string& fileName);
     
     /**
      * @brief Gets a new DataSet from this DataSet. The DataSet will contain 
@@ -275,7 +275,7 @@ public:
      * Input parameter
      * @return A reduced DataSet
      */
-    DataSet getReducedDataSet(Clustering clustering);
+    DataSet getReducedDataSet(const Clustering& clustering) const;
 
 private:
     /**

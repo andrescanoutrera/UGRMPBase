@@ -5,11 +5,8 @@
 
 /**
  * @file main.cpp
- * @author Silvia Acid Carrillo <acid@decsai.ugr.es>
- * @author Andrés Cano Utrera <acu@decsai.ugr.es>
- * @author Luis Castillo Vidal <L.Castillo@decsai.ugr.es>
- * 
- * Created on 24 de octubre de 2025, 9:27
+ * @author estudiante1: Romero López, Ulises
+ * @author estudiante2: Ruiz Cano, Juan
  */
 
 #include <iostream>
@@ -79,22 +76,50 @@ int main(int argc, char* argv[]) {
     int indexInputFile = -1; // index of the input file in argv
 
     // Loop to process program arguments
+    
+    for (int i = 1; i < argc; ++i) {
+        string arg = argv[i];
+        if (arg == "-K") {
+            if (i + 1 < argc) { 
+                K = atoi(argv[++i]); 
+            } else {
+                showHelp(cerr, "Number of clusters not provided after -K");
+                return 1;
+            }
+        } else if (arg == "-o") {
+            if (i + 1 < argc) { 
+                outputFileName = argv[++i];
+            } else {
+                showHelp(cerr, "Missing value for -o");
+                return 1;
+            }
+        } else {
+            // If it doesn't match a flag, it must be the input file
+            indexInputFile = i;
+        }
+    }
+
+    if (indexInputFile == -1) {
+        showHelp(cerr, "Input file not provided");
+        return 1;
+    }
 
     // Load the input dataset from the given file
-    
+    inputDataset.load(argv[indexInputFile]);
+
     // Set the location vector and K in the clustering object. Use the default
     // seed value.
-
+    clustering.set(inputDataset.getVectorLocation() , K); //Suppose its the the location vector inside the inputDataset
     // Run the clustering algorithm
-    
-    // Get the dataset with reduced dimensionality
+    clustering.run();
+    // Get the dataset with reduced dimensionality 
+    //Suppose that i have to assign it to output dataset
+    outputDataset = inputDataset.getReducedDataSet(clustering);
 
     // Save the output dataset in the given file
+    outputDataset.save(outputFileName);
     
     return 0;
 }
 
 
-
-//only things done:
-//Constructors of vectorInt
