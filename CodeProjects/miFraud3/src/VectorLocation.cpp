@@ -54,7 +54,7 @@ using namespace std;
     VectorLocation& VectorLocation::operator=(const VectorLocation &orig){
         
         //Edge case detection needed
-        if(this == &orig){
+        if(this != &orig){
 
             Location* temp = new Location[orig._capacity];
             
